@@ -1,0 +1,115 @@
+/* Rohan Carousel */
+body { font-family: Arial, sans-serif; font-size: 14px;}
+h1, h2 { font-size: 14px;}
+p { line-height: 1.1em;}
+
+* { margin: 0; padding: 0;}
+
+#main-container {
+	width: 100%;
+}
+
+#content { 	
+	margin: 0 auto;
+	width: 800px;	
+}
+
+/* Carousel styles */
+#carousel-container {
+	margin-top: 50px;
+	width: 800px;
+	height: 400px;
+	overflow: hidden;
+	position: relative;
+}
+
+ul#carousel {
+	position: absolute;
+	z-index: 0;
+}
+
+	ul#carousel li {
+		width: 800px;
+		height: 400px;	
+		display: block;
+		float: left;
+		list-style: none;
+		background: #000;
+		color: #FFF;
+	}
+
+	.slide-content {
+		position: absolute;
+		bottom: 0;
+		z-index: 10;
+		width: 780px;
+		height: auto;
+		padding: 10px 10px 10px 10px;
+		background: #000;	
+	}
+	
+#controls {
+	width: 800px;
+	height: 30px;
+	position: absolute;
+	z-index: 100;
+	top: 150px;
+	left:0;
+}	
+	
+	#controls a { 
+		width: 55px; 
+		min-height: 40px;
+		display: block; 
+		margin: 0 15px;  
+		line-height: 40px;
+		text-align: center;
+		text-decoration: none;
+		background: #FFF;
+		color: #CCC;
+	}
+
+	#controls a:hover { 
+		color: #111;
+	}
+	
+	#controls a.btn-prev {
+		float: left;
+	}
+
+	#controls a.btn-nxt {
+		float: right;
+	}
+
+#blobs { 
+	width: 100px;	
+	height: 15px; 
+	position: relative;
+	top: 8px;
+	left: 8px;
+}
+
+	#blobs ul li {
+		display: block;
+		float: left;
+		margin-right: 10px;
+	}
+
+	#blobs ul li a {
+		display: block;
+		width: 5px;
+		height: 5px;
+		padding: 5px;
+		line-height: 5px;
+		text-decoration: none;
+		background: #288ee5;
+		color: #FFF;
+		text-align: center;
+		font-size: 12px;
+	}
+
+	#blobs ul li a:hover, #blobs ul li a.active {
+	 text-decoration: none;
+	 background: #FFF;
+	 color: #000;
+	}

@@ -1,0 +1,54 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf360
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11700\viewh14300\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\f0\b\fs32 \cf0 Rohan Carousel steps:
+\b0 \
+\
+
+\b Objective.functionality:
+\b0 \
+When prev and next buttons are clicked the slides (li's) should animate accordingly back and forth.\
+If its the first slide prev button should be hidden or grey out\
+If its the last slide and next is pressed the carousel should animate back to the start, to slide one. \
+Or loop seamlessly to slide one.\
+A case of one variable change to switch between these two ways of working.\
+\
+
+\b Variables needed for script:\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\b0 \cf0 1. The width of each li (800px)\
+1 b. Width of ul (total of li's together)
+\b \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+
+\b0 \cf0 2.  The number of li's the carousel contains (use .length in jquery?)\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+\cf0 to calculate the width of the ul#carousel which needs dynamically updating according to how many li's there are. Currently 800px/slide / 5 slides = 4000px\
+This calculate number needs to injected inline on the ul#carousel via jquery.\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\ql\qnatural\pardirnatural
+\cf0 \
+3. The current position in px from left to right for each li (add a class dynamically to all li's called slide + 1 etc\'85)\
+\
+5. How far to animate right or left. In this case 800px\
+6. speed of animation\
+\
+
+\b Writing script:\
+
+\b0 1. When next button is clicked animate the first li 800px to the left.\
+2. A for loop will be needed to go through all the li's (slides)
+\b \
+
+\b0 3. Maybe a conditional statement will be needed when the carousel reaches the last li to go back to the start.\
+\
+\
+Greg notes:\
+1. On click of nxt add 1 to the var current position which is 0 at the start\
+2. Get the location of next slide pos\
+3. Animate to that position\
+\
+}
