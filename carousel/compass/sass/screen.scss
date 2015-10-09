@@ -15,7 +15,7 @@ nav {
     /* Cross-browser inline-block helper */
     @include inline-block;      
     /* Text-shadow helper + rgba() is a built-in Sass mixin */        
-    @include text-shadow(0 1px 1px rgba(#000,0.3));
+    @include text-shadow(0 10px 1px rgba(#000,0.3));
     /* Cross-browser CSS3 transition */
     @include single-transition(color, 0.5s, ease-in);  
     &:hover {
@@ -23,4 +23,12 @@ nav {
       color: shade($my_color, 20%);  
     }
   }
+}
+
+#test {
+  width: 50%;
+  height: 250px;
+  background: red;
+  clear: both;
+  border-radius: 15px;
 }

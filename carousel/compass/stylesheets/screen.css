@@ -84,7 +84,7 @@ nav a {
   *zoom: 1;
   *display: inline;
   /* Text-shadow helper + rgba() is a built-in Sass mixin */
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 10px 1px rgba(0, 0, 0, 0.3);
   /* Cross-browser CSS3 transition */
   -moz-transition: color 0.5s ease-in;
   -o-transition: color 0.5s ease-in;
@@ -95,4 +95,13 @@ nav a {
 nav a:hover {
   /* Compass color mixin: shade() */
   color: #94ae44;
+}
+
+/* line 28, ../sass/screen.scss */
+#test {
+  width: 50%;
+  height: 250px;
+  background: red;
+  clear: both;
+  border-radius: 15px;
 }
