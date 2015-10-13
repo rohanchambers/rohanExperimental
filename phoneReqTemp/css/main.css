@@ -1,0 +1,18 @@
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.col-md-12 {
+	background: orange;
+}
+.col-md-6 {
+	background: red;
+}
+.col-md-6.col-2 {
+	background: blue;
+}
