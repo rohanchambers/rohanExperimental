@@ -3,16 +3,30 @@
    ========================================================================== */
 
 body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+/*    padding-top: 50px;
+    padding-bottom: 20px;*/
 }
 
-.col-md-12 {
+/*div {
+	text-align: center;
+}*/
+
+.container {
+	margin-bottom: 15px;
+}
+
+.orange {
 	background: orange;
 }
-.col-md-6 {
+
+.blue {
+	background: #66CCFF;
+}
+
+.red {
 	background: red;
 }
-.col-md-6.col-2 {
-	background: blue;
+
+.green {
+	background: green;	
 }
