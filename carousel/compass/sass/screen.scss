@@ -25,10 +25,55 @@ nav {
   }
 }
 
-#test {
-  width: 50%;
+
+$colorOrange: orange;
+
+#viewport { display: none;}
+
+#red, #orange, #blue {
+  position: relative;
+  width: 100px;
   height: 250px;
   background: red;
-  clear: both;
   border-radius: 15px;
 }
+
+#orange {
+  background: $colorOrange;
+  // margin: 0 auto;
+}
+
+#blue {
+  background: blue;
+  float: right;
+}
+
+#red {
+  float: left;
+}
+
+
+.animate {
+  transition: 2s ease-in-out;
+  -webkit-transition: 2s ease-in-out;
+  -moz-transition: 2s ease-in-out;
+}
+
+
+#red.animate {
+  transform: translate(5em,0);
+  -webkit-transform: translate(5em,0);
+  -moz-transform: translate(5em,0);
+}
+
+#blue.animate {
+  transform: translate(-10em,0);
+  -webkit-transform: translate(-10em,0);
+  -moz-transform: translate(-10em,0);
+}
+
+
+
+
+
+

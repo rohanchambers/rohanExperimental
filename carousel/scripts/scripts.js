@@ -1,5 +1,13 @@
 $(document).ready(function(){
 
+
+	
+			//$('#red, #blue').addClass('animate');
+
+
+
+
+
 	var slide = $('#carousel li');
 	var slideWidth = $('#carousel li').width();
 	var totalSlides = slide.length;

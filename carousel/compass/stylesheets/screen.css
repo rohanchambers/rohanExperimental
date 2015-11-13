@@ -97,11 +97,53 @@ nav a:hover {
   color: #94ae44;
 }
 
-/* line 28, ../sass/screen.scss */
-#test {
-  width: 50%;
+/* line 31, ../sass/screen.scss */
+#viewport {
+  display: none;
+}
+
+/* line 33, ../sass/screen.scss */
+#red, #orange, #blue {
+  position: relative;
+  width: 100px;
   height: 250px;
   background: red;
-  clear: both;
   border-radius: 15px;
+}
+
+/* line 41, ../sass/screen.scss */
+#orange {
+  background: orange;
+}
+
+/* line 46, ../sass/screen.scss */
+#blue {
+  background: blue;
+  float: right;
+}
+
+/* line 51, ../sass/screen.scss */
+#red {
+  float: left;
+}
+
+/* line 56, ../sass/screen.scss */
+.animate {
+  transition: 2s ease-in-out;
+  -webkit-transition: 2s ease-in-out;
+  -moz-transition: 2s ease-in-out;
+}
+
+/* line 63, ../sass/screen.scss */
+#red.animate {
+  transform: translate(5em, 0);
+  -webkit-transform: translate(5em, 0);
+  -moz-transform: translate(5em, 0);
+}
+
+/* line 69, ../sass/screen.scss */
+#blue.animate {
+  transform: translate(-10em, 0);
+  -webkit-transform: translate(-10em, 0);
+  -moz-transform: translate(-10em, 0);
 }
