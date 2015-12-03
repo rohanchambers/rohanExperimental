@@ -1,0 +1,158 @@
+/* Project Name: Sass common uses | Author: | Date:  */
+
+/* Variables */
+$main-font: Helvetica, Arial, sans-serif;
+$primary-color: #333;
+$secondary-color: #000;
+
+body {
+	font-family: $main-font;
+	color: #FFF;
+}
+
+h2 {
+	font-size: 16px;
+	margin-bottom: 5px;
+}
+
+#container {
+	width: 960px;
+	height: auto;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+	.row {
+		height: auto;
+		overflow: hidden;
+	}
+
+/* Mixin's */
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	 	-moz-border-radius: $radius;
+	 		-ms-border-radius: $radius;
+	 			border-radius: $radius;
+}
+
+@mixin box-shadow($shadow) {
+	-webkit-box-shadow: $shadow;
+	 	-moz-box-shadow: $shadow;
+	 		-ms-box-shadow: $shadow;
+	 			box-shadow: $shadow;
+}
+
+.box {
+	@include border-radius(10px);
+	float: left;
+	margin: 10px;
+	padding: 10px;
+	width: 200px;
+	height: 200px;
+	background: $primary-color;
+	color: white;
+	font-size: 16px;
+}
+
+	.box:hover {
+		@include box-shadow(2px 2px 10px 0px #666666);
+	}
+
+.box:hover .box-info {
+  display: block;
+}
+
+.box-info {
+  display: none;
+}
+
+/* Extend .box for small variation colors and less html classes */
+.box-red {	
+	@extend .box;
+	background: red;
+}
+
+.box-blue {
+	@extend .box;
+	background: blue;
+} 
+
+.box-orange {
+	@extend .box;
+	 background: orange;	
+}
+
+
+/* Row 2 CSS3 front back flip effect  */
+.row-2 .box {
+    -webkit-perspective: 600px;
+    background: none;
+  }
+  
+.row-2 .box:hover {
+	@include box-shadow(none);
+}
+
+.front img {
+	width: 220px;
+	height: 200px;
+	@include border-radius(10px);  
+}
+
+.box .front {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 200px;
+	height: 200px;
+	z-index: 900;
+	-webkit-transform: rotateX(0deg) rotateY(0deg);
+	-webkit-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+	-moz-transform: rotateX(0deg) rotateY(0deg);
+	-moz-transform-style: preserve-3d;
+	-moz-backface-visibility: hidden;
+		/* -- transition for animation -- */
+		-o-transition: all .6s ease-in-out;
+		-ms-transition: all .6s ease-in-out;
+		-moz-transition: all .6s ease-in-out;
+		-webkit-transition: all .6s ease-in-out;
+		transition: all .6s ease-in-out;
+}
+
+.box .back {
+	@include border-radius(10px);	
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 200px;
+	height: 180px;
+	padding: 10px;
+	background: $primary-color;
+	overflow: hidden;
+	z-index: 800;
+	-webkit-transform: rotateY(-180deg);
+	-webkit-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+	-moz-transform: rotateY(-180deg);
+	-moz-transform-style: preserve-3d;
+	-moz-backface-visibility: hidden;
+		/* -- transition for animation -- */
+		-o-transition: all .6s ease-in-out;
+		-ms-transition: all .6s ease-in-out;
+		-moz-transition: all .6s ease-in-out;
+		-webkit-transition: all .6s ease-in-out;
+		transition: all .6s ease-in-out;
+}
+
+.box.flip .front {
+  z-index: 900;
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+}
+
+.box.flip .back {
+  z-index: 1000;
+  -webkit-transform: rotateX(0deg) rotateY(0deg);
+  -moz-transform: rotateX(0deg) rotateY(0deg);
+}
