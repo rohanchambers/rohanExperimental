@@ -1,0 +1,31 @@
+/* Rohan Bourbon */
+// sass --watch styles.scss:styles.css
+
+@import "bourbon/bourbon";
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 14px; }
+
+h1, h2 {
+  font-size: 14px; }
+
+p {
+  line-height: 1.1em; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+#main-container {
+  width: 100%; }
+
+#content {
+  margin: 0 auto;
+  width: 800px; }
+
+
+  #mybutton {    
+    @include button(pill);  
+  }
+  
