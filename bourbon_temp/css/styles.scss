@@ -1,31 +1,120 @@
 /* Rohan Bourbon */
 // sass --watch styles.scss:styles.css
-
 @import "bourbon/bourbon";
+$visual-grid: true;
+$visual-grid-color: red;
+$visual-grid-index: front;
+$visual-grid-opacity: 0.4;
+@import "neat/grid-settings";
+@import "neat/neat";
 
 body {
   font-family: Arial, sans-serif;
   font-size: 14px; }
 
 h1, h2 {
-  font-size: 14px; }
+  font-size: 14px; 
+    margin-bottom: 10px;
+}
 
 p {
-  line-height: 1.1em; }
+  line-height: 1.1em; 
+    margin-bottom: 10px;
+}
 
 * {
   margin: 0;
   padding: 0; }
 
-#main-container {
-  width: 100%; }
+$border-box-sizing: true !default;
 
-#content {
-  margin: 0 auto;
-  width: 800px; }
+#mybutton {   
+  @include button();
+  outline: 0;
+}
+
+.element {
+  min-height: 100px;
+  @include pad(15px );
+  @include linear-gradient(to top, red, orange);
+
+    h1 {
+      font-family: $helvetica;
+      font-size: golden-ratio(14px,  1);
+      @include text-decoration(underline double rgb(124,213,224));
+    }
+}
+
+// Grid layout
+.container {
+    @include outer-container();
+}
+    // Define row columns
+    .row {
+        //background: purple;
+        @include row( $display: default, $direction: LTR);
+        margin: 0 0 15px 0;
+    }
+
+    #full-bg-image {
+      @include linear-gradient(to top, red, yellow);
+      height: auto;
+    }
 
 
-  #mybutton {    
-    @include button(pill);  
-  }
-  
+
+    .element-1 {
+      @include span-columns(4 of 12);
+    }
+
+    .element-2 {
+      @include span-columns(4 of 12);
+    }
+
+    .element-3 {
+      @include span-columns(4 of 12);
+    }    
+
+
+    .element-4 {
+      @include span-columns(6 of 12);
+    }
+
+    .element-5 {
+      @include span-columns(6 of 12);
+    }
+
+
+    .element-6 {
+      @include span-columns(3 of 12);
+    }
+
+    .element-7 {
+      @include span-columns(9 of 12);
+    } 
+
+
+    .element-8 {
+      @include span-columns(12 of 12);
+    }
+
+
+    $mobile: new-breakpoint(max-width 640px);
+
+    .element-1, 
+    .element-2, 
+    .element-3 {
+        @include media($mobile) {
+            @include span-columns(12 of 12);
+        }
+    }
+
+    .element {
+        @include media($mobile) {
+            @include span-columns(12 of 12);
+            @include linear-gradient(to top, red, pink);           
+        }
+    }    
+
+
+
