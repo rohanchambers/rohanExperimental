@@ -1,12 +1,20 @@
 /* Rohan Bourbon */
 // sass --watch styles.scss:styles.css
 @import "bourbon/bourbon";
+// Change the grid settings
+$column: 910px;
+$gutter: 30px;
+$grid-columns: 10;
+$max-width: 1366px;
+
 $visual-grid: true;
 $visual-grid-color: red;
 $visual-grid-index: front;
 $visual-grid-opacity: 0.4;
-@import "neat/grid-settings";
+
 @import "neat/neat";
+
+
 
 body {
   font-family: Arial, sans-serif;

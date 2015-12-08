@@ -1,62 +1,195 @@
-/*
-Error: File to import not found or unreadable: neat/grid-settings.
-        on line 8 of styles.scss
+/* Rohan Bourbon */
+html {
+  box-sizing: border-box; }
 
-3: @import "bourbon/bourbon";
-4: $visual-grid: true;
-5: $visual-grid-color: red;
-6: $visual-grid-index: front;
-7: $visual-grid-opacity: 0.4;
-8: @import "neat/grid-settings";
-9: @import "neat/neat";
-10: 
-11: body {
-12:   font-family: Arial, sans-serif;
-13:   font-size: 14px; }
+*, *::after, *::before {
+  box-sizing: inherit; }
 
-Backtrace:
-styles.scss:8
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/import_node.rb:67:in `rescue in import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/import_node.rb:45:in `import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/import_node.rb:28:in `imported_file'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/import_node.rb:37:in `css_import?'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:311:in `visit_import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/stack.rb:79:in `block in with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/stack.rb:115:in `with_frame'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/stack.rb:79:in `with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:52:in `map'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:157:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:8:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/engine.rb:378:in `_render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/engine.rb:295:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:209:in `each'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:470:in `on_file_changed'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:328:in `block in watch'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/vendor/listen/lib/listen/listener.rb:252:in `call'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/vendor/listen/lib/listen/listener.rb:252:in `on_change'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/vendor/listen/lib/listen/adapter.rb:254:in `call'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/vendor/listen/lib/listen/adapter.rb:254:in `report_changes'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/vendor/listen/lib/listen/adapter.rb:323:in `poll_changed_directories'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
-*/
 body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: File to import not found or unreadable: neat/grid-settings.\A         on line 8 of styles.scss\A \A 3: @import \"bourbon/bourbon\";\A 4: $visual-grid: true;\A 5: $visual-grid-color: red;\A 6: $visual-grid-index: front;\A 7: $visual-grid-opacity: 0.4;\A 8: @import \"neat/grid-settings\";\A 9: @import \"neat/neat\";\A 10: \A 11: body {\A 12:   font-family: Arial, sans-serif;\A 13:   font-size: 14px; }"; }
+  background-image: -webkit-linear-gradient(left, transparent 0, red 0, red 9.71185%, transparent 9.71185%, transparent 10.03202%, red 10.03202%, red 19.74386%, transparent 19.74386%, transparent 20.06403%, red 20.06403%, red 29.77588%, transparent 29.77588%, transparent 30.09605%, red 30.09605%, red 39.8079%, transparent 39.8079%, transparent 40.12807%, red 40.12807%, red 49.83991%, transparent 49.83991%, transparent 50.16009%, red 50.16009%, red 59.87193%, transparent 59.87193%, transparent 60.1921%, red 60.1921%, red 69.90395%, transparent 69.90395%, transparent 70.22412%, red 70.22412%, red 79.93597%, transparent 79.93597%, transparent 80.25614%, red 80.25614%, red 89.96798%, transparent 89.96798%, transparent 90.28815%, red 90.28815%, red 100%, transparent 100%);
+  background-image: -moz-linear-gradient(left, transparent 0, red 0, red 9.71185%, transparent 9.71185%, transparent 10.03202%, red 10.03202%, red 19.74386%, transparent 19.74386%, transparent 20.06403%, red 20.06403%, red 29.77588%, transparent 29.77588%, transparent 30.09605%, red 30.09605%, red 39.8079%, transparent 39.8079%, transparent 40.12807%, red 40.12807%, red 49.83991%, transparent 49.83991%, transparent 50.16009%, red 50.16009%, red 59.87193%, transparent 59.87193%, transparent 60.1921%, red 60.1921%, red 69.90395%, transparent 69.90395%, transparent 70.22412%, red 70.22412%, red 79.93597%, transparent 79.93597%, transparent 80.25614%, red 80.25614%, red 89.96798%, transparent 89.96798%, transparent 90.28815%, red 90.28815%, red 100%, transparent 100%);
+  background-image: -ms-linear-gradient(left, transparent 0, red 0, red 9.71185%, transparent 9.71185%, transparent 10.03202%, red 10.03202%, red 19.74386%, transparent 19.74386%, transparent 20.06403%, red 20.06403%, red 29.77588%, transparent 29.77588%, transparent 30.09605%, red 30.09605%, red 39.8079%, transparent 39.8079%, transparent 40.12807%, red 40.12807%, red 49.83991%, transparent 49.83991%, transparent 50.16009%, red 50.16009%, red 59.87193%, transparent 59.87193%, transparent 60.1921%, red 60.1921%, red 69.90395%, transparent 69.90395%, transparent 70.22412%, red 70.22412%, red 79.93597%, transparent 79.93597%, transparent 80.25614%, red 80.25614%, red 89.96798%, transparent 89.96798%, transparent 90.28815%, red 90.28815%, red 100%, transparent 100%);
+  background-image: -o-linear-gradient(left, transparent 0, red 0, red 9.71185%, transparent 9.71185%, transparent 10.03202%, red 10.03202%, red 19.74386%, transparent 19.74386%, transparent 20.06403%, red 20.06403%, red 29.77588%, transparent 29.77588%, transparent 30.09605%, red 30.09605%, red 39.8079%, transparent 39.8079%, transparent 40.12807%, red 40.12807%, red 49.83991%, transparent 49.83991%, transparent 50.16009%, red 50.16009%, red 59.87193%, transparent 59.87193%, transparent 60.1921%, red 60.1921%, red 69.90395%, transparent 69.90395%, transparent 70.22412%, red 70.22412%, red 79.93597%, transparent 79.93597%, transparent 80.25614%, red 80.25614%, red 89.96798%, transparent 89.96798%, transparent 90.28815%, red 90.28815%, red 100%, transparent 100%);
+  background-image: linear-gradient(to left, transparent 0, red 0, red 9.71185%, transparent 9.71185%, transparent 10.03202%, red 10.03202%, red 19.74386%, transparent 19.74386%, transparent 20.06403%, red 20.06403%, red 29.77588%, transparent 29.77588%, transparent 30.09605%, red 30.09605%, red 39.8079%, transparent 39.8079%, transparent 40.12807%, red 40.12807%, red 49.83991%, transparent 49.83991%, transparent 50.16009%, red 50.16009%, red 59.87193%, transparent 59.87193%, transparent 60.1921%, red 60.1921%, red 69.90395%, transparent 69.90395%, transparent 70.22412%, red 70.22412%, red 79.93597%, transparent 79.93597%, transparent 80.25614%, red 80.25614%, red 89.96798%, transparent 89.96798%, transparent 90.28815%, red 90.28815%, red 100%, transparent 100%);
+  content: "";
+  display: inline-block;
+  height: 100%;
+  left: 0;
+  margin: 0 auto;
+  max-width: 1366px;
+  opacity: 0.4;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  width: 100%;
+  z-index: 9999; }
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 14px; }
+
+h1, h2 {
+  font-size: 14px;
+  margin-bottom: 10px; }
+
+p {
+  line-height: 1.1em;
+  margin-bottom: 10px; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+#mybutton {
+  border: 1px solid #076fe4;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 0 0 #8ebcf1;
+  color: white;
+  display: inline-block;
+  font-size: inherit;
+  font-weight: bold;
+  background-color: #4294f0;
+  background-image: -webkit-linear-gradient(#4294f0, #0776f3);
+  background-image: linear-gradient(#4294f0, #0776f3);
+  padding: 7px 18px;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #0065d6;
+  background-clip: padding-box;
+  outline: 0; }
+  #mybutton:hover:not(:disabled) {
+    background-color: #2f87ea;
+    background-image: -webkit-linear-gradient(#2f87ea, #086fe3);
+    background-image: linear-gradient(#2f87ea, #086fe3);
+    box-shadow: inset 0 1px 0 0 #60a2ec;
+    cursor: pointer; }
+  #mybutton:active:not(:disabled), #mybutton:focus:not(:disabled) {
+    border: 1px solid #076fe4;
+    box-shadow: inset 0 0 8px 4px #0868d3, inset 0 0 8px 4px #0868d3; }
+  #mybutton:disabled {
+    cursor: not-allowed;
+    opacity: 0.5; }
+
+.element {
+  min-height: 100px;
+  padding: 15px;
+  background-color: red;
+  background-image: -webkit-linear-gradient(bottom, red, orange);
+  background-image: linear-gradient(to top,red, orange); }
+  .element h1 {
+    font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    font-size: 22.652px;
+    -moz-text-decoration: underline double #7cd5e0; }
+
+.container {
+  max-width: 1366px;
+  margin-left: auto;
+  margin-right: auto; }
+  .container::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.row {
+  display: block;
+  margin: 0 0 15px 0; }
+  .row::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+#full-bg-image {
+  background-color: red;
+  background-image: -webkit-linear-gradient(bottom, red, yellow);
+  background-image: linear-gradient(to top,red, yellow);
+  height: auto; }
+
+.element-1 {
+  float: left;
+  display: block;
+  margin-right: 0.26667%;
+  width: 33.15556%; }
+  .element-1:last-child {
+    margin-right: 0; }
+
+.element-2 {
+  float: left;
+  display: block;
+  margin-right: 0.26667%;
+  width: 33.15556%; }
+  .element-2:last-child {
+    margin-right: 0; }
+
+.element-3 {
+  float: left;
+  display: block;
+  margin-right: 0.26667%;
+  width: 33.15556%; }
+  .element-3:last-child {
+    margin-right: 0; }
+
+.element-4 {
+  float: left;
+  display: block;
+  margin-right: 0.26667%;
+  width: 49.86667%; }
+  .element-4:last-child {
+    margin-right: 0; }
+
+.element-5 {
+  float: left;
+  display: block;
+  margin-right: 0.26667%;
+  width: 49.86667%; }
+  .element-5:last-child {
+    margin-right: 0; }
+
+.element-6 {
+  float: left;
+  display: block;
+  margin-right: 0.26667%;
+  width: 24.8%; }
+  .element-6:last-child {
+    margin-right: 0; }
+
+.element-7 {
+  float: left;
+  display: block;
+  margin-right: 0.26667%;
+  width: 74.93333%; }
+  .element-7:last-child {
+    margin-right: 0; }
+
+.element-8 {
+  float: left;
+  display: block;
+  margin-right: 0.26667%;
+  width: 100%; }
+  .element-8:last-child {
+    margin-right: 0; }
+
+@media screen and (max-width: 640px) {
+  .element-1,
+  .element-2,
+  .element-3 {
+    float: left;
+    display: block;
+    margin-right: 0.26667%;
+    width: 100%; }
+    .element-1:last-child,
+    .element-2:last-child,
+    .element-3:last-child {
+      margin-right: 0; } }
+
+@media screen and (max-width: 640px) {
+  .element {
+    float: left;
+    display: block;
+    margin-right: 0.26667%;
+    width: 100%;
+    background-color: red;
+    background-image: -webkit-linear-gradient(bottom, red, pink);
+    background-image: linear-gradient(to top,red, pink); }
+    .element:last-child {
+      margin-right: 0; } }
+
+/*# sourceMappingURL=styles.css.map */
