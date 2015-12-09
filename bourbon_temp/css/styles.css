@@ -192,26 +192,19 @@ p {
   .container {
     margin: 0 40px; } }
 
+@media screen and (max-width: 867px) {
+  .container {
+    margin: 0 15px; } }
+
+@media screen and (max-width: 867px) {
+  .element {
+    background-color: blue;
+    background-image: -webkit-linear-gradient(bottom, blue, purple);
+    background-image: linear-gradient(to top,blue, purple); } }
+
 @media screen and (max-width: 667px) {
   .container {
-    margin: 0 10px; } }
-
-@media screen and (max-width: 667px) {
-  .element-1,
-  .element-2,
-  .element-3 {
-    float: left;
-    display: block;
-    margin-right: 1.20482%;
-    width: 100%; }
-    .element-1:last-child,
-    .element-2:last-child,
-    .element-3:last-child {
-      margin-right: 0; } }
-
-@media screen and (max-width: 667px) {
-  .element-8 {
-    margin-left: 0%; } }
+    margin: 0 5px; } }
 
 .row {
   margin: 0; }
@@ -229,5 +222,22 @@ p {
       background-image: linear-gradient(to top,red, pink); }
       .element:last-child {
         margin-right: 0; } }
+
+@media screen and (max-width: 667px) {
+  .element-1,
+  .element-2,
+  .element-3 {
+    float: left;
+    display: block;
+    margin-right: 1.20482%;
+    width: 32.53012%; }
+    .element-1:last-child,
+    .element-2:last-child,
+    .element-3:last-child {
+      margin-right: 0; } }
+
+@media screen and (max-width: 667px) {
+  .element-8 {
+    margin-left: 0%; } }
 
 /*# sourceMappingURL=styles.css.map */
