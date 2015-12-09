@@ -5,66 +5,47 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
-body:before {
-  background-image: -webkit-linear-gradient(left, transparent 0, red 0, red 9.71185%, transparent 9.71185%, transparent 10.03202%, red 10.03202%, red 19.74386%, transparent 19.74386%, transparent 20.06403%, red 20.06403%, red 29.77588%, transparent 29.77588%, transparent 30.09605%, red 30.09605%, red 39.8079%, transparent 39.8079%, transparent 40.12807%, red 40.12807%, red 49.83991%, transparent 49.83991%, transparent 50.16009%, red 50.16009%, red 59.87193%, transparent 59.87193%, transparent 60.1921%, red 60.1921%, red 69.90395%, transparent 69.90395%, transparent 70.22412%, red 70.22412%, red 79.93597%, transparent 79.93597%, transparent 80.25614%, red 80.25614%, red 89.96798%, transparent 89.96798%, transparent 90.28815%, red 90.28815%, red 100%, transparent 100%);
-  background-image: -moz-linear-gradient(left, transparent 0, red 0, red 9.71185%, transparent 9.71185%, transparent 10.03202%, red 10.03202%, red 19.74386%, transparent 19.74386%, transparent 20.06403%, red 20.06403%, red 29.77588%, transparent 29.77588%, transparent 30.09605%, red 30.09605%, red 39.8079%, transparent 39.8079%, transparent 40.12807%, red 40.12807%, red 49.83991%, transparent 49.83991%, transparent 50.16009%, red 50.16009%, red 59.87193%, transparent 59.87193%, transparent 60.1921%, red 60.1921%, red 69.90395%, transparent 69.90395%, transparent 70.22412%, red 70.22412%, red 79.93597%, transparent 79.93597%, transparent 80.25614%, red 80.25614%, red 89.96798%, transparent 89.96798%, transparent 90.28815%, red 90.28815%, red 100%, transparent 100%);
-  background-image: -ms-linear-gradient(left, transparent 0, red 0, red 9.71185%, transparent 9.71185%, transparent 10.03202%, red 10.03202%, red 19.74386%, transparent 19.74386%, transparent 20.06403%, red 20.06403%, red 29.77588%, transparent 29.77588%, transparent 30.09605%, red 30.09605%, red 39.8079%, transparent 39.8079%, transparent 40.12807%, red 40.12807%, red 49.83991%, transparent 49.83991%, transparent 50.16009%, red 50.16009%, red 59.87193%, transparent 59.87193%, transparent 60.1921%, red 60.1921%, red 69.90395%, transparent 69.90395%, transparent 70.22412%, red 70.22412%, red 79.93597%, transparent 79.93597%, transparent 80.25614%, red 80.25614%, red 89.96798%, transparent 89.96798%, transparent 90.28815%, red 90.28815%, red 100%, transparent 100%);
-  background-image: -o-linear-gradient(left, transparent 0, red 0, red 9.71185%, transparent 9.71185%, transparent 10.03202%, red 10.03202%, red 19.74386%, transparent 19.74386%, transparent 20.06403%, red 20.06403%, red 29.77588%, transparent 29.77588%, transparent 30.09605%, red 30.09605%, red 39.8079%, transparent 39.8079%, transparent 40.12807%, red 40.12807%, red 49.83991%, transparent 49.83991%, transparent 50.16009%, red 50.16009%, red 59.87193%, transparent 59.87193%, transparent 60.1921%, red 60.1921%, red 69.90395%, transparent 69.90395%, transparent 70.22412%, red 70.22412%, red 79.93597%, transparent 79.93597%, transparent 80.25614%, red 80.25614%, red 89.96798%, transparent 89.96798%, transparent 90.28815%, red 90.28815%, red 100%, transparent 100%);
-  background-image: linear-gradient(to left, transparent 0, red 0, red 9.71185%, transparent 9.71185%, transparent 10.03202%, red 10.03202%, red 19.74386%, transparent 19.74386%, transparent 20.06403%, red 20.06403%, red 29.77588%, transparent 29.77588%, transparent 30.09605%, red 30.09605%, red 39.8079%, transparent 39.8079%, transparent 40.12807%, red 40.12807%, red 49.83991%, transparent 49.83991%, transparent 50.16009%, red 50.16009%, red 59.87193%, transparent 59.87193%, transparent 60.1921%, red 60.1921%, red 69.90395%, transparent 69.90395%, transparent 70.22412%, red 70.22412%, red 79.93597%, transparent 79.93597%, transparent 80.25614%, red 80.25614%, red 89.96798%, transparent 89.96798%, transparent 90.28815%, red 90.28815%, red 100%, transparent 100%);
-  content: "";
-  display: inline-block;
-  height: 100%;
-  left: 0;
-  margin: 0 auto;
-  max-width: 1366px;
-  opacity: 0.4;
-  pointer-events: none;
-  position: fixed;
-  right: 0;
-  width: 100%;
-  z-index: 9999; }
+* {
+  margin: 0;
+  padding: 0; }
 
 body {
   font-family: Arial, sans-serif;
-  font-size: 14px; }
+  font-size: 0.875rem; }
 
 h1, h2 {
-  font-size: 14px;
+  font-size: 1.5rem;
   margin-bottom: 10px; }
 
 p {
   line-height: 1.1em;
   margin-bottom: 10px; }
 
-* {
-  margin: 0;
-  padding: 0; }
-
 #mybutton {
-  border: 1px solid #076fe4;
+  border: 1px solid #b80000;
   border-radius: 3px;
-  box-shadow: inset 0 1px 0 0 #8ebcf1;
+  box-shadow: inset 0 1px 0 0 #f85454;
   color: white;
   display: inline-block;
   font-size: inherit;
   font-weight: bold;
-  background-color: #4294f0;
-  background-image: -webkit-linear-gradient(#4294f0, #0776f3);
-  background-image: linear-gradient(#4294f0, #0776f3);
+  background-color: red;
+  background-image: -webkit-linear-gradient(red, #c70000);
+  background-image: linear-gradient(red, #c70000);
   padding: 7px 18px;
   text-decoration: none;
-  text-shadow: 0 1px 0 #0065d6;
+  text-shadow: 0 1px 0 #a30000;
   background-clip: padding-box;
   outline: 0; }
   #mybutton:hover:not(:disabled) {
-    background-color: #2f87ea;
-    background-image: -webkit-linear-gradient(#2f87ea, #086fe3);
-    background-image: linear-gradient(#2f87ea, #086fe3);
-    box-shadow: inset 0 1px 0 0 #60a2ec;
+    background-color: #e10505;
+    background-image: -webkit-linear-gradient(#e10505, #b80000);
+    background-image: linear-gradient(#e10505, #b80000);
+    box-shadow: inset 0 1px 0 0 #f72222;
     cursor: pointer; }
   #mybutton:active:not(:disabled), #mybutton:focus:not(:disabled) {
-    border: 1px solid #076fe4;
-    box-shadow: inset 0 0 8px 4px #0868d3, inset 0 0 8px 4px #0868d3; }
+    border: 1px solid #b80000;
+    box-shadow: inset 0 0 8px 4px #a80000, inset 0 0 8px 4px #a80000; }
   #mybutton:disabled {
     cursor: not-allowed;
     opacity: 0.5; }
@@ -77,11 +58,10 @@ p {
   background-image: linear-gradient(to top,red, orange); }
   .element h1 {
     font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-    font-size: 22.652px;
     -moz-text-decoration: underline double #7cd5e0; }
 
 .container {
-  max-width: 1366px;
+  max-width: 1024px;
   margin-left: auto;
   margin-right: auto; }
   .container::after {
@@ -100,96 +80,154 @@ p {
 #full-bg-image {
   background-color: red;
   background-image: -webkit-linear-gradient(bottom, red, yellow);
-  background-image: linear-gradient(to top,red, yellow);
-  height: auto; }
+  background-image: linear-gradient(to top,red, yellow); }
+
+#half-bg-image {
+  min-height: 450px; }
 
 .element-1 {
   float: left;
   display: block;
-  margin-right: 0.26667%;
-  width: 33.15556%; }
+  margin-right: 1.20482%;
+  width: 32.53012%; }
   .element-1:last-child {
     margin-right: 0; }
 
 .element-2 {
   float: left;
   display: block;
-  margin-right: 0.26667%;
-  width: 33.15556%; }
+  margin-right: 1.20482%;
+  width: 32.53012%; }
   .element-2:last-child {
     margin-right: 0; }
 
 .element-3 {
   float: left;
   display: block;
-  margin-right: 0.26667%;
-  width: 33.15556%; }
+  margin-right: 1.20482%;
+  width: 32.53012%; }
   .element-3:last-child {
     margin-right: 0; }
 
 .element-4 {
   float: left;
   display: block;
-  margin-right: 0.26667%;
-  width: 49.86667%; }
+  margin-right: 1.20482%;
+  width: 49.39759%; }
   .element-4:last-child {
     margin-right: 0; }
 
 .element-5 {
   float: left;
   display: block;
-  margin-right: 0.26667%;
-  width: 49.86667%; }
+  margin-right: 1.20482%;
+  width: 49.39759%; }
   .element-5:last-child {
     margin-right: 0; }
 
 .element-6 {
   float: left;
   display: block;
-  margin-right: 0.26667%;
-  width: 24.8%; }
+  margin-right: 1.20482%;
+  width: 24.09639%; }
   .element-6:last-child {
     margin-right: 0; }
 
 .element-7 {
   float: left;
   display: block;
-  margin-right: 0.26667%;
-  width: 74.93333%; }
+  margin-right: 1.20482%;
+  width: 74.6988%; }
   .element-7:last-child {
     margin-right: 0; }
 
 .element-8 {
   float: left;
   display: block;
-  margin-right: 0.26667%;
-  width: 100%; }
+  margin-right: 1.20482%;
+  width: 32.53012%;
+  margin-left: 67.46988%; }
   .element-8:last-child {
     margin-right: 0; }
 
-@media screen and (max-width: 640px) {
+.element-9 {
+  float: left;
+  display: block;
+  margin-right: 1.20482%;
+  width: 100%; }
+  .element-9:last-child {
+    margin-right: 0; }
+
+.element-10 {
+  float: left;
+  display: block;
+  width: 50.60241%;
+  min-height: 450px;
+  position: relative;
+  z-index: 1; }
+  .element-10:last-child {
+    width: 49.39759%; }
+
+.bg-color-filler {
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  width: 50%;
+  min-height: 450px;
+  background-color: red;
+  background-image: -webkit-linear-gradient(bottom, red, yellow);
+  background-image: linear-gradient(to top,red, yellow); }
+
+.element-11 {
+  width: 50%;
+  min-height: 450px;
+  position: absolute;
+  right: 0;
+  background: url(../images/android-phone.jpg) no-repeat center center;
+  background-size: cover; }
+  .element-11 h1, .element-11 p, .element-11 button {
+    display: none !important; }
+
+@media screen and (max-width: 1030px) {
+  .container {
+    margin: 0 40px; } }
+
+@media screen and (max-width: 667px) {
+  .container {
+    margin: 0 10px; } }
+
+@media screen and (max-width: 667px) {
   .element-1,
   .element-2,
   .element-3 {
     float: left;
     display: block;
-    margin-right: 0.26667%;
+    margin-right: 1.20482%;
     width: 100%; }
     .element-1:last-child,
     .element-2:last-child,
     .element-3:last-child {
       margin-right: 0; } }
 
-@media screen and (max-width: 640px) {
-  .element {
-    float: left;
-    display: block;
-    margin-right: 0.26667%;
-    width: 100%;
-    background-color: red;
-    background-image: -webkit-linear-gradient(bottom, red, pink);
-    background-image: linear-gradient(to top,red, pink); }
-    .element:last-child {
-      margin-right: 0; } }
+@media screen and (max-width: 667px) {
+  .element-8 {
+    margin-left: 0%; } }
+
+.row {
+  margin: 0; }
+
+.element {
+  margin-bottom: 15px; }
+  @media screen and (max-width: 667px) {
+    .element {
+      float: left;
+      display: block;
+      margin-right: 1.20482%;
+      width: 100%;
+      background-color: red;
+      background-image: -webkit-linear-gradient(bottom, red, pink);
+      background-image: linear-gradient(to top,red, pink); }
+      .element:last-child {
+        margin-right: 0; } }
 
 /*# sourceMappingURL=styles.css.map */
