@@ -1,0 +1,17 @@
+@import "neat-helpers";
+// Override the grid
+$column: 90px;
+$gutter: 15px;
+$grid-columns: 12;
+$max-width: 1024px;
+
+// Define your breakpoints
+$desktop-med: new-breakpoint(max-width 1030px);
+$desktop-sml: new-breakpoint(max-width 867px);
+$tablet: new-breakpoint(max-width 768px);
+$mobile: new-breakpoint(max-width 667px);
+
+$visual-grid: false;
+$visual-grid-color: red;
+$visual-grid-index: front;
+$visual-grid-opacity: 0.3;
