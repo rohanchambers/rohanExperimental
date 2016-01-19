@@ -25,7 +25,7 @@ p {
 }
 
 #mybutton {   
-    @include button(red);
+    @include button(orange);
     outline: 0;
 }
 
