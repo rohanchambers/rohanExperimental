@@ -10,24 +10,36 @@ body {
     font-size: rem(14); 
 }
 
+// VARIABLES
+$color-red: #e20510;
+$color-white: #FFF;
+$color-text: #404040;
+
 // TYPOGRAPHY
-h1, h2 {
-    // font-size: rem(24); 
-    margin-bottom: 10px;
+h1 {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-weight: 400;
+    color: $color-red;
 }
 
 p {
-
+    font-size: rem(15);
+    color: $color-text;
 }
 
 a {
 
 }
 
-// VARIABLES
-$color-red: #e20510;
-$color-white: #FFF;
-$color-text: #404040;
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 30px 0 40px 0;
+    padding: 0; 
+}
+
 
 // COMMON STYLES
 .nav-btn {
@@ -59,14 +71,6 @@ $color-text: #404040;
     background: url(../img/global/sectionDividerFull.png) center top no-repeat;
 }
 
-
-// HEADER NAVIGATION
-header, section, footer {
-    width: 960px;
-    margin: 0 auto;
-    clear: both;
-
-}
 
 header#header {
     position: relative;
@@ -163,10 +167,10 @@ header#header {
     width: 100%;
     height: 470px;
 
-    .slides {
+    .slide {
         margin: 0 auto;
         
-        .article-container {
+        .slide-content {
             width: 960px;
             margin: 0 auto;
         }
@@ -179,7 +183,7 @@ header#header {
             text-align: right;
             font-family: 'Open Sans', sans-serif;
 
-                h2 {
+                h1 {
                     margin: 0;
                     color: $color-white;
                     text-transform: uppercase;                    
@@ -249,34 +253,9 @@ header#header {
 
 
 
-#services {
-    margin-top: 450px;
-}
-
-
-
-
-
-
 
 
 // NEAT LAYOUT
-#mybutton {   
-    @include button(orange);
-    outline: 0;
-}
-
-.element {
-    min-height: 100px;
-    @include pad(15px);
-    @include linear-gradient(to top, red, orange);
-
-    h1 {
-        font-family: $helvetica;
-        // font-size: golden-ratio(14px, 1);
-        @include text-decoration(underline double rgb(124,213,224));
-    }
-}
 
 // Grid layout
 .container {
@@ -284,14 +263,123 @@ header#header {
 }
     // Define rows
     .row {
-        //background: purple;
         @include row( $display: default, $direction: LTR);
-        margin: 0 0 15px 0;
+        margin: 0;
     }
 
-    #full-bg-image {
-        @include linear-gradient(to top, red, yellow);
+
+// Services
+#services {
+    margin-top: 380px;
+    @include clearfix;
+
+    .row.row-products {
+        margin-bottom: 50px;
     }
+}
+    
+    .intro {
+        @include span-columns(12 of 12);        
+        text-align: center; 
+
+
+            h1 {
+                position: relative;
+                font-size: rem(36);
+                text-transform: uppercase;
+                
+                span {
+                    display: block;
+                    margin: 0 auto;
+                    width: 130px;
+                    height: 10px;
+                    border-top: 2px solid $color-red;
+                }
+            }
+
+            p {
+                width: 60%;
+                margin: 0 auto;
+            }
+    }
+
+    #mouse-scroll {
+        display: block;
+        margin: 20px auto 15px auto;
+        width: 25px;
+        height: 72px;
+        background-image: url(../img/global/iconMouseDown.png);
+        clear: both;
+    }
+
+    .repair {
+        @include span-columns(4 of 12);
+        text-align: center; 
+            
+            h1 {
+                font-size: rem(19);
+            }
+
+            p {
+                font-size: rem(12);
+                width: 70%;
+                margin: 0 auto;            
+            }
+
+            span {
+                display: block;
+                margin: 0 auto;
+                height: 124px;
+                @include hide-text;                
+            }            
+    }
+
+    #iphone-repair span {
+        width: 85px;
+        background: url(../img/repair/repair_iphone.png) no-repeat bottom center;
+    }
+
+    #ipad-repair span {
+        width: 123px;
+        background: url(../img/repair/repair_ipad.png) no-repeat bottom center;
+    }
+
+    #ipod-repair span {
+        width: 100px;
+        background: url(../img/repair/repair_ipod.png) no-repeat bottom center;
+    }
+
+    #android-repair span {
+        width: 125px;
+        background: url(../img/repair/repair_android.png) no-repeat bottom center;
+    }
+
+    #laptop-repair span {
+        width: 220px;
+        background: url(../img/repair/repair_laptop.png) no-repeat bottom center;
+    }
+
+    #unlocks-repair span {
+        width: 60px;
+        background: url(../img/repair/repair_unlocks.png) no-repeat bottom center;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     #half-bg-image {
         min-height: 450px;
@@ -310,7 +398,7 @@ header#header {
         @include span-columns(4 of 12);
     }    
 
-    // Row 2: Pass 'collapse' as an argument after '6 of 12' to get rid of gutters on selected elements
+    // Row 2: Pass 'block-collapse' as an argument after '6 of 12' to get rid of gutters on selected elements
     .element-4 {
         @include span-columns(6 of 12);
     }
@@ -334,14 +422,11 @@ header#header {
         @include shift(8);
     }
     
-    // Row 9
-    .element-9 {
-      @include span-columns(12 of 12);
-    }
+
 
     // Row 10
     .element-10 {
-        @include span-columns(6 of 12, collapse);
+        @include span-columns(6 of 12, block-collapse);
         min-height: 450px;
         position: relative;
         z-index: 1;
@@ -395,9 +480,9 @@ header#header {
         }
     }
 
-    .row {
-        margin: 0;
-    }
+    // .row {
+    //     margin: 0;
+    // }
 
     .element {
         @include media($mobile) {
@@ -420,4 +505,21 @@ header#header {
             @include shift(0);
         }
     }
-    
+
+
+  #mybutton {   
+    //@include button(orange);
+    outline: 0;
+}
+
+.element {
+    min-height: 100px;
+    @include pad(15px);
+    @include linear-gradient(to top, red, orange);
+
+    h1 {
+        font-family: $helvetica;
+        // font-size: golden-ratio(14px, 1);
+        @include text-decoration(underline double rgb(124,213,224));
+    }
+}  

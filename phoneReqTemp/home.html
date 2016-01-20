@@ -20,39 +20,43 @@
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 
-<header id="header">
-    <div id="logo"><a href="#">Phone Resq</a></div>
-    <nav id="nav-main" class="nav-global">
-        <ul>
-            <li><a href="#">Services<i class="fa fa-caret-down fa-lg"></i></a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Sell your device</a></li>
-            <li><a href="#">Contact us</a></li>
-        </ul>
-    </nav>
-    <nav id="social-links" class="nav-global">
-        <ul>
-            <li><a href="#" title="Facebook share"><i class="fa fa-facebook fa-lg"></i></a></li>
-            <li><a href="#" title="Twitter share"><i class="fa fa-twitter fa-lg"></i></a></li>
-            <li><a href="#" title="Instagram share"><i class="fa fa-instagram fa-lg"></i></a></li>
-            <li><a href="#" title="RSS share"><i class="fa fa-rss fa-lg"></i></a></li>
-        </ul>
-    </nav>
-    <nav id="nav-cta" class="nav-global">
-        <li><a href="#" class="btn-global"><i class="fa fa-wrench fa-lg"></i>Request repair</a></li>
-        <li><a href="#" class="btn-global"><i class="fa fa-phone fa-lg"></i>(904) 310-0059</a></li>
-    </nav>
-</header>
+<div class="container">
+    <header id="header">
+        <div id="logo"><a href="#">Phone Resq</a></div>
+        <nav id="nav-main" class="nav-global">
+            <ul>
+                <li><a href="#">Services<i class="fa fa-caret-down fa-lg"></i></a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Sell your device</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </nav>
+        <nav id="social-links" class="nav-global">
+            <ul>
+                <li><a href="#" title="Facebook share"><i class="fa fa-facebook fa-lg"></i></a></li>
+                <li><a href="#" title="Twitter share"><i class="fa fa-twitter fa-lg"></i></a></li>
+                <li><a href="#" title="Instagram share"><i class="fa fa-instagram fa-lg"></i></a></li>
+                <li><a href="#" title="RSS share"><i class="fa fa-rss fa-lg"></i></a></li>
+            </ul>
+        </nav>
+        <nav id="nav-cta" class="nav-global">
+            <li><a href="#" class="btn-global"><i class="fa fa-wrench fa-lg"></i>Request repair</a></li>
+            <li><a href="#" class="btn-global"><i class="fa fa-phone fa-lg"></i>(904) 310-0059</a></li>
+        </nav>
+    </header><!-- End of Header -->
+</div>
 
 <!-- CAROUSEL -->
 <section id="carousel">
     <div id="viewport">
-        <div class="slides" id="slide-1">
-            <div class="article-container">
+        <div class="slide" id="slide-1">
+            <div class="slide-content">
                 <article>
-                    <h2>Welcome to Phone ResQ.</h2>
-                    <p>We repair and improve all of your handheld devices and home computers. Our hassle-free customer service is centered around your interests and the intention of getting you back online.</p>
-                    <a href="#">Contact us</a>
+                    <header>
+                        <h1>Welcome to Phone ResQ.</h1>
+                        <p>We repair and improve all of your handheld devices and home computers. Our hassle-free customer service is centered around your interests and the intention of getting you back online.</p>
+                        <a href="#">Contact us</a>
+                    </header>
                 </article>
             </div>
         </div>
@@ -60,14 +64,73 @@
         <div id="carousel-btn">
             <a href="#" id="btn-prev" class="btn-slide"><i class="fa fa-chevron-left fa-3x"></i></a>
             <a href="#" id="btn-nxt" class="btn-slide"><i class="fa fa-chevron-right fa-3x"></i></a>
-        </div>        
+        </div>
     </div>
 
     <div class="section-divider"></div>
-</section>
+</section><!-- End of Carousel section-->
 
+<section id="services">
+    <div class="container">
+        <div class="row">
+            <article class="intro">
+                <h1>Services<span></span></h1>
+                <p>We’re here to serve you with all of your device-related needs. Whether your screen is cracked or you’re looking for assistance setting up a program on your computer, we’ve got you covered.</p>
+                <span id="mouse-scroll"></span>
+                <hr />
+            </article>        
+        </div><!-- End of row -->
+        
+        <!-- Repair cateogories -->
+        <div class="row row-products">
+            <article id="iphone-repair" class="repair">
+                <header>
+                    <span>iPhone repair</span>
+                    <h1>iPhone repair</h1>
+                    <p>Whether you have the original iPhone or the latest model, we can take a look at your device and figure out what steps need to be made to get you back on the grid.</p>
+                </header>
+            </article>
+            <article id="ipad-repair" class="repair">
+                <header>
+                    <span>iPad repair</span>
+                    <h1>iPad repair</h1>
+                    <p>If you don’t have the time to make an appointment and have your tablet sent away to a third-party repair shop, consider our in-house services for all of your iPad needs.</p>
+                </header>
+            </article>
+            <article class="repair" id="ipod-repair" class="repair">
+                <header>
+                    <span>iPod repair</span>
+                    <h1>iPod Repair</h1>
+                    <p>So your iPod is busted and you need to get back to jamming out on your favorite tunes. We get it.</p>
+                </header>
+            </article>
+        </div><!-- End of row -->
 
-
+        <div class="row">
+            <article id="android-repair" class="repair">
+                <header>
+                    <span>Android repair</span>
+                    <h1>Android Repair</h1>
+                    <p>We’re not just about Apple here. We work on Android devices as well. All devices and models are covered in the hands of our knowledgeable staff.</p>
+                </header>
+            </article>
+            <article id="laptop-repair" class="repair">
+                <header>
+                    <span>Laptop &amp; Desktop Repair</span>
+                    <h1>Laptop &amp; Desktop Repair</h1>
+                    <p>Doesn’t it feel like when your computer isn’t working, that life slows down? Let us take a look and we’ll get you up and running again in no time.</p>
+                </header>
+            </article>
+            <article id="unlocks-repair" class="repair">
+                <header>
+                    <span>Cell Phone unlocks</span>
+                    <h1>Cell Phone unlocks</h1>
+                    <p>Interested in unlocking your phone? We’ve got the tools to safely and securely unlock almost any smartphone device.</p>
+                </header>
+            </article>
+        </div><!-- End of row -->
+    </div><!-- End of container -->
+</section><!-- End of Services Section -->
 
 
 
@@ -90,36 +153,7 @@
         <p>We’re here to serve you with all of your device-related needs. Whether your screen is cracked or you’re looking for assistance setting up a program on your computer, we’ve got you covered.</p>
     </hgroup>
 
-    <div id="mouse-scroll"></div>
 
-    <hr />
-
-    <div id="repair-type">
-        <article>
-            <h2>iPhone repair</h2>
-            <p>Whether you have the original iPhone or the latest model, we can take a look at your device and figure out what steps need to be made to get you back on the grid.</p>
-        </article>
-        <article>
-            <h2>iPad repair</h2>
-            <p>If you don’t have the time to make an appointment and have your tablet sent away to a third-party repair shop, consider our in-house services for all of your iPad needs.</p>
-        </article>
-        <article>
-            <h2>iPod Repair</h2>
-            <p>So your iPod is busted and you need to get back to jamming out on your favorite tunes. We get it.</p>
-        </article>
-        <article>
-            <h2>Android Repair</h2>
-            <p>We’re not just about Apple here. We work on Android devices as well. All devices and models are covered in the hands of our knowledgeable staff.</p>
-        </article>
-        <article>
-            <h2>Laptop &amp; Desktop Repair</h2>
-            <p>Doesn’t it feel like when your computer isn’t working, that life slows down? Let us take a look and we’ll get you up and running again in no time.</p>                       
-        </article>
-        <article>
-            <h2>Cell Phone unlocks</h2>
-            <p>Interested in unlocking your phone? We’ve got the tools to safely and securely unlock almost any smartphone device.</p>
-        </article>
-    </div>
 </section><!-- End of repair type -->
 
 <section id="about">

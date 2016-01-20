@@ -372,8 +372,22 @@ body {
   font-family: Verdana, Arial, sans-serif;
   font-size: 0.875rem; }
 
-h1, h2 {
-  margin-bottom: 10px; }
+h1 {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-weight: 400;
+  color: #e20510; }
+
+p {
+  font-size: 0.9375rem;
+  color: #404040; }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ddd;
+  margin: 30px 0 40px 0;
+  padding: 0; }
 
 .nav-btn, #nav-cta .btn-global {
   display: block;
@@ -399,11 +413,6 @@ h1, h2 {
   width: 100%;
   height: 25px;
   background: url(../img/global/sectionDividerFull.png) center top no-repeat; }
-
-header, section, footer {
-  width: 960px;
-  margin: 0 auto;
-  clear: both; }
 
 header#header {
   position: relative;
@@ -468,30 +477,30 @@ header#header {
   z-index: 0;
   width: 100%;
   height: 470px; }
-  #carousel .slides {
+  #carousel .slide {
     margin: 0 auto; }
-    #carousel .slides .article-container {
+    #carousel .slide .slide-content {
       width: 960px;
       margin: 0 auto; }
-    #carousel .slides article {
+    #carousel .slide article {
       float: right;
       margin-right: 130px;
       margin-top: 140px;
       width: 550px;
       text-align: right;
       font-family: 'Open Sans', sans-serif; }
-      #carousel .slides article h2 {
+      #carousel .slide article h1 {
         margin: 0;
         color: #FFF;
         text-transform: uppercase;
         font-size: 32px;
         font-weight: 600; }
-      #carousel .slides article p {
+      #carousel .slide article p {
         margin: 5px 0 40px 0;
         font-size: 22px;
         font-weight: 300;
         color: #FFF; }
-      #carousel .slides article a {
+      #carousel .slide article a {
         padding: 8px 25px;
         font-size: 22px;
         color: #FFF;
@@ -500,7 +509,7 @@ header#header {
         text-decoration: none;
         border-radius: 4px;
         border: 3px solid #FFF; }
-      #carousel .slides article a:hover {
+      #carousel .slide article a:hover {
         background-color: #e20510;
         border: 3px solid #e20510;
         border-radius: 5px; }
@@ -525,48 +534,6 @@ header#header {
     background: url(../img/carousel/slide-1.jpg);
     background-size: cover; }
 
-#services {
-  margin-top: 450px; }
-
-#mybutton {
-  border: 1px solid #b87700;
-  border-radius: 3px;
-  box-shadow: inset 0 1px 0 0 #f8be54;
-  color: #333333;
-  display: inline-block;
-  font-size: inherit;
-  font-weight: bold;
-  background-color: orange;
-  background-image: -webkit-linear-gradient(orange, #c78100);
-  background-image: linear-gradient(orange, #c78100);
-  padding: 7px 18px;
-  text-decoration: none;
-  text-shadow: 0 1px 0 #ffac14;
-  background-clip: padding-box;
-  outline: 0; }
-  #mybutton:hover:not(:disabled) {
-    background-color: #e19305;
-    background-image: -webkit-linear-gradient(#e19305, #b87700);
-    background-image: linear-gradient(#e19305, #b87700);
-    box-shadow: inset 0 1px 0 0 #f7ac22;
-    cursor: pointer; }
-  #mybutton:active:not(:disabled), #mybutton:focus:not(:disabled) {
-    border: 1px solid #b87700;
-    box-shadow: inset 0 0 8px 4px #a86d00, inset 0 0 8px 4px #a86d00; }
-  #mybutton:disabled {
-    cursor: not-allowed;
-    opacity: 0.5; }
-
-.element {
-  min-height: 100px;
-  padding: 15px;
-  background-color: red;
-  background-image: -webkit-linear-gradient(bottom, red, orange);
-  background-image: linear-gradient(to top,red, orange); }
-  .element h1 {
-    font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-    -moz-text-decoration: underline double #7cd5e0; }
-
 .container {
   max-width: 1024px;
   margin-left: auto;
@@ -578,16 +545,96 @@ header#header {
 
 .row {
   display: block;
-  margin: 0 0 15px 0; }
+  margin: 0; }
   .row::after {
     clear: both;
     content: "";
     display: table; }
 
-#full-bg-image {
-  background-color: red;
-  background-image: -webkit-linear-gradient(bottom, red, yellow);
-  background-image: linear-gradient(to top,red, yellow); }
+#services {
+  margin-top: 380px; }
+  #services::after {
+    clear: both;
+    content: "";
+    display: table; }
+  #services .row.row-products {
+    margin-bottom: 50px; }
+
+.intro {
+  float: left;
+  display: block;
+  margin-right: 1.20482%;
+  width: 100%;
+  text-align: center; }
+  .intro:last-child {
+    margin-right: 0; }
+  .intro h1 {
+    position: relative;
+    font-size: 2.25rem;
+    text-transform: uppercase; }
+    .intro h1 span {
+      display: block;
+      margin: 0 auto;
+      width: 130px;
+      height: 10px;
+      border-top: 2px solid #e20510; }
+  .intro p {
+    width: 60%;
+    margin: 0 auto; }
+
+#mouse-scroll {
+  display: block;
+  margin: 20px auto 15px auto;
+  width: 25px;
+  height: 72px;
+  background-image: url(../img/global/iconMouseDown.png);
+  clear: both; }
+
+.repair {
+  float: left;
+  display: block;
+  margin-right: 1.20482%;
+  width: 32.53012%;
+  text-align: center; }
+  .repair:last-child {
+    margin-right: 0; }
+  .repair h1 {
+    font-size: 1.1875rem; }
+  .repair p {
+    font-size: 0.75rem;
+    width: 70%;
+    margin: 0 auto; }
+  .repair span {
+    display: block;
+    margin: 0 auto;
+    height: 124px;
+    overflow: hidden;
+    text-indent: 101%;
+    white-space: nowrap; }
+
+#iphone-repair span {
+  width: 85px;
+  background: url(../img/repair/repair_iphone.png) no-repeat bottom center; }
+
+#ipad-repair span {
+  width: 123px;
+  background: url(../img/repair/repair_ipad.png) no-repeat bottom center; }
+
+#ipod-repair span {
+  width: 100px;
+  background: url(../img/repair/repair_ipod.png) no-repeat bottom center; }
+
+#android-repair span {
+  width: 125px;
+  background: url(../img/repair/repair_android.png) no-repeat bottom center; }
+
+#laptop-repair span {
+  width: 220px;
+  background: url(../img/repair/repair_laptop.png) no-repeat bottom center; }
+
+#unlocks-repair span {
+  width: 60px;
+  background: url(../img/repair/repair_unlocks.png) no-repeat bottom center; }
 
 #half-bg-image {
   min-height: 450px; }
@@ -657,14 +704,6 @@ header#header {
   .element-8:last-child {
     margin-right: 0; }
 
-.element-9 {
-  float: left;
-  display: block;
-  margin-right: 1.20482%;
-  width: 100%; }
-  .element-9:last-child {
-    margin-right: 0; }
-
 .element-10 {
   float: left;
   display: block;
@@ -713,9 +752,6 @@ header#header {
   .container {
     margin: 0 5px; } }
 
-.row {
-  margin: 0; }
-
 .element {
   margin-bottom: 15px; }
   @media screen and (max-width: 667px) {
@@ -746,5 +782,18 @@ header#header {
 @media screen and (max-width: 667px) {
   .element-8 {
     margin-left: 0%; } }
+
+#mybutton {
+  outline: 0; }
+
+.element {
+  min-height: 100px;
+  padding: 15px;
+  background-color: red;
+  background-image: -webkit-linear-gradient(bottom, red, orange);
+  background-image: linear-gradient(to top,red, orange); }
+  .element h1 {
+    font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    -moz-text-decoration: underline double #7cd5e0; }
 
 /*# sourceMappingURL=styles.css.map */
