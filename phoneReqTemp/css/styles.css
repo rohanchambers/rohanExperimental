@@ -379,7 +379,8 @@ h1 {
 
 p {
   font-size: 0.9375rem;
-  color: #404040; }
+  color: #404040;
+  line-height: 1.5; }
 
 hr {
   display: block;
@@ -599,9 +600,11 @@ header#header {
   .repair:last-child {
     margin-right: 0; }
   .repair h1 {
-    font-size: 1.1875rem; }
+    font-size: 1.1875rem;
+    margin-bottom: 5px; }
   .repair p {
-    font-size: 0.75rem;
+    font-size: 0.8125rem;
+    line-height: 1.3;
     width: 70%;
     margin: 0 auto; }
   .repair span {
@@ -636,8 +639,76 @@ header#header {
   width: 60px;
   background: url(../img/repair/repair_unlocks.png) no-repeat bottom center; }
 
-#half-bg-image {
+#about .container {
   min-height: 450px; }
+  #about .container article {
+    float: right;
+    width: 80%;
+    margin-right: 13%;
+    padding: 30px 0 0 0; }
+    #about .container article h1, #about .container article p {
+      color: #FFF; }
+    #about .container article h1 {
+      font-size: 1.1875rem;
+      font-weight: 600; }
+    #about .container article p {
+      font-size: 0.875rem;
+      line-height: 1.7;
+      margin-bottom: 20px; }
+  #about .container article.left {
+    float: left;
+    margin-left: 13%; }
+
+.bg-color {
+  position: absolute;
+  z-index: 0;
+  width: 50%;
+  min-height: 450px;
+  background-color: #475573; }
+
+.bg-color-left {
+  left: 0; }
+
+.bg-color-right {
+  right: 0; }
+
+.about-rows {
+  float: left;
+  display: block;
+  width: 50.60241%;
+  min-height: 450px;
+  position: relative;
+  z-index: 1; }
+  .about-rows:last-child {
+    width: 49.39759%; }
+
+#about-row-one,
+#about-row-three {
+  float: left; }
+
+#about-row-two {
+  float: right; }
+
+.about-row-img {
+  width: 50%;
+  min-height: 450px;
+  position: absolute;
+  right: 0; }
+
+#about-row-one-img {
+  right: 0;
+  background: #475573 url(../img/about/bg-section-one.jpg) no-repeat center center;
+  background-size: cover; }
+
+#about-row-two-img {
+  left: 0;
+  background: #475573 url(../img/about/bg-section-one.jpg) no-repeat center center;
+  background-size: cover; }
+
+#about-row-three-img {
+  right: 0;
+  background: #475573 url(../img/about/bg-section-one.jpg) no-repeat center center;
+  background-size: cover; }
 
 .element-1 {
   float: left;
@@ -703,36 +774,6 @@ header#header {
   margin-left: 67.46988%; }
   .element-8:last-child {
     margin-right: 0; }
-
-.element-10 {
-  float: left;
-  display: block;
-  width: 50.60241%;
-  min-height: 450px;
-  position: relative;
-  z-index: 1; }
-  .element-10:last-child {
-    width: 49.39759%; }
-
-.bg-color-filler {
-  position: absolute;
-  z-index: 0;
-  left: 0;
-  width: 50%;
-  min-height: 450px;
-  background-color: red;
-  background-image: -webkit-linear-gradient(bottom, red, yellow);
-  background-image: linear-gradient(to top,red, yellow); }
-
-.element-11 {
-  width: 50%;
-  min-height: 450px;
-  position: absolute;
-  right: 0;
-  background: url(../images/android-phone.jpg) no-repeat center center;
-  background-size: cover; }
-  .element-11 h1, .element-11 p, .element-11 button {
-    display: none !important; }
 
 @media screen and (max-width: 1030px) {
   .container {
