@@ -393,9 +393,22 @@ h1, h2 {
   background-color: #FFF;
   color: #404040; }
 
-header {
-  clear: both;
-  overflow: hidden; }
+.section-divider {
+  position: absolute;
+  top: 450px;
+  width: 100%;
+  height: 25px;
+  background: url(../img/global/sectionDividerFull.png) center top no-repeat; }
+
+header, section, footer {
+  width: 960px;
+  margin: 0 auto;
+  clear: both; }
+
+header#header {
+  position: relative;
+  z-index: 10;
+  padding: 10px 0; }
 
 #logo {
   float: left;
@@ -425,8 +438,10 @@ header {
     font-family: 'Open Sans', Arial, sans-serif;
     font-size: 0.9375rem;
     text-decoration: none;
-    color: #000;
+    color: #FFF;
     text-transform: uppercase; }
+  .nav-global a:hover {
+    color: #e20510; }
 
 #nav-main li {
   position: relative;
@@ -446,6 +461,72 @@ header {
     margin: 0 0 0 10px; }
   #nav-cta i {
     margin-right: 7px; }
+
+#carousel {
+  position: absolute;
+  top: 0;
+  z-index: 0;
+  width: 100%;
+  height: 470px; }
+  #carousel .slides {
+    margin: 0 auto; }
+    #carousel .slides .article-container {
+      width: 960px;
+      margin: 0 auto; }
+    #carousel .slides article {
+      float: right;
+      margin-right: 130px;
+      margin-top: 140px;
+      width: 550px;
+      text-align: right;
+      font-family: 'Open Sans', sans-serif; }
+      #carousel .slides article h2 {
+        margin: 0;
+        color: #FFF;
+        text-transform: uppercase;
+        font-size: 32px;
+        font-weight: 600; }
+      #carousel .slides article p {
+        margin: 5px 0 40px 0;
+        font-size: 22px;
+        font-weight: 300;
+        color: #FFF; }
+      #carousel .slides article a {
+        padding: 8px 25px;
+        font-size: 22px;
+        color: #FFF;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-decoration: none;
+        border-radius: 4px;
+        border: 3px solid #FFF; }
+      #carousel .slides article a:hover {
+        background-color: #e20510;
+        border: 3px solid #e20510;
+        border-radius: 5px; }
+  #carousel #carousel-btn {
+    position: absolute;
+    top: 200px;
+    width: 100%; }
+  #carousel .btn-slide {
+    position: absolute;
+    width: 30px;
+    height: 40px;
+    color: #FFF; }
+  #carousel .btn-slide:hover {
+    color: #e20510; }
+  #carousel #btn-prev {
+    left: 30px; }
+  #carousel #btn-nxt {
+    right: 30px; }
+  #carousel #slide-1 {
+    width: 100%;
+    height: 470px;
+    background: url(../img/carousel/slide-1.jpg);
+    background-size: cover; }
+
+#services {
+  margin-top: 450px; }
 
 #mybutton {
   border: 1px solid #b87700;
