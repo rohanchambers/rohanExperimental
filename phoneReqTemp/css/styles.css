@@ -1,4 +1,4 @@
-/* Rohan Bourbon */
+/* Phone Resq styles */
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
@@ -390,6 +390,10 @@ hr {
   margin: 30px 0 40px 0;
   padding: 0; }
 
+section,
+header {
+  position: relative; }
+
 .nav-btn, #nav-cta .btn-global {
   display: block;
   width: auto;
@@ -408,15 +412,29 @@ hr {
   background-color: #FFF;
   color: #404040; }
 
+.btn-animate,
+#nav-main a {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: color, background-color;
+  transition-property: color, background-color; }
+
 .section-divider {
   position: absolute;
-  top: 450px;
+  z-index: 100;
   width: 100%;
   height: 25px;
   background: url(../img/global/sectionDividerFull.png) center top no-repeat; }
 
-header#header {
-  position: relative;
+#header {
   z-index: 10;
   padding: 10px 0; }
 
@@ -452,6 +470,17 @@ header#header {
     text-transform: uppercase; }
   .nav-global a:hover {
     color: #e20510; }
+  .nav-global .hvr-underline-from-left {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    overflow: hidden; }
 
 #nav-main li {
   position: relative;
@@ -477,7 +506,7 @@ header#header {
   top: 0;
   z-index: 0;
   width: 100%;
-  height: 470px; }
+  height: 530px; }
   #carousel .slide {
     margin: 0 auto; }
     #carousel .slide .slide-content {
@@ -514,6 +543,8 @@ header#header {
         background-color: #e20510;
         border: 3px solid #e20510;
         border-radius: 5px; }
+  #carousel .section-divider {
+    top: 510px; }
   #carousel #carousel-btn {
     position: absolute;
     top: 200px;
@@ -531,7 +562,7 @@ header#header {
     right: 30px; }
   #carousel #slide-1 {
     width: 100%;
-    height: 470px;
+    height: 530px;
     background: url(../img/carousel/slide-1.jpg);
     background-size: cover; }
 
@@ -553,13 +584,17 @@ header#header {
     display: table; }
 
 #services {
-  margin-top: 380px; }
+  margin: 440px 0 0 0;
+  padding-bottom: 50px; }
   #services::after {
     clear: both;
     content: "";
     display: table; }
   #services .row.row-products {
     margin-bottom: 50px; }
+  #services .section-divider {
+    background: url(../img/global/sectionDividerFullTrans.png) center top no-repeat;
+    bottom: -25px; }
 
 .intro {
   float: left;
@@ -639,6 +674,9 @@ header#header {
   width: 60px;
   background: url(../img/repair/repair_unlocks.png) no-repeat bottom center; }
 
+#about .section-divider {
+  bottom: -9px;
+  background: url(../img/global/sectionDividerFullTransBoth.png) center top no-repeat; }
 #about .container {
   min-height: 450px; }
   #about .container article {
@@ -672,24 +710,28 @@ header#header {
 .bg-color-right {
   right: 0; }
 
-.about-rows {
+.about-rows,
+.sell-rows {
   float: left;
   display: block;
   width: 50.60241%;
   min-height: 450px;
   position: relative;
   z-index: 1; }
-  .about-rows:last-child {
+  .about-rows:last-child,
+  .sell-rows:last-child {
     width: 49.39759%; }
 
 #about-row-one,
 #about-row-three {
   float: left; }
 
-#about-row-two {
+#about-row-two,
+#sell-row {
   float: right; }
 
-.about-row-img {
+.about-row-img,
+.sell-row-img {
   width: 50%;
   min-height: 450px;
   position: absolute;
@@ -700,7 +742,8 @@ header#header {
   background: #475573 url(../img/about/bg-section-one.jpg) no-repeat center center;
   background-size: cover; }
 
-#about-row-two-img {
+#about-row-two-img,
+#sell-row-img {
   left: 0;
   background: #475573 url(../img/about/bg-section-one.jpg) no-repeat center center;
   background-size: cover; }
@@ -709,6 +752,33 @@ header#header {
   right: 0;
   background: #475573 url(../img/about/bg-section-one.jpg) no-repeat center center;
   background-size: cover; }
+
+#sell {
+  margin-top: -31px; }
+  #sell .container {
+    min-height: 250px; }
+    #sell .container .bg-color {
+      background-color: #FFF; }
+    #sell .container article {
+      float: right;
+      width: 80%;
+      margin-right: 13%;
+      padding: 30px 0 0 0; }
+      #sell .container article h1 {
+        font-size: 1.1875rem;
+        font-weight: 600;
+        color: #e20510; }
+      #sell .container article p {
+        font-size: 0.875rem;
+        color: #404040;
+        line-height: 1.5;
+        margin-bottom: 20px; }
+    #sell .container article.left {
+      float: left;
+      margin-left: 13%; }
+
+.sell-row-img {
+  min-height: 250px; }
 
 .element-1 {
   float: left;

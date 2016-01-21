@@ -1,4 +1,4 @@
-/* Rohan Bourbon */
+/* Phone Resq styles */
 // sass --watch styles.scss:styles.css
 @import "normalize";
 @import "bourbon/bourbon";
@@ -42,6 +42,10 @@ hr {
     padding: 0; 
 }
 
+section, 
+header {
+    position: relative;
+}
 
 // COMMON STYLES
 .nav-btn {
@@ -65,17 +69,34 @@ hr {
     color: $color-text;
 }
 
+.btn-animate,
+#nav-main a {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    //overflow: hidden;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: color, background-color;
+    transition-property: color, background-color;
+}
+
 .section-divider {
     position: absolute;
-    top: 450px;
+    z-index: 100;    
     width: 100%;
     height: 25px;
     background: url(../img/global/sectionDividerFull.png) center top no-repeat;
 }
 
 
-header#header {
-    position: relative;
+// HEADER
+#header {
     z-index: 10;
     padding: 10px 0;
 }
@@ -95,6 +116,7 @@ header#header {
         }
 }
 
+// Main Navigation
 .nav-global {
     float: left;
     margin-top: 15px;
@@ -120,7 +142,20 @@ header#header {
 
     a:hover {
         color: $color-red;
-    }    
+    }
+
+    .hvr-underline-from-left {
+        display: inline-block;
+        vertical-align: middle;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -moz-osx-font-smoothing: grayscale;
+        position: relative;
+        overflow: hidden;
+    }        
 }
 
 #nav-main {
@@ -134,6 +169,7 @@ header#header {
     }
 }
 
+// Social media links
 #social-links {
     margin-left: 40px;
 
@@ -142,6 +178,7 @@ header#header {
     }
 }
 
+// Request repair and phone
 #nav-cta {
     float: right;
     margin-top: 10px;
@@ -154,9 +191,8 @@ header#header {
     }
     
     .btn-global {
-        @extend .nav-btn
-    }
-   
+        @extend .nav-btn;
+    }   
 }
 
 
@@ -167,7 +203,7 @@ header#header {
     top: 0;
     z-index: 0;
     width: 100%;
-    height: 470px;
+    height: 530px;
 
     .slide {
         margin: 0 auto;
@@ -214,10 +250,15 @@ header#header {
                 a:hover {
                     background-color: $color-red;                   
                     border: 3px solid $color-red;
-                    border-radius: 5px; 
+                    border-radius: 5px;
                 }
         }
     } // End of Slides
+    
+    // Carousel divider    
+    .section-divider {
+        top: 510px;
+    }
 
     #carousel-btn {
         position: absolute;
@@ -247,7 +288,7 @@ header#header {
 
     #slide-1 {
         width: 100%;
-        height: 470px;
+        height: 530px;
         background: url(../img/carousel/slide-1.jpg);
         background-size: cover;
     }
@@ -275,12 +316,19 @@ header#header {
 
 // Services
 #services {
-    margin-top: 380px;
+    margin: 440px 0 0 0;
+    padding-bottom: 50px;
     @include clearfix;
 
     .row.row-products {
         margin-bottom: 50px;
     }
+
+    // Services Divider   
+    .section-divider {
+        background: url(../img/global/sectionDividerFullTrans.png) center top no-repeat;
+        bottom: -25px;
+    }          
 }
     
     .intro {
@@ -372,92 +420,168 @@ header#header {
 
 
 // About
-#about .container {
-    min-height: 450px;
-    
-        article {
-            float: right;
-            width: 80%;
-            margin-right: 13%;
-            padding: 30px 0 0 0;
+#about {
 
-            h1, p {
-                color: $color-white;
+    .section-divider {
+        bottom: -9px;
+        background: url(../img/global/sectionDividerFullTransBoth.png) center top no-repeat;
+    }
+
+    .container {
+        min-height: 450px;
+        
+            article {
+                float: right;
+                width: 80%;
+                margin-right: 13%;
+                padding: 30px 0 0 0;
+
+                h1, p {
+                    color: $color-white;
+                }
+
+                h1 {
+                    font-size: rem(19);
+                    font-weight: 600;
+                }
+
+                p {
+                    font-size: rem(14);
+                    line-height: 1.7;
+                    margin-bottom: 20px;
+                }
             }
 
-            h1 {
-                font-size: rem(19);
-                font-weight: 600;
+            article.left {
+                float: left;
+                margin-left: 13%;
             }
-
-            p {
-                font-size: rem(14);
-                line-height: 1.7;
-                margin-bottom: 20px;
-            }
-        }
-
-        article.left {
-            float: left;
-            margin-left: 13%;
-        }
-
+           
+    }
 }
-    // Background grey color half section for text
-    .bg-color {
-        position: absolute;
-        z-index: 0;
-        width: 50%;
-        min-height: 450px;
-        background-color: $color-grey;
+
+
+// Background grey color half section for text
+.bg-color {
+    position: absolute;
+    z-index: 0;
+    width: 50%;
+    min-height: 450px;
+    background-color: $color-grey;
+}
+
+    .bg-color-left {
+        left: 0;
     }
 
-        .bg-color-left {
-            left: 0;
-        }
-
-        .bg-color-right {
-            right: 0;
-        }
-
-    
-    .about-rows {
-        @include span-columns(6 of 12, block-collapse);
-        min-height: 450px;
-        position: relative;
-        z-index: 1;           
-    }
-
-    #about-row-one,
-    #about-row-three { float: left;}
-    #about-row-two { float: right;}
-
-    .about-row-img {
-        width: 50%;
-        min-height: 450px;
-        position: absolute;
+    .bg-color-right {
         right: 0;
     }
 
-        #about-row-one-img {
-            right: 0;
-            background: $color-grey url(../img/about/bg-section-one.jpg) no-repeat center center;
-            background-size: cover;                  
-        }
 
-        #about-row-two-img {
-            left: 0;
-            background: $color-grey url(../img/about/bg-section-one.jpg) no-repeat center center; 
-            background-size: cover;
-        }
+.about-rows,
+.sell-rows {
+    @include span-columns(6 of 12, block-collapse);
+    min-height: 450px;
+    position: relative;
+    z-index: 1;           
+}
+
+#about-row-one,
+#about-row-three { float: left;}
+#about-row-two,
+#sell-row { float: right;}
+
+.about-row-img,
+.sell-row-img {
+    width: 50%;
+    min-height: 450px;
+    position: absolute;
+    right: 0;
+}
+
+    #about-row-one-img {
+        right: 0;
+        background: $color-grey url(../img/about/bg-section-one.jpg) no-repeat center center;
+        background-size: cover;                  
+    }
+
+    #about-row-two-img,
+    #sell-row-img {
+        left: 0;
+        background: $color-grey url(../img/about/bg-section-one.jpg) no-repeat center center; 
+        background-size: cover;
+    }
+
+    #about-row-three-img {
+        right: 0;       
+        background: $color-grey url(../img/about/bg-section-one.jpg) no-repeat center center;
+        background-size: cover;            
+    }
 
 
 
-        #about-row-three-img {
-            right: 0;       
-            background: $color-grey url(../img/about/bg-section-one.jpg) no-repeat center center;
-            background-size: cover;            
-        }
+#sell {
+    margin-top: -31px;
+
+    .container {
+        min-height: 250px;
+
+            .bg-color {
+                background-color: $color-white;
+            }
+
+            article {
+                float: right;
+                width: 80%;
+                margin-right: 13%;
+                padding: 30px 0 0 0;
+
+
+                h1 {
+                    font-size: rem(19);
+                    font-weight: 600;
+                    color: $color-red;
+                }
+
+                p {
+                    font-size: rem(14);
+                    color: $color-text;
+                    line-height: 1.5;
+                    margin-bottom: 20px;
+                }
+            }
+
+            article.left {
+                float: left;
+                margin-left: 13%;
+            }
+           
+    }    
+}
+
+.sell-row-img {
+    min-height: 250px;
+}
+.sell-rows {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
