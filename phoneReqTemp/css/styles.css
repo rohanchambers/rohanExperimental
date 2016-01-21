@@ -884,7 +884,7 @@ article.intro {
 #contact {
   background-color: #475573;
   min-height: 500px;
-  padding-bottom: 25px; }
+  padding-bottom: 40px; }
   #contact hr {
     margin: 20px 0 15px 0; }
   #contact .intro h1 {
@@ -921,6 +921,10 @@ article.intro {
       border-radius: 5px; }
   #contact .two-col {
     min-height: 365px; }
+  #contact #map {
+    width: 90%;
+    height: 370px;
+    margin-top: 25px; }
   #contact #get-in-touch .intro {
     text-align: left; }
     #contact #get-in-touch .intro div {

@@ -701,7 +701,7 @@ article.intro {
 #contact {
     background-color: $color-grey;
     min-height: 500px;
-    padding-bottom: 25px;
+    padding-bottom: 40px;
     
     hr {
         margin: 20px 0 15px 0;
@@ -763,8 +763,10 @@ article.intro {
         min-height: 365px;
     }
 
-    #google-map {
-        
+    #map {
+        width: 90%;
+        height: 370px;
+        margin-top: 25px;
     }
 
     #get-in-touch {        
