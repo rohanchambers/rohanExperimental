@@ -21,6 +21,7 @@ h1 {
     font-family: 'Open Sans', Arial, sans-serif;
     font-weight: 400;
     color: $color-red;
+    margin: 20px 0 10px;
 }
 
 p {
@@ -48,7 +49,37 @@ header {
 }
 
 // COMMON STYLES
-.nav-btn {
+article.intro {
+
+    @include span-columns(12 of 12);        
+
+    //margin-top: 15px;
+    text-align: center;
+
+    h1 {
+        position: relative;
+        font-size: rem(36);
+        color: $color-red;
+        text-transform: uppercase;        
+        
+        span {
+            display: block;
+            margin: 0 auto;
+            width: 130px;
+            height: 10px;
+            border-top: 2px solid $color-red;
+        }
+    }
+
+    P {
+        width: 60%;
+        margin: 0 auto;
+        color: $color-text;                
+    }
+
+}
+
+.btn-global {
     display: block;
     width: auto;
     height: 30px;
@@ -56,7 +87,9 @@ header {
     border-radius: 5px;
     background-color: $color-red;
     box-shadow: 2px 2px #999999;
-    font-size: 11px; 
+    font-size: 11px;
+    text-align: center;
+    text-decoration: none;
     color: $color-white;
     
         -webkit-box-shadow: 0px 1px 3px 0px rgba(153,153,153,1);
@@ -64,7 +97,7 @@ header {
         box-shadow: 0px 1px 3px 0px rgba(153,153,153,1);
 } 
 
-.nav-btn:hover {
+.btn-global:hover {
     background-color: $color-white;
     color: $color-text;
 }
@@ -84,6 +117,30 @@ header {
     transition-duration: 0.3s;
     -webkit-transition-property: color, background-color;
     transition-property: color, background-color;
+}
+
+// Hover animate for repair and shop products
+@-webkit-keyframes spaceboots {
+    0% { -webkit-transform: translate(2px, 1px) rotate(0deg); }
+    10% { -webkit-transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { -webkit-transform: translate(-3px, 0px) rotate(1deg); }
+    30% { -webkit-transform: translate(0px, 2px) rotate(0deg); }
+    40% { -webkit-transform: translate(1px, -1px) rotate(1deg); }
+    50% { -webkit-transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { -webkit-transform: translate(-3px, 1px) rotate(0deg); }
+    70% { -webkit-transform: translate(2px, 1px) rotate(-1deg); }
+    80% { -webkit-transform: translate(-1px, -1px) rotate(1deg); }
+    90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
+    100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.shake,
+.shake {
+    -webkit-animation-name: spaceboots;
+    -webkit-animation-duration: 0.8s;
+    -webkit-transform-origin:50% 50%;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
 }
 
 .section-divider {
@@ -155,7 +212,7 @@ header {
         -moz-osx-font-smoothing: grayscale;
         position: relative;
         overflow: hidden;
-    }        
+    }
 }
 
 #nav-main {
@@ -190,8 +247,8 @@ header {
         margin-right: 7px;
     }
     
-    .btn-global {
-        @extend .nav-btn;
+    .btn-nav {
+        @extend .btn-global;
     }   
 }
 
@@ -320,6 +377,16 @@ header {
     padding-bottom: 50px;
     @include clearfix;
 
+    .intro {
+        h1{
+            color: $color-red;
+
+            span {
+                border-top: 2px solid $color-red;
+            }
+        }
+    }
+
     .row.row-products {
         margin-bottom: 50px;
     }
@@ -331,29 +398,6 @@ header {
     }          
 }
     
-    .intro {
-        @include span-columns(12 of 12);        
-        text-align: center; 
-
-            h1 {
-                position: relative;
-                font-size: rem(36);
-                text-transform: uppercase;
-                
-                span {
-                    display: block;
-                    margin: 0 auto;
-                    width: 130px;
-                    height: 10px;
-                    border-top: 2px solid $color-red;
-                }
-            }
-
-            p {
-                width: 60%;
-                margin: 0 auto;
-            }
-    }
 
     #mouse-scroll {
         display: block;
@@ -365,12 +409,14 @@ header {
     }
 
     .repair {
+        position: relative;
         @include span-columns(4 of 12);
+
         text-align: center; 
             
             h1 {
                 font-size: rem(19);
-                margin-bottom: 5px;
+                margin: 15px 0 5px;
             }
 
             p {
@@ -379,13 +425,22 @@ header {
                 width: 70%;
                 margin: 0 auto;            
             }
+            
+            a {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
 
             span {
                 display: block;
                 margin: 0 auto;
                 height: 124px;
                 @include hide-text;                
-            }            
+            }
+
     }
 
     #iphone-repair span {
@@ -423,8 +478,8 @@ header {
 #about {
 
     .section-divider {
-        bottom: -9px;
-        background: url(../img/global/sectionDividerFullTransBoth.png) center top no-repeat;
+        bottom: 8px;
+        background: url(../img/global/sectionDividerFullTransMulti.png) center top no-repeat;
     }
 
     .container {
@@ -509,13 +564,13 @@ header {
     #about-row-two-img,
     #sell-row-img {
         left: 0;
-        background: $color-grey url(../img/about/bg-section-one.jpg) no-repeat center center; 
+        background: $color-grey url(../img/about/bg-section-two.jpg) no-repeat center center; 
         background-size: cover;
     }
 
     #about-row-three-img {
         right: 0;       
-        background: $color-grey url(../img/about/bg-section-one.jpg) no-repeat center center;
+        background: $color-grey url(../img/about/bg-section-three.jpg) no-repeat center center;
         background-size: cover;            
     }
 
@@ -525,9 +580,10 @@ header {
     margin-top: -31px;
 
     .container {
-        min-height: 250px;
+        min-height: 280px;
 
             .bg-color {
+                min-height: 250px;
                 background-color: $color-white;
             }
 
@@ -557,13 +613,197 @@ header {
                 margin-left: 13%;
             }
            
+    }
+
+    .section-divider {
+        bottom: 2px;
+        background: url(../img/global/sectionDividerFullTransMulti.png) center top no-repeat;
+    }
+
+    .sell-row-img {
+        min-height: 280px;
+        background: $color-grey url(../img/about/bg-sell.jpg) no-repeat center center;
+        background-size: cover;
+    }
+
+    .sell-rows {
+        min-height: 250px;
     }    
 }
 
-.sell-row-img {
-    min-height: 250px;
+
+// SHOP
+
+#shop {
+    margin-top: -27px;
+    min-height: 530px;
+    background: url(../img/shop/bg-shop.jpg) center center no-repeat;
+    background-size: cover;
+        
+    .intro {
+        header {
+            margin-top: 45px;
+        }
+
+        h1{
+            color: $color-white;
+
+            span {
+                width: 60px;
+                border-top: 2px solid $color-white;
+            }
+        }
+
+        p {
+            color: $color-white;
+        }        
+    }
+
+
+    #shop-products {
+        display: flex;
+        justify-content: space-between;
+        margin: 50px auto;
+
+        article {
+            position: relative;
+            min-width: 130px;
+            min-height: 250px;
+            vertical-align: bottom;
+        }
+
+        a {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            right: 50%;
+            margin-left: -60px;
+            width: 120px;
+            @extend .btn-global;      
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+
+        #accessories img {
+            margin-top: 85px;
+        }
+    }
 }
-.sell-rows {}
+
+// CONTACT
+
+#contact {
+    background-color: $color-grey;
+    min-height: 500px;
+    
+    .intro {
+        h1{
+            color: $color-white;
+            span {
+                border-top: 2px solid $color-white;
+            }
+        }
+
+        p {
+            color: $color-white;
+        }
+    }
+    
+    #contact-form {
+        margin-top: 40px;
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 320px;
+            height: 40px;
+            padding: 0 10px;
+            background-color: transparent;
+            border: 0;
+            border-bottom: 2px solid $color-white;
+            -webkit-appearance: none
+        }
+
+        #btn-submit {
+            margin-top: 15px;
+            width: auto;
+            font-size: rem(25);
+            text-transform: uppercase;
+            border: 3px solid $color-white;
+            height: 60px;
+            padding: 10px 15px;
+            line-height: 40px;
+            border-radius: 5px;
+        }
+
+        #btn-submit:hover {
+            background-color: $color-red;                   
+            border: 3px solid $color-red;
+            border-radius: 5px;
+        }
+    }
+
+
+}    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -699,3 +939,30 @@ header {
         @include text-decoration(underline double rgb(124,213,224));
     }
 }  
+
+
+
+            // span:hover {
+            //   animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+            //   transform: translate3d(0, 0, 0);
+            //   backface-visibility: hidden;
+            //   perspective: 1000px;
+            // }
+
+            // @keyframes shake {
+            //   10%, 90% {
+            //     transform: translate3d(-1px, 0, 0);
+            //   }
+              
+            //   20%, 80% {
+            //     transform: translate3d(2px, 0, 0);
+            //   }
+
+            //   30%, 50%, 70% {
+            //     transform: translate3d(-4px, 0, 0);
+            //   }
+
+            //   40%, 60% {
+            //     transform: translate3d(4px, 0, 0);
+            //   }
+            // }
