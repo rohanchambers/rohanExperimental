@@ -712,6 +712,7 @@ article.intro {
         h1 {
             color: $color-white;
             span {
+                width: 160px;
                 border-top: 2px solid $color-white;
             }
         }
@@ -789,7 +790,8 @@ article.intro {
             color: $color-white;
 
             span {
-                margin-left: 60px;
+                width: 190px;
+                margin-left: 29px;
                 text-align: center;
             }
         }
@@ -799,8 +801,6 @@ article.intro {
             margin-left: 0;
         }
     }
-
-
 }    
 
 

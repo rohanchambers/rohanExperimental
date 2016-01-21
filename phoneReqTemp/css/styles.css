@@ -890,6 +890,7 @@ article.intro {
   #contact .intro h1 {
     color: #FFF; }
     #contact .intro h1 span {
+      width: 160px;
       border-top: 2px solid #FFF; }
   #contact .intro p {
     color: #FFF; }
@@ -936,7 +937,8 @@ article.intro {
   #contact #get-in-touch h1 {
     color: #FFF; }
     #contact #get-in-touch h1 span {
-      margin-left: 60px;
+      width: 190px;
+      margin-left: 29px;
       text-align: center; }
   #contact #get-in-touch p {
     color: #FFF;
