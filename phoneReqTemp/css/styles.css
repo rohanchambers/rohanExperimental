@@ -383,6 +383,9 @@ p {
   color: #404040;
   line-height: 1.5; }
 
+a {
+  text-decoration: none; }
+
 hr {
   display: block;
   height: 1px;
@@ -394,30 +397,6 @@ hr {
 section,
 header {
   position: relative; }
-
-article.intro {
-  float: left;
-  display: block;
-  margin-right: 1.20482%;
-  width: 100%;
-  text-align: center; }
-  article.intro:last-child {
-    margin-right: 0; }
-  article.intro h1 {
-    position: relative;
-    font-size: 2.25rem;
-    color: #e20510;
-    text-transform: uppercase; }
-    article.intro h1 span {
-      display: block;
-      margin: 0 auto;
-      width: 130px;
-      height: 10px;
-      border-top: 2px solid #e20510; }
-  article.intro P {
-    width: 60%;
-    margin: 0 auto;
-    color: #404040; }
 
 .btn-global, #nav-cta .btn-nav, #shop #shop-products a {
   display: block;
@@ -640,6 +619,38 @@ article.intro {
     clear: both;
     content: "";
     display: table; }
+
+.two-col {
+  float: left;
+  display: block;
+  margin-right: 1.20482%;
+  width: 49.39759%; }
+  .two-col:last-child {
+    margin-right: 0; }
+
+article.intro {
+  float: left;
+  display: block;
+  margin-right: 1.20482%;
+  width: 100%;
+  text-align: center; }
+  article.intro:last-child {
+    margin-right: 0; }
+  article.intro h1 {
+    position: relative;
+    font-size: 2.25rem;
+    color: #e20510;
+    text-transform: uppercase; }
+    article.intro h1 span {
+      display: block;
+      margin: 0 auto;
+      width: 130px;
+      height: 10px;
+      border-top: 2px solid #e20510; }
+  article.intro P {
+    width: 60%;
+    margin: 0 auto;
+    color: #404040; }
 
 #services {
   margin: 440px 0 0 0;
@@ -905,6 +916,62 @@ article.intro {
       background-color: #e20510;
       border: 3px solid #e20510;
       border-radius: 5px; }
+
+#clients {
+  min-height: 110px;
+  background-color: #e20510; }
+  #clients #client-list {
+    float: left;
+    display: block;
+    margin-right: 1.20482%;
+    width: 100%;
+    text-align: justify;
+    font-size: 0.1px;
+    /* IE 9/10 fix */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 33px; }
+    #clients #client-list:last-child {
+      margin-right: 0; }
+  #clients #client-list:after {
+    content: '';
+    width: 100%;
+    /* Ensures justification for single lines */
+    display: inline-block;
+    height: auto; }
+  #clients .client {
+    display: inline-block;
+    min-height: 41px; }
+
+footer {
+  min-height: 330px;
+  background-color: #282727; }
+  footer p {
+    font-size: 0.75rem;
+    line-height: 1.3;
+    color: #FFF; }
+  footer a {
+    color: #FFF; }
+  footer a:hover {
+    color: #e20510; }
+  footer .two-col {
+    height: 330px;
+    padding: 35px 0; }
+  footer #company-details a {
+    text-decoration: underline; }
+  footer #company-details a:hover {
+    text-decoration: none;
+    color: #e20510; }
+  footer #company-details #social-links {
+    margin: 23px 0 0 0; }
+    footer #company-details #social-links li {
+      margin-right: 15px; }
+  footer #back-top {
+    text-align: right; }
+    footer #back-top #copyright {
+      margin-top: 25px;
+      font-size: 0.6875rem; }
 
 .element-1 {
   float: left;
