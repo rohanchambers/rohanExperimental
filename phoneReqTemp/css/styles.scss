@@ -648,7 +648,7 @@ article.intro {
             margin-top: 45px;
         }
 
-        h1{
+        h1 {
             color: $color-white;
 
             span {
@@ -701,9 +701,15 @@ article.intro {
 #contact {
     background-color: $color-grey;
     min-height: 500px;
+    padding-bottom: 25px;
     
+    hr {
+        margin: 20px 0 15px 0;
+    }
+    
+    // Contact us form
     .intro {
-        h1{
+        h1 {
             color: $color-white;
             span {
                 border-top: 2px solid $color-white;
@@ -750,6 +756,49 @@ article.intro {
             border-radius: 5px;
         }
     }
+
+
+    // Get  in touch
+    .two-col {
+        min-height: 365px;
+    }
+
+    #google-map {
+        
+    }
+
+    #get-in-touch {        
+        
+        .intro {
+            text-align: left;
+    
+            div {
+                width: 95%;
+            }
+
+            p {
+                width: 75%;
+                margin-bottom: 15px;
+                font-size: rem(14);
+            }            
+        }
+        
+        h1 {
+            color: $color-white;
+
+            span {
+                margin-left: 60px;
+                text-align: center;
+            }
+        }
+
+        p {
+            color: $color-white;
+            margin-left: 0;
+        }
+    }
+
+
 }    
 
 

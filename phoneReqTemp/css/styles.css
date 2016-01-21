@@ -883,7 +883,10 @@ article.intro {
 
 #contact {
   background-color: #475573;
-  min-height: 500px; }
+  min-height: 500px;
+  padding-bottom: 25px; }
+  #contact hr {
+    margin: 20px 0 15px 0; }
   #contact .intro h1 {
     color: #FFF; }
     #contact .intro h1 span {
@@ -916,6 +919,24 @@ article.intro {
       background-color: #e20510;
       border: 3px solid #e20510;
       border-radius: 5px; }
+  #contact .two-col {
+    min-height: 365px; }
+  #contact #get-in-touch .intro {
+    text-align: left; }
+    #contact #get-in-touch .intro div {
+      width: 95%; }
+    #contact #get-in-touch .intro p {
+      width: 75%;
+      margin-bottom: 15px;
+      font-size: 0.875rem; }
+  #contact #get-in-touch h1 {
+    color: #FFF; }
+    #contact #get-in-touch h1 span {
+      margin-left: 60px;
+      text-align: center; }
+  #contact #get-in-touch p {
+    color: #FFF;
+    margin-left: 0; }
 
 #clients {
   min-height: 110px;
