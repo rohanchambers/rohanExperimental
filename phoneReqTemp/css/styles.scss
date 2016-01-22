@@ -125,7 +125,7 @@ header {
 // HEADER
 #header {
     z-index: 10;
-    padding: 10px 0;
+    padding: 10px 0;  
 }
 
 #logo {
@@ -145,6 +145,7 @@ header {
 
 // Main Navigation
 .nav-global {
+    position: relative;
     float: left;
     margin-top: 15px;
 
@@ -153,23 +154,23 @@ header {
         padding: 0;
     }
 
-    li {
-        float: left;
-        list-style-type: none;
-        padding: 0;
-    }
+        li {
+            float: left;
+            list-style-type: none;
+            padding: 0;   
+        }
 
-    a {
-        font-family: 'Open Sans', Arial, sans-serif;
-        font-size: rem(15);
-        text-decoration: none;
-        color: $color-white;
-        text-transform: uppercase;
-    }
+            a {
+                font-family: 'Open Sans', Arial, sans-serif;
+                font-size: rem(15);
+                text-decoration: none;
+                color: $color-white;
+                text-transform: uppercase;
+            }
 
-    a:hover {
-        color: $color-red;
-    }
+            a:hover {
+                color: $color-red;
+            }
 
     .hvr-underline-from-left {
         display: inline-block;
@@ -186,9 +187,69 @@ header {
 }
 
 #nav-main {
+    position: relative;
+
     li {
         position: relative;
+        
         margin: 0 0 0 15px;
+            
+            // Sub nav   
+            ul#subnav {
+                display: none;
+                position: absolute;
+                top: 20px;
+                left: -5px;
+                width: 220px;
+                padding-top: 5px;
+
+                li {
+                    position: relative;
+                    display: block;
+                    float: none;
+                    margin: 0;
+                                     
+                        a {
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            padding: 5px 6px; 
+                            border-bottom: 1px solid $color-white;                            
+                        }
+
+                        a:hover {
+                            background-color: $color-white;
+                        }
+
+                        span {
+                            position: absolute;
+                            bottom: 0;
+                            display: block;
+                            width: 0%;
+                            height: 2px;
+                            background-color: $color-red;
+                            -moz-transition: width 1s ease;
+                                -webkit-transition: width 1s ease;
+                                    transition: width 1s ease;                            
+                        }
+
+
+                }
+
+                li:hover span {
+                    width: 100%;
+                }
+
+            }             
+    }
+    
+
+
+    li#dropdown:hover > #subnav {
+        display:block;
+        -moz-animation: fadeInDown .3s ease-in ;
+        -webkit-animation: fadeInDown .3s ease-in ;
+        animation: fadeInDown .3s ease-in;
     }
 
     i {
@@ -209,6 +270,7 @@ header {
 #nav-cta {
     float: right;
     margin-top: 10px;
+
     li {
         margin: 0 0 0 10px;
     }
@@ -252,13 +314,14 @@ header {
                     margin: 0;
                     color: $color-white;
                     text-transform: uppercase;                    
-                    font-size: 32px;
+                    font-size: rem(32);
                     font-weight: 600;                
                 }
 
                 p {
-                    margin: 5px 0 40px 0;
-                    font-size: 22px;
+                    margin: 10px 0 30px 0;
+                    font-size: rem(22);
+                    line-height: 1.4;
                     font-weight: 300;
                     color: $color-white;
                 }
@@ -960,7 +1023,7 @@ footer {
 
 
 
-
+ 
 
 
     // Row 1
