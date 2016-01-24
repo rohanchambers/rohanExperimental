@@ -31,7 +31,13 @@ p {
 }
 
 a {
+    text-decoration: underline;
+    color: $color-white;
+}
+
+a:hover {
     text-decoration: none;
+    color: $color-red;
 }
 
 hr {
@@ -171,19 +177,6 @@ header {
             a:hover {
                 color: $color-red;
             }
-
-    .hvr-underline-from-left {
-        display: inline-block;
-        vertical-align: middle;
-        -webkit-transform: translateZ(0);
-        transform: translateZ(0);
-        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-        -moz-osx-font-smoothing: grayscale;
-        position: relative;
-        overflow: hidden;
-    }
 }
 
 #nav-main {
@@ -232,8 +225,6 @@ header {
                                 -webkit-transition: width 1s ease;
                                     transition: width 1s ease;                            
                         }
-
-
                 }
 
                 li:hover span {
@@ -243,8 +234,6 @@ header {
             }             
     }
     
-
-
     li#dropdown:hover > #subnav {
         display:block;
         -moz-animation: fadeInDown .3s ease-in ;
@@ -428,7 +417,7 @@ article.intro {
 
     P {
         width: 60%;
-        margin: 0 auto;
+        margin: 0 auto 10px auto;
         color: $color-text;                
     }
 
@@ -439,17 +428,21 @@ article.intro {
 
 // Services
 #services {
-    margin: 440px 0 0 0;
-    padding-bottom: 50px;
+    margin: 415px 0 0 0;
+    padding: 25px 0 50px 0;
     @include clearfix;
 
     .intro {
-        h1{
+        h1 {
             color: $color-red;
 
             span {
                 border-top: 2px solid $color-red;
             }
+        }
+
+        p#show-hide {
+            display: none;
         }
     }
 
@@ -463,17 +456,75 @@ article.intro {
         bottom: -25px;
     }          
 }
-    
-
+    // Mouse scroll down animate
     #mouse-scroll {
+        position: relative;
         display: block;
-        margin: 20px auto 15px auto;
+        margin: 15px auto 15px auto;
         width: 25px;
         height: 72px;
         background-image: url(../img/global/iconMouseDown.png);
         clear: both;
+        cursor: pointer;
     }
 
+        .fa-angle-down {
+            display: none;
+            position: absolute;        
+            left: -1px; 
+            color: #ccc;
+        }
+
+            .angle-down-1 {            
+                bottom: -5px;            
+            }
+
+            .angle-down-2 {
+                bottom: -15px;
+            }
+
+        .icon-animate,
+        .icon-animate:before {
+            position: absolute;
+            top: 0;
+        }
+         
+        .icon-animate {
+            width: 25px;
+            height: 45px;
+            top: 0%;
+            //box-shadow: inset 0 0 0 1px #ccc;
+            border-radius: 20px;
+        }
+         
+        .icon-animate:before {
+            content: '';
+            width: 5px;
+            height: 5px;
+            background: #ccc;
+            margin-left: -3px;
+            top: 10px;
+            border-radius: 3px;
+              -webkit-animation-duration: 1s;
+                animation-duration: 1s;
+              -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
+              -webkit-animation-name: scroll;
+                animation-name: scroll;
+            }
+         
+        @-webkit-keyframes scroll {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            -webkit-transform: translateY(10px);
+                transform: translateY(10px);
+            }
+        }
+         
+     // Repair products   
     .repair {
         position: relative;
         @include span-columns(4 of 12);
@@ -544,7 +595,7 @@ article.intro {
 #about {
 
     .section-divider {
-        bottom: 8px;
+        bottom: -25px;
         background: url(../img/global/sectionDividerFullTransMulti.png) center top no-repeat;
     }
 
@@ -555,7 +606,7 @@ article.intro {
                 float: right;
                 width: 80%;
                 margin-right: 13%;
-                padding: 30px 0 0 0;
+                padding: 30px 0;
 
                 h1, p {
                     color: $color-white;
@@ -603,7 +654,7 @@ article.intro {
 .about-rows,
 .sell-rows {
     @include span-columns(6 of 12, block-collapse);
-    min-height: 450px;
+    min-height: 400px;
     position: relative;
     z-index: 1;           
 }
@@ -643,7 +694,6 @@ article.intro {
 
 
 #sell {
-    margin-top: -31px;
 
     .container {
         min-height: 280px;
@@ -683,7 +733,7 @@ article.intro {
 
     .section-divider {
         bottom: 2px;
-        background: url(../img/global/sectionDividerFullTransMulti.png) center top no-repeat;
+        background: url(../img/global/sectionDividerFullTransMulti2.png) center top no-repeat;
     }
 
     .sell-row-img {
@@ -786,21 +836,68 @@ article.intro {
     }
     
     #contact-form {
-        margin-top: 40px;
+        position: relative;
+        margin: 40px auto 0 auto;
+        width: 60%;
 
         p {
+            position: relative;
             margin-bottom: 20px;
         }
 
-        input {
-            width: 320px;
+        input, textarea {
+            width: 100%;
             height: 40px;
             padding: 0 10px;
             background-color: transparent;
             border: 0;
             border-bottom: 2px solid $color-white;
-            -webkit-appearance: none
+            color: $color-white;            
+            -webkit-appearance: none;
         }
+
+            span {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                display: block;
+                width: 0%;
+                height: 2px;
+                border-bottom: 2px solid $color-red;
+                background-color: $color-red;
+                    -moz-transition: width 0.5s ease;
+                        -webkit-transition: width 0.5s ease;
+                            transition: width 0.5s ease;                  
+            }
+        
+        #textarea span {
+            bottom: 5px;
+        }
+
+        input[type=text]:focus, 
+        input[type=submit],
+        textarea {
+            // Remove focus glow
+            outline-color: transparent;
+            outline-style: none;        
+        }
+        textarea {
+            height: 40px;
+
+            -webkit-transition: height 0.3s;
+            -o-transition: height 0.3s;
+            transition: height 0.3s;                      
+        }
+
+        textarea:focus {
+            height: 150px;
+        }
+        
+        // Change color for textarea placeholder (value)
+        ::-webkit-input-placeholder { color: $color-white;}
+        ::-moz-placeholder {color: $color-white;}
+        :-ms-input-placeholder { color: $color-white;} 
+        :-o-input-placeholder { color: $color-white;} 
 
         #btn-submit {
             margin-top: 15px;
@@ -809,7 +906,7 @@ article.intro {
             text-transform: uppercase;
             border: 3px solid $color-white;
             height: 60px;
-            padding: 10px 15px;
+            padding: 7px 15px;
             line-height: 40px;
             border-radius: 5px;
         }

@@ -1,9 +1,57 @@
 $( document ).ready(function() {
 
-	// Prevent default
-	$('a, #btn-submit').click( function(e) {
-		e.preventDefault();
+	// $('#contact-form input').click( function(){
+	// 	$(this).focus().siblings().css({width: '100%'});
+	// });
+
+	// Show hide value of form inputs and textarea
+	$('input:text, textarea').each(function(){
+		var txtval = $(this).val();
+		var txtAreaVal = $(this).attr("placeholder");
+		
+		$(this).focus(function(){
+			$(this).val('');
+			$(this).attr("placeholder", '');
+			$(this).siblings('span').css({width: '100%'});
+		});
+
+		$(this).blur(function(){
+			if( $(this).val() == "") {
+				$(this).val(txtval);
+				$(this).siblings('span').css({width: '0%'});
+			}
+
+			if( $(this).attr("placeholder") == "") {
+				$(this).attr("placeholder", txtAreaVal);
+				$(this).siblings('span').css({width: '0%'});
+			}
+		});
 	});
+
+	//Scroll to sections
+	$('a[href^=#]').click(function(){
+	    event.preventDefault();
+	    var target = $(this).attr('href');
+	    if (target == '#')
+	      $('html, body').animate({scrollTop : 0}, 600);
+	    else
+	      $('html, body').animate({
+	        scrollTop: $(target).offset().top - 0
+	    }, 600);
+	});
+
+	// Icon mouse show hide intro text 
+	$('.icon-animate').click( function(){
+	    $('html, body').animate({
+	        scrollTop: $('#services').offset().top - 0
+	    }, 600);
+	    $('#show-hide').slideDown(500);
+	});
+
+	// Prevent default
+	// $('a, #btn-submit').click( function(e) {
+	// 	e.preventDefault();
+	// });
 
 	// Service shake repair products
 	$('.repair a').hover( function(){

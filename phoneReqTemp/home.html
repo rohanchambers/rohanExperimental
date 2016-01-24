@@ -25,7 +25,7 @@
         <div id="logo"><a href="#">Phone Resq</a></div>
         <nav id="nav-main" class="nav-global">
             <ul>
-                <li id="dropdown"><a href="#">Services<i class="fa fa-caret-down fa-lg"></i></a>
+                <li id="dropdown"><a href="#services">Services<i class="fa fa-caret-down fa-lg"></i></a>
                     <ul id="subnav">
                         <li><a href="#">iPhone repair</a><span></span></li>
                         <li><a href="#">iPad repair</a><span></span></li>
@@ -35,9 +35,9 @@
                         <li><a href="#">Cell Phone Unlocks</a><span></span></li>
                     </ul>
                 </li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Sell your device</a></li>
-                <li><a href="#">Contact us</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#sell">Sell your device</a></li>
+                <li><a href="#contact">Contact us</a></li>
             </ul>
         </nav>
         <nav id="social-links" class="nav-global">
@@ -87,7 +87,13 @@
             <article class="intro">
                 <h1>Services<span></span></h1>
                 <p>We’re here to serve you with all of your device-related needs. Whether your screen is cracked or you’re looking for assistance setting up a program on your computer, we’ve got you covered.</p>
-                <span id="mouse-scroll"></span>
+                <p id="show-hide">Our services include, but are not limited to:<br>
+                screen repair, speeding up your slow device, hard drive repair, jailbreaking, application and software setup assistance (Coming Soon), iCloud support and other miscellaneous services. Click below to discover more based on your needs.</p>
+                <div id="mouse-scroll">
+                    <div class='icon-animate'></div>
+                    <i class="fa fa-angle-down fa-3x angle-down-1"></i>
+                    <i class="fa fa-angle-down fa-3x  angle-down-2"></i>
+                </div>
                 <hr />
             </article>
         </div><!-- End of row -->
@@ -95,12 +101,12 @@
         <!-- Repair cateogories -->
         <div class="row row-products">
             <article id="iphone-repair" class="repair">
-                <header>                    
+                <header>
                     <span>iPhone repair</span> 
                     <h1>iPhone repair</h1>
                     <p>Whether you have the original iPhone or the latest model, we can take a look at your device and figure out what steps need to be made to get you back on the grid.</p>
                 </header>
-                <a href="#"></a>
+                <a href="#">&nbsp;</a>
             </article>
             <article id="ipad-repair" class="repair">
                 <header>
@@ -108,7 +114,7 @@
                     <h1>iPad repair</h1>
                     <p>If you don’t have the time to make an appointment and have your tablet sent away to a third-party repair shop, consider our in-house services for all of your iPad needs.</p>
                 </header>
-                <a href="#"></a>
+                <a href="#">&nbsp;</a>
             </article>
             <article id="ipod-repair" class="repair">
                 <header>
@@ -116,7 +122,7 @@
                     <h1>iPod Repair</h1>
                     <p>So your iPod is busted and you need to get back to jamming out on your favorite tunes. We get it.</p>
                 </header>
-                <a href="#"></a>
+                <a href="#">&nbsp;</a>
             </article>
         </div><!-- End of row -->
 
@@ -127,7 +133,7 @@
                     <h1>Android Repair</h1>
                     <p>We’re not just about Apple here. We work on Android devices as well. All devices and models are covered in the hands of our knowledgeable staff.</p>
                 </header>
-                <a href="#"></a>
+                <a href="#">&nbsp;</a>
             </article>
             <article id="laptop-repair" class="repair">
                 <header>
@@ -135,7 +141,7 @@
                     <h1>Laptop &amp; Desktop Repair</h1>
                     <p>Doesn’t it feel like when your computer isn’t working, that life slows down? Let us take a look and we’ll get you up and running again in no time.</p>
                 </header>
-                <a href="#"></a>
+                <a href="#">&nbsp;</a>
             </article>
             <article id="unlocks-repair" class="repair">
                 <header>
@@ -173,11 +179,9 @@
             <div class="bg-color bg-color-right"></div>
             <div id="about-row-two" class="about-rows">
                 <article class="left">
-                    <header>
-                        <h1>Phone ResQ strives to create a new and unique experience for its customers:</h1>
-                        <p>A one-on-one interaction that redefines customer service geared toward consistency and ultimate satisfaction.</p>
-                        <p>We at Phone ResQ put our customers first and understand what it means to go a day or two without your device. When you put your device-related needs in our hands, we spring into action and work tirelessly to get your device running smoothly once again, so you can resume your life and work with ease.</p>
-                    </header>      
+                    <p>As Fernandina Beach’s premier Cell Phone Repair service center, we feel a responsibility in keeping prices low so that you don’t have to travel far to get the best price and service for your needs. We proudly carry strictly genuine parts that come at a low cost, which we can then pass those savings onto you.</p>
+                    <p>Don’t let the word “Phone” in our name confuse you— we don’t just do cell phones. We also work on and repair almost any device with a screen. Your computer, be it a laptop or desktop, cannot go weeks broken any more than your phone can!</p>
+
                 </article>
             </div>
             <div id="about-row-two-img" class="about-row-img"></div>
@@ -188,9 +192,8 @@
             <div id="about-row-three" class="about-rows">
                 <article>
                     <header>
-                        <h1>Phone ResQ strives to create a new and unique experience for its customers:</h1>
-                        <p>A one-on-one interaction that redefines customer service geared toward consistency and ultimate satisfaction.</p>
-                        <p>We at Phone ResQ put our customers first and understand what it means to go a day or two without your device. When you put your device-related needs in our hands, we spring into action and work tirelessly to get your device running smoothly once again, so you can resume your life and work with ease.</p>
+                        <p>The benefit to our services is that you’ll have all of your device-related needs taken care of under one roof! No need to go to different locations and scout multiple agents. We take care of all of your needs, in one place.</p>
+                        <p>If you’re looking for a quote or estimate on your desired repair, visit our <a href="#contact">Contact Us</a> section. Or stop by our shop during our regular business hours. No appointment needed. We can take a look at your device and let you know what steps will follow. Estimates are, of course, free and we will be able to diagnose the problem and what needs to be done on site. So there’s no need to send your device far and away for even the most complex of problems. It’s fast, easy and best of all: efficient.</p>
                     </header>
                 </article>      
             </div>
@@ -274,10 +277,10 @@
                     <p>Please fill in all the fields below to send us a message online.</p>
                 </header>            
                 <form id="contact-form">
-                    <p><input type="text" value="Name" id="name" /></p>
-                    <p><input type="text" value="Email" id="email" /></p>
-                    <p><input type="text" value="Phone number (optional)" id="phone" /></p>
-                    <p><input type="text" value="Your message" id="message" /></p>
+                    <p><input type="text" value="Name" id="name" /><span></span></p>
+                    <p><input type="text" value="Email" id="email" /><span></span></p>
+                    <p><input type="text" value="Phone number (optional)" id="phone" /><span></span></p>
+                    <p id="textarea"><textarea placeholder="Your message" id="message"></textarea><span></span></p>
                     <p><input type="submit" value="Send" id="btn-submit" class="btn-animate"></p>                
                 </form>
             </article>
@@ -304,7 +307,7 @@
                         Fernandina Beach,<br>
                         Florida, 32034</p>
 
-                        <p>Email: phoneresq@gmail.com<br>
+                        <p>Email: <a href="mailto:info@phoneresq.com">info@phoneresq.com</a><br>
                         Hours: 10:00AM to 5:00 PM <br>
                         (Monday-Saturday)</p>
                     </div>
