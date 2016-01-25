@@ -63,8 +63,10 @@ $( document ).ready(function() {
 $(document).on('scroll',function(){
     if($(document).scrollTop()>100){
         $('header').removeClass('nav-max').addClass('nav-min');
+        $('#services').addClass('nav-max');
     } else{
-        $('header').removeClass('nav-min').addClass('nav-max');
+        $('header, #services').removeClass('nav-min').addClass('nav-max');
+        $('#services').removeClass('nav-max');
     }
 });
 

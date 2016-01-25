@@ -440,6 +440,7 @@ header {
             width: 30px;
             height: 40px;
             color: $color-white;
+            display: none;
         }
         
         .btn-slide:hover {
@@ -546,6 +547,10 @@ article.intro {
         bottom: -25px;
     }          
 }
+
+#services.nav-max {
+    margin-top: 505px;
+}
     // Mouse scroll down animate
     #mouse-scroll {
         position: relative;
@@ -562,7 +567,7 @@ article.intro {
             display: none;
             position: absolute;        
             left: -1px; 
-            color: #ccc;
+            color: #ddd;
         }
 
             .angle-down-1 {            
@@ -764,21 +769,21 @@ article.intro {
 
     #about-row-one-img {
         right: 0;
-        background: $color-grey url(../img/about/bg-section-one.jpg) no-repeat center center;
+        background: $color-grey url(../img/about/bg-section-one-2.jpg) no-repeat center right;
         background-size: cover;                  
     }
 
     #about-row-two-img,
     #sell-row-img {
         left: 0;
-        background: $color-grey url(../img/about/bg-section-two.jpg) no-repeat center center; 
+        background: $color-grey url(../img/about/bg-section-two-2.jpg) no-repeat center center; 
         background-size: cover;
     }
 
     #about-row-three-img {
         right: 0;       
-        background: $color-grey url(../img/about/bg-section-three.jpg) no-repeat center center;
-        background-size: cover;            
+        background: $color-grey url(../img/about/bg-section-three-2.jpg) no-repeat center center;
+        background-size: cover;          
     }
 
 
@@ -828,7 +833,7 @@ article.intro {
 
     .sell-row-img {
         min-height: 280px;
-        background: $color-grey url(../img/about/bg-sell.jpg) no-repeat center center;
+        background: $color-grey url(../img/about/bg-sell.jpg) no-repeat center -20px;
         background-size: cover;
     }
 
