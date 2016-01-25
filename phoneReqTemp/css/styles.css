@@ -749,6 +749,7 @@ article.intro {
     color: #404040; }
 
 #services {
+  overflow: hidden;
   margin: 400px 0 0 0;
   padding: 25px 0 50px 0; }
   #services::after {
@@ -767,7 +768,7 @@ article.intro {
     background: url(../img/global/sectionDividerFullTrans.png) center top no-repeat;
     bottom: -25px; }
 
-#services.nav-max {
+#services.nav-min {
   margin-top: 505px; }
 
 #mouse-scroll {

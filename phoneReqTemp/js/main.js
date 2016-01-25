@@ -63,13 +63,20 @@ $( document ).ready(function() {
 $(document).on('scroll',function(){
     if($(document).scrollTop()>100){
         $('header').removeClass('nav-max').addClass('nav-min');
-        $('#services').addClass('nav-max');
+        $('#services').addClass('nav-min');
     } else{
-        $('header, #services').removeClass('nav-min').addClass('nav-max');
-        $('#services').removeClass('nav-max');
+        $('header').removeClass('nav-min').addClass('nav-max');
+        $('#services').removeClass('nav-min');
     }
 });
 
+
+// Get current scroll position * FIXME
+$(window).scroll(function (event) {
+    var scroll = $(window).scrollTop();
+    // Do something
+    console.log(scroll);
+});
 
 // Load Google maps
 function initMap() {

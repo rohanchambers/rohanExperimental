@@ -519,6 +519,7 @@ article.intro {
 
 // Services
 #services {
+    overflow: hidden;    
     margin: 400px 0 0 0;
     padding: 25px 0 50px 0;
     @include clearfix;
@@ -548,9 +549,11 @@ article.intro {
     }          
 }
 
-#services.nav-max {
+// Add margin when nav become minimised and positioned fixed. 
+#services.nav-min {
     margin-top: 505px;
 }
+
     // Mouse scroll down animate
     #mouse-scroll {
         position: relative;

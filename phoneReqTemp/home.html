@@ -11,7 +11,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/animate.css"/>
+    <!-- <link rel="stylesheet" href="css/animate.css"/> -->
+    <link rel="stylesheet" href="css/animations.css"/>
     <link rel="stylesheet" href="css/styles.css"/>
     <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 </head>
@@ -64,10 +65,10 @@
         <div class="slide" id="slide-1">
             <div class="slide-content">
                 <article>
-                    <header>
-                        <h1>Welcome to Phone ResQ.</h1>
-                        <p>We repair and improve all of your handheld devices and home computers. Our hassle-free customer service is centered around your interests and the intention of getting you back online.</p>
-                        <a href="#" class="btn-animate">Contact us</a>
+                    <header class="animatedParent animateOnce" data-sequence='500'>
+                        <h1 data-id='1' class="animated fadeInLeft">Welcome to Phone ResQ.</h1>
+                        <p data-id='2' class="animated fadeInLeft">We repair and improve all of your handheld devices and home computers. Our hassle-free customer service is centered around your interests and the intention of getting you back online.</p>
+                        <a href="#" data-id='3' class="btn-animate animated fadeInLeft">Contact us</a>
                     </header>
                 </article>
             </div>
@@ -100,8 +101,8 @@
         </div><!-- End of row -->
         
         <!-- Repair cateogories -->
-        <div class="row row-products">
-            <article id="iphone-repair" class="repair">
+        <div class="row row-products animatedParent" data-appear-top-offset="-100">
+            <article id="iphone-repair" class="repair animated fadeInLeft">
                 <header>
                     <span>iPhone repair</span> 
                     <h1>iPhone repair</h1>
@@ -109,7 +110,7 @@
                 </header>
                 <a href="#">&nbsp;</a>
             </article>
-            <article id="ipad-repair" class="repair">
+            <article id="ipad-repair" class="repair animated fadeInUp">
                 <header>
                     <span>iPad repair</span>
                     <h1>iPad repair</h1>
@@ -117,7 +118,7 @@
                 </header>
                 <a href="#">&nbsp;</a>
             </article>
-            <article id="ipod-repair" class="repair">
+            <article id="ipod-repair" class="repair animated fadeInRight">
                 <header>
                     <span>iPod repair</span>
                     <h1>iPod Repair</h1>
@@ -127,8 +128,8 @@
             </article>
         </div><!-- End of row -->
 
-        <div class="row">
-            <article id="android-repair" class="repair">
+        <div class="row animatedParent" data-appear-top-offset="-100">
+            <article id="android-repair" class="repair animated fadeInLeft">
                 <header>
                     <span>Android repair</span>
                     <h1>Android Repair</h1>
@@ -136,7 +137,7 @@
                 </header>
                 <a href="#">&nbsp;</a>
             </article>
-            <article id="laptop-repair" class="repair">
+            <article id="laptop-repair" class="repair animated fadeInUp">
                 <header>
                     <span>Laptop &amp; Desktop Repair</span>
                     <h1>Laptop &amp; Desktop Repair</h1>
@@ -144,7 +145,7 @@
                 </header>
                 <a href="#">&nbsp;</a>
             </article>
-            <article id="unlocks-repair" class="repair">
+            <article id="unlocks-repair" class="repair animated fadeInRight">
                 <header>
                     <span>Cell Phone unlocks</span>
                     <h1>Cell Phone unlocks</h1>
@@ -238,28 +239,28 @@
         </div>
 
         <div class="row">
-            <div id="shop-products">
-                <article id="iPhone" class="product">
+            <div id="shop-products" class="animatedParent" data-sequence="100">
+                <article id="iPhone" class="product animated fadeInUp" data-id='1'>
                     <img src="img/shop/products/iphone.png" alt="" />
                     <a href="#" class="btn-global btn-animate">Find out more</a>
                 </article>
 
-                <article id="samsung" class="product">
+                <article id="samsung" class="product animated fadeInUp" data-id='2'>
                     <img src="img/shop/products/android.png" alt="" />
                     <a href="#" class="btn-global btn-animate">Find out more</a>
                 </article>
 
-                <article id="iPad" class="product">
+                <article id="iPad" class="product animated fadeInUp" data-id='3'>
                     <img src="img/shop/products/ipad.png" alt="" />
                     <a href="#" class="btn-global btn-animate">Find out more</a>
                 </article>      
 
-                <article id="samsung-galaxy" class="product">
+                <article id="samsung-galaxy" class="product animated fadeInUp" data-id='4'>
                     <img src="img/shop/products/samsungTablet.png" alt="" />
                     <a href="#" class="btn-global btn-animate">Find out more</a>
                 </article>
 
-                <article id="accessories" class="product">
+                <article id="accessories" class="product animated fadeInUp" data-id='5'>
                     <img src="img/shop/products/accessories.png" alt="" />
                     <a href="#" class="btn-global btn-animate">Find out more</a>
                 </article>
@@ -372,6 +373,7 @@
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
 <!-- Replace the API Key with your own -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAnlujjc073E2Ku0_K_HyCtbRDC-HjFgk&callback=initMap" async defer></script>
+<script src="js/vendor/css3-animate-it.js"></script>
 <script src="js/main.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
