@@ -1,28 +1,24 @@
 $( document ).ready(function() {
 
-	// $('#contact-form input').click( function(){
-	// 	$(this).focus().siblings().css({width: '100%'});
-	// });
-
 	// Show hide value of form inputs and textarea
 	$('input:text, textarea').each(function(){
 		var txtval = $(this).val();
-		var txtAreaVal = $(this).attr("placeholder");
+		var txtAreaVal = $(this).attr('placeholder');
 		
 		$(this).focus(function(){
 			$(this).val('');
-			$(this).attr("placeholder", '');
+			$(this).attr('placeholder', '');
 			$(this).siblings('span').css({width: '100%'});
 		});
 
 		$(this).blur(function(){
-			if( $(this).val() == "") {
+			if( $(this).val() == '') {
 				$(this).val(txtval);
 				$(this).siblings('span').css({width: '0%'});
 			}
 
-			if( $(this).attr("placeholder") == "") {
-				$(this).attr("placeholder", txtAreaVal);
+			if( $(this).attr('placeholder') == '') {
+				$(this).attr('placeholder', txtAreaVal);
 				$(this).siblings('span').css({width: '0%'});
 			}
 		});
@@ -36,7 +32,7 @@ $( document ).ready(function() {
 	      $('html, body').animate({scrollTop : 0}, 600);
 	    else
 	      $('html, body').animate({
-	        scrollTop: $(target).offset().top - 0
+	        scrollTop: $(target).offset().top - 75
 	    }, 600);
 	});
 
@@ -47,11 +43,6 @@ $( document ).ready(function() {
 	    }, 600);
 	    $('#show-hide').slideDown(500);
 	});
-
-	// Prevent default
-	// $('a, #btn-submit').click( function(e) {
-	// 	e.preventDefault();
-	// });
 
 	// Service shake repair products
 	$('.repair a').hover( function(){
@@ -68,6 +59,15 @@ $( document ).ready(function() {
 	});
 
 });
+
+$(document).on('scroll',function(){
+    if($(document).scrollTop()>100){
+        $('header').removeClass('nav-max').addClass('nav-min');
+    } else{
+        $('header').removeClass('nav-min').addClass('nav-max');
+    }
+});
+
 
 // Load Google maps
 function initMap() {

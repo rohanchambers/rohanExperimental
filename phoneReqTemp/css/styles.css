@@ -403,7 +403,7 @@ section,
 header {
   position: relative; }
 
-.btn-global, #nav-cta .btn-nav, #shop #shop-products a {
+.btn-global, #header #nav-cta .btn-nav, #shop #shop-products a {
   display: block;
   width: auto;
   height: 30px;
@@ -419,7 +419,7 @@ header {
   -moz-box-shadow: 0px 1px 3px 0px #999999;
   box-shadow: 0px 1px 3px 0px #999999; }
 
-.btn-global:hover, #nav-cta .btn-nav:hover, #shop #shop-products a:hover {
+.btn-global:hover, #header #nav-cta .btn-nav:hover, #shop #shop-products a:hover {
   background-color: #FFF;
   color: #404040; }
 
@@ -438,7 +438,7 @@ header {
   -webkit-transition-property: color, background-color;
   transition-property: color, background-color; }
 
-@-webkit-keyframes spaceboots {
+@-webkit-keyframes shakeit {
   0% {
     -webkit-transform: translate(2px, 1px) rotate(0deg); }
   10% {
@@ -463,7 +463,7 @@ header {
     -webkit-transform: translate(1px, -2px) rotate(-1deg); } }
 .shake,
 .shake {
-  -webkit-animation-name: spaceboots;
+  -webkit-animation-name: shakeit;
   -webkit-animation-duration: 0.8s;
   -webkit-transform-origin: 50% 50%;
   -webkit-animation-iteration-count: infinite;
@@ -479,20 +479,138 @@ header {
 #header {
   z-index: 10;
   padding: 10px 0; }
+  #header #nav-main {
+    position: relative; }
+    #header #nav-main li {
+      position: relative;
+      margin: 0 0 0 15px; }
+      #header #nav-main li ul#subnav {
+        display: none;
+        position: absolute;
+        top: 20px;
+        left: -5px;
+        width: 220px;
+        padding-top: 5px; }
+        #header #nav-main li ul#subnav li {
+          position: relative;
+          display: block;
+          float: none;
+          margin: 0; }
+          #header #nav-main li ul#subnav li a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            padding: 5px 6px;
+            border-bottom: 1px solid #FFF; }
+          #header #nav-main li ul#subnav li a::after {
+            content: '';
+            background: none; }
+          #header #nav-main li ul#subnav li span {
+            position: absolute;
+            bottom: 0;
+            display: block;
+            width: 0%;
+            height: 2px;
+            background-color: #e20510;
+            -moz-transition: width .5s ease;
+            -webkit-transition: width .5s ease;
+            transition: width .5s ease; }
+        #header #nav-main li ul#subnav li:hover span {
+          width: 100%; }
+    #header #nav-main li#dropdown:hover > #subnav {
+      display: block;
+      -moz-animation: fadeInDown 0.3s ease-in;
+      -webkit-animation: fadeInDown 0.3s ease-in;
+      animation: fadeInDown .3s ease-in; }
+    #header #nav-main i {
+      margin-left: 5px; }
+    #header #nav-main a {
+      color: #FFF; }
+    #header #nav-main a::after {
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      content: '';
+      width: 0%;
+      height: 1px;
+      background-color: #FFF;
+      -webkit-transition: all .2s linear;
+      -moz-transition: all .2s linear;
+      transition: all .2s linear; }
+    #header #nav-main a:hover::after {
+      width: 100%; }
+  #header #social-links {
+    margin-left: 40px; }
+    #header #social-links li {
+      margin: 0 10px 0 0; }
+  #header #nav-cta {
+    float: right;
+    margin-top: 10px; }
+    #header #nav-cta li {
+      margin: 0 0 0 10px; }
+    #header #nav-cta i {
+      margin-right: 7px; }
+  #header #logo {
+    float: left;
+    margin-right: 5px;
+    width: 99px;
+    height: 85px;
+    background-image: url(../img/global/phoneResqLogo.png);
+    overflow: hidden;
+    text-indent: 101%;
+    white-space: nowrap; }
+    #header #logo a {
+      display: block;
+      width: 100%;
+      height: 100%; }
 
-#logo {
-  float: left;
-  margin-right: 5px;
-  width: 99px;
-  height: 85px;
-  background-image: url(../img/global/phoneResqLogo.png);
-  overflow: hidden;
-  text-indent: 101%;
-  white-space: nowrap; }
-  #logo a {
-    display: block;
-    width: 100%;
-    height: 100%; }
+#header.nav-min {
+  position: fixed;
+  z-index: 200;
+  top: 0;
+  width: 100%;
+  height: 75px;
+  padding: 7px 0;
+  background-color: #FFF;
+  transition: all 1s;
+  -moz-transition: all 1s;
+  /* Firefox 4 */
+  -webkit-transition: all 1s;
+  /* Safari and Chrome */
+  -o-transition: all 1s;
+  /* Opera */
+  -webkit-box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.75); }
+  #header.nav-min #nav-main a,
+  #header.nav-min #social-links a {
+    color: #404040; }
+  #header.nav-min .nav-global {
+    margin-top: 20px; }
+  #header.nav-min #nav-cta {
+    margin-top: 15px; }
+  #header.nav-min #social-links a:hover {
+    color: #e20510; }
+  #header.nav-min #sub-nav, #header.nav-min #dropdown i,
+  #header.nav-min li#dropdown:hover > #subnav {
+    display: none !important; }
+  #header.nav-min #logo {
+    width: 75px;
+    background-size: 100%;
+    background-repeat: no-repeat; }
+  #header.nav-min #nav-main a::after {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    content: '';
+    width: 0%;
+    height: 1px;
+    background-color: #404040;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    transition: all .2s linear; }
+  #header.nav-min #nav-main a:hover::after {
+    width: 100%; }
 
 .nav-global {
   position: relative;
@@ -513,64 +631,6 @@ header {
     text-transform: uppercase; }
   .nav-global a:hover {
     color: #e20510; }
-
-#nav-main {
-  position: relative; }
-  #nav-main li {
-    position: relative;
-    margin: 0 0 0 15px; }
-    #nav-main li ul#subnav {
-      display: none;
-      position: absolute;
-      top: 20px;
-      left: -5px;
-      width: 220px;
-      padding-top: 5px; }
-      #nav-main li ul#subnav li {
-        position: relative;
-        display: block;
-        float: none;
-        margin: 0; }
-        #nav-main li ul#subnav li a {
-          display: block;
-          width: 100%;
-          height: 100%;
-          padding: 5px 6px;
-          border-bottom: 1px solid #FFF; }
-        #nav-main li ul#subnav li a:hover {
-          background-color: #FFF; }
-        #nav-main li ul#subnav li span {
-          position: absolute;
-          bottom: 0;
-          display: block;
-          width: 0%;
-          height: 2px;
-          background-color: #e20510;
-          -moz-transition: width 1s ease;
-          -webkit-transition: width 1s ease;
-          transition: width 1s ease; }
-      #nav-main li ul#subnav li:hover span {
-        width: 100%; }
-  #nav-main li#dropdown:hover > #subnav {
-    display: block;
-    -moz-animation: fadeInDown 0.3s ease-in;
-    -webkit-animation: fadeInDown 0.3s ease-in;
-    animation: fadeInDown .3s ease-in; }
-  #nav-main i {
-    margin-left: 5px; }
-
-#social-links {
-  margin-left: 40px; }
-  #social-links li {
-    margin: 0 10px 0 0; }
-
-#nav-cta {
-  float: right;
-  margin-top: 10px; }
-  #nav-cta li {
-    margin: 0 0 0 10px; }
-  #nav-cta i {
-    margin-right: 7px; }
 
 #carousel {
   position: absolute;
@@ -688,7 +748,7 @@ article.intro {
     color: #404040; }
 
 #services {
-  margin: 415px 0 0 0;
+  margin: 400px 0 0 0;
   padding: 25px 0 50px 0; }
   #services::after {
     clear: both;
