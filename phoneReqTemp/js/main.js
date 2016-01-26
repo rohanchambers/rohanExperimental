@@ -1,7 +1,13 @@
 $( document ).ready(function() {
 
+	// Mobile icon hamburger
+	$('#nav-hamburger').click(function(){
+		$(this).toggleClass('open');
+		$('#nav-main ul').slideToggle().toggleClass('mobile-dropdown');
+	});
+
 	// Show hide value of form inputs and textarea
-	$('input:text, textarea').each(function(){
+	$('input, textarea').each(function(){
 		var txtval = $(this).val();
 		var txtAreaVal = $(this).attr('placeholder');
 		
@@ -24,42 +30,58 @@ $( document ).ready(function() {
 		});
 	});
 
+	// Validate form
+	 $("#contact-form").validate();
+
+	// Minimal nav add active state to show underline
+	$('#nav-main a').click( function(){
+		$('#nav-main a').removeClass('active');		
+		$(this).addClass('active');		
+	});
+
 	//Scroll to sections
 	$('a[href^=#]').click(function(){
 	    event.preventDefault();
 	    var target = $(this).attr('href');
-	    if (target == '#')
-	      $('html, body').animate({scrollTop : 0}, 600);
-	    else
-	      $('html, body').animate({
-	        scrollTop: $(target).offset().top - 75
-	    }, 600);
+	    var speed = 600;
+
+	    if (target == '#header')
+	   
+	      $('html, body').animate({scrollTop : 0}, speed);
+	    
+	    else if(target == '#contact'){	    	
+	   
+	    	$('html, body').animate({scrollTop : 3370}, speed);
+	    
+	    } else if(target == '#about'){	    	
+	   
+	    	$('html, body').animate({scrollTop : 1370}, speed);
+	    
+	    } else $('html, body').animate({
+	   
+	        scrollTop: $(target).offset().top - 45
+	   
+	    }, speed);
+	});
+
+	// Service shake repair products
+	$('.repair a, .product a, .product img').hover( function(){
+		$(this).parent().find('span, img').addClass('shake');
+	}, function() {
+		$(this).parent().find('span, img').removeClass();
 	});
 
 	// Icon mouse show hide intro text 
 	$('.icon-animate').click( function(){
 	    $('html, body').animate({
-	        scrollTop: $('#services').offset().top - 0
+	        scrollTop: $('#services').offset().top - 45
 	    }, 600);
 	    $('#show-hide').slideDown(500);
 	});
-
-	// Service shake repair products
-	$('.repair a').hover( function(){
-		$(this).parent().find('span').addClass('shake');
-	}, function() {
-		$(this).parent().find('span').removeClass();
-	});
-
-	// Shop shake products
-	$('.product a, .product img').hover( function(){
-		$(this).parent().find('img').addClass('shake');
-	}, function() {
-		$(this).parent().find('img').removeClass();
-	});
-
 });
 
+
+// On scroll change nav types
 $(document).on('scroll',function(){
     if($(document).scrollTop()>100){
         $('header').removeClass('nav-max').addClass('nav-min');
@@ -70,13 +92,6 @@ $(document).on('scroll',function(){
     }
 });
 
-
-// Get current scroll position * FIXME
-$(window).scroll(function (event) {
-    var scroll = $(window).scrollTop();
-    // Do something
-    console.log(scroll);
-});
 
 // Load Google maps
 function initMap() {
@@ -117,3 +132,13 @@ function initMap() {
 	infowindow.open(map, marker);
 	});
 }
+
+
+
+
+// Get current scroll position * FIXME
+// $(window).scroll(function (event) {
+//     var scroll = $(window).scrollTop();
+//     // Do something
+//     console.log(scroll);
+// });

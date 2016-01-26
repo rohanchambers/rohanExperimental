@@ -23,7 +23,7 @@
     
 <header id="header">
     <div class="container">    
-        <div id="logo"><a href="#">Phone Resq</a></div>
+        <div id="logo"><a href="#header">Phone Resq</a></div>
         <nav id="nav-main" class="nav-global">
             <ul>
                 <li id="dropdown"><a href="#services">Services<i class="fa fa-caret-down fa-lg"></i></a>
@@ -51,11 +51,18 @@
         </nav>
         <nav id="nav-cta" class="nav-global">
             <ul>
-                <li><a href="#" class="btn-nav btn-animate"><i class="fa fa-wrench fa-lg"></i>Request repair</a></li>
-                <li><a href="#" class="btn-nav btn-animate"><i class="fa fa-phone fa-lg"></i>(904) 310-0059</a></li>
+                <li><a href="#contact" class="btn-nav btn-animate"><i class="fa fa-wrench fa-lg"></i>Request repair</a></li>
+                <li><a href="tel:9043100059" class="btn-nav btn-animate"><i class="fa fa-phone fa-lg"></i>(904) 310-0059</a></li>
             </ul>
         </nav>
+        <div id="nav-hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>        
     </div>
+
 </header><!-- End of Header -->
 
 
@@ -68,7 +75,7 @@
                     <header class="animatedParent animateOnce" data-sequence='500'>
                         <h1 data-id='1' class="animated fadeInLeft">Welcome to Phone ResQ.</h1>
                         <p data-id='2' class="animated fadeInLeft">We repair and improve all of your handheld devices and home computers. Our hassle-free customer service is centered around your interests and the intention of getting you back online.</p>
-                        <a href="#" data-id='3' class="btn-animate animated fadeInLeft">Contact us</a>
+                        <a href="#contact" data-id='3' class="btn-animate animated fadeInLeft">Contact us</a>
                     </header>
                 </article>
             </div>
@@ -241,27 +248,27 @@
         <div class="row">
             <div id="shop-products" class="animatedParent" data-sequence="100">
                 <article id="iPhone" class="product animated fadeInUp" data-id='1'>
-                    <img src="img/shop/products/iphone.png" alt="" />
+                    <img src="img/shop/products/iphone.png" alt="iPhone repair" />
                     <a href="#" class="btn-global btn-animate">Find out more</a>
                 </article>
 
                 <article id="samsung" class="product animated fadeInUp" data-id='2'>
-                    <img src="img/shop/products/android.png" alt="" />
+                    <img src="img/shop/products/android.png" alt="iPad repair" />
                     <a href="#" class="btn-global btn-animate">Find out more</a>
                 </article>
 
                 <article id="iPad" class="product animated fadeInUp" data-id='3'>
-                    <img src="img/shop/products/ipad.png" alt="" />
+                    <img src="img/shop/products/ipad.png" alt="iPod repair" />
                     <a href="#" class="btn-global btn-animate">Find out more</a>
                 </article>      
 
                 <article id="samsung-galaxy" class="product animated fadeInUp" data-id='4'>
-                    <img src="img/shop/products/samsungTablet.png" alt="" />
+                    <img src="img/shop/products/samsungTablet.png" alt="Samsung Galaxy repair" />
                     <a href="#" class="btn-global btn-animate">Find out more</a>
                 </article>
 
                 <article id="accessories" class="product animated fadeInUp" data-id='5'>
-                    <img src="img/shop/products/accessories.png" alt="" />
+                    <img src="img/shop/products/accessories.png" alt="Accessories" />
                     <a href="#" class="btn-global btn-animate">Find out more</a>
                 </article>
             </div>            
@@ -278,12 +285,30 @@
                     <h1>Contact us<span></span></h1>
                     <p>Please fill in all the fields below to send us a message online.</p>
                 </header>            
-                <form id="contact-form">
-                    <p><input type="text" value="Name" id="name" /><span></span></p>
-                    <p><input type="text" value="Email" id="email" /><span></span></p>
-                    <p><input type="text" value="Phone number (optional)" id="phone" /><span></span></p>
-                    <p id="textarea"><textarea placeholder="Your message" id="message"></textarea><span></span></p>
-                    <p><input type="submit" value="Send" id="btn-submit" class="btn-animate"></p>                
+                <form id="contact-form" method="get" action="">
+                    <p>
+                        <input type="text" placeholder="Name" name="fullname" id="resqFullname" required>
+                        <span></span>
+                        <label for="resqFullname"></label>
+                    </p>
+                    <p>
+                        <input type="email" placeholder="Email" name="email" id="resqEmail" required>
+                        <span></span>
+                        <label for="resqEmail"></label>
+                    </p>
+                    <p>
+                        <input type="numbers" placeholder="Phone number (optional)" name="phone" id="resqPhone">
+                        <span></span>
+                        <label for="resqPhone"></label>
+                    </p>        
+                    <p id="textarea">
+                        <textarea placeholder="Your message" name="message" id="resqMessage" required></textarea>
+                        <span></span>
+                        <label for="resqMessage"></label>
+                    </p>
+                    <p>
+                        <button type="submit" id="btn-submit" class="btn-animate">Send</button>
+                    </p>        
                 </form>
             </article>
         </div>
@@ -341,7 +366,7 @@
     <div class="container">
         <div class="row">
             <div id="company-details" class="two-col">
-                <a href="#"><img src="img/footer/logo.png" alt="" /></a>
+                <a href="/home.php"><img src="img/footer/logo.png" alt="Phone Resq." /></a>
                 <p>(904) 310-0059</p>
                 <p><a href="mailto:info@phoneresq.com">info@phoneresq.com</a></p>
                 <p>1001 Atlantic Avenue Suite<br>
@@ -357,23 +382,23 @@
                 </nav>
             </div>
             <div id="back-top" class="two-col">
-                <a href="#"><img src="img/footer/backTop.png" alt="" /></a>
-                <p><a href="">Services</a></p> 
-                <p><a href="">iPhone Repair</a></p>
-                <p><a href="">iPod Repair</a></p>
-                <p><a href="">iPad Repair</a></p>
-                <p><a href="">Android Repair</a></p>
-                <p id="copyright">© Phone Resq 2015. All Rights Reserved.</p>
+                <a href="#header"><img src="img/footer/backTop.png" alt="Back to top" /></a>
+                <p><a href="#">Services</a></p> 
+                <p><a href="#">iPhone Repair</a></p>
+                <p><a href="#">iPod Repair</a></p>
+                <p><a href="#">iPad Repair</a></p>
+                <p><a href="#">Android Repair</a></p>
+                <p id="copyright">&copy; Phone Resq 2016. All Rights Reserved.</p>
             </div>
         </div>
     </div>    
 </footer> 
-
 <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
 <!-- Replace the API Key with your own -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAnlujjc073E2Ku0_K_HyCtbRDC-HjFgk&callback=initMap" async defer></script>
 <script src="js/vendor/css3-animate-it.js"></script>
+<script src="js/vendor/jquery.validate.min.js"></script>
 <script src="js/main.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
