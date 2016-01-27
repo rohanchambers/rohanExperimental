@@ -194,9 +194,9 @@ header {
         
         li#dropdown:hover > #subnav {
             display:block;
-            -moz-animation: fadeInDown .3s ease-in ;
-                -webkit-animation: fadeInDown .3s ease-in ;
-                    animation: fadeInDown .3s ease-in;
+            -moz-animation: fadeIn .5s ease-in ;
+                -webkit-animation: fadeIn .5s ease-in ;
+                    animation: fadeIn .5s ease-in;
         }
 
         i {
@@ -496,8 +496,6 @@ header {
 article.intro {
 
     @include span-columns(12 of 12);        
-
-    //margin-top: 15px;
     text-align: center;
 
     h1 {
@@ -991,7 +989,8 @@ article.intro {
 
         input, 
         input[type=submit],
-        textarea {
+        textarea,
+        button {
             // Remove focus glow
             outline-color: transparent;
             outline-style: none;        
@@ -1042,7 +1041,7 @@ article.intro {
     }
 
     #map {
-        width: 90%;
+        width: 95%;
         height: 370px;
         margin-top: 25px;
     }
@@ -1051,16 +1050,17 @@ article.intro {
         
         .intro {
             text-align: left;
-    
-            div {
-                width: 95%;
-            }
 
             p {
                 width: 75%;
                 margin-bottom: 15px;
                 font-size: rem(14);
-            }            
+            } 
+
+            a:hover {
+                background-color: $color-red;
+                color: $color-white;
+            }           
         }
         
         h1 {
@@ -1170,19 +1170,51 @@ footer {
 
 
 
+// RESPONSIVE STYLES
 
+// Desktop 1030px max.       
+@include media($desktop-med) {
+    .container {            
+        margin: 0 10px;
+        //background-color: red;
+    }
+
+    #carousel .slide .slide-content {
+        width: 100%;
+    }
+
+    #shop {
+        display: none;
+    }
+}
+
+// Remove social links when resizing browser down
+@media (max-width: 956px) {
+    #social-links {
+        display: none;
+    }
+}
+
+// iPad 867px
 @include media($desktop-sml) {
 
+    .container {
+        margin: 0 15px;
+        //background-color: orange;
+    }
+
+    #services {
+        margin-top: 510px;
+    }
+
     #header {
-        padding: 0!important;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        padding: 0;
         border-top: 9px solid $color-red;
 
-        #social-links,
-        #nav-cta,
-        #logo {
-            display: none;
-        }
-        
+        // Mobile nav
         #nav-main {
             margin: 0;            
             width: 100%;
@@ -1196,9 +1228,9 @@ footer {
             }
 
             li {
-                float: none!important;
+                float: none;
                 width: 100%;
-                margin: 0!important;
+                margin: 0;
                 background-color: $color-red;
                 border-bottom: 1px solid $color-white;
 
@@ -1208,24 +1240,74 @@ footer {
                     width: 100%;
                     height: 100%;
                     padding: 17px 15px;
-                    font-size: rem(16)!important;                  
+                    font-size: rem(16);                  
                 }
 
-                ul {
-                    display: none!important;
+                a::after {
+                    width: 100%;
+                    -moz-transition: none;
+                    -webkit-transition: none;
+                    transition: none;                  
                 }
+
+                a:hover {
+                    background-color: $color-white;
+                    color: $color-red;
+                }
+
+                    ul#subnav {
+                        display: none;
+                        position: relative;
+                        top: auto;
+                        left: auto;
+                        width: 100%;
+
+                        li {
+                            span {
+                                display: none;
+                                -moz-transition: none;
+                                -webkit-transition: none;
+                                transition: none;                                
+                            }
+
+                            a {
+                                padding: 15px 40px;
+                                border-bottom: none;                        
+                            }
+                        }
+                    }
+
             }
+
+            li#dropdown:hover > #subnav {
+                display:block;
+                -moz-animation: none;
+                    -webkit-animation: none;
+                        animation: none;
+            }            
         }
 
+        #logo {
+            margin-top: 15px;
+            display: none;
+        }
+
+        #social-links,
+        #nav-cta {
+            display: none;
+        }
+        
+        // Hamburger icon for mobile
         #nav-hamburger {
             display: block!important;
         }
         
         #nav-hamburger {
+          position: absolute;
+          right: 0;
+          z-index: 1000;       
           width: 30px;
           height: 45px;
-          position: relative;
-          float: right;
           margin: 15px 20px;
           -webkit-transform: rotate(0deg);
           -moz-transform: rotate(0deg);
@@ -1257,8 +1339,9 @@ footer {
           transition: .25s ease-in-out;
         }
 
-
-         /* Icon 3 */
+        // #nav-hamburger.open span {
+        //     background: $color-text;
+        // }
 
         #nav-hamburger span:nth-child(1) {
           top: 0px;
@@ -1302,154 +1385,101 @@ footer {
     }
 }
 
+// Mobile 667px max.
+@include media($mobile) {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // Desktop Small styles        
     .container {
-        @include media($desktop-med) {
-            margin: 0 40px;
+        margin: 0 0px;
+        width: 100%;
+        background-color: transparent;            
+    }
+
+    // Change to 1 column so everything blocks under each other
+    .intro,
+    .repair,
+    .about-rows,
+    #contact .two-col {
+        @include span-columns(12 of 12);
+    }
+
+    // Carousel section
+    #carousel .slide {
+        .slide-content {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        article {
+            width: 100%;
+            float: none;
+            margin: 0;
+            padding-top: 80px;
+            text-align: center;
         }
     }
     
-    .container {
-        @include media($desktop-sml) {
-            margin: 0 15px;
-        }
+    #services {
+        //overflow: visible;
+        padding-bottom: 10px;
     }
 
-        .element {
-            @include media($desktop-sml) {
-                @include linear-gradient(to top, blue, purple);
+    #about .container article {
+        margin-right: 10%;
+    }
+
+    // Section Intro text articles
+    article.intro p {
+        width: 100%;
+    }
+    
+    // Services equal margin bottoms for all products
+    .repair,
+    #services .row.row-products {
+        margin-bottom: 30px;
+    }
+    
+    #contact {
+        #map {
+            width: 100%;
+        }
+
+        #get-in-touch .intro {
+            text-align: center;
+            
+            span {
+                margin: 0 auto;
+            }
+
+            p {
+                width: 100%;
             }
         }
-    
-    // Mobile styles
-    .container {
-        @include media($mobile) {
-            margin: 0 5px;
-        }
     }
 
-    // .row {
-    //     margin: 0;
-    // }
-
-    .element {
-        @include media($mobile) {
-            @include span-columns(12 of 12);
-            @include linear-gradient(to top, red, pink);
-        }
-        margin-bottom: 15px;
+    // Hide sections that are not needed for mobile
+    #about .section-divider,
+    #sell .section-divider,
+    #clients,
+    #shop,
+    #sell,        
+    hr {
+        display: none;
     }
 
-    .element-1, 
-    .element-2, 
-    .element-3 {
-            @include media($mobile) {
-                @include span-columns(4 of 12);            
-        }
-    }
-    
-    .element-8 {
-        @include media($mobile) {
-            @include shift(0);
-        }
-    }
-
-
-  #mybutton {   
-    //@include button(orange);
-    outline: 0;
 }
 
-.element {
-    min-height: 100px;
-    @include pad(15px);
-    @include linear-gradient(to top, red, orange);
-
-    h1 {
-        font-family: $helvetica;
-        // font-size: golden-ratio(14px, 1);
-        @include text-decoration(underline double rgb(124,213,224));
-    }
-}  
 
 
 
-            // span:hover {
-            //   animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
-            //   transform: translate3d(0, 0, 0);
-            //   backface-visibility: hidden;
-            //   perspective: 1000px;
-            // }
 
-            // @keyframes shake {
-            //   10%, 90% {
-            //     transform: translate3d(-1px, 0, 0);
-            //   }
-              
-            //   20%, 80% {
-            //     transform: translate3d(2px, 0, 0);
-            //   }
 
-            //   30%, 50%, 70% {
-            //     transform: translate3d(-4px, 0, 0);
-            //   }
 
-            //   40%, 60% {
-            //     transform: translate3d(4px, 0, 0);
-            //   }
-            // }
+
+
+
+
+
+
+ 
+
+

@@ -78,18 +78,52 @@ $( document ).ready(function() {
 	    }, 600);
 	    $('#show-hide').slideDown(500);
 	});
+
+	// Detect if mobile or tablet
+ 	// if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) {
+  //       $('.row').removeClass('animatedParent'); // to remove transition
+  //   }
+
+
+
+	// if( getWidth() < 667 ) {
+	// 	$('.animatedParent').removeClass('animatedParent');
+	// }
+	
 });
 
 
 // On scroll change nav types
 $(document).on('scroll',function(){
-    if($(document).scrollTop()>100){
-        $('header').removeClass('nav-max').addClass('nav-min');
+
+  	// Detect browser width
+	function getWidth() {
+		if (self.innerHeight) {
+			return self.innerWidth;
+		}
+
+		if (document.documentElement && document.documentElement.clientHeight) {
+			return document.documentElement.clientWidth;
+		}
+
+		if (document.body) {
+			return document.body.clientWidth;
+		}
+	}
+
+    if($(document).scrollTop() > 100) {
+        $('#header').removeClass('nav-max').addClass('nav-min');
         $('#services').addClass('nav-min');
-    } else{
-        $('header').removeClass('nav-min').addClass('nav-max');
+    } else {
+        $('#header').removeClass('nav-min').addClass('nav-max');
         $('#services').removeClass('nav-min');
     }
+
+
+	if( getWidth() < 866 ) {
+		$('#header, #services').removeClass();
+	}
+
 });
 
 

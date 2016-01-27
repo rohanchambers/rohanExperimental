@@ -68,25 +68,22 @@
 
 <!-- CAROUSEL -->
 <section id="carousel">
-    <div id="viewport">
-        <div class="slide" id="slide-1">
-            <div class="slide-content">
-                <article>
-                    <header class="animatedParent animateOnce" data-sequence='500'>
-                        <h1 data-id='1' class="animated fadeInLeft">Welcome to Phone ResQ.</h1>
-                        <p data-id='2' class="animated fadeInLeft">We repair and improve all of your handheld devices and home computers. Our hassle-free customer service is centered around your interests and the intention of getting you back online.</p>
-                        <a href="#contact" data-id='3' class="btn-animate animated fadeInLeft">Contact us</a>
-                    </header>
-                </article>
-            </div>
-        </div><!-- End of Viewport-->
-
-        <div id="carousel-btn">
-            <a href="#" id="btn-prev" class="btn-slide btn-animate"><i class="fa fa-chevron-left fa-3x"></i></a>
-            <a href="#" id="btn-nxt" class="btn-slide btn-animate"><i class="fa fa-chevron-right fa-3x"></i></a>
+    <div class="slide" id="slide-1">
+        <div class="slide-content">
+            <article>
+                <header class="animatedParent animateOnce" data-sequence='500'>
+                    <h1 data-id='1' class="animated fadeInLeft">Welcome to Phone ResQ.</h1>
+                    <p data-id='2' class="animated fadeInLeft">We repair and improve all of your handheld devices and home computers. Our hassle-free customer service is centered around your interests and the intention of getting you back online.</p>
+                    <a href="#contact" data-id='3' class="btn-animate animated fadeInLeft">Contact us</a>
+                </header>
+            </article>
         </div>
-    </div>
+    </div><!-- End of Slide -->
 
+    <div id="carousel-btn">
+        <a href="#" id="btn-prev" class="btn-slide btn-animate"><i class="fa fa-chevron-left fa-3x"></i></a>
+        <a href="#" id="btn-nxt" class="btn-slide btn-animate"><i class="fa fa-chevron-right fa-3x"></i></a>
+    </div>
     <div class="section-divider"></div>
 </section><!-- End of Carousel section-->
 
@@ -321,7 +318,7 @@
 
             <div id="get-in-touch" class="two-col">
                 <article class="intro">
-                    <div>
+ 
                         <h1>Get in touch<span></span></h1>
                     
                         <p>Contact us today! Stop by the store during normal business hours or call us at<br> 
@@ -337,7 +334,7 @@
                         <p>Email: <a href="mailto:info@phoneresq.com">info@phoneresq.com</a><br>
                         Hours: 10:00AM to 5:00 PM <br>
                         (Monday-Saturday)</p>
-                    </div>
+
                 </article>    
 
             </div>
