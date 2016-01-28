@@ -60,7 +60,7 @@
             <span></span>
             <span></span>
             <span></span>
-        </div>        
+        </div>
     </div>
 
 </header><!-- End of Header -->
@@ -370,7 +370,7 @@
                 Fernandina Beach Florida<br>
                 32034</p>
                 
-                <nav id="social-links" class="nav-global">
+                <nav id="footer-social-links" class="nav-global">
                     <ul>
                         <li><a href="#" title="Facebook share"><i class="fa fa-facebook fa-lg btn-animate"></i></a></li>
                         <li><a href="#" title="Twitter share"><i class="fa fa-twitter fa-lg btn-animate"></i></a></li>
@@ -378,14 +378,14 @@
                     </ul>
                 </nav>
             </div>
-            <div id="back-top" class="two-col">
-                <a href="#header"><img src="img/footer/backTop.png" alt="Back to top" /></a>
+            <div id="footer-links" class="two-col">
+                <a href="#header" id="back-top"></a>
                 <p><a href="#">Services</a></p> 
                 <p><a href="#">iPhone Repair</a></p>
                 <p><a href="#">iPod Repair</a></p>
                 <p><a href="#">iPad Repair</a></p>
                 <p><a href="#">Android Repair</a></p>
-                <p id="copyright">&copy; Phone Resq 2016. All Rights Reserved.</p>
+                <p id="copyright">&copy;2016 Phone Resq. All Rights Reserved.</p>
             </div>
         </div>
     </div>    

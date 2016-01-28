@@ -132,7 +132,7 @@ header {
     z-index: 10;
     padding: 10px 0;
     
-    // Hide nav icon hamburger
+    // Hide nav icon hamburger on desktop
     #nav-hamburger {
         display: none;
     }
@@ -192,6 +192,7 @@ header {
                 }             
         }
         
+        // Animate fade of sub nav on Services hover
         li#dropdown:hover > #subnav {
             display:block;
             -moz-animation: fadeIn .5s ease-in ;
@@ -206,7 +207,8 @@ header {
         a {
             color: $color-white;
         }
-
+        
+        // On hover of subnav items. Animate from 0 - 100% red 
         a::after {
             position: absolute;
             bottom: -2px;
@@ -226,7 +228,8 @@ header {
     }
 
     // Social media links
-    #social-links {
+    #social-links, 
+    #footer-social-links {
         margin-left: 40px;
 
         li {
@@ -269,6 +272,7 @@ header {
 } // End of Header
 
 
+// Animate nav minified version on scroll 
 #header.nav-min {
     position: fixed;
     z-index: 200;
@@ -288,14 +292,16 @@ header {
                 box-shadow: 0px 0px 9px 2px rgba(0,0,0,0.75);
 
     #nav-main, 
-    #social-links {
+    #social-links,
+    #footer-social-links {
         a {
             color: $color-text;
         }
     }
     
+    // Underline on .active nav states added in JS
     #nav-main a.active::after {
-        width: 100%!important;
+        width: 100%;
     }
 
     .nav-global {
@@ -306,7 +312,8 @@ header {
         margin-top: 15px;
     }
 
-    #social-links a:hover {
+    #social-links a:hover,
+    #footer-social-links a:hover {
         color: $color-red;   
     }
     
@@ -743,7 +750,7 @@ article.intro {
     position: absolute;
     z-index: 0;
     width: 50%;
-    min-height: 450px;
+    min-height: 650px;
     background-color: $color-grey;
 }
 
@@ -759,7 +766,7 @@ article.intro {
 .about-rows,
 .sell-rows {
     @include span-columns(6 of 12, block-collapse);
-    min-height: 400px;
+    min-height: 450px;
     position: relative;
     z-index: 1;           
 }
@@ -772,7 +779,7 @@ article.intro {
 .about-row-img,
 .sell-row-img {
     width: 50%;
-    min-height: 450px;
+    min-height: 500px;
     position: absolute;
     right: 0;
 }
@@ -1147,7 +1154,8 @@ footer {
             color: $color-red;
         }
 
-        #social-links {
+        #social-links,
+        #footer-social-links {
             margin: 23px 0 0 0;
 
             li {
@@ -1156,8 +1164,19 @@ footer {
         }
     }
 
-    #back-top {
+    #footer-links {
         text-align: right;
+        
+        #back-top {
+            display: inline-block;
+            width: 62px;
+            height: 74px;
+            background: url(../img/footer/backTop.png) 0 0;            
+        }
+
+        #back-top:hover {
+            background-position: -62px 0;
+        }
 
         #copyright {
             margin-top: 25px;
@@ -1168,318 +1187,5 @@ footer {
 
 }
 
-
-
-// RESPONSIVE STYLES
-
-// Desktop 1030px max.       
-@include media($desktop-med) {
-    .container {            
-        margin: 0 10px;
-        //background-color: red;
-    }
-
-    #carousel .slide .slide-content {
-        width: 100%;
-    }
-
-    #shop {
-        display: none;
-    }
-}
-
-// Remove social links when resizing browser down
-@media (max-width: 956px) {
-    #social-links {
-        display: none;
-    }
-}
-
-// iPad 867px
-@include media($desktop-sml) {
-
-    .container {
-        margin: 0 15px;
-        //background-color: orange;
-    }
-
-    #services {
-        margin-top: 510px;
-    }
-
-    #header {
-        position: fixed;
-        width: 100%;
-        top: 0;
-        padding: 0;
-        border-top: 9px solid $color-red;
-
-        // Mobile nav
-        #nav-main {
-            margin: 0;            
-            width: 100%;
-
-            ul {
-                display: none;
-            }
-
-            ul.mobile-dropdown {
-                display: block;            
-            }
-
-            li {
-                float: none;
-                width: 100%;
-                margin: 0;
-                background-color: $color-red;
-                border-bottom: 1px solid $color-white;
-
-                a {
-                    display: block;
-                    text-transform: uppercase;
-                    width: 100%;
-                    height: 100%;
-                    padding: 17px 15px;
-                    font-size: rem(16);                  
-                }
-
-                a::after {
-                    width: 100%;
-                    -moz-transition: none;
-                    -webkit-transition: none;
-                    transition: none;                  
-                }
-
-                a:hover {
-                    background-color: $color-white;
-                    color: $color-red;
-                }
-
-                    ul#subnav {
-                        display: none;
-                        position: relative;
-                        top: auto;
-                        left: auto;
-                        width: 100%;
-
-                        li {
-                            span {
-                                display: none;
-                                -moz-transition: none;
-                                -webkit-transition: none;
-                                transition: none;                                
-                            }
-
-                            a {
-                                padding: 15px 40px;
-                                border-bottom: none;                        
-                            }
-                        }
-                    }
-
-            }
-
-            li#dropdown:hover > #subnav {
-                display:block;
-                -moz-animation: none;
-                    -webkit-animation: none;
-                        animation: none;
-            }            
-        }
-
-        #logo {
-            margin-top: 15px;
-            display: none;
-        }
-
-        #social-links,
-        #nav-cta {
-            display: none;
-        }
-        
-        // Hamburger icon for mobile
-        #nav-hamburger {
-            display: block!important;
-        }
-        
-        #nav-hamburger {
-          position: absolute;
-          right: 0;
-          z-index: 1000;       
-          width: 30px;
-          height: 45px;
-          margin: 15px 20px;
-          -webkit-transform: rotate(0deg);
-          -moz-transform: rotate(0deg);
-          -o-transform: rotate(0deg);
-          transform: rotate(0deg);
-          -webkit-transition: .5s ease-in-out;
-          -moz-transition: .5s ease-in-out;
-          -o-transition: .5s ease-in-out;
-          transition: .5s ease-in-out;
-          cursor: pointer;
-        }
-
-        #nav-hamburger span {
-          display: block;
-          position: absolute;
-          height: 4px;
-          width: 100%;
-          background: $color-white;
-          border-radius: 5px;
-          opacity: 1;
-          left: 0;
-          -webkit-transform: rotate(0deg);
-          -moz-transform: rotate(0deg);
-          -o-transform: rotate(0deg);
-          transform: rotate(0deg);
-          -webkit-transition: .25s ease-in-out;
-          -moz-transition: .25s ease-in-out;
-          -o-transition: .25s ease-in-out;
-          transition: .25s ease-in-out;
-        }
-
-        // #nav-hamburger.open span {
-        //     background: $color-text;
-        // }
-
-        #nav-hamburger span:nth-child(1) {
-          top: 0px;
-        }
-
-        #nav-hamburger span:nth-child(2),
-        #nav-hamburger span:nth-child(3) {
-          top: 9px;
-        }
-
-        #nav-hamburger span:nth-child(4) {
-          top: 18px;
-        }
-
-        #nav-hamburger.open span:nth-child(1) {
-          top: 18px;
-          width: 0%;
-          left: 50%;
-        }
-
-        #nav-hamburger.open span:nth-child(2) {
-          -webkit-transform: rotate(45deg);
-          -moz-transform: rotate(45deg);
-          -o-transform: rotate(45deg);
-          transform: rotate(45deg);
-        }
-
-        #nav-hamburger.open span:nth-child(3) {
-          -webkit-transform: rotate(-45deg);
-          -moz-transform: rotate(-45deg);
-          -o-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-        }
-
-        #nav-hamburger.open span:nth-child(4) {
-          top: 18px;
-          width: 0%;
-          left: 50%;
-        }
-
-    }
-}
-
-// Mobile 667px max.
-@include media($mobile) {
-
-    .container {
-        margin: 0 0px;
-        width: 100%;
-        background-color: transparent;            
-    }
-
-    // Change to 1 column so everything blocks under each other
-    .intro,
-    .repair,
-    .about-rows,
-    #contact .two-col {
-        @include span-columns(12 of 12);
-    }
-
-    // Carousel section
-    #carousel .slide {
-        .slide-content {
-            width: 80%;
-            margin: 0 auto;
-        }
-
-        article {
-            width: 100%;
-            float: none;
-            margin: 0;
-            padding-top: 80px;
-            text-align: center;
-        }
-    }
-    
-    #services {
-        //overflow: visible;
-        padding-bottom: 10px;
-    }
-
-    #about .container article {
-        margin-right: 10%;
-    }
-
-    // Section Intro text articles
-    article.intro p {
-        width: 100%;
-    }
-    
-    // Services equal margin bottoms for all products
-    .repair,
-    #services .row.row-products {
-        margin-bottom: 30px;
-    }
-    
-    #contact {
-        #map {
-            width: 100%;
-        }
-
-        #get-in-touch .intro {
-            text-align: center;
-            
-            span {
-                margin: 0 auto;
-            }
-
-            p {
-                width: 100%;
-            }
-        }
-    }
-
-    // Hide sections that are not needed for mobile
-    #about .section-divider,
-    #sell .section-divider,
-    #clients,
-    #shop,
-    #sell,        
-    hr {
-        display: none;
-    }
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
+@import "responsive";
 

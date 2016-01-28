@@ -541,9 +541,11 @@ header {
       transition: all .2s linear; }
     #header #nav-main a:hover::after {
       width: 100%; }
-  #header #social-links {
+  #header #social-links,
+  #header #footer-social-links {
     margin-left: 40px; }
-    #header #social-links li {
+    #header #social-links li,
+    #header #footer-social-links li {
       margin: 0 10px 0 0; }
   #header #nav-cta {
     float: right;
@@ -585,15 +587,17 @@ header {
   -moz-box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.75); }
   #header.nav-min #nav-main a,
-  #header.nav-min #social-links a {
+  #header.nav-min #social-links a,
+  #header.nav-min #footer-social-links a {
     color: #404040; }
   #header.nav-min #nav-main a.active::after {
-    width: 100% !important; }
+    width: 100%; }
   #header.nav-min .nav-global {
     margin-top: 20px; }
   #header.nav-min #nav-cta {
     margin-top: 15px; }
-  #header.nav-min #social-links a:hover {
+  #header.nav-min #social-links a:hover,
+  #header.nav-min #footer-social-links a:hover {
     color: #e20510; }
   #header.nav-min #sub-nav, #header.nav-min #dropdown i,
   #header.nav-min li#dropdown:hover > #subnav {
@@ -912,7 +916,7 @@ article.intro {
   position: absolute;
   z-index: 0;
   width: 50%;
-  min-height: 450px;
+  min-height: 650px;
   background-color: #475573; }
 
 .bg-color-left {
@@ -926,7 +930,7 @@ article.intro {
   float: left;
   display: block;
   width: 50.60241%;
-  min-height: 400px;
+  min-height: 450px;
   position: relative;
   z-index: 1; }
   .about-rows:last-child,
@@ -944,7 +948,7 @@ article.intro {
 .about-row-img,
 .sell-row-img {
   width: 50%;
-  min-height: 450px;
+  min-height: 500px;
   position: absolute;
   right: 0; }
 
@@ -1188,41 +1192,72 @@ footer {
   footer #company-details a:hover {
     text-decoration: none;
     color: #e20510; }
-  footer #company-details #social-links {
+  footer #company-details #social-links,
+  footer #company-details #footer-social-links {
     margin: 23px 0 0 0; }
-    footer #company-details #social-links li {
+    footer #company-details #social-links li,
+    footer #company-details #footer-social-links li {
       margin-right: 15px; }
-  footer #back-top {
+  footer #footer-links {
     text-align: right; }
-    footer #back-top #copyright {
+    footer #footer-links #back-top {
+      display: inline-block;
+      width: 62px;
+      height: 74px;
+      background: url(../img/footer/backTop.png) 0 0; }
+    footer #footer-links #back-top:hover {
+      background-position: -62px 0; }
+    footer #footer-links #copyright {
       margin-top: 25px;
       font-size: 0.6875rem; }
 
 @media screen and (max-width: 1030px) {
   .container {
-    margin: 0 10px; }
+    margin: 0 4%; }
 
   #carousel .slide .slide-content {
-    width: 100%; }
-
-  #shop {
-    display: none; } }
-@media (max-width: 956px) {
+    width: 100%; } }
+@media (max-width: 1017px) {
   #social-links {
     display: none; } }
+@media (max-width: 861px) {
+  #nav-cta {
+    display: none; } }
 @media screen and (max-width: 867px) {
+  .about-row-img,
+  .sell-row-img {
+    width: 50%;
+    min-height: 652px;
+    position: absolute;
+    right: 0; } }
+@media screen and (max-width: 768px) {
   .container {
-    margin: 0 15px; }
+    margin: 0 2%; }
+
+  .about-row-img,
+  .sell-row-img {
+    width: 50%;
+    min-height: 620px;
+    position: absolute;
+    right: 0; }
 
   #services {
     margin-top: 510px; }
+
+  #shop, #sell .section-divider {
+    display: none; }
+
+  #sell .sell-row-img {
+    min-height: 325px; }
 
   #header {
     position: fixed;
     width: 100%;
     top: 0;
     padding: 0;
-    border-top: 9px solid #e20510; }
+    border-top: 6px solid #e20510; }
+    #header #nav-hamburger {
+      display: block; }
     #header #nav-main {
       margin: 0;
       width: 100%; }
@@ -1265,22 +1300,27 @@ footer {
           #header #nav-main li ul#subnav li a {
             padding: 15px 40px;
             border-bottom: none; }
+      #header #nav-main li#dropdown a {
+        border-bottom: 1px solid #FFF; }
+      #header #nav-main li#dropdown > #subnav {
+        display: block; }
       #header #nav-main li#dropdown:hover > #subnav {
         display: block;
         -moz-animation: none;
         -webkit-animation: none;
         animation: none; }
     #header #logo {
-      margin-top: 15px;
       display: none; }
-    #header #social-links,
     #header #nav-cta {
       display: none; }
-    #header #nav-hamburger {
-      display: block !important; }
+    #header #social-links {
+      position: fixed;
+      right: 80px;
+      display: block;
+      margin-top: 15px; }
     #header #nav-hamburger {
       position: absolute;
-      right: 0;
+      right: 10px;
       z-index: 1000;
       width: 30px;
       height: 45px;
@@ -1299,7 +1339,7 @@ footer {
       position: absolute;
       height: 4px;
       width: 100%;
-      background: #FFF;
+      background: #e20510;
       border-radius: 5px;
       opacity: 1;
       left: 0;
@@ -1335,11 +1375,30 @@ footer {
     #header #nav-hamburger.open span:nth-child(4) {
       top: 18px;
       width: 0%;
-      left: 50%; } }
+      left: 50%; }
+
+  #header.nav-min {
+    height: 60px;
+    padding: 0; }
+    #header.nav-min #nav-main {
+      margin-top: 4px; }
+    #header.nav-min #logo {
+      display: block;
+      height: 46px;
+      margin-top: 5px;
+      background-size: 70%; }
+    #header.nav-min #nav-hamburger span {
+      background-color: #404040; }
+    #header.nav-min #nav-hamburger.open span {
+      background-color: #e20510; }
+    #header.nav-min #nav-main li#dropdown:hover > #subnav {
+      display: block !important; }
+    #header.nav-min #nav-main a::after {
+      display: none; } }
 @media screen and (max-width: 667px) {
   .container {
-    margin: 0 0px;
-    width: 100%;
+    margin: 0 4%;
+    width: 92%;
     background-color: transparent; }
 
   .intro,

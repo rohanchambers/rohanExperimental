@@ -1,9 +1,37 @@
+// Detect browser width
+function getWidth() {
+	if (self.innerHeight) {
+		return self.innerWidth;
+	}
+
+	if (document.documentElement && document.documentElement.clientHeight) {
+		return document.documentElement.clientWidth;
+	}
+
+	if (document.body) {
+		return document.body.clientWidth;
+	}
+}
+
+if( getWidth() < 769 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+	$('#header').addClass('nav-min');
+}
+
+// Document ready
 $( document ).ready(function() {
 
-	// Mobile icon hamburger
-	$('#nav-hamburger').click(function(){
+	// Tablet on resize width show minified menu
+	function resize() {
+	    if ($(window).width() < 769) {
+	     $('#header, #services').addClass('nav-min');
+	    }
+	}
+    $(window).resize(resize);
+
+	// Mobile icon hamburger show/hide mobile nav
+	$('#nav-hamburger, #nav-main a').click(function(){
 		$(this).toggleClass('open');
-		$('#nav-main ul').slideToggle().toggleClass('mobile-dropdown');
+		$('#nav-main ul').toggleClass('mobile-dropdown');
 	});
 
 	// Show hide value of form inputs and textarea
@@ -79,52 +107,26 @@ $( document ).ready(function() {
 	    $('#show-hide').slideDown(500);
 	});
 
-	// Detect if mobile or tablet
- 	// if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) {
-  //       $('.row').removeClass('animatedParent'); // to remove transition
-  //   }
-
-
-
-	// if( getWidth() < 667 ) {
-	// 	$('.animatedParent').removeClass('animatedParent');
-	// }
-	
 });
 
 
-// On scroll change nav types
+
+// Document on scroll change nav state
 $(document).on('scroll',function(){
 
-  	// Detect browser width
-	function getWidth() {
-		if (self.innerHeight) {
-			return self.innerWidth;
-		}
-
-		if (document.documentElement && document.documentElement.clientHeight) {
-			return document.documentElement.clientWidth;
-		}
-
-		if (document.body) {
-			return document.body.clientWidth;
-		}
-	}
-
-    if($(document).scrollTop() > 100) {
-        $('#header').removeClass('nav-max').addClass('nav-min');
-        $('#services').addClass('nav-min');
-    } else {
-        $('#header').removeClass('nav-min').addClass('nav-max');
-        $('#services').removeClass('nav-min');
-    }
-
-
-	if( getWidth() < 866 ) {
-		$('#header, #services').removeClass();
+	if(getWidth() > 768){
+		// On srcoll of 100px activate minified nav
+	    if($(document).scrollTop() > 100) {
+	        $('#header').addClass('nav-min');
+	        $('#services').addClass('nav-min');
+	    } else {
+	        $('#header').removeClass('nav-min');
+	        $('#services').removeClass('nav-min');
+	    }
 	}
 
 });
+
 
 
 // Load Google maps
