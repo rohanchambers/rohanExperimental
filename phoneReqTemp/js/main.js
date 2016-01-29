@@ -20,6 +20,22 @@ if( getWidth() < 769 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Oper
 // Document ready
 $( document ).ready(function() {
 
+	// Parallax effect for bg image on shop section
+	var parallax = document.querySelectorAll(".parallax"),
+	speed = 0.3;
+
+	window.onscroll = function(){
+	[].slice.call(parallax).forEach(function(el,i){
+
+	var windowYOffset = window.pageYOffset,
+		elBackgrounPos = "50% " + (windowYOffset * speed) + "px";
+
+		el.style.backgroundPosition = elBackgrounPos;
+
+		});
+	};
+
+
 	// Tablet on resize width show minified menu
 	function resize() {
 	    if ($(window).width() < 769) {
@@ -28,11 +44,6 @@ $( document ).ready(function() {
 	}
     $(window).resize(resize);
 
-	// Mobile icon hamburger show/hide mobile nav
-	$('#nav-hamburger, #nav-main a').click(function(){
-		$(this).toggleClass('open');
-		$('#nav-main ul').toggleClass('mobile-dropdown');
-	});
 
 	// Show hide value of form inputs and textarea
 	$('input, textarea').each(function(){
@@ -61,10 +72,31 @@ $( document ).ready(function() {
 	// Validate form
 	 $("#contact-form").validate();
 
+	// Mobile icon hamburger show/hide mobile nav
+	$('#nav-hamburger, #nav-main a').click(function(){
+		$(this).toggleClass('open');
+		$('#nav-main ul').toggleClass('mobile-dropdown');
+	});
+
 	// Minimal nav add active state to show underline
 	$('#nav-main a').click( function(){
 		$('#nav-main a').removeClass('active');		
 		$(this).addClass('active');		
+	});
+
+	// Service shake repair products
+	$('.repair a, .product a, .product img').hover( function(){
+		$(this).parent().find('span, img').addClass('shake');
+	}, function() {
+		$(this).parent().find('span, img').removeClass();
+	});
+
+	// Icon mouse show hide intro text 
+	$('.icon-animate').click( function(){
+	    $('html, body').animate({
+	        scrollTop: $('#services').offset().top - 45
+	    }, 600);
+	    $('#show-hide').slideDown(500).stop(false, false);
 	});
 
 	//Scroll to sections
@@ -92,21 +124,6 @@ $( document ).ready(function() {
 	    }, speed);
 	});
 
-	// Service shake repair products
-	$('.repair a, .product a, .product img').hover( function(){
-		$(this).parent().find('span, img').addClass('shake');
-	}, function() {
-		$(this).parent().find('span, img').removeClass();
-	});
-
-	// Icon mouse show hide intro text 
-	$('.icon-animate').click( function(){
-	    $('html, body').animate({
-	        scrollTop: $('#services').offset().top - 45
-	    }, 600);
-	    $('#show-hide').slideDown(500);
-	});
-
 });
 
 
@@ -123,6 +140,12 @@ $(document).on('scroll',function(){
 	        $('#header').removeClass('nav-min');
 	        $('#services').removeClass('nav-min');
 	    }
+
+	    if($(document).scrollTop() > 400) {
+			$('#show-hide').slideDown(500);
+	    } else {
+	    	$('#show-hide').slideUp(500);
+	    }    
 	}
 
 });

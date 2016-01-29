@@ -948,7 +948,7 @@ article.intro {
 .about-row-img,
 .sell-row-img {
   width: 50%;
-  min-height: 500px;
+  min-height: 510px;
   position: absolute;
   right: 0; }
 
@@ -1003,8 +1003,9 @@ article.intro {
 #shop {
   margin-top: -27px;
   min-height: 530px;
-  background: url(../img/shop/bg-shop.jpg) center center no-repeat;
-  background-size: cover; }
+  background: #000 url(../img/shop/hero2.jpg) 0 0;
+  background-repeat: repeat-y;
+  background-size: 100%; }
   #shop .intro header {
     margin-top: 45px; }
   #shop .intro h1 {
@@ -1382,6 +1383,8 @@ footer {
     padding: 0; }
     #header.nav-min #nav-main {
       margin-top: 4px; }
+      #header.nav-min #nav-main a {
+        color: #FFF; }
     #header.nav-min #logo {
       display: block;
       height: 46px;
