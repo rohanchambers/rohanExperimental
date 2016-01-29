@@ -14,6 +14,7 @@
     <!-- <link rel="stylesheet" href="css/animate.css"/> -->
     <link rel="stylesheet" href="css/animations.css"/>
     <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" type="text/css" href="css/keyframes.css" data-skrollr-stylesheet />    
     <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 </head>
 <body id="page-repair" class="iphone-repair">
@@ -69,6 +70,19 @@
 <!-- iPhone repair -->
 <section id="repair">
     <div class="container">
+
+        <div id="parallax-1" class="parallax"></div>
+        <div id="parallax-2" class="parallax"></div>
+
+        <div id="parallax-3" class="parallax"></div>
+        <div id="parallax-4" class="parallax"></div>
+
+        <div id="parallax-5" class="parallax"></div>
+        <div id="parallax-6" class="parallax"></div>   
+
+        <div id="parallax-7" class="parallax"></div>
+        <div id="parallax-8" class="parallax"></div>
+                    
         <div class="row">
             <header>
                 <article class="intro">
@@ -300,6 +314,8 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAnlujjc073E2Ku0_K_HyCtbRDC-HjFgk&callback=initMap" async defer></script>
 <script src="js/vendor/css3-animate-it.js"></script>
 <script src="js/vendor/jquery.validate.min.js"></script>
+<script src="js/vendor/skrollr.stylesheets.min.js"></script>
+<script src="js/vendor/skrollr.min.js"></script>
 <script src="js/main.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

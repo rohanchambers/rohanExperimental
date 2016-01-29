@@ -379,7 +379,6 @@ header {
 }
 
 
-
 // CAROUSEL
 
 #carousel {
@@ -867,7 +866,7 @@ article.intro {
     min-height: 530px;
     background: #000 url(../img/shop/bg-shop.jpg) 0 0;
     background-repeat: repeat-y;
-    background-size: 100%;
+    background-size: cover;
 
         
     .intro {
@@ -1205,8 +1204,7 @@ footer {
 
             // Sub nav   
             ul#subnav {
-                display: none;
-                background-color: white;
+                background-color: $color-white;
 
                 li {
                     border-bottom: 1px solid $color-text;
@@ -1221,6 +1219,20 @@ footer {
     }
 
 }
+
+#page-repair #header.nav-min {
+    #nav-main {
+        li {
+            ul#subnav {
+                padding-top: 0;
+
+                li {
+                    border-bottom: 1px solid white;
+                }        
+            }
+        }
+    }
+} 
 
 #repair {
     article {
@@ -1247,9 +1259,9 @@ footer {
         overflow: hidden;
         padding: 0 0 50px 0;
     }
-
-    .row:first-child {
-        padding: 0;
+    
+    .container {
+        position: relative;
     }
 
     .img-holder {
@@ -1302,6 +1314,59 @@ footer {
 
     }
 }
+
+
+// PARALLAX ELEMENTS
+
+.parallax {
+    position: absolute;
+    top: 50%;
+    width: 365px;
+    height: 626px;
+    background: url(../img/page-repair/bg-parallax.png) no-repeat;
+    opacity: 0.5;
+}
+
+    #parallax-1 {
+        left: 100px;
+        transform: rotate(65deg);
+    }
+
+    #parallax-2 {
+        right: 150px;
+        transform: rotate(20deg);
+    }
+
+
+    #parallax-3 {
+        left: 100px;
+        transform: rotate(65deg);
+    }
+
+    #parallax-4 {
+        right: 150px;
+        transform: rotate(20deg);
+    }
+
+    #parallax-5 {
+        left: 100px;
+        transform: rotate(65deg);
+    }
+
+    #parallax-6 {
+        right: 150px;
+        transform: rotate(20deg);
+    }
+
+    #parallax-7 {
+        left: 100px;
+        transform: rotate(65deg);
+    }
+
+    #parallax-8 {
+        right: 150px;
+        transform: rotate(20deg);
+    }    
 
 @import "responsive";
 

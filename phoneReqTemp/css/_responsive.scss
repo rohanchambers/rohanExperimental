@@ -4,7 +4,6 @@
 @include media($desktop-med) {
     .container {            
         margin: 0 4%;
-        //background-color: red;
     }
 
     #carousel .slide .slide-content {
@@ -41,7 +40,6 @@
 
     .container {
         margin: 0 2%;
-        //background-color: orange;
     }
     
     .about-row-img,
@@ -290,6 +288,10 @@
             display: none;
         }
 
+    }
+
+    #repair {
+        margin-top: 65px;
     }
 
 }

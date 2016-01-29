@@ -1005,7 +1005,7 @@ article.intro {
   min-height: 530px;
   background: #000 url(../img/shop/bg-shop.jpg) 0 0;
   background-repeat: repeat-y;
-  background-size: 100%; }
+  background-size: cover; }
   #shop .intro header {
     margin-top: 45px; }
   #shop .intro h1 {
@@ -1217,12 +1217,16 @@ footer {
 #page-repair #header #nav-main {
   position: relative; }
   #page-repair #header #nav-main li ul#subnav {
-    display: none;
-    background-color: white; }
+    background-color: #FFF; }
     #page-repair #header #nav-main li ul#subnav li {
       border-bottom: 1px solid #404040; }
   #page-repair #header #nav-main li a::after {
     background-color: #404040; }
+
+#page-repair #header.nav-min #nav-main li ul#subnav {
+  padding-top: 0; }
+  #page-repair #header.nav-min #nav-main li ul#subnav li {
+    border-bottom: 1px solid white; }
 
 #repair article {
   width: 65%; }
@@ -1237,8 +1241,8 @@ footer {
 #repair .row {
   overflow: hidden;
   padding: 0 0 50px 0; }
-#repair .row:first-child {
-  padding: 0; }
+#repair .container {
+  position: relative; }
 #repair .img-holder {
   position: relative;
   min-height: 360px; }
@@ -1272,6 +1276,46 @@ footer {
   transition: all .2s linear; }
 #repair .two-col a:hover::before {
   width: 100%; }
+
+.parallax {
+  position: absolute;
+  top: 50%;
+  width: 365px;
+  height: 626px;
+  background: url(../img/page-repair/bg-parallax.png) no-repeat;
+  opacity: 0.5; }
+
+#parallax-1 {
+  left: 100px;
+  transform: rotate(65deg); }
+
+#parallax-2 {
+  right: 150px;
+  transform: rotate(20deg); }
+
+#parallax-3 {
+  left: 100px;
+  transform: rotate(65deg); }
+
+#parallax-4 {
+  right: 150px;
+  transform: rotate(20deg); }
+
+#parallax-5 {
+  left: 100px;
+  transform: rotate(65deg); }
+
+#parallax-6 {
+  right: 150px;
+  transform: rotate(20deg); }
+
+#parallax-7 {
+  left: 100px;
+  transform: rotate(65deg); }
+
+#parallax-8 {
+  right: 150px;
+  transform: rotate(20deg); }
 
 @media screen and (max-width: 1030px) {
   .container {
@@ -1458,7 +1502,10 @@ footer {
     #header.nav-min #nav-main li#dropdown:hover > #subnav {
       display: block !important; }
     #header.nav-min #nav-main a::after {
-      display: none; } }
+      display: none; }
+
+  #repair {
+    margin-top: 65px; } }
 @media screen and (max-width: 667px) {
   .container {
     margin: 0 4%;

@@ -20,21 +20,8 @@ if( getWidth() < 769 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Oper
 // Document ready
 $( document ).ready(function() {
 
-	// Parallax effect for bg image on shop section
-	var parallax = document.querySelectorAll(".parallax"),
-	speed = 0.3;
-
-	window.onscroll = function(){
-	[].slice.call(parallax).forEach(function(el,i){
-
-	var windowYOffset = window.pageYOffset,
-		elBackgrounPos = "50% " + (windowYOffset * speed) + "px";
-
-		el.style.backgroundPosition = elBackgrounPos;
-
-		});
-	};
-
+	// Skrollr initialise
+	var s = skrollr.init();
 
 	// Tablet on resize width show minified menu
 	function resize() {
@@ -194,6 +181,20 @@ function initMap() {
 
 
 
+// // Parallax effect for bg image on shop section
+// var parallax = document.querySelectorAll(".parallax"),
+// speed = 0.3;
+
+// window.onscroll = function(){
+// [].slice.call(parallax).forEach(function(el,i){
+
+// var windowYOffset = window.pageYOffset,
+// 	elBackgrounPos = "50% " + (windowYOffset * speed) + "px";
+
+// 	el.style.backgroundPosition = elBackgrounPos;
+
+// 	});
+// };
 
 // Get current scroll position * FIXME
 // $(window).scroll(function (event) {
