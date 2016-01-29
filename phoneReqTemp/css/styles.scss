@@ -17,7 +17,7 @@ $color-text: #404040;
 $color-grey: #475573;
 
 // TYPOGRAPHY
-h1 {
+h1, h2 {
     font-family: 'Open Sans', Arial, sans-serif;
     font-weight: 400;
     color: $color-red;
@@ -865,7 +865,7 @@ article.intro {
 #shop {
     margin-top: -27px;
     min-height: 530px;
-    background: #000 url(../img/shop/hero2.jpg) 0 0;
+    background: #000 url(../img/shop/bg-shop.jpg) 0 0;
     background-repeat: repeat-y;
     background-size: 100%;
 
@@ -1186,8 +1186,136 @@ footer {
         }
 
     }
+}
+
+
+
+
+// Repair page
+#page-repair #header {
+    
+    a {
+        color: $color-text;
+    }
+
+    #nav-main {
+        position: relative;
+
+        li {
+
+            // Sub nav   
+            ul#subnav {
+                display: none;
+                background-color: white;
+
+                li {
+                    border-bottom: 1px solid $color-text;
+                }
+            }
+
+            // On hover of subnav items. Animate from 0 - 100% red 
+            a::after {
+                background-color: $color-text;
+            }        
+        }
+    }
 
 }
 
+#repair {
+    article {
+        width: 65%;
+    }
+
+    article.intro {
+        margin-bottom: 30px;
+    }
+
+    h1, p {
+        text-align: left;
+    }
+    
+    h1 {
+        width: 280px;
+    }
+
+    p {
+        width: 100%;
+    }
+
+    .row {
+        overflow: hidden;
+        padding: 0 0 50px 0;
+    }
+
+    .row:first-child {
+        padding: 0;
+    }
+
+    .img-holder {
+        position: relative;
+        min-height: 360px;
+
+        img {
+            position: absolute;
+            bottom: 0;            
+        }
+    }
+    
+    .btn-global {
+        text-transform: uppercase;
+        margin-right: 10px;
+        -webkit-box-shadow: 0px 1px 3px 0px #999999;
+        -moz-box-shadow: 0px 1px 3px 0px #999999;
+        box-shadow: 0px 1px 3px 0px #999999;        
+        
+        i {
+            margin-right: 7px;
+        }
+    }
+    
+    .two-col {
+        h2 {
+            position: relative;
+            font-size: rem(27);
+            margin-top: 30px;
+            padding-top: 5px;
+            color: $color-text;
+        }
+
+        h2::before {
+            content: '';            
+            position: absolute;
+            top: -5px;
+            left: 0;
+            width: 50%;
+            height: 2px;
+            background-color: $color-red;
+            -webkit-transition: all .2s linear;
+                -moz-transition: all .2s linear;
+                    transition: all .2s linear;               
+        }
+
+        a:hover::before {
+            width: 100%;
+        }    
+
+    }
+}
+
 @import "responsive";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

@@ -372,7 +372,7 @@ body {
   font-family: Verdana, Arial, sans-serif;
   font-size: 0.875rem; }
 
-h1 {
+h1, h2 {
   font-family: 'Open Sans', Arial, sans-serif;
   font-weight: 400;
   color: #e20510;
@@ -1003,7 +1003,7 @@ article.intro {
 #shop {
   margin-top: -27px;
   min-height: 530px;
-  background: #000 url(../img/shop/hero2.jpg) 0 0;
+  background: #000 url(../img/shop/bg-shop.jpg) 0 0;
   background-repeat: repeat-y;
   background-size: 100%; }
   #shop .intro header {
@@ -1212,6 +1212,67 @@ footer {
       margin-top: 25px;
       font-size: 0.6875rem; }
 
+#page-repair #header a {
+  color: #404040; }
+#page-repair #header #nav-main {
+  position: relative; }
+  #page-repair #header #nav-main li ul#subnav {
+    display: none;
+    background-color: white; }
+    #page-repair #header #nav-main li ul#subnav li {
+      border-bottom: 1px solid #404040; }
+  #page-repair #header #nav-main li a::after {
+    background-color: #404040; }
+
+#repair article {
+  width: 65%; }
+#repair article.intro {
+  margin-bottom: 30px; }
+#repair h1, #repair p {
+  text-align: left; }
+#repair h1 {
+  width: 280px; }
+#repair p {
+  width: 100%; }
+#repair .row {
+  overflow: hidden;
+  padding: 0 0 50px 0; }
+#repair .row:first-child {
+  padding: 0; }
+#repair .img-holder {
+  position: relative;
+  min-height: 360px; }
+  #repair .img-holder img {
+    position: absolute;
+    bottom: 0; }
+#repair .btn-global, #repair #header #nav-cta .btn-nav, #header #nav-cta #repair .btn-nav, #repair #shop #shop-products a, #shop #shop-products #repair a {
+  text-transform: uppercase;
+  margin-right: 10px;
+  -webkit-box-shadow: 0px 1px 3px 0px #999999;
+  -moz-box-shadow: 0px 1px 3px 0px #999999;
+  box-shadow: 0px 1px 3px 0px #999999; }
+  #repair .btn-global i, #repair #header #nav-cta .btn-nav i, #header #nav-cta #repair .btn-nav i, #repair #shop #shop-products a i, #shop #shop-products #repair a i {
+    margin-right: 7px; }
+#repair .two-col h2 {
+  position: relative;
+  font-size: 1.6875rem;
+  margin-top: 30px;
+  padding-top: 5px;
+  color: #404040; }
+#repair .two-col h2::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 50%;
+  height: 2px;
+  background-color: #e20510;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear; }
+#repair .two-col a:hover::before {
+  width: 100%; }
+
 @media screen and (max-width: 1030px) {
   .container {
     margin: 0 4%; }
@@ -1321,7 +1382,7 @@ footer {
       margin-top: 15px; }
     #header #nav-hamburger {
       position: absolute;
-      right: 10px;
+      right: -5px;
       z-index: 1000;
       width: 30px;
       height: 45px;
@@ -1418,6 +1479,14 @@ footer {
     #contact .two-col:last-child {
       margin-right: 0; }
 
+  .two-col {
+    float: left;
+    display: block;
+    margin-right: 1.20482%;
+    width: 100%; }
+    .two-col:last-child {
+      margin-right: 0; }
+
   #carousel .slide .slide-content {
     width: 80%;
     margin: 0 auto; }
@@ -1433,6 +1502,19 @@ footer {
 
   #about .container article {
     margin-right: 10%; }
+
+  #repair article {
+    width: 100%; }
+  #repair .img-holder img {
+    left: 50%;
+    right: 50%;
+    margin-left: -85px; }
+  #repair .two-col p, #repair .two-col h2 {
+    text-align: center; }
+  #repair .two-col h2::before {
+    left: 50%;
+    right: 50%;
+    margin-left: -24%; }
 
   article.intro p {
     width: 100%; }

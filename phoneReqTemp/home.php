@@ -231,7 +231,7 @@
 
 </section><!-- End of Sell -->
 
-<section id="shop" class="parallax">
+<section id="shop" class="">
     <div class="container">
         <div class="row">
             <article class="intro">
