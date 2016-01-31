@@ -21,7 +21,9 @@ if( getWidth() < 769 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Oper
 $( document ).ready(function() {
 
 	// Skrollr initialise
-	var s = skrollr.init();
+	// var s = skrollr.init({
+	// 	forceHeight: false
+	// });	
 
 	// Tablet on resize width show minified menu
 	function resize() {
@@ -35,22 +37,13 @@ $( document ).ready(function() {
 	// Show hide value of form inputs and textarea
 	$('input, textarea').each(function(){
 		var txtval = $(this).val();
-		var txtAreaVal = $(this).attr('placeholder');
-		
 		$(this).focus(function(){
-			$(this).val('');
-			$(this).attr('placeholder', '');
+			$(this).val('')
 			$(this).siblings('span').css({width: '100%'});
 		});
-
 		$(this).blur(function(){
-			if( $(this).val() == '') {
+			if($(this).val() == ""){
 				$(this).val(txtval);
-				$(this).siblings('span').css({width: '0%'});
-			}
-
-			if( $(this).attr('placeholder') == '') {
-				$(this).attr('placeholder', txtAreaVal);
 				$(this).siblings('span').css({width: '0%'});
 			}
 		});
@@ -96,13 +89,13 @@ $( document ).ready(function() {
 	   
 	      $('html, body').animate({scrollTop : 0}, speed);
 	    
-	    else if(target == '#contact'){	    	
+	    else if(target == '#contact'){
 	   
-	    	$('html, body').animate({scrollTop : 3370}, speed);
+	    	$('html, body').animate({scrollTop : 3600}, speed);
 	    
-	    } else if(target == '#about'){	    	
+	    } else if(target == '#about'){
 	   
-	    	$('html, body').animate({scrollTop : 1370}, speed);
+	    	$('html, body').animate({scrollTop : 1466}, speed);
 	    
 	    } else $('html, body').animate({
 	   
@@ -197,8 +190,8 @@ function initMap() {
 // };
 
 // Get current scroll position * FIXME
-// $(window).scroll(function (event) {
-//     var scroll = $(window).scrollTop();
-//     // Do something
-//     console.log(scroll);
-// });
+$(window).scroll(function (event) {
+    var scroll = $(window).scrollTop();
+    // Do something
+    console.log(scroll);
+});

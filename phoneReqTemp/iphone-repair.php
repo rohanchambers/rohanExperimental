@@ -11,7 +11,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <!-- <link rel="stylesheet" href="css/animate.css"/> -->
     <link rel="stylesheet" href="css/animations.css"/>
     <link rel="stylesheet" href="css/styles.css"/>
     <link rel="stylesheet" type="text/css" href="css/keyframes.css" data-skrollr-stylesheet />    
@@ -24,10 +23,10 @@
     
 <header id="header">
     <div class="container">    
-        <div id="logo"><a href="#header">Phone Resq</a></div>
+        <div id="logo"><a href="../#header">Phone Resq</a></div>
         <nav id="nav-main" class="nav-global">
             <ul>
-                <li id="dropdown"><a href="#services">Services<i class="fa fa-caret-down fa-lg"></i></a>
+                <li id="dropdown"><a href="/#services">Services<i class="fa fa-caret-down fa-lg"></i></a>
                     <ul id="subnav">
                         <li><a href="#">iPhone repair</a><span></span></li>
                         <li><a href="#">iPad repair</a><span></span></li>
@@ -37,9 +36,9 @@
                         <li><a href="#">Cell Phone Unlocks</a><span></span></li>
                     </ul>
                 </li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#sell">Sell your device</a></li>
-                <li><a href="#contact">Contact us</a></li>
+                <li><a href="/#about">About</a></li>
+                <li><a href="/#sell">Sell your device</a></li>
+                <li><a href="/#contact">Contact us</a></li>
             </ul>
         </nav>
         <nav id="social-links" class="nav-global">
@@ -71,7 +70,7 @@
 <section id="repair">
     <div class="container">
 
-        <div id="parallax-1" class="parallax"></div>
+<!--         <div id="parallax-1" class="parallax"></div>
         <div id="parallax-2" class="parallax"></div>
 
         <div id="parallax-3" class="parallax"></div>
@@ -81,9 +80,9 @@
         <div id="parallax-6" class="parallax"></div>   
 
         <div id="parallax-7" class="parallax"></div>
-        <div id="parallax-8" class="parallax"></div>
-                    
-        <div class="row">
+        <div id="parallax-8" class="parallax"></div> -->
+
+        <div class="row row-intro">
             <header>
                 <article class="intro">
                     <h1>iPhone repair<span></span></h1>
@@ -93,14 +92,40 @@
             </header>
         </div>
 
-        <div class="row">
-            <div class="two-col"></div>
+        <div class="row">            
             <div class="two-col">
-                <a href="#" class="btn-global btn-animate"><i class="fa fa-caret-down fa-lg"></i>Filter model</a>
-                <a href="#" class="btn-global btn-animate"><i class="fa fa-caret-down fa-lg"></i>Change device brand</a>
-            </div>
-        </div>
+                <form id="filter-model">
+                    <div>
+                        <select class="filter-model btn-animate">
+                            <option>Filter model</option>
+                            <option>iPhone 4</option>
+                            <option>iPhone 4s</option>
+                            <option>iPhone 5</option>
+                            <option>iPhone 5s</option>
+                            <option>iPhone 5c</option>
+                            <option>iPhone 6</option>
+                            <option>iPhone 6s</option>
+                        </select>
+                        <i class="fa fa-caret-down fa-lg"></i>
+                    </div>
 
+                    <div>
+                        <select class="filter-model btn-animate">
+                            <option>Change brand</option>
+                            <option>iPhone</option>
+                            <option>iPad</option>
+                            <option>iPod</option>
+                            <option>Android</option>
+                            <option>Laptop</option>
+                            <option>Unlocks</option>
+                        </select>
+                        <i class="fa fa-caret-down fa-lg"></i>
+                    </div>
+                </form>         
+            </div>
+            <div class="two-col"></div>
+        </div>
+            
         <div class="row animatedParent">
             <div class="two-col">
                 <div class="img-holder animated fadeInLeft"><img src="img/page-repair/iphone/iphone6s.png" alt="iPhone6s" /></div>
@@ -298,7 +323,7 @@
             </div>
             <div id="footer-links" class="two-col">
                 <a href="#header" id="back-top"></a>
-                <p><a href="#">Services</a></p> 
+                <p><a href="#services">Services</a></p> 
                 <p><a href="#">iPhone Repair</a></p>
                 <p><a href="#">iPod Repair</a></p>
                 <p><a href="#">iPad Repair</a></p>

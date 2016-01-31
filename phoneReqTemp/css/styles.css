@@ -423,8 +423,50 @@ header {
   background-color: #FFF;
   color: #404040; }
 
+#filter-model {
+  position: relative;
+  width: 100%;
+  z-index: 100; }
+  #filter-model div {
+    position: relative;
+    float: left;
+    margin-right: 15px; }
+  #filter-model i {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #FFF; }
+  #filter-model select {
+    -webkit-appearance: none;
+    /*REMOVES DEFAULT CHROME & SAFARI STYLE*/
+    -moz-appearance: none;
+    /*REMOVES DEFAULT FIREFOX STYLE*/
+    border: 0 !important;
+    /*REMOVES BORDER*/
+    background-color: #e20510;
+    color: #fff;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    font-size: 11px;
+    padding: 9px;
+    min-width: 130px;
+    cursor: pointer;
+    outline-color: transparent;
+    outline-style: none;
+    -webkit-box-shadow: 0px 1px 3px 0px #999999;
+    -moz-box-shadow: 0px 1px 3px 0px #999999;
+    box-shadow: 0px 1px 3px 0px #999999; }
+  #filter-model select:first-child {
+    text-transform: uppercase; }
+  #filter-model select:hover {
+    background-color: #FFF;
+    color: #404040; }
+  #filter-model div:hover i {
+    color: #404040; }
+
 .btn-animate,
-#nav-main a {
+#nav-main a,
+select {
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: translateZ(0);
@@ -1016,14 +1058,15 @@ article.intro {
   #shop .intro p {
     color: #FFF; }
   #shop #shop-products {
-    display: flex;
-    justify-content: space-between;
-    margin: 50px auto; }
+    margin: 50px auto;
+    width: 100%;
+    min-height: 250px; }
     #shop #shop-products article {
+      float: left;
+      margin-right: 2%;
       position: relative;
-      min-width: 130px;
-      min-height: 250px;
-      vertical-align: bottom; }
+      width: 18%;
+      min-height: 250px; }
     #shop #shop-products a {
       position: absolute;
       bottom: 0;
@@ -1089,7 +1132,9 @@ article.intro {
     #contact #contact-form input,
     #contact #contact-form input[type=submit],
     #contact #contact-form textarea,
-    #contact #contact-form button {
+    #contact #contact-form button,
+    #contact #contact-form select,
+    #contact #contact-form option {
       outline-color: transparent;
       outline-style: none; }
     #contact #contact-form textarea {
@@ -1241,6 +1286,8 @@ footer {
 #repair .row {
   overflow: hidden;
   padding: 0 0 50px 0; }
+#repair .row-intro {
+  padding-bottom: 0; }
 #repair .container {
   position: relative; }
 #repair .img-holder {
@@ -1509,13 +1556,13 @@ footer {
 @media screen and (max-width: 667px) {
   .container {
     margin: 0 4%;
-    width: 92%;
-    background-color: transparent; }
+    width: 92%; }
 
   .intro,
   .repair,
   .about-rows,
-  #contact .two-col {
+  #contact .two-col,
+  #repair .two-col {
     float: left;
     display: block;
     margin-right: 1.20482%;
@@ -1523,15 +1570,8 @@ footer {
     .intro:last-child,
     .repair:last-child,
     .about-rows:last-child,
-    #contact .two-col:last-child {
-      margin-right: 0; }
-
-  .two-col {
-    float: left;
-    display: block;
-    margin-right: 1.20482%;
-    width: 100%; }
-    .two-col:last-child {
+    #contact .two-col:last-child,
+    #repair .two-col:last-child {
       margin-right: 0; }
 
   #carousel .slide .slide-content {

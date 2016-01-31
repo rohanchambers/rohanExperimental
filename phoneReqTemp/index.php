@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/styles.css"/>
     <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 </head>
-<body>
+<body id="skrollr-body">
 <!--[if lt IE 7]>
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
@@ -28,12 +28,12 @@
             <ul>
                 <li id="dropdown"><a href="#services">Services<i class="fa fa-caret-down fa-lg"></i></a>
                     <ul id="subnav">
-                        <li><a href="#">iPhone repair</a><span></span></li>
-                        <li><a href="#">iPad repair</a><span></span></li>
-                        <li><a href="#">iPod repair</a><span></span></li>
-                        <li><a href="#">Android repair</a><span></span></li>
-                        <li><a href="#">Laptop &amp; Desktop repair</a><span></span></li>
-                        <li><a href="#">Cell Phone Unlocks</a><span></span></li>
+                        <li><a href="iphone-repair.php">iPhone repair</a><span></span></li>
+                        <li><a href="iphone-repair.php">iPad repair</a><span></span></li>
+                        <li><a href="iphone-repair.php">iPod repair</a><span></span></li>
+                        <li><a href="iphone-repair.php">Android repair</a><span></span></li>
+                        <li><a href="iphone-repair.php">Laptop &amp; Desktop repair</a><span></span></li>
+                        <li><a href="iphone-repair.php">Cell Phone Unlocks</a><span></span></li>
                     </ul>
                 </li>
                 <li><a href="#about">About</a></li>
@@ -381,10 +381,10 @@
             <div id="footer-links" class="two-col">
                 <a href="#header" id="back-top"></a>
                 <p><a href="#">Services</a></p> 
-                <p><a href="#">iPhone Repair</a></p>
-                <p><a href="#">iPod Repair</a></p>
-                <p><a href="#">iPad Repair</a></p>
-                <p><a href="#">Android Repair</a></p>
+                <p><a href="#iphone-repair">iPhone Repair</a></p>
+                <p><a href="#iphone-repair">iPod Repair</a></p>
+                <p><a href="#iphone-repair">iPad Repair</a></p>
+                <p><a href="#iphone-repair">Android Repair</a></p>
                 <p id="copyright">&copy;2016 Phone Resq. All Rights Reserved.</p>
             </div>
         </div>
@@ -396,6 +396,9 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAnlujjc073E2Ku0_K_HyCtbRDC-HjFgk&callback=initMap" async defer></script>
 <script src="js/vendor/css3-animate-it.js"></script>
 <script src="js/vendor/jquery.validate.min.js"></script>
+<script src="js/vendor/skrollr.stylesheets.min.js"></script>
+<script src="js/vendor/skrollr.min.js"></script>
+
 <script src="js/main.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

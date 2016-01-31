@@ -4,7 +4,11 @@
 @import "bourbon/bourbon";
 @import "neat/grid-settings";
 @import "neat/neat";
-
+// #skrollr-body {
+//   height: 100%;
+//   position: relative;
+//   width: 100%;
+// }
 body {
     font-family: Verdana, Arial, sans-serif;
     font-size: rem(14); 
@@ -78,8 +82,63 @@ header {
     color: $color-text;
 }
 
+#filter-model {
+    position: relative;
+    width: 100%;
+    z-index: 100;
+    
+    div {
+        position: relative;
+        float: left;
+        margin-right: 15px;
+    }
+
+    i {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: $color-white; 
+    }
+
+    select {
+        -webkit-appearance: none;  /*REMOVES DEFAULT CHROME & SAFARI STYLE*/
+        -moz-appearance: none;  /*REMOVES DEFAULT FIREFOX STYLE*/
+        border: 0 !important;  /*REMOVES BORDER*/        
+        background-color: $color-red;
+        color: #fff;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        font-size: 11px;
+        padding: 9px;
+        min-width: 130px;
+        cursor: pointer;
+        outline-color: transparent;
+        outline-style: none;          
+        -webkit-box-shadow: 0px 1px 3px 0px rgba(153,153,153,1);
+            -moz-box-shadow: 0px 1px 3px 0px rgba(153,153,153,1);
+            box-shadow: 0px 1px 3px 0px rgba(153,153,153,1);              
+    }
+
+    select:first-child {
+        text-transform: uppercase;
+    }
+
+    select:hover {
+        background-color: $color-white;
+        color: $color-text;
+    }
+
+    div:hover i {
+        color: $color-text;
+    }
+
+}
+
+
+
 .btn-animate,
-#nav-main a {
+#nav-main a,
+select {
     display: inline-block;
     vertical-align: middle;
     -webkit-transform: translateZ(0);
@@ -87,6 +146,7 @@ header {
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    
     -moz-osx-font-smoothing: grayscale;
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
@@ -125,6 +185,9 @@ header {
     height: 25px;
     background: url(../img/global/sectionDividerFull.png) center top no-repeat;
 }
+
+
+
 
 
 // HEADER
@@ -890,35 +953,38 @@ article.intro {
 
 
     #shop-products {
-        display: flex;
-        justify-content: space-between;
+        // display: flex;
+        // justify-content: space-between;
         margin: 50px auto;
+        width: 100%;
+        min-height: 250px;
 
         article {
+            float: left;
+            margin-right: 2%;
             position: relative;
-            min-width: 130px;
+            width: 18%;
             min-height: 250px;
-            vertical-align: bottom;
         }
 
-        a {
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            right: 50%;
-            margin-left: -60px;
-            width: 120px;
-            @extend .btn-global;      
-        }
+            a {
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                right: 50%;
+                margin-left: -60px;
+                width: 120px;
+                @extend .btn-global;      
+            }
 
-        img {
-            display: block;
-            margin: 0 auto;
-        }
+            img {
+                display: block;
+                margin: 0 auto;
+            }
 
-        #accessories img {
-            margin-top: 85px;
-        }
+            #accessories img {
+                margin-top: 85px;
+            }
     }
 }
 
@@ -998,7 +1064,9 @@ article.intro {
         input, 
         input[type=submit],
         textarea,
-        button {
+        button,
+        select,
+        option {
             // Remove focus glow
             outline-color: transparent;
             outline-style: none;        
@@ -1254,12 +1322,16 @@ footer {
     p {
         width: 100%;
     }
-
+    
     .row {
         overflow: hidden;
         padding: 0 0 50px 0;
     }
     
+    .row-intro {
+        padding-bottom: 0; 
+    }
+
     .container {
         position: relative;
     }

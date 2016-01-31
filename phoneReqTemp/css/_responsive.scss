@@ -301,20 +301,16 @@
 
     .container {
         margin: 0 4%;
-        width: 92%;
-        background-color: transparent;            
+        width: 92%;           
     }
 
     // Change to 1 column so everything blocks under each other
     .intro,
     .repair,
     .about-rows,
-    #contact .two-col {
+    #contact .two-col,
+    #repair .two-col {
         @include span-columns(12 of 12);
-    }
-    
-    .two-col {
-       @include span-columns(12 of 12);
     }
 
     // Carousel section
