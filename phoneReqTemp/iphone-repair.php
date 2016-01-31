@@ -70,7 +70,7 @@
 <section id="repair">
     <div class="container">
 
-<!--         <div id="parallax-1" class="parallax"></div>
+        <div id="parallax-1" class="parallax"></div>
         <div id="parallax-2" class="parallax"></div>
 
         <div id="parallax-3" class="parallax"></div>
@@ -80,7 +80,7 @@
         <div id="parallax-6" class="parallax"></div>   
 
         <div id="parallax-7" class="parallax"></div>
-        <div id="parallax-8" class="parallax"></div> -->
+        <div id="parallax-8" class="parallax"></div>
 
         <div class="row row-intro">
             <header>

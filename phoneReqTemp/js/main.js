@@ -20,10 +20,12 @@ if( getWidth() < 769 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Oper
 // Document ready
 $( document ).ready(function() {
 
-	// Skrollr initialise
-	// var s = skrollr.init({
-	// 	forceHeight: false
-	// });	
+	//Skrollr initialise
+	if(!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
+	    skrollr.init({
+	        forceHeight: false
+	    });
+	}
 
 	// Tablet on resize width show minified menu
 	function resize() {
@@ -190,8 +192,8 @@ function initMap() {
 // };
 
 // Get current scroll position * FIXME
-$(window).scroll(function (event) {
-    var scroll = $(window).scrollTop();
-    // Do something
-    console.log(scroll);
-});
+// $(window).scroll(function (event) {
+//     var scroll = $(window).scrollTop();
+//     // Do something
+//     console.log(scroll);
+// });

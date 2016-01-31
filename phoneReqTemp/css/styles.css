@@ -1397,7 +1397,8 @@ footer {
   #services {
     margin-top: 510px; }
 
-  #shop, #sell .section-divider {
+  #shop, #sell .section-divider,
+  .parallax {
     display: none; }
 
   #sell .sell-row-img {
