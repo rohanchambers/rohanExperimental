@@ -28,7 +28,7 @@
                 <li id="dropdown"><a href="#services">Services<i class="fa fa-caret-down fa-lg"></i></a>
                     <ul id="subnav">
                         <li><a href="iphone-repair.php">iPhone repair</a><span></span></li>
-                        <li><a href="iphone-repair.php">iPad repair</a><span></span></li>
+                        <li><a href="ipad-repair.php">iPad repair</a><span></span></li>
                         <li><a href="iphone-repair.php">iPod repair</a><span></span></li>
                         <li><a href="iphone-repair.php">Android repair</a><span></span></li>
                         <li><a href="iphone-repair.php">Laptop &amp; Desktop repair</a><span></span></li>
@@ -119,7 +119,7 @@
                     <h1>iPad repair</h1>
                     <p>If you don’t have the time to make an appointment and have your tablet sent away to a third-party repair shop, consider our in-house services for all of your iPad needs.</p>
                 </header>
-                <a href="#">&nbsp;</a>
+                <a href="ipad-repair.php">&nbsp;</a>
             </article>
             <article id="ipod-repair" class="repair animated fadeInRight">
                 <header>
@@ -288,11 +288,13 @@
                   //Email information
                   $admin_email = "rohanchambers888@gmail.com";
                   $email = $_REQUEST['email'];
-                  $subject = $_REQUEST['subject'];
-                  $comment = $_REQUEST['comment'];
-                  
+                  $subject = "Phone Resq. message: " . $_REQUEST['subject'];
+                  $comment = $_REQUEST['comment'].$phone;
+                  $phone = $_REQUEST['phone'];
+                  $comment_phone = $comment . "\n\n Phone: ".$phone;
+
                   //send email
-                  mail($admin_email, "$subject", $comment, "From:" . $email);
+                  mail($admin_email, "$subject", "Comment: \n" . $comment_phone, "From:" . $email);
                   
                   //Email response
                   echo "Thank you for contacting us!";

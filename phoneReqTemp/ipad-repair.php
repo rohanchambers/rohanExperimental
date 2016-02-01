@@ -16,7 +16,7 @@
     <link rel="stylesheet" type="text/css" href="css/keyframes.css" data-skrollr-stylesheet />    
     <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 </head>
-<body id="page-repair" class="iphone-repair">
+<body id="page-repair" class="ipad-repair">
 <!--[if lt IE 7]>
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
@@ -85,9 +85,8 @@
         <div class="row row-intro">
             <header>
                 <article class="intro">
-                    <h1>iPhone repair<span></span></h1>
-                    <p>Just about any problem with your iPhone can be repaired. Cracked screens, broken home buttons and charging ports, along with swapping the back of your device to a different color, and any micro-soldering work that can be done is very possible.</p> 
-                    <p>Bring your device in and we can fix it without having to send it away to a third-party service center. We do all of our repairs in-house, for your convenience and a speedy return. Check below for your device model and it’s price menu. We work with the iPhone 6, 6 PLUS, 5S, 5C, 5, 4S, 4, 3GS, and 3G.</p>
+                    <h1>iPad repair<span></span></h1>
+                    <p>It isn’t easy to find a service center willing or even capable of taking care of a lot of the issues iPad owners face. Our service offers for the iPad is a complete and convenient standard for any of your anticipated needs.</p>
                 </article>
             </header>
         </div>
@@ -98,13 +97,11 @@
                     <div>
                         <select class="filter-model btn-animate">
                             <option value="reset">Filter model</option>
-                            <option value="iphone4">iPhone 4</option>
-                            <option value="iphone4s">iPhone 4s</option>
-                            <option value="iphone5">iPhone 5</option>
-                            <option value="iphone5c">iPhone 5s</option>
-                            <option value="iphone5c">iPhone 5c</option>
-                            <option value="iphone6">iPhone 6</option>
-                            <option value="iphone6s">iPhone 6s</option>
+                            <option value="ipad-air-2">iPad Air 2</option>
+                            <option value="ipad-air">iPad Air</option>
+                            <option value="ipad-mini-2">iPad Mini 2</option>
+                            <option value="ipad-mini">iPad Mini</option>
+                            <option value="ipad-4">iPad 4</option>
                         </select>
                         <i class="fa fa-caret-down fa-lg"></i>
                     </div>
@@ -127,96 +124,70 @@
         </div>
             
         <div class="row-container">    
-        <div class="row animatedParent">
-            <div class="two-col filter iphone6s">
-                <div class="img-holder animated fadeInLeft"><img src="img/page-repair/iphone/iphone6s.png" alt="iPhone6s" /></div>
-                <h2>iPhone 6s and 6s plus</h2>
-                <p>Cracked Screen Replacement: $110M<br>
-                Home Button: $65<br>
-                Ear Speaker: $45<br>
-                Front facing Camera: $45<br>
-                Rear Facing Camera: $50<br>
-                Loud speaker: $45<br>
-                Charging Port: $65M</p>
+            <div class="row animatedParent">
+                <div class="two-col filter ipad-air-2">
+                    <div class="img-holder animated fadeInLeft"><img src="img/page-repair/ipad/ipad-air-2.jpg" alt="iPad Air 2" /></div>
+                    <h2>iPad Air 2</h2>
+                    <p>Cracked Screen Replacement: $110M<br>
+                    Home Button: $65<br>
+                    Ear Speaker: $45<br>
+                    Front facing Camera: $45<br>
+                    Rear Facing Camera: $50<br>
+                    Loud speaker: $45<br>
+                    Charging Port: $65M</p>
+                </div>
+                <div class="two-col filter ipad-air">
+                    <div class="img-holder animated fadeInRight"><img src="img/page-repair/ipad/ipad-air.jpg" alt="iPad Air" /></div>
+                    <h2>iPad Air</h2>
+                    <p>Cracked Screen Replacement: $110M<br>
+                    Home Button: $65<br>
+                    Ear Speaker: $45<br>
+                    Front facing Camera: $45<br>
+                    Rear Facing Camera: $50<br>
+                    Loud speaker: $45<br>
+                    Charging Port: $65M</p>
+                </div>
             </div>
-            <div class="two-col filter iphone6">
-                <div class="img-holder animated fadeInRight"><img src="img/page-repair/iphone/iphone6.png" alt="iPhone6" /></div>
-                <h2>iPhone 6 and 6 plus</h2>
-                <p>Cracked Screen Replacement: $110M<br>
-                Home Button: $65<br>
-                Ear Speaker: $45<br>
-                Front facing Camera: $45<br>
-                Rear Facing Camera: $50<br>
-                Loud speaker: $45<br>
-                Charging Port: $65M</p>
-            </div>
-        </div>
 
-        <div class="row animatedParent">
-            <div class="two-col filter iphone5s">
-                <div class="img-holder animated fadeInLeft"><img src="img/page-repair/iphone/iphone5s.png" alt="iPhone5s" /></div>
-                <h2>iPhone 5s</h2>
-                <p>Cracked Screen Replacement: $110M<br>
-                Home Button: $65<br>
-                Ear Speaker: $45<br>
-                Front facing Camera: $45<br>
-                Rear Facing Camera: $50<br>
-                Loud speaker: $45<br>
-                Charging Port: $65M</p>
-            </div>
-            <div class="two-col filter iphone5c">
-                <div class="img-holder animated fadeInRight"><img src="img/page-repair/iphone/iphone5c.png" alt="iPhone6c" /></div>
-                <h2>iPhone 5c</h2>
-                <p>Cracked Screen Replacement: $110M<br>
-                Home Button: $65<br>
-                Ear Speaker: $45<br>
-                Front facing Camera: $45<br>
-                Rear Facing Camera: $50<br>
-                Loud speaker: $45<br>
-                Charging Port: $65M</p>
-            </div>
-        </div>   
+            <div class="row animatedParent">
+                <div class="two-col filter ipad-mini-2">
+                    <div class="img-holder animated fadeInLeft"><img src="img/page-repair/ipad/ipad-mini-2.jpg" alt="iPad Mini 2" /></div>
+                    <h2>iPad Mini 2</h2>
+                    <p>Cracked Screen Replacement: $110M<br>
+                    Home Button: $65<br>
+                    Ear Speaker: $45<br>
+                    Front facing Camera: $45<br>
+                    Rear Facing Camera: $50<br>
+                    Loud speaker: $45<br>
+                    Charging Port: $65M</p>
+                </div>
+                <div class="two-col filter ipad-mini">
+                    <div class="img-holder animated fadeInRight"><img src="img/page-repair/ipad/ipad-mini.jpg" alt="iPad Mini" /></div>
+                    <h2>iPad Mini</h2>
+                    <p>Cracked Screen Replacement: $110M<br>
+                    Home Button: $65<br>
+                    Ear Speaker: $45<br>
+                    Front facing Camera: $45<br>
+                    Rear Facing Camera: $50<br>
+                    Loud speaker: $45<br>
+                    Charging Port: $65M</p>
+                </div>
+            </div>   
 
 
-        <div class="row animatedParent">
-            <div class="two-col filter iphone5">
-                <div class="img-holder animated fadeInLeft"><img src="img/page-repair/iphone/iphone5.png" alt="iPhone5" /></div>
-                <h2>iPhone 5</h2>
-                <p>Cracked Screen Replacement: $110M<br>
-                Home Button: $65<br>
-                Ear Speaker: $45<br>
-                Front facing Camera: $45<br>
-                Rear Facing Camera: $50<br>
-                Loud speaker: $45<br>
-                Charging Port: $65M</p>
+            <div class="row animatedParent">
+                <div class="two-col filter ipad-4">
+                    <div class="img-holder animated fadeInLeft"><img src="img/page-repair/ipad/ipad-4.jpg" alt="iPad 4" /></div>
+                    <h2>iPad 4</h2>
+                    <p>Cracked Screen Replacement: $110M<br>
+                    Home Button: $65<br>
+                    Ear Speaker: $45<br>
+                    Front facing Camera: $45<br>
+                    Rear Facing Camera: $50<br>
+                    Loud speaker: $45<br>
+                    Charging Port: $65M</p>
+                </div>
             </div>
-            <div class="two-col filter iphone4s">
-                <div class="img-holder animated fadeInRight"><img src="img/page-repair/iphone/iphone4s.png" alt="iPhone4s" /></div>
-                <h2>iPhone 4s</h2>
-                <p>Cracked Screen Replacement: $110M<br>
-                Home Button: $65<br>
-                Ear Speaker: $45<br>
-                Front facing Camera: $45<br>
-                Rear Facing Camera: $50<br>
-                Loud speaker: $45<br>
-                Charging Port: $65M</p>
-            </div>
-        </div>
-
-        <div class="row animatedParent">
-            <div class="two-col filter iphone4">
-                <div class="img-holder animated fadeInLeft"><img src="img/page-repair/iphone/iphone4.png" alt="iPhone4" /></div>
-                <h2>iPhone 4</h2>
-                <p>Cracked Screen Replacement: $110M<br>
-                Home Button: $65<br>
-                Ear Speaker: $45<br>
-                Front facing Camera: $45<br>
-                Rear Facing Camera: $50<br>
-                Loud speaker: $45<br>
-                Charging Port: $65M</p>
-            </div>
-        </div>
-
         </div><!-- End of row container -->
     </div>
 </div>    

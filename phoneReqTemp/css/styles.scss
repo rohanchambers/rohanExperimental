@@ -1267,12 +1267,6 @@ footer {
 
     #nav-main {
         position: relative;
-
-        #social-links {
-            a:hover {
-                color: $color-red;
-            }
-        }
             
         li {
             // Sub nav   
@@ -1290,6 +1284,12 @@ footer {
             }        
         }
     }
+
+    #social-links {
+        a:hover {
+            color: $color-red!important;
+        }
+    }    
 
 }
 
@@ -1311,7 +1311,7 @@ footer {
             }
         }
     }
-} 
+}
 
 // Add margin when nav become minimised and positioned fixed. 
 #repair.nav-min {
@@ -1325,15 +1325,19 @@ footer {
 
     article.intro {
         margin-bottom: 30px;
+    
+        h1 {
+            span {
+                margin: 0 0 0 15px;
+            }
+        }        
     }
 
     h1, p {
         text-align: left;
     }
     
-    h1 {
-        width: 280px;
-    }
+
 
     p {
         width: 100%;
@@ -1358,7 +1362,9 @@ footer {
 
         img {
             position: absolute;
-            bottom: 0;            
+            bottom: 0;
+            max-width: 250px;
+            max-height: 360px;           
         }
     }
     

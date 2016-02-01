@@ -1261,14 +1261,14 @@ footer {
   color: #404040; }
 #page-repair #header #nav-main {
   position: relative; }
-  #page-repair #header #nav-main #social-links a:hover {
-    color: #e20510; }
   #page-repair #header #nav-main li ul#subnav {
     background-color: #FFF; }
     #page-repair #header #nav-main li ul#subnav li {
       border-bottom: 1px solid #404040; }
   #page-repair #header #nav-main li a::after {
     background-color: #404040; }
+#page-repair #header #social-links a:hover {
+  color: #e20510 !important; }
 
 #page-repair #header.nav-min #nav-main #social-links a:hover {
   color: #e20510; }
@@ -1284,10 +1284,10 @@ footer {
   width: 65%; }
 #repair article.intro {
   margin-bottom: 30px; }
+  #repair article.intro h1 span {
+    margin: 0 0 0 15px; }
 #repair h1, #repair p {
   text-align: left; }
-#repair h1 {
-  width: 280px; }
 #repair p {
   width: 100%; }
 #repair .row {
@@ -1302,7 +1302,9 @@ footer {
   min-height: 360px; }
   #repair .img-holder img {
     position: absolute;
-    bottom: 0; }
+    bottom: 0;
+    max-width: 250px;
+    max-height: 360px; }
 #repair .btn-global, #repair #header #nav-cta .btn-nav, #header #nav-cta #repair .btn-nav, #repair #shop #shop-products a, #shop #shop-products #repair a {
   text-transform: uppercase;
   margin-right: 10px;
@@ -1598,6 +1600,9 @@ footer {
 
   #about .container article {
     margin-right: 10%; }
+
+  .ipad-repair #repair .img-holder img {
+    margin-left: -120px; }
 
   #repair article {
     width: 100%; }
