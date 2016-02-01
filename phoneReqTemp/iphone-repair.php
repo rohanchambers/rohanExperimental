@@ -23,7 +23,7 @@
     
 <header id="header">
     <div class="container">    
-        <div id="logo"><a href="../#header">Phone Resq</a></div>
+        <div id="logo"><a href="/projects/phoneResq/">Phone Resq</a></div>
         <nav id="nav-main" class="nav-global">
             <ul>
                 <li id="dropdown"><a href="/#services">Services<i class="fa fa-caret-down fa-lg"></i></a>
@@ -37,7 +37,7 @@
                     </ul>
                 </li>
                 <li><a href="/#about">About</a></li>
-                <li><a href="/#sell">Sell your device</a></li>
+                <li id="nav-sell"><a href="/#sell">Sell your device</a></li>
                 <li><a href="/#contact">Contact us</a></li>
             </ul>
         </nav>

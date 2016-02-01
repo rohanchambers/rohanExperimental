@@ -8,10 +8,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Phone Req Home</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" >
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <!-- <link rel="stylesheet" href="css/animate.css"/> -->
     <link rel="stylesheet" href="css/animations.css"/>
     <link rel="stylesheet" href="css/styles.css"/>
     <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
@@ -37,7 +36,7 @@
                     </ul>
                 </li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#sell">Sell your device</a></li>
+                <li id="nav-sell"><a href="#sell">Sell your device</a></li>
                 <li><a href="#contact">Contact us</a></li>
             </ul>
         </nav>
@@ -108,11 +107,11 @@
         <div class="row row-products animatedParent" data-appear-top-offset="-100">
             <article id="iphone-repair" class="repair animated fadeInLeft">
                 <header>
-                    <span>iPhone repair</span> 
+                    <span>iPhone repair</span>
                     <h1>iPhone repair</h1>
                     <p>Whether you have the original iPhone or the latest model, we can take a look at your device and figure out what steps need to be made to get you back on the grid.</p>
                 </header>
-                <a href="#">&nbsp;</a>
+                <a href="iphone-repair.php">&nbsp;</a>
             </article>
             <article id="ipad-repair" class="repair animated fadeInUp">
                 <header>
@@ -281,10 +280,31 @@
                 <header>
                     <h1>Contact us<span></span></h1>
                     <p>Please fill in all the fields below to send us a message online.</p>
-                </header>            
-                <form id="contact-form" method="get" action="">
+                </header>
+            <?php
+                //if "email" variable is filled out, send email
+                  if (isset($_REQUEST['email']))  {
+                  
+                  //Email information
+                  $admin_email = "rohanchambers888@gmail.com";
+                  $email = $_REQUEST['email'];
+                  $subject = $_REQUEST['subject'];
+                  $comment = $_REQUEST['comment'];
+                  
+                  //send email
+                  mail($admin_email, "$subject", $comment, "From:" . $email);
+                  
+                  //Email response
+                  echo "Thank you for contacting us!";
+                  }
+                  
+                  //if "email" variable is not filled out, display the form
+                  else  {
+                ?>
+
+                <form id="contact-form" method="post">
                     <p>
-                        <input type="text" placeholder="Name" name="fullname" id="resqFullname" required>
+                        <input type="text" placeholder="Name" name="subject" id="resqFullname" required>
                         <span></span>
                         <label for="resqFullname"></label>
                     </p>
@@ -299,7 +319,7 @@
                         <label for="resqPhone"></label>
                     </p>        
                     <p id="textarea">
-                        <textarea placeholder="Your message" name="message" id="resqMessage" required></textarea>
+                        <textarea placeholder="Your message" name="comment" id="resqMessage" required></textarea>
                         <span></span>
                         <label for="resqMessage"></label>
                     </p>
@@ -307,7 +327,13 @@
                         <button type="submit" id="btn-submit" class="btn-animate">Send</button>
                     </p>        
                 </form>
+            <?php
+              }
+            ?>
             </article>
+
+  
+
         </div>
         
         <div class="row"> 

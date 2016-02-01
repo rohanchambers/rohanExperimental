@@ -37,26 +37,28 @@ $( document ).ready(function() {
 
 
 	// Show hide value of form inputs and textarea
-	$('input, textarea').each(function(){
-		var txtval = $(this).val();
-		$(this).focus(function(){
-			$(this).val('')
-			$(this).siblings('span').css({width: '100%'});
-		});
-		$(this).blur(function(){
-			if($(this).val() == ""){
-				$(this).val(txtval);
-				$(this).siblings('span').css({width: '0%'});
-			}
-		});
-	});
+    $('input, textarea').each(function(){
+        var txtval = $(this).val();
+        $(this).focus(function(){
+            if($(this).val() == txtval){
+                $(this).val('');
+                $(this).siblings('span').css({width: '100%'});
+            }
+        });
+        $(this).blur(function(){
+            if($(this).val() == ""){
+                $(this).val(txtval);
+                $(this).siblings('span').css({width: '0%'});
+            }
+        });
+    });
 
 	// Validate form
 	 $("#contact-form").validate();
 
 	// Mobile icon hamburger show/hide mobile nav
-	$('#nav-hamburger, #nav-main a').click(function(){
-		$(this).toggleClass('open');
+	$('#nav-hamburger, #nav-main li a').click(function(){
+		$('#nav-hamburger').toggleClass('open');
 		$('#nav-main ul').toggleClass('mobile-dropdown');
 	});
 
@@ -73,37 +75,37 @@ $( document ).ready(function() {
 		$(this).parent().find('span, img').removeClass();
 	});
 
-	// Icon mouse show hide intro text 
-	$('.icon-animate').click( function(){
-	    $('html, body').animate({
-	        scrollTop: $('#services').offset().top - 45
-	    }, 600);
-	    $('#show-hide').slideDown(500).stop(false, false);
-	});
-
 	//Scroll to sections
 	$('a[href^=#]').click(function(){
 	    event.preventDefault();
 	    var target = $(this).attr('href');
 	    var speed = 600;
 
-	    if (target == '#header')
-	   
+	    if (target == '#header') {	   
+	      
 	      $('html, body').animate({scrollTop : 0}, speed);
-	    
-	    else if(target == '#contact'){
-	   
-	    	$('html, body').animate({scrollTop : 3600}, speed);
-	    
-	    } else if(target == '#about'){
-	   
-	    	$('html, body').animate({scrollTop : 1466}, speed);
 	    
 	    } else $('html, body').animate({
 	   
 	        scrollTop: $(target).offset().top - 45
 	   
 	    }, speed);
+	});
+
+	// Icon mouse show hide intro text only if it hasn't scrolled down
+	$('.icon-animate').click( function(){
+		if($(document).scrollTop() < 400) {
+		    $('html, body').animate({
+		        scrollTop: $('#services').offset().top - 45
+		    }, 600);
+		    
+		} else {
+			$('#show-hide').slideDown(500);
+		}
+	});
+
+	$('#repair .two-col img').click( function(){
+		$(this).parent().siblings('h2:before').css({width: '100%'});
 	});
 
 });
@@ -123,6 +125,7 @@ $(document).on('scroll',function(){
 	        $('#services').removeClass('nav-min');
 	    }
 
+	    // If scroll top is 400 + show hide intro paragraph
 	    if($(document).scrollTop() > 400) {
 			$('#show-hide').slideDown(500);
 	    } else {

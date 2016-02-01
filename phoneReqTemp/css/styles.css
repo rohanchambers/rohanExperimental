@@ -1063,9 +1063,9 @@ article.intro {
     min-height: 250px; }
     #shop #shop-products article {
       float: left;
-      margin-right: 2%;
+      margin-right: 1%;
       position: relative;
-      width: 18%;
+      width: 17%;
       min-height: 250px; }
     #shop #shop-products a {
       position: absolute;
@@ -1268,6 +1268,8 @@ footer {
   #page-repair #header #nav-main li a::after {
     background-color: #404040; }
 
+#page-repair #header.nav-min #nav-main #social-links a:hover {
+  color: #e20510; }
 #page-repair #header.nav-min #nav-main li ul#subnav {
   padding-top: 0; }
   #page-repair #header.nav-min #nav-main li ul#subnav li {
@@ -1398,7 +1400,8 @@ footer {
     margin-top: 510px; }
 
   #shop, #sell .section-divider,
-  .parallax {
+  .parallax,
+  #nav-sell {
     display: none; }
 
   #sell .sell-row-img {
