@@ -1261,6 +1261,8 @@ footer {
   color: #404040; }
 #page-repair #header #nav-main {
   position: relative; }
+  #page-repair #header #nav-main #social-links a:hover {
+    color: #e20510; }
   #page-repair #header #nav-main li ul#subnav {
     background-color: #FFF; }
     #page-repair #header #nav-main li ul#subnav li {
@@ -1274,6 +1276,9 @@ footer {
   padding-top: 0; }
   #page-repair #header.nav-min #nav-main li ul#subnav li {
     border-bottom: 1px solid white; }
+
+#repair.nav-min {
+  margin-top: 175px; }
 
 #repair article {
   width: 65%; }

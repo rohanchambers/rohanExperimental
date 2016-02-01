@@ -1268,8 +1268,13 @@ footer {
     #nav-main {
         position: relative;
 
+        #social-links {
+            a:hover {
+                color: $color-red;
+            }
+        }
+            
         li {
-
             // Sub nav   
             ul#subnav {
                 background-color: $color-white;
@@ -1307,6 +1312,11 @@ footer {
         }
     }
 } 
+
+// Add margin when nav become minimised and positioned fixed. 
+#repair.nav-min {
+    margin-top: 175px;
+}
 
 #repair {
     article {

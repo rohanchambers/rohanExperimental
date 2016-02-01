@@ -20,6 +20,34 @@ if( getWidth() < 769 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Oper
 // Document ready
 $( document ).ready(function() {
 
+	// Filter devices from dropdown
+	$('.filter-model').on('change', function(){
+
+		// Get value of the selected device from the dropdown
+		var getVal = $('.' + $(this).val());
+		// Hide all devices with class below
+		$('.filter, .row-container .row').fadeOut();
+		// Show row of selected device
+		getVal.parent('.row-container .row').fadeIn();
+		// Show selected device
+		getVal.fadeIn();
+		// CSS3 transitions when user selects device from dropdown
+		$('#repair .row').removeClass('animatedParent');
+		getVal.children().removeClass('animated fadeInRight fadeInLeft');
+
+		// Hide parallax divs
+		$('.parallax').removeClass('parallax');
+		// Reset to show all devices
+
+		if( $(this).val() == 'reset' ) {
+			// Remove CSS3 transitions when user resets
+			$('.img-holder').removeClass('animated fadeInRight fadeInLeft');
+			$('.filter, .row-container .row').fadeIn();			
+		}
+
+
+	});
+
 	//Skrollr initialise
 	if(!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
 	    skrollr.init({
@@ -120,9 +148,11 @@ $(document).on('scroll',function(){
 	    if($(document).scrollTop() > 100) {
 	        $('#header').addClass('nav-min');
 	        $('#services').addClass('nav-min');
+	        $('#repair').addClass('nav-min');
 	    } else {
 	        $('#header').removeClass('nav-min');
 	        $('#services').removeClass('nav-min');
+	        $('#repair').removeClass('nav-min');
 	    }
 
 	    // If scroll top is 400 + show hide intro paragraph

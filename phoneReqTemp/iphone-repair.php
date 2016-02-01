@@ -97,14 +97,14 @@
                 <form id="filter-model">
                     <div>
                         <select class="filter-model btn-animate">
-                            <option>Filter model</option>
-                            <option>iPhone 4</option>
-                            <option>iPhone 4s</option>
-                            <option>iPhone 5</option>
-                            <option>iPhone 5s</option>
-                            <option>iPhone 5c</option>
-                            <option>iPhone 6</option>
-                            <option>iPhone 6s</option>
+                            <option value="reset">Filter model</option>
+                            <option value="iphone4">iPhone 4</option>
+                            <option value="iphone4s">iPhone 4s</option>
+                            <option value="iphone5">iPhone 5</option>
+                            <option value="iphone5c">iPhone 5s</option>
+                            <option value="iphone5c">iPhone 5c</option>
+                            <option value="iphone6">iPhone 6</option>
+                            <option value="iphone6s">iPhone 6s</option>
                         </select>
                         <i class="fa fa-caret-down fa-lg"></i>
                     </div>
@@ -112,6 +112,7 @@
                     <div>
                         <select class="filter-model btn-animate">
                             <option>Change brand</option>
+                            <option value="http://google.com/">Google</option>
                             <option>iPhone</option>
                             <option>iPad</option>
                             <option>iPod</option>
@@ -126,8 +127,9 @@
             <div class="two-col"></div>
         </div>
             
+        <div class="row-container">    
         <div class="row animatedParent">
-            <div class="two-col">
+            <div class="two-col filter iphone6s">
                 <div class="img-holder animated fadeInLeft"><img src="img/page-repair/iphone/iphone6s.png" alt="iPhone6s" /></div>
                 <h2>iPhone 6s and 6s plus</h2>
                 <p>Cracked Screen Replacement: $110M<br>
@@ -138,7 +140,7 @@
                 Loud speaker: $45<br>
                 Charging Port: $65M</p>
             </div>
-            <div class="two-col">
+            <div class="two-col filter iphone6">
                 <div class="img-holder animated fadeInRight"><img src="img/page-repair/iphone/iphone6.png" alt="iPhone6" /></div>
                 <h2>iPhone 6 and 6 plus</h2>
                 <p>Cracked Screen Replacement: $110M<br>
@@ -152,7 +154,7 @@
         </div>
 
         <div class="row animatedParent">
-            <div class="two-col">
+            <div class="two-col filter iphone5s">
                 <div class="img-holder animated fadeInLeft"><img src="img/page-repair/iphone/iphone5s.png" alt="iPhone5s" /></div>
                 <h2>iPhone 5s</h2>
                 <p>Cracked Screen Replacement: $110M<br>
@@ -163,7 +165,7 @@
                 Loud speaker: $45<br>
                 Charging Port: $65M</p>
             </div>
-            <div class="two-col">
+            <div class="two-col filter iphone5c">
                 <div class="img-holder animated fadeInRight"><img src="img/page-repair/iphone/iphone5c.png" alt="iPhone6c" /></div>
                 <h2>iPhone 5c</h2>
                 <p>Cracked Screen Replacement: $110M<br>
@@ -178,7 +180,7 @@
 
 
         <div class="row animatedParent">
-            <div class="two-col">
+            <div class="two-col filter iphone5">
                 <div class="img-holder animated fadeInLeft"><img src="img/page-repair/iphone/iphone5.png" alt="iPhone5" /></div>
                 <h2>iPhone 5</h2>
                 <p>Cracked Screen Replacement: $110M<br>
@@ -189,7 +191,7 @@
                 Loud speaker: $45<br>
                 Charging Port: $65M</p>
             </div>
-            <div class="two-col">
+            <div class="two-col filter iphone4s">
                 <div class="img-holder animated fadeInRight"><img src="img/page-repair/iphone/iphone4s.png" alt="iPhone4s" /></div>
                 <h2>iPhone 4s</h2>
                 <p>Cracked Screen Replacement: $110M<br>
@@ -203,7 +205,7 @@
         </div>
 
         <div class="row animatedParent">
-            <div class="two-col">
+            <div class="two-col filter iphone4">
                 <div class="img-holder animated fadeInLeft"><img src="img/page-repair/iphone/iphone4.png" alt="iPhone4" /></div>
                 <h2>iPhone 4</h2>
                 <p>Cracked Screen Replacement: $110M<br>
@@ -214,7 +216,9 @@
                 Loud speaker: $45<br>
                 Charging Port: $65M</p>
             </div>
-        </div>                               
+        </div>
+
+        </div><!-- End of row container -->
     </div>
 </div>    
 </section><!-- End of Repair section-->
