@@ -279,7 +279,6 @@
             <article class="intro">
                 <header>
                     <h1>Contact us<span></span></h1>
-                   <!--  <p class="please-fill">Please fill in all the fields below to send us a message online.</p> -->
                 </header>
                 <?php
                     //if "email" variable is filled out, send email
@@ -297,7 +296,7 @@
                       mail($admin_email, "$subject", "Comment: \n" . $comment_phone, "From:" . $email);
                       
                       //Email response
-                      echo "<p>Your message has been sent! We will be in touch with your very soon.</p>";
+                      echo "<p>Thank you, your message has been sent successfully! We will be in touch with your very soon.</p>";
                       }
                       
                       //if "email" variable is not filled out, display the form

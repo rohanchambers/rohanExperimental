@@ -12,13 +12,13 @@
 }
 
 // Remove social links when resizing browser down
-@media (max-width: 1017px) {
+@media (max-width: 1028px) {
     #social-links {
         display: none;
     }
 }
 
-@media (max-width: 861px) {
+@media (max-width: 873px) {
     #nav-cta {
         display: none;
     }

@@ -319,9 +319,10 @@ select {
     #logo {
         float: left;
         margin-right: 5px;
-        width: 99px;
-        height: 85px;
-        background-image: url(../img/global/phoneResqLogo.png);
+        max-width: 110px;
+        height: 112px;
+        background: url(../img/global/phoneResqLogo.png) no-repeat;
+        background-size: 100%;
         @include hide-text;
 
             a {
@@ -384,9 +385,10 @@ select {
     }
     
     #logo {
-        width: 75px;
+        max-width: 70px;
+        height: 63px;
+        background: url(../img/global/phoneResqLogo.png) no-repeat;
         background-size: 100%;
-        background-repeat: no-repeat;
     }
     
     #nav-main {

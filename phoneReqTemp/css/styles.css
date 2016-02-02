@@ -599,9 +599,10 @@ select {
   #header #logo {
     float: left;
     margin-right: 5px;
-    width: 99px;
-    height: 85px;
-    background-image: url(../img/global/phoneResqLogo.png);
+    max-width: 110px;
+    height: 112px;
+    background: url(../img/global/phoneResqLogo.png) no-repeat;
+    background-size: 100%;
     overflow: hidden;
     text-indent: 101%;
     white-space: nowrap; }
@@ -645,9 +646,10 @@ select {
   #header.nav-min li#dropdown:hover > #subnav {
     display: none !important; }
   #header.nav-min #logo {
-    width: 75px;
-    background-size: 100%;
-    background-repeat: no-repeat; }
+    max-width: 70px;
+    height: 63px;
+    background: url(../img/global/phoneResqLogo.png) no-repeat;
+    background-size: 100%; }
   #header.nav-min #nav-main a::after {
     position: absolute;
     bottom: -2px;
@@ -1384,10 +1386,10 @@ footer {
 
   #carousel .slide .slide-content {
     width: 100%; } }
-@media (max-width: 1017px) {
+@media (max-width: 1028px) {
   #social-links {
     display: none; } }
-@media (max-width: 861px) {
+@media (max-width: 873px) {
   #nav-cta {
     display: none; } }
 @media screen and (max-width: 867px) {

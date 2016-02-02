@@ -81,8 +81,10 @@ $( document ).ready(function() {
 	// Validate form
 	 $("#contact-form").validate();
 
-	 $('#contact-form').submit();
-
+	 $('#btn-submit').click( function(){
+		$('#contact-form').submit();
+	 });
+	 
 	// Mobile icon hamburger show/hide mobile nav
 	$('#nav-hamburger, #nav-main li a').click(function(){
 		$('#nav-hamburger').toggleClass('open');
