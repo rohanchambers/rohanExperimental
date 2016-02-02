@@ -22,7 +22,6 @@ $( document ).ready(function() {
 
 	// Filter devices from dropdown
 	$('.filter-model').on('change', function(){
-
 		// Get value of the selected device from the dropdown
 		var getVal = $('.' + $(this).val());
 		// Hide all devices with class below
@@ -44,8 +43,6 @@ $( document ).ready(function() {
 			$('.img-holder').removeClass('animated fadeInRight fadeInLeft');
 			$('.filter, .row-container .row').fadeIn();			
 		}
-
-
 	});
 
 	//Skrollr initialise
@@ -83,6 +80,8 @@ $( document ).ready(function() {
 
 	// Validate form
 	 $("#contact-form").validate();
+
+	 $('#contact-form').submit();
 
 	// Mobile icon hamburger show/hide mobile nav
 	$('#nav-hamburger, #nav-main li a').click(function(){

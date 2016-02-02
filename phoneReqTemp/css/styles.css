@@ -1095,8 +1095,13 @@ article.intro {
     color: #FFF; }
   #contact #contact-form {
     position: relative;
-    margin: 40px auto 0 auto;
+    margin: 20px auto 0 auto;
     width: 60%; }
+    #contact #contact-form fieldset {
+      border: none; }
+    #contact #contact-form legend {
+      color: #FFF;
+      margin-bottom: 30px; }
     #contact #contact-form p {
       position: relative;
       margin-bottom: 20px; }
