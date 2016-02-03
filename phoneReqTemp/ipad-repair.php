@@ -77,10 +77,7 @@
         <div id="parallax-4" class="parallax"></div>
 
         <div id="parallax-5" class="parallax"></div>
-        <div id="parallax-6" class="parallax"></div>   
-
-        <div id="parallax-7" class="parallax"></div>
-        <div id="parallax-8" class="parallax"></div>
+        <div id="parallax-6" class="parallax"></div>
 
         <div class="row row-intro">
             <header>
@@ -129,7 +126,7 @@
                     <div class="img-holder animated fadeInLeft"><img src="img/page-repair/ipad/ipad-air-2.jpg" alt="iPad Air 2" /></div>
                     <h2>iPad Air 2</h2>
                     <p>Cracked Screen Replacement(iPad AIR): $160<br>
-                    Any other repairs: $Call for Quote$</p>
+                    Any other repairs: Call for Quote</p>
                 </div>
                 <div class="two-col filter ipad-air">
                     <div class="img-holder animated fadeInRight"><img src="img/page-repair/ipad/ipad-air.jpg" alt="iPad Air" /></div>

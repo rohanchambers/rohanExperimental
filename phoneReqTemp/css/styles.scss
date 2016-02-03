@@ -133,6 +133,10 @@ header {
         color: $color-text;
     }
 
+    div i:hover {
+        color: $color-white;  
+    }
+
 }
 
 .btn-animate,
@@ -1436,7 +1440,7 @@ footer {
     width: 365px;
     height: 626px;
     background: url(../img/page-repair/bg-parallax.png) no-repeat;
-    opacity: 0.5;
+    opacity: 0.4;
 }
 
     #parallax-1 {

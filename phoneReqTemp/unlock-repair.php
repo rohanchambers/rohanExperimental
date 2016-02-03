@@ -69,6 +69,9 @@
 <!-- iPhone repair -->
 <section id="repair">
     <div class="container">
+        
+        <div id="parallax-1" class="parallax"></div>
+        <div id="parallax-2" class="parallax"></div>    
         <div class="row row-intro">
             <header>
                 <article class="intro">

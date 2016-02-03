@@ -106,21 +106,20 @@ $( document ).ready(function() {
 
 	//Scroll to sections
 	$('a[href^=#]').click(function(){
-	    event.preventDefault();
 	    var target = $(this).attr('href');
 	    var speed = 600;
 
-	    // if (target == '#header') {	   
+	    if (target == '#header') {	   
 	      
-	    //   $(document.documentElement).animate({scrollTop : 0}, speed);
+	      $('html, body').animate({scrollTop : 0}, speed);
 	    
-	    // } else 
-	    $('html, body').animate({
+	    } else $('html, body').animate({
 	   
-	        scrollTop: $(target).offset().top - 60
+	        scrollTop: $(target).offset().top - 45
 	   
 	    }, speed);
-	});
+	});	
+
 
 	// Icon mouse show hide intro text only if it hasn't scrolled down
 	$('.icon-animate').click( function(){

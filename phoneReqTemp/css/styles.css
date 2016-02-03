@@ -464,6 +464,8 @@ header {
     color: #404040; }
   #filter-model div:hover i {
     color: #404040; }
+  #filter-model div i:hover {
+    color: #FFF; }
 
 .btn-animate,
 #nav-main a,
@@ -1353,7 +1355,7 @@ footer {
   width: 365px;
   height: 626px;
   background: url(../img/page-repair/bg-parallax.png) no-repeat;
-  opacity: 0.5; }
+  opacity: 0.4; }
 
 #parallax-1 {
   left: 100px;

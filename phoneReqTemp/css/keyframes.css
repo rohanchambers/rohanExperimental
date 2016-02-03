@@ -52,12 +52,13 @@
 
 }
 
+
 @-skrollr-keyframes animation3 {
     500 {
-        top:1500px;
+        top:1700px;
     }
 
-    1800 {
+    2000 {
         top:400px;
     }
 
@@ -74,12 +75,13 @@
 
 }
 
+
 @-skrollr-keyframes animation5 {
     1200 {
-        top:3000px;
+        top:2700px;
     }
 
-    3400 {
+    4000 {
         top:300px;
     }
 }
@@ -89,30 +91,29 @@
         top:3000px;
     }
 
-    2800 {
-        top:400px;
+    3100 {
+        top:300px;
     }
 }
 
 
-
 @-skrollr-keyframes animation7 {
     1600 {
-        top:3000px;
+        top:3400px;
     }
 
-    3100 {
+    3000 {
         top: 2000px;
     }
 }
 
 @-skrollr-keyframes animation8 {
     1600 {
-        top:3000px;
+        top:3100px;
     }
 
     3000 {
-        top:2000px;
+        top:2400px;
     }
 
 }

@@ -30,10 +30,10 @@
                     <ul id="subnav">
                         <li><a href="iphone-repair.php">iPhone repair</a><span></span></li>
                         <li><a href="ipad-repair.php">iPad repair</a><span></span></li>
-                        <li><a href="ipod-repair.php">iPod repair</a><span></span></li>
-                        <li><a href="android-repair.php">Android repair</a><span></span></li>
-                        <li><a href="laptop-repair.php">Laptop &amp; Desktop repair</a><span></span></li>
-                        <li><a href="unlock-repair.php">Cell Phone Unlocks</a><span></span></li>
+                        <li><a href="#">iPod repair</a><span></span></li>
+                        <li><a href="#">Android repair</a><span></span></li>
+                        <li><a href="#">Laptop &amp; Desktop repair</a><span></span></li>
+                        <li><a href="#">Cell Phone Unlocks</a><span></span></li>
                     </ul>
                 </li>
                 <li><a href="/#about">About</a></li>

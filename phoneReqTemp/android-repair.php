@@ -133,14 +133,16 @@
                     <p>Screen replacement: $xxx<br>
                     Charging port repair: $xx<br>
                     Charing port replacement: $xx<br>
-                    Battery replacement: $xx</p>
+                    Battery replacement: $xx<br>
+                    Any other repairs: Call for Quote</p>
                 </div>
                 <div class="two-col filter galaxys4">
                     <div class="img-holder animated fadeInRight"><img src="img/page-repair/android/galaxyS4.png" alt="Galaxy S4" /></div>
                     <h2>Galaxy S4</h2>
                     <p>Screen Replacement: $xxx<br>
                     Charging port replacement: $xx<br>
-                    Battery replacement: $xx</p>
+                    Battery replacement: $xx<br>
+                    Any other repairs: Call for Quote</p>
                 </div>
             </div>
 
@@ -150,14 +152,16 @@
                     <h2>Galaxy S5</h2>
                     <p>Screen Replacement: $xxx<br>
                     Charging port replacement: $xx<br>
-                    Battery replacement: $xx</p>
+                    Battery replacement: $xx<br>
+                    Any other repairs: Call for Quote</p>
                 </div>
                 <div class="two-col filter galaxys6">
                     <div class="img-holder animated fadeInRight"><img src="img/page-repair/android/galaxyS6.png" alt="Galaxy S6" /></div>
                     <h2>Galaxy S6</h2>
                     <p>Screen Replacement: $xxx<br>
                     Charging port replacement: $xx<br>
-                    Battery replacement: $xx</p>
+                    Battery replacement: $xx<br>
+                    Any other repairs: Call for Quote</p>
                 </div>
             </div>   
 
@@ -168,7 +172,8 @@
                     <h2>Galaxy Note 2</h2>                
                     <p>Screen Replacement: $xxx<br>
                     Charging port replacement: $xx<br>
-                    Battery replacement: $xx</p>
+                    Battery replacement: $xx<br>
+                    Any other repairs: Call for Quote</p>
                 </div>
             </div>
         </div><!-- End of row container -->
