@@ -1,5 +1,12 @@
 // RESPONSIVE STYLES
 
+// Desktop 1200px min.       
+@include media($desktop-lrg) {
+    #sell .sell-row-img {
+        background-position: center bottom;
+    }
+}
+
 // Desktop 1030px max.       
 @include media($desktop-med) {
     .container {            
@@ -407,3 +414,4 @@
     }
 
 }
+

@@ -370,7 +370,8 @@ html {
 
 body {
   font-family: Verdana, Arial, sans-serif;
-  font-size: 0.875rem; }
+  font-size: 0.875rem;
+  height: 100%; }
 
 h1, h2 {
   font-family: 'Open Sans', Arial, sans-serif;
@@ -802,7 +803,7 @@ article.intro {
 
 #services {
   overflow: hidden;
-  margin: 400px 0 0 0;
+  margin: 380px 0 0 0;
   padding: 25px 0 50px 0; }
   #services::after {
     clear: both;
@@ -1297,6 +1298,12 @@ footer {
   text-align: left; }
 #repair p {
   width: 100%; }
+#repair a {
+  color: #404040; }
+#repair a:hover {
+  background-color: #e20510;
+  color: #FFF;
+  text-decoration: none; }
 #repair .row {
   overflow: hidden;
   padding: 0 0 50px 0; }
@@ -1380,6 +1387,9 @@ footer {
   right: 150px;
   transform: rotate(20deg); }
 
+@media screen and (min-width: 1200px) {
+  #sell .sell-row-img {
+    background-position: center bottom; } }
 @media screen and (max-width: 1030px) {
   .container {
     margin: 0 4%; }

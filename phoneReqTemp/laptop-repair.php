@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Phone Req | iPhone Repair</title>
+    <title>Phone Req | Laptop and desktop repair</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300' rel='stylesheet' type='text/css'>
@@ -85,9 +85,8 @@
         <div class="row row-intro">
             <header>
                 <article class="intro">
-                    <h1>iPhone repair<span></span></h1>
-                    <p>Just about any problem with your iPhone can be repaired. Cracked screens, broken home buttons and charging ports, along with swapping the back of your device to a different color, and any micro-soldering work that can be done is very possible.</p> 
-                    <p>Bring your device in and we can fix it without having to send it away to a third-party service center. We do all of our repairs in-house, for your convenience and a speedy return. Check below for your device model and it’s price menu. We work with the iPhone 6, 6 PLUS, 5S, 5C, 5, 4S, 4, 3GS, and 3G.</p>
+                    <h1>Laptop and desktop repair<span></span></h1>
+                    <p>For computers, we currently only offer screen-based repairs. Check back with us soon or send a request through the <a href="#contact">contact</a> form to be notified when we begin offering additional services.</p>
                 </article>
             </header>
         </div>
@@ -129,85 +128,28 @@
         <div class="row-container">    
             <div class="row animatedParent">
                 <div class="two-col filter iphone6s">
-                    <div class="img-holder animated fadeInLeft"><img src="img/page-repair/iphone/iphone6s.png" alt="iPhone6s" /></div>
-                    <h2>iPhone 6s and 6s plus</h2>
-                    <p>iPhone 6 Screen Replacement: $149.99<br>
-                    iPhone 6s+ Screen Replacement: $179.99<br>
-                    iPhone 6s and 6s+ Charging Port Replacement: $65<br>
-                    iPhone 6s and 6s+ Front Camera Replacement: $65<br>
-                    iPhone 6s and 6 Plus Rear Camera Replacement: $65<br>
-                    For more 6s and 6s+ repairs, please contact us!</p>
+                    <div class="img-holder animated fadeInLeft"><img src="img/page-repair/laptop/macbook.png" alt="Apple Mackbook" /></div>
+                    <h2>Apple Mackbook</h2>
+                    <p>OS Install : Coming soon<br>
+                    Data Recovery Starting at: Coming soon<br>
+                    Virus Removal (Windows &amp; Mac) Starting at: Coming soon<br>
+                    Hard Drive Replacement Starting at: Coming soon<br>
+                    RAM Upgrade Starting at: Coming soon<br>
+                    LCD Display Replacement Starting at: $99<br>
+                    Keyboard Replacement Starting at: $25</p>
                 </div>
                 <div class="two-col filter iphone6">
-                    <div class="img-holder animated fadeInRight"><img src="img/page-repair/iphone/iphone6.png" alt="iPhone6" /></div>
-                    <h2>iPhone 6 and 6 plus</h2>
-                    <p><p>iPhone 6 Screen Replacement: $149.99<br>
-                    iPhone 6+ Screen Replacement: $179.99<br>
-                    iPhone 6 and 6+ Charging Port Replacement: $65<br>
-                    iPhone 6 and 6+ Front Camera Replacement: $65<br>
-                    iPhone 6 and 6 Plus Rear Camera Replacement: $65<br>
-                    For more 6 and 6+ repairs, please contact us!</p>
-                </div>
-            </div>
-
-            <div class="row animatedParent">
-                <div class="two-col filter iphone5s">
-                    <div class="img-holder animated fadeInLeft"><img src="img/page-repair/iphone/iphone5s.png" alt="iPhone5s" /></div>
-                    <h2>iPhone 5s</h2>
-                    <p>Cracked Screen Replacement: $110<br>
+                    <div class="img-holder animated fadeInRight"><img src="img/page-repair/laptop/windows.jpg" alt="Window laptops and desktops" /></div>
+                    <h2>Windows Laptops and desktops</h2>
+                    <p>Cracked Screen Replacement: $110M<br>
                     Home Button: $65<br>
                     Ear Speaker: $45<br>
                     Front facing Camera: $45<br>
                     Rear Facing Camera: $50<br>
                     Loud speaker: $45<br>
-                    Charging Port: $65</p>
-                </div>
-                <div class="two-col filter iphone5c">
-                    <div class="img-holder animated fadeInRight"><img src="img/page-repair/iphone/iphone5c.png" alt="iPhone6c" /></div>
-                    <h2>iPhone 5c</h2>
-                    <p>Cracked Screen Replacement: $105<br>
-                    Home Button: $40<br>
-                    Ear Speaker: $45<br>
-                    Front Facing Camera: $45<br>
-                    Rear Facing Camera: $50<br>
-                    Large Speaker: $45<br>
-                    Charging Port: $60</p>
-                </div>
-            </div>   
-
-            <div class="row animatedParent">
-                <div class="two-col filter iphone5">
-                    <div class="img-holder animated fadeInLeft"><img src="img/page-repair/iphone/iphone5.png" alt="iPhone5" /></div>
-                    <h2>iPhone 5</h2>
-                    <p>Cracked Screen Replacement: $99<br>
-                    Home Button: $40<br>
-                    Ear Speaker: $45<br>
-                    Vibrate Motor: $45<br>
-                    Charging Port: $50</p>
-                </div>
-                <div class="two-col filter iphone4s">
-                    <div class="img-holder animated fadeInRight"><img src="img/page-repair/iphone/iphone4s.png" alt="iPhone4s" /></div>
-                    <h2>iPhone 4s</h2>
-                    <p>Cracked Screen Replacement: $65<br>
-                    Rear Cover Replacement: $35<br>
-                    Home Button: $45<br>
-                    Charging Port: $45<br>
-                    Color Swap Starting at: $80</p>
+                    Charging Port: $65M</p>
                 </div>
             </div>
-
-            <div class="row animatedParent">
-                <div class="two-col filter iphone4">
-                    <div class="img-holder animated fadeInLeft"><img src="img/page-repair/iphone/iphone4.png" alt="iPhone4" /></div>
-                    <h2>iPhone 4</h2>
-                    <p>Cracked Screen Replacement: $65<br>
-                    Rear Cover Replacement: $35<br>
-                    Home Button: $45<br>
-                    Charging Port: $45<br>
-                    Color Swap Starting at: $80</p>
-                </div>
-            </div>
-
         </div><!-- End of row container -->
     </div>
 </div>    

@@ -110,13 +110,14 @@ $( document ).ready(function() {
 	    var target = $(this).attr('href');
 	    var speed = 600;
 
-	    if (target == '#header') {	   
+	    // if (target == '#header') {	   
 	      
-	      $('html, body').animate({scrollTop : 0}, speed);
+	    //   $(document.documentElement).animate({scrollTop : 0}, speed);
 	    
-	    } else $('html, body').animate({
+	    // } else 
+	    $('html, body').animate({
 	   
-	        scrollTop: $(target).offset().top - 45
+	        scrollTop: $(target).offset().top - 60
 	   
 	    }, speed);
 	});

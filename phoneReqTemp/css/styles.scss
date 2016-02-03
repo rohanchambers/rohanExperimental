@@ -11,7 +11,8 @@
 // }
 body {
     font-family: Verdana, Arial, sans-serif;
-    font-size: rem(14); 
+    font-size: rem(14);
+    height: 100%;
 }
 
 // VARIABLES
@@ -596,7 +597,7 @@ article.intro {
 // Services
 #services {
     overflow: hidden;    
-    margin: 400px 0 0 0;
+    margin: 380px 0 0 0;
     padding: 25px 0 50px 0;
     @include clearfix;
 
@@ -1346,10 +1347,18 @@ footer {
         text-align: left;
     }
     
-
-
     p {
         width: 100%;
+    }
+
+    a {
+        color: $color-text;
+    }
+
+    a:hover {
+        background-color: $color-red;
+        color: $color-white;
+        text-decoration: none;
     }
     
     .row {

@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Phone Req Home</title>
+    <title>Phone Req "| iPad repair"</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300' rel='stylesheet' type='text/css'>
@@ -101,7 +101,7 @@
                             <option value="ipad-air">iPad Air</option>
                             <option value="ipad-mini-2">iPad Mini 2</option>
                             <option value="ipad-mini">iPad Mini</option>
-                            <option value="ipad-4">iPad 4</option>
+                            <option value="ipad-4">iPad 3-4</option>
                         </select>
                         <i class="fa fa-caret-down fa-lg"></i>
                     </div>
@@ -128,24 +128,14 @@
                 <div class="two-col filter ipad-air-2">
                     <div class="img-holder animated fadeInLeft"><img src="img/page-repair/ipad/ipad-air-2.jpg" alt="iPad Air 2" /></div>
                     <h2>iPad Air 2</h2>
-                    <p>Cracked Screen Replacement: $110M<br>
-                    Home Button: $65<br>
-                    Ear Speaker: $45<br>
-                    Front facing Camera: $45<br>
-                    Rear Facing Camera: $50<br>
-                    Loud speaker: $45<br>
-                    Charging Port: $65M</p>
+                    <p>Cracked Screen Replacement(iPad AIR): $160<br>
+                    Any other repairs: $Call for Quote$</p>
                 </div>
                 <div class="two-col filter ipad-air">
                     <div class="img-holder animated fadeInRight"><img src="img/page-repair/ipad/ipad-air.jpg" alt="iPad Air" /></div>
                     <h2>iPad Air</h2>
-                    <p>Cracked Screen Replacement: $110M<br>
-                    Home Button: $65<br>
-                    Ear Speaker: $45<br>
-                    Front facing Camera: $45<br>
-                    Rear Facing Camera: $50<br>
-                    Loud speaker: $45<br>
-                    Charging Port: $65M</p>
+                    <p>Cracked Screen Replacement(iPad AIR): $160<br>
+                    Any other repairs: Call for a quote</p>
                 </div>
             </div>
 
@@ -153,24 +143,14 @@
                 <div class="two-col filter ipad-mini-2">
                     <div class="img-holder animated fadeInLeft"><img src="img/page-repair/ipad/ipad-mini-2.jpg" alt="iPad Mini 2" /></div>
                     <h2>iPad Mini 2</h2>
-                    <p>Cracked Screen Replacement: $110M<br>
-                    Home Button: $65<br>
-                    Ear Speaker: $45<br>
-                    Front facing Camera: $45<br>
-                    Rear Facing Camera: $50<br>
-                    Loud speaker: $45<br>
-                    Charging Port: $65M</p>
+                    <p>Cracked Screen Replacement(iPad AIR): $160<br>
+                    Any other repairs: Call for a quote</p>
                 </div>
                 <div class="two-col filter ipad-mini">
                     <div class="img-holder animated fadeInRight"><img src="img/page-repair/ipad/ipad-mini.jpg" alt="iPad Mini" /></div>
                     <h2>iPad Mini</h2>
-                    <p>Cracked Screen Replacement: $110M<br>
-                    Home Button: $65<br>
-                    Ear Speaker: $45<br>
-                    Front facing Camera: $45<br>
-                    Rear Facing Camera: $50<br>
-                    Loud speaker: $45<br>
-                    Charging Port: $65M</p>
+                    <p>Cracked Screen Replacement(iPad AIR): $160<br>
+                    Any other repairs: Call for a quote</p>
                 </div>
             </div>   
 
@@ -178,14 +158,9 @@
             <div class="row animatedParent">
                 <div class="two-col filter ipad-4">
                     <div class="img-holder animated fadeInLeft"><img src="img/page-repair/ipad/ipad-4.jpg" alt="iPad 4" /></div>
-                    <h2>iPad 4</h2>
-                    <p>Cracked Screen Replacement: $110M<br>
-                    Home Button: $65<br>
-                    Ear Speaker: $45<br>
-                    Front facing Camera: $45<br>
-                    Rear Facing Camera: $50<br>
-                    Loud speaker: $45<br>
-                    Charging Port: $65M</p>
+                    <h2>iPad 3-4</h2>
+                    <p>Cracked Screen Replacement: $115/$125<br>
+                    Any other repairs: $Call for Quote$</p>
                 </div>
             </div>
         </div><!-- End of row container -->
