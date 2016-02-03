@@ -29,10 +29,10 @@
                     <ul id="subnav">
                         <li><a href="iphone-repair.php">iPhone repair</a><span></span></li>
                         <li><a href="ipad-repair.php">iPad repair</a><span></span></li>
-                        <li><a href="iphone-repair.php">iPod repair</a><span></span></li>
-                        <li><a href="iphone-repair.php">Android repair</a><span></span></li>
-                        <li><a href="iphone-repair.php">Laptop &amp; Desktop repair</a><span></span></li>
-                        <li><a href="iphone-repair.php">Cell Phone Unlocks</a><span></span></li>
+                        <li><a href="ipod-repair.php">iPod repair</a><span></span></li>
+                        <li><a href="android-repair.php">Android repair</a><span></span></li>
+                        <li><a href="laptop-repair.php">Laptop &amp; Desktop repair</a><span></span></li>
+                        <li><a href="unlock-repair.php">Cell Phone Unlocks</a><span></span></li>
                     </ul>
                 </li>
                 <li><a href="#about">About</a></li>
@@ -127,7 +127,7 @@
                     <h1>iPod Repair</h1>
                     <p>So your iPod is busted and you need to get back to jamming out on your favorite tunes. We get it.</p>
                 </header>
-                <a href="#">&nbsp;</a>
+                <a href="ipod-repair.php">&nbsp;</a>
             </article>
         </div><!-- End of row -->
 
@@ -138,7 +138,7 @@
                     <h1>Android Repair</h1>
                     <p>We’re not just about Apple here. We work on Android devices as well. All devices and models are covered in the hands of our knowledgeable staff.</p>
                 </header>
-                <a href="#">&nbsp;</a>
+                <a href="android-repair.php">&nbsp;</a>
             </article>
             <article id="laptop-repair" class="repair animated fadeInUp">
                 <header>
@@ -146,7 +146,7 @@
                     <h1>Laptop &amp; Desktop Repair</h1>
                     <p>Doesn’t it feel like when your computer isn’t working, that life slows down? Let us take a look and we’ll get you up and running again in no time.</p>
                 </header>
-                <a href="#">&nbsp;</a>
+                <a href="laptop-repair.php">&nbsp;</a>
             </article>
             <article id="unlocks-repair" class="repair animated fadeInRight">
                 <header>
@@ -154,7 +154,7 @@
                     <h1>Cell Phone unlocks</h1>
                     <p>Interested in unlocking your phone? We’ve got the tools to safely and securely unlock almost any smartphone device.</p>
                 </header>
-                <a href="#"></a>
+                <a href="unlock-repair.php"></a>
             </article>
         </div><!-- End of row -->
     </div><!-- End of container -->

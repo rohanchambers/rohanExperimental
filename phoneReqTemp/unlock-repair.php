@@ -30,10 +30,10 @@
                     <ul id="subnav">
                         <li><a href="iphone-repair.php">iPhone repair</a><span></span></li>
                         <li><a href="ipad-repair.php">iPad repair</a><span></span></li>
-                        <li><a href="#">iPod repair</a><span></span></li>
-                        <li><a href="#">Android repair</a><span></span></li>
-                        <li><a href="#">Laptop &amp; Desktop repair</a><span></span></li>
-                        <li><a href="#">Cell Phone Unlocks</a><span></span></li>
+                        <li><a href="ipod-repair.php">iPod repair</a><span></span></li>
+                        <li><a href="android-repair.php">Android repair</a><span></span></li>
+                        <li><a href="laptop-repair.php">Laptop &amp; Desktop repair</a><span></span></li>
+                        <li><a href="unlock-repair.php">Cell Phone Unlocks</a><span></span></li>
                     </ul>
                 </li>
                 <li><a href="/#about">About</a></li>
@@ -84,13 +84,7 @@
                     <div>
                         <select class="filter-model btn-animate">
                             <option value="reset">Filter model</option>
-                            <option value="iphone4">iPhone 4</option>
-                            <option value="iphone4s">iPhone 4s</option>
-                            <option value="iphone5">iPhone 5</option>
-                            <option value="iphone5c">iPhone 5s</option>
-                            <option value="iphone5c">iPhone 5c</option>
-                            <option value="iphone6">iPhone 6</option>
-                            <option value="iphone6s">iPhone 6s</option>
+                            <option value="unlock">Cellphone unlock</option>
                         </select>
                         <i class="fa fa-caret-down fa-lg"></i>
                     </div>
@@ -100,10 +94,10 @@
                             <option>Change brand</option>
                             <option value="iphone-repair.php">iPhone</option>
                             <option value="ipad-repair.php">iPad</option>
-                            <option>iPod</option>
-                            <option>Android</option>
-                            <option>Laptop</option>
-                            <option>Unlocks</option>
+                            <option value="ipod-repair.php">iPod</option>
+                            <option value="android-repair.php">Android</option>
+                            <option value="laptop-repair.php">Laptop</option>
+                            <option value="unlock-repair.php">Unlocks</option>
                         </select>
                         <i class="fa fa-caret-down fa-lg"></i>
                     </div>
@@ -114,7 +108,7 @@
             
         <div class="row-container">    
             <div class="row animatedParent">
-                <div class="two-col filter iphone6s">
+                <div class="two-col filter unlock">
                     <div class="img-holder animated fadeInLeft"><img src="img/page-repair/unlock/unlock.png" alt="Cellphone unlock" /></div>
                     <h2>Cellphone unlock</h2>
                     <p>Prices are coming soon but please <a href="#contact">contact us</a> for a quote!</p>

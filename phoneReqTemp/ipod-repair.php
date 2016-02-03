@@ -30,10 +30,10 @@
                     <ul id="subnav">
                         <li><a href="iphone-repair.php">iPhone repair</a><span></span></li>
                         <li><a href="ipad-repair.php">iPad repair</a><span></span></li>
-                        <li><a href="#">iPod repair</a><span></span></li>
-                        <li><a href="#">Android repair</a><span></span></li>
-                        <li><a href="#">Laptop &amp; Desktop repair</a><span></span></li>
-                        <li><a href="#">Cell Phone Unlocks</a><span></span></li>
+                        <li><a href="ipod-repair.php">iPod repair</a><span></span></li>
+                        <li><a href="android-repair.php">Android repair</a><span></span></li>
+                        <li><a href="laptop-repair.php">Laptop &amp; Desktop repair</a><span></span></li>
+                        <li><a href="unlock-repair.php">Cell Phone Unlocks</a><span></span></li>
                     </ul>
                 </li>
                 <li><a href="/#about">About</a></li>
@@ -109,10 +109,10 @@
                             <option>Change brand</option>
                             <option value="iphone-repair.php">iPhone</option>
                             <option value="ipad-repair.php">iPad</option>
-                            <option>iPod</option>
-                            <option>Android</option>
-                            <option>Laptop</option>
-                            <option>Unlocks</option>
+                            <option value="ipod-repair.php">iPod</option>
+                            <option value="android-repair.php">Android</option>
+                            <option value="laptop-repair.php">Laptop</option>
+                            <option value="unlock-repair.php">Unlocks</option>
                         </select>
                         <i class="fa fa-caret-down fa-lg"></i>
                     </div>
@@ -123,17 +123,17 @@
             
         <div class="row-container">    
         <div class="row animatedParent">
-            <div class="two-col filter iphone6s">
+            <div class="two-col filter ipodTouch">
                 <div class="img-holder animated fadeInLeft"><img src="img/page-repair/ipod/ipod-touch.png" alt="iPod Touch" /></div>
-                <h2>Ipod Touch 4th gen / 5th gen</h2>
+                <h2>iPod Touch 4th gen / 5th gen</h2>
                 <p>Screen Replacement 4th gen/5th gen: $60/$140<br>
                 Home Button Starting at: $45<br>
                 Headphone Jack Starting at: $45<br>
                 Rear Cover Starting at: $45</p>
             </div>
-            <div class="two-col filter iphone6">
+            <div class="two-col filter ipodNano">
                 <div class="img-holder animated fadeInRight"><img src="img/page-repair/ipod/ipod-nano.png" alt="iPod Nano" /></div>
-                <h2>Ipod Nano</h2>
+                <h2>iPod Nano</h2>
                 <p>Screen Replacement Starting at: $35<br>
                 LCD Display Starting at: $35<br>
                 Click-Wheel Starting at: $30<br>
@@ -142,9 +142,9 @@
         </div>
 
         <div class="row animatedParent">
-            <div class="two-col filter iphone5s">
+            <div class="two-col filter ipodClassic">
                 <div class="img-holder animated fadeInLeft"><img src="img/page-repair/ipod/ipod-classic.png" alt="iPod Classic" /></div>
-                <h2>iPhone 5s</h2>
+                <h2>iPod Classic</h2>
                 <p>Screen Replacement: $45<br>
                 Screen Replacement: $30<br>
                 Screen Replacement Starting at: $45<br>
