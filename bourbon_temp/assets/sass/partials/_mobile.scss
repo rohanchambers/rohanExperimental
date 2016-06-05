@@ -1,0 +1,410 @@
+// DESKTOP | Max 1024px
+@include media($large-desktop) {
+	#what-we-do-outer {
+		overflow: hidden;		
+		height: 1000px;
+	}
+}
+
+// DESKTOP | Max 1024px
+@include media($desktop) {
+
+	// Logo spacing
+	#home {
+		h1 {
+			width: auto;
+		}
+	}
+	
+	// Spacing for header sections
+	section header,
+	#logo,
+	.overlay h1 {
+		padding: 0 3%;
+	}
+	
+	// Reset padding to even out columns
+	#case-study-intro {
+		padding: 0;
+	}
+	
+	.overlay {
+		padding-top: 5px;
+	}
+
+	footer .col {
+		padding: 2% 3%;
+	}
+}
+
+// TABLET | Max width 800px
+@include media($tablet) {
+
+	header h1,
+	.overlay h1, 
+	header .intro,
+	#what-we-do .intro, 
+	#contact-info h2, 
+	footer #footer-logo, 
+	#work .row .view .mask p span {
+		font-family: arial_blackregular, Arial, Verdana, sans-serif;
+	}
+
+	header h1 {
+		font-size: rem(30);
+	}
+	
+	header h1:before {
+		height: 31px;
+	}
+	
+	#contact h1 {
+		padding-left: 25px;
+		text-align: left;
+	}
+
+	#what-we-do header {
+		padding: 0;
+	}
+
+	#home {
+		background: url(../img/global/bg-emitter.png) center center no-repeat;
+		background-size: contain;
+		#slogan {
+			width: 82%;			
+	
+			p {
+				font-size: rem(72);
+			}
+		}
+	}
+
+	#what-we-do-outer {
+		height: auto;
+	}
+
+	#what-we-do {
+		background-color: $yellow;
+		
+		.col {
+			min-height: auto;
+		}
+
+		.col-skew {
+			width: 100%;
+			height: auto;
+			padding: 5%;			
+		}
+
+		.col-no-skew,
+		.col-skew:after {
+			display: none;
+		}	
+	}
+
+	#work {
+		.row {
+			.view {
+				@include span-columns(6);
+				@include omega-reset(3n);
+			}
+		}
+
+		h1, p {
+			float: left;
+			text-align: left;
+		}
+
+		h1 {
+			padding-left: 25px;
+		}
+
+		h1:before {
+			left: 0;
+			right: auto;
+		}
+
+		h1:after {
+			left: 25px;
+		}
+
+		.view.coming-soon p {
+			font-size: rem(26);
+		}
+	}
+
+	#clients {
+		.row {
+			.client {
+				@include span-columns(4);
+				@include omega-reset(4n);
+			}		
+		}
+	}
+
+	#contact {
+		p {
+			width: 100%;
+			margin: 0%;
+		}
+	}
+
+	#offices, #get-in-touch, #follow-us {
+		min-height: auto;
+		@include span-columns(12);		
+	}
+
+	#quick-message #contact-form {
+	    width: 100%;
+	}	
+
+	canvas, 
+	#nav-mini {
+		display: none;
+	}
+	.overlay {
+	 	ul li a.active {
+			background-color: transparent;
+		}
+	}
+
+	#case-study {
+		.col,
+		#case-study-info,
+		#case-study-img  {
+			@include span-columns(12);
+		}
+
+		.col-no-skew,
+		.col-skew:after {
+			display: none;
+		}			
+	}
+	
+	// Paddding for col skew on case study page
+	#logo-outer #logo .col-skew,
+	#case-study-outer #case-study .col-skew	{
+		min-height: auto;
+		padding: 2% 4%;
+	}
+
+
+}
+
+// TABLET 600PX | Logo stack: ;
+$tablet-600: new-breakpoint(max-width 600px);
+
+@include media($tablet-600) {
+	#home,
+	.overlay,
+	#logo {
+		h1 {
+			width: 150px;
+			line-height: 1em;
+			font-size: rem(25);
+			padding-left: 0;
+		}
+	} 
+
+	#home {
+		#slogan p {
+			font-size: rem(64);
+		}
+	}
+
+	.overlay {
+		h1 {		  
+	    	position: absolute;
+			left: 10px;		 
+		}
+	}
+
+	#case-study #case-study-intro {
+		h1 {
+			line-height: normal;
+			width: 100%;
+		}
+
+		h1:after {
+			width: 170px;
+		}
+	}
+
+	#home,
+	#logo {
+		#social-links ul#share-me {
+			@include media($tablet-600) {
+				top: 120px;
+				right: -15px;
+			}
+		}		
+	}
+}
+
+
+// MOBILE | max width 479px
+@include media($mobile) {
+
+	#work,
+	#clients,
+	#contact {
+		margin-top: 25px;
+		@include clearfix();
+	}
+	
+	header p {
+		width: 100%	;
+	}
+
+	#home {
+		#slogan {
+
+			p {
+				font-size: rem(36);
+			}
+
+			span, 
+			span#all-the-time {
+				font-size: rem(30);	
+			}
+		}
+	}
+
+	#work {
+		.row {
+			.view {
+				@include span-columns(12);
+			}
+		}
+	}
+
+	#clients {
+		.row {
+			.client {
+				@include span-columns(6);
+			}		
+		}
+	}
+
+	.fa-1x {
+		font-size: rem(40);
+	}
+
+	#quick-message {
+		h1 {
+			width: 100%;
+			font-size: rem(30);
+			text-align: left;
+		}
+
+		h1:after {
+			bottom: -4px;
+		}
+	}
+
+	footer #copyright-info {
+		height: 233px;
+		ul {
+			padding: 0;
+		}
+	}
+
+	.overlay ul li { 
+		height: calc(100% / 12);
+			a {
+				font-size: rem(30);
+			}
+	}
+
+	li.overlay-share ul li {
+		margin-bottom: 20px;
+	}
+
+	.overlay ul li.overlay-share {
+		margin: 0;
+		ul {
+			width: 100%;
+			margin: 0;
+			position: relative;
+			left: auto;
+		}		
+	}
+}
+
+// MOBILE SMALL | max width 320px
+@include media($small-mobile) {
+	#what-we-do h1 {
+		font-size: rem(34);
+	}
+
+	#social-links {
+		display: none;
+	}
+
+	#quick-message h1 {
+		font-size: 1.7rem;
+	}
+}
+
+
+$mobile-home: new-breakpoint(max-height 414px);
+
+@include media($mobile-home) {
+	#home {
+		#slogan {
+			width: 40%;
+
+			p {
+				font-size: rem(30);
+				line-height: 1.1em;
+			}
+
+			span, 
+			span#all-the-time {
+				font-size: rem(30);	
+			}			
+		}
+		
+		#mouse-scroll {
+			display: none;
+		}
+		
+		#social-links {
+			display: none;
+		}		
+	}
+	
+	#home h1, 
+	.overlay h1,
+	#case-study h1 {
+		font-size: rem(20);
+	}
+
+	.overlay {
+		nav {
+			top: 40%;
+		}
+
+		ul li { 
+			height: calc(100% / 10);
+
+			a {
+				font-size: rem(26);
+			}
+		}
+		
+		li.overlay-share ul li {
+			margin-bottom: 20px;
+		}
+
+		li.social {
+			margin-top: 20px;
+		}
+
+		ul li a.active {
+			background-color: transparent;
+		}	
+
+	}
+}
+

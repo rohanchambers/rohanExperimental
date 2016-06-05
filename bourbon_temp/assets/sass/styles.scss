@@ -1,0 +1,190 @@
+/* Rohan Bourbon */
+@import "../../bower_components/bourbon/app/assets/stylesheets/bourbon";
+@import "grid-settings";
+@import "../../bower_components/neat/app/assets/stylesheets/neat";
+@import "grid-settings";
+@import "partials/_base";
+@import "partials/_mixins";
+@import "partials/_typography";
+@import "partials/_layout";
+
+* {
+    margin: 0;
+    padding: 0; 
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: rem(14);     
+}
+
+h1, h2 {
+    font-size: rem(24); 
+    margin-bottom: 10px;
+}
+
+p {
+    line-height: 1.1em; 
+    margin-bottom: 10px;
+}
+
+#mybutton {   
+    @include button(orange);
+    outline: 0;
+}
+
+.element {
+    min-height: 100px;
+    @include pad(15px);
+    @include linear-gradient(to top, red, orange);
+
+    h1 {
+        font-family: $helvetica;
+        // font-size: golden-ratio(14px, 1);
+        @include text-decoration(underline double rgb(124,213,224));
+    }
+}
+
+// Grid layout
+.container {
+    @include outer-container();
+}
+    // Define rows
+    .row {
+        //background: purple;
+        @include row( $display: default, $direction: LTR);
+        margin: 0 0 15px 0;
+    }
+
+    #full-bg-image {
+        @include linear-gradient(to top, red, yellow);
+    }
+
+    #half-bg-image {
+        min-height: 450px;
+    }
+    
+    // Row 1
+    .element-1 {
+        @include span-columns(4 of 12);        
+    }
+
+    .element-2 {
+        @include span-columns(4 of 12);
+    }
+
+    .element-3 {
+        @include span-columns(4 of 12);
+    }    
+
+    // Row 2: Pass 'collapse' as an argument after '6 of 12' to get rid of gutters on selected elements
+    .element-4 {
+        @include span-columns(6 of 12);
+    }
+
+    .element-5 {
+        @include span-columns(6 of 12);    
+    }
+    
+    // Row 3
+    .element-6 {
+        @include span-columns(3 of 12);
+    }
+
+    .element-7 {
+        @include span-columns(9 of 12);
+    } 
+
+    // Row 4
+    .element-8 {
+        @include span-columns(4 of 12);
+        @include shift(8);
+    }
+    
+    // Row 9
+    .element-9 {
+      @include span-columns(12 of 12);
+    }
+
+    // Row 10
+    .element-10 {
+        @include span-columns(6 of 12, collapse);
+        min-height: 450px;
+        position: relative;
+        z-index: 1;
+    }
+
+        .bg-color-filler {
+            position: absolute;
+            z-index: 0;
+            left: 0;
+            width: 50%;
+            min-height: 450px;
+            @include linear-gradient(to top, red, yellow);
+        }
+
+    .element-11 {
+        width: 50%;
+        min-height: 450px;
+        position: absolute;
+        right: 0;       
+        background: url(../assets/img/android-phone.jpg) no-repeat center center;
+        background-size: cover;
+
+        h1, p, button {
+            display: none!important;
+        }
+    }
+
+    // Desktop Small styles        
+    .container {
+        @include media($desktop-med) {
+            margin: 0 40px;
+        }
+    }
+    
+    .container {
+        @include media($desktop-sml) {
+            margin: 0 15px;
+        }
+    }
+
+        .element {
+            @include media($desktop-sml) {
+                @include linear-gradient(to top, blue, purple);
+            }
+        }
+    
+    // Mobile styles
+    .container {
+        @include media($mobile) {
+            margin: 0 5px;
+        }
+    }
+
+    .row {
+        margin: 0;
+    }
+
+    .element {
+        @include media($mobile) {
+            @include span-columns(12 of 12);
+            @include linear-gradient(to top, red, pink);
+        }
+        margin-bottom: 15px;
+    }
+
+    .element-1, 
+    .element-2, 
+    .element-3 {
+            @include media($mobile) {
+                @include span-columns(4 of 12);            
+        }
+    }
+    
+    .element-8 {
+        @include media($mobile) {
+            @include shift(0);
+        }
+    }
+    
