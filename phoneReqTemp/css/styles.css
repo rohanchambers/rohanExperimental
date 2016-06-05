@@ -592,6 +592,16 @@ select {
     #header #social-links li,
     #header #footer-social-links li {
       margin: 0 10px 0 0; }
+  #header #social-links ul#share-me {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    min-height: 200px;
+    width: 150px; }
+    #header #social-links ul#share-me li {
+      display: block;
+      margin-bottom: 10px;
+      background-color: red; }
   #header #nav-cta {
     float: right;
     margin-top: 10px; }

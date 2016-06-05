@@ -4,11 +4,7 @@
 @import "bourbon/bourbon";
 @import "neat/grid-settings";
 @import "neat/neat";
-// #skrollr-body {
-//   height: 100%;
-//   position: relative;
-//   width: 100%;
-// }
+
 body {
     font-family: Verdana, Arial, sans-serif;
     font-size: rem(14);
@@ -302,7 +298,21 @@ select {
             margin: 0 10px 0 0;
         }
     }
+    
+    #social-links ul#share-me {
+        position: fixed;
+        left: 0;
+        top: 50%;
+        min-height: 200px;
+        width: 150px;
 
+        li {
+            display: block;
+            margin-bottom: 10px;
+            background-color: red;            
+        }
+    }
+        
     // Request repair and phone
     #nav-cta {
         float: right;

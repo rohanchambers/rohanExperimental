@@ -14,6 +14,13 @@
     <link rel="stylesheet" href="css/animations.css"/>
     <link rel="stylesheet" href="css/styles.css"/>
     <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
+    <meta property="og:url"           content="http://www.phoneresq.com" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="Welcome to Phone ResQ" />
+    <meta property="og:description"   content="We repair and improve all of your handheld devices and home computers. Our hassle-free customer service is centered around your interests and the intention of getting you back online." />
+    <meta property="og:image"         content="http://www.rohanchambers.net/projects/phoneResq/img/global/phoneResqLogo.png" />
+
 </head>
 <body id="skrollr-body">
 <!--[if lt IE 7]>
@@ -46,6 +53,25 @@
                 <li><a href="#" title="Twitter share"><i class="fa fa-twitter fa-lg btn-animate"></i></a></li>
                 <li><a href="#" title="Instagram share"><i class="fa fa-instagram fa-lg btn-animate"></i></a></li>
                 <li><a href="#" title="RSS share"><i class="fa fa-rss fa-lg btn-animate"></i></a></li>
+                <li><a href="#" title="Social share"><i class="fa fa-lg fa-share-alt btn-animate"></i></a>
+                    <ul id="share-me">
+                        <li>
+                        <a target="_blank" href="#"
+                            class="shareFacebook"
+                            data-method='feed'
+                            data-link='https://phoneresq.com/'
+                            data-picture='http://www.rohanchambers.net/projects/phoneResq/img/global/phoneResqLogo.png'
+                            data-name='Welcome to Phone resQ.'
+                            data-caption=''
+                            data-description='We repair and improve all of your handheld devices and home computers. Our hassle-free customer service is centered around your interests and the intention of getting you back online.'>Facebook share</a>                          
+                        </li>
+                        <li><a target="_blank" href="https://twitter.com/intent/tweet?url=https://phoneresq.com/&text=We repair and improve all of your handheld devices and home computers.">Twitter share</a></li>
+                        <li><a href="https://plus.google.com/share?url=https%3A//phoneresq.com/">Google+ share</a></li>
+                        <li><a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//phoneresq.com/&title=Phone%20ResQ&summary=We%20repair%20and%20improve%20all%20of%20your%20handheld%20devices%20and%20home%20computers.%20Our%20hassle-free%20customer%20service%20is%20centered%20around%20your%20interests%20and%20the%20intention%20of%20getting%20you%20back%20online.&source=">LinkedIn share</a></li>
+                        <!-- Your share button code -->
+                        <li><a href"#" data-href="http://www.your-domain.com/your-page.html" data-layout="button_count">sdfs</a>
+                    </ul>
+                </li>
             </ul>
         </nav>
         <nav id="nav-cta" class="nav-global">
@@ -236,7 +262,7 @@
             <article class="intro">
                 <header>
                     <h1>Shop<span></span></h1>
-                    <p>Please find some products that are for sale or refurbished.</p>
+                    <p>Please checkout our fine selection of phones, tablets and accessories.</p>
                 </header>
             </article>
         </div>
@@ -412,7 +438,7 @@
                 <p><a href="#iphone-repair">iPod Repair</a></p>
                 <p><a href="#iphone-repair">iPad Repair</a></p>
                 <p><a href="#iphone-repair">Android Repair</a></p>
-                <p id="copyright">&copy;2016 Phone Resq. All Rights Reserved.</p>
+                <p id="copyright">&copy;<?php echo date("Y") ?> Phone Resq. All Rights Reserved.</p>
             </div>
         </div>
     </div>    
@@ -436,6 +462,26 @@
     // e.src='//www.google-analytics.com/analytics.js';
     // r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
     // ga('create','UA-XXXXX-X');ga('send','pageview');
+</script>
+
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '628421490629466',
+      xfbml      : true,
+      version    : 'v2.5'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
 </script>
 </body>
 </html>
