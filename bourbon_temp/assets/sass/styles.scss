@@ -1,11 +1,11 @@
-/* Rohan Bourbon */
+/* Bourbon and Neat import */
 @import "../../bower_components/bourbon/app/assets/stylesheets/bourbon";
 @import "grid-settings";
 @import "../../bower_components/neat/app/assets/stylesheets/neat";
 @import "grid-settings";
 @import "partials/_base";
-@import "partials/_mixins";
 @import "partials/_typography";
+@import "partials/_mixins";
 @import "partials/_layout";
 
 * {
