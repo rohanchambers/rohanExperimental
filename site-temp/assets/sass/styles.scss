@@ -1,0 +1,177 @@
+/* Bourbon and Neat import */
+@import "../../bower_components/bourbon/app/assets/stylesheets/bourbon";
+@import "grid-settings";
+@import "../../bower_components/neat/app/assets/stylesheets/neat";
+@import "grid-settings";
+@import "partials/_base";
+@import "partials/_typography";
+@import "partials/_mixins";
+@import "partials/_layout";
+
+#header {
+    position: relative; 
+    background-color: $white;
+    width: 100%;
+
+    img {
+        position: relative;
+        height: 100px;
+        z-index: 10;
+    }
+
+    #particle-canvas {
+        position: absolute!important;
+        z-index: 0;
+        bottom: 0;
+        right: 0;
+        width: 80%;
+        height: 200px;
+
+        div {
+            background: transparent!important;
+        }
+
+        canvas {
+            width: 100%;
+        }               
+    }        
+}
+
+#contact {
+    #intro {
+        p {
+            width: 60%;
+        }        
+    }
+
+    // Contact form styles
+    #contact-form {
+        position: relative;
+        z-index: 1;
+        width: 50%;
+
+        fieldset {
+            border: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        legend {
+            color: $white;
+            margin-bottom: 30px;
+        }
+
+        p {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            height: 40px;
+            padding: 0 0px;
+            background-color: transparent;
+            border: 0;
+            border-bottom: 2px solid $white;
+            color: $white;            
+            -webkit-appearance: none;
+            @include clearfix;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        
+        label[for="privacy"] {
+            position: relative;
+            display: inline;
+        }
+
+        #privacy-error {
+            position: absolute;
+            left: 0;
+            bottom: -23px;
+        }
+        .dropdown label { 
+            position: relative;
+            margin: 0 0 5px 0;
+        }
+
+            span {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                display: block;
+                width: 0%;
+                height: 2px;
+                border-bottom: 2px solid red;
+                background-color: red;
+                    -moz-transition: width 0.5s ease;
+                        -webkit-transition: width 0.5s ease;
+                            transition: width 0.5s ease;                  
+            }
+
+            label {
+                position: absolute;
+                right: 0;
+                margin-top: 5px;
+                display: block;
+                color: $white;
+            }
+        
+        #textarea span {
+            bottom: 6px;
+        }
+
+        input, 
+        input[type=submit],
+        textarea,
+        button,
+        select,
+        option {
+            // Remove focus glow
+            outline-color: transparent;
+            outline-style: none;        
+        }
+
+        textarea {
+            height: 40px;
+
+            -webkit-transition: height 0.3s;
+            -o-transition: height 0.3s;
+            transition: height 0.3s;                      
+        }
+
+        textarea:focus {
+            height: 150px;
+        }
+        
+        // Change color for textarea placeholder (value)
+        ::-webkit-input-placeholder { color: $white;}
+        ::-moz-placeholder { color: $white;}
+        :-ms-input-placeholder { color: $white;} 
+        :-o-input-placeholder { color: $white;} 
+
+        #btn-submit {
+            margin-top: 15px;
+            width: auto;
+            font-size: rem(25);
+            color: #FFF;
+            text-transform: uppercase;
+            background-color: transparent;
+            border: 3px solid $white;
+            height: 60px;
+            padding: 7px 15px;
+            line-height: 40px;
+            border-radius: 5px;
+        }
+
+        #btn-submit:hover {
+            background-color: red;                   
+            border: 3px solid red;
+            border-radius: 5px;
+        }
+    }     
+}
+
+@import "partials/_mobile";
