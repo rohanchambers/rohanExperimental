@@ -24,7 +24,7 @@ function ageGate() {
 }
 
 $(document).ready(function(){
-    // Show hide value of form inputs
+    // Show hide value of form inputs on focus
     $('#contact-form input').each(function(){
         var txtval = $(this).val();
         $(this).focus(function(){

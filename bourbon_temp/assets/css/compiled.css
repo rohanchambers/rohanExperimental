@@ -440,7 +440,7 @@ h1 {
   position: relative;
   width: auto;
   font-family: 'arial_blackregular', Arial, Verdana;
-  font-size: 1.625rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
   color: #FFF;
   margin-bottom: 10px; }
@@ -461,6 +461,12 @@ p {
   color: #FFF;
   margin-bottom: 10px; }
 
+a {
+  color: #FFF; }
+
+a:hover {
+  text-decoration: none; }
+
 .antialiased {
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
@@ -478,9 +484,10 @@ p {
     display: table; }
 
 #contact-outer {
+  position: relative;
   width: 100%;
-  background: #000 url(../img/sony_bg2.png) no-repeat right top;
-  background-size: 40%; }
+  background: #000 url(../img/sony_bg2.png) no-repeat right bottom;
+  background-size: 50%; }
 
 .row {
   display: block;
@@ -494,20 +501,40 @@ p {
     content: "";
     display: table; }
 
+footer {
+  position: relative;
+  height: 300px; }
+
 #header {
+  position: relative;
   background-color: #FFF;
   width: 100%; }
   #header img {
-    height: 100px; }
+    position: relative;
+    height: 100px;
+    z-index: 10; }
+  #header #particle-canvas {
+    position: absolute !important;
+    z-index: 0;
+    bottom: 0;
+    right: 0;
+    width: 80%;
+    height: 200px; }
+    #header #particle-canvas div {
+      background: transparent !important; }
+    #header #particle-canvas canvas {
+      width: 100%; }
 
 #contact #intro p {
   width: 60%; }
 #contact #contact-form {
   position: relative;
-  margin: 0 auto;
+  z-index: 1;
   width: 50%; }
   #contact #contact-form fieldset {
-    border: none; }
+    border: none;
+    margin: 0;
+    padding: 0; }
   #contact #contact-form legend {
     color: #FFF;
     margin-bottom: 30px; }
@@ -517,7 +544,7 @@ p {
   #contact #contact-form input[type="text"], #contact #contact-form input[type="email"], #contact #contact-form textarea {
     width: 100%;
     height: 40px;
-    padding: 0 10px;
+    padding: 0 0px;
     background-color: transparent;
     border: 0;
     border-bottom: 2px solid #FFF;
@@ -527,6 +554,15 @@ p {
       clear: both;
       content: "";
       display: table; }
+  #contact #contact-form input[type="checkbox"] {
+    margin-right: 10px; }
+  #contact #contact-form label[for="privacy"] {
+    position: relative;
+    display: inline; }
+  #contact #contact-form #privacy-error {
+    position: absolute;
+    left: 0;
+    bottom: -23px; }
   #contact #contact-form .dropdown label {
     position: relative;
     margin: 0 0 5px 0; }
@@ -547,8 +583,7 @@ p {
     right: 0;
     margin-top: 5px;
     display: block;
-    color: #FFF;
-    font-size: 0.75rem; }
+    color: #FFF; }
   #contact #contact-form #textarea span {
     bottom: 6px; }
   #contact #contact-form input,
@@ -591,8 +626,14 @@ p {
     border: 3px solid red;
     border-radius: 5px; }
 
+@media screen and (min-width: 1025px) {
+  #contact-outer {
+    background: #000 url(../img/sony_bg2.png) no-repeat right 0;
+    background-size: 40%; } }
 @media screen and (max-width: 479px) {
-  #contact-form {
+  #contact #intro p {
+    width: 100%; }
+  #contact #contact-form {
     width: 100%; } }
 
 /*# sourceMappingURL=styles.css.map */
