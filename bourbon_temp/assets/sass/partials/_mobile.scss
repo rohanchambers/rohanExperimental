@@ -1,5 +1,9 @@
-// DESKTOP | Max 1024px
+// DESKTOP LARGE | Min 1024px
 @include media($large-desktop) {
+	#contact-outer {
+		background: $black url(../img/sony_bg2.png) no-repeat right 0;
+		background-size: 40%;
+	}
 }
 
 // DESKTOP | Max 1024px
@@ -10,16 +14,23 @@
 @include media($tablet) {
 }
 
-@include media($tablet-600) {
-}
-
 // MOBILE | max width 479px
 @include media($mobile) {
+
+	#contact {
+		#intro p {
+			width: 100%;
+		}
+
+	    #contact-form {
+	        width: 100%;
+	     }
+	}
 }
 
 // MOBILE SMALL | max width 320px
 @include media($small-mobile) {
 }
 
-// MOBILE LANDSCAPE | Custom breakpoint
+// MOBILE LANDSCAPE | Custom inline variable breakpoint
 $mobile-home: new-breakpoint(max-height 414px);

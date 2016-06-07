@@ -8,183 +8,170 @@
 @import "partials/_mixins";
 @import "partials/_layout";
 
-* {
-    margin: 0;
-    padding: 0; 
+#header {
+    position: relative; 
+    background-color: $white;
+    width: 100%;
+
+    img {
+        position: relative;
+        height: 100px;
+        z-index: 10;
+    }
+
+    #particle-canvas {
+        position: absolute!important;
+        z-index: 0;
+        bottom: 0;
+        right: 0;
+        width: 80%;
+        height: 200px;
+
+        div {
+            background: transparent!important;
+        }
+
+        canvas {
+            width: 100%;
+        }               
+    }        
 }
 
-body {
-    font-family: Arial, sans-serif;
-    font-size: rem(14);     
-}
-
-h1, h2 {
-    font-size: rem(24); 
-    margin-bottom: 10px;
-}
-
-p {
-    line-height: 1.1em; 
-    margin-bottom: 10px;
-}
-
-#mybutton {   
-    @include button(orange);
-    outline: 0;
-}
-
-.element {
-    min-height: 100px;
-    @include pad(15px);
-    @include linear-gradient(to top, red, orange);
-
-    h1 {
-        font-family: $helvetica;
-        // font-size: golden-ratio(14px, 1);
-        @include text-decoration(underline double rgb(124,213,224));
-    }
-}
-
-// Grid layout
-.container {
-    @include outer-container();
-}
-    // Define rows
-    .row {
-        //background: purple;
-        @include row( $display: default, $direction: LTR);
-        margin: 0 0 15px 0;
+#contact {
+    #intro {
+        p {
+            width: 60%;
+        }        
     }
 
-    #full-bg-image {
-        @include linear-gradient(to top, red, yellow);
-    }
-
-    #half-bg-image {
-        min-height: 450px;
-    }
-    
-    // Row 1
-    .element-1 {
-        @include span-columns(4 of 12);        
-    }
-
-    .element-2 {
-        @include span-columns(4 of 12);
-    }
-
-    .element-3 {
-        @include span-columns(4 of 12);
-    }    
-
-    // Row 2: Pass 'collapse' as an argument after '6 of 12' to get rid of gutters on selected elements
-    .element-4 {
-        @include span-columns(6 of 12);
-    }
-
-    .element-5 {
-        @include span-columns(6 of 12);    
-    }
-    
-    // Row 3
-    .element-6 {
-        @include span-columns(3 of 12);
-    }
-
-    .element-7 {
-        @include span-columns(9 of 12);
-    } 
-
-    // Row 4
-    .element-8 {
-        @include span-columns(4 of 12);
-        @include shift(8);
-    }
-    
-    // Row 9
-    .element-9 {
-      @include span-columns(12 of 12);
-    }
-
-    // Row 10
-    .element-10 {
-        @include span-columns(6 of 12, collapse);
-        min-height: 450px;
+    // Contact form styles
+    #contact-form {
         position: relative;
         z-index: 1;
-    }
-
-        .bg-color-filler {
-            position: absolute;
-            z-index: 0;
-            left: 0;
-            width: 50%;
-            min-height: 450px;
-            @include linear-gradient(to top, red, yellow);
-        }
-
-    .element-11 {
         width: 50%;
-        min-height: 450px;
-        position: absolute;
-        right: 0;       
-        background: url(../assets/img/android-phone.jpg) no-repeat center center;
-        background-size: cover;
 
-        h1, p, button {
-            display: none!important;
+        fieldset {
+            border: none;
+            margin: 0;
+            padding: 0;
         }
-    }
 
-    // Desktop Small styles        
-    .container {
-        @include media($desktop-med) {
-            margin: 0 40px;
+        legend {
+            color: $white;
+            margin-bottom: 30px;
         }
-    }
-    
-    .container {
-        @include media($desktop-sml) {
-            margin: 0 15px;
-        }
-    }
 
-        .element {
-            @include media($desktop-sml) {
-                @include linear-gradient(to top, blue, purple);
+        p {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            height: 40px;
+            padding: 0 0px;
+            background-color: transparent;
+            border: 0;
+            border-bottom: 2px solid $white;
+            color: $white;            
+            -webkit-appearance: none;
+            @include clearfix;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        
+        label[for="privacy"] {
+            position: relative;
+            display: inline;
+        }
+
+        #privacy-error {
+            position: absolute;
+            left: 0;
+            bottom: -23px;
+        }
+        .dropdown label { 
+            position: relative;
+            margin: 0 0 5px 0;
+        }
+
+            span {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                display: block;
+                width: 0%;
+                height: 2px;
+                border-bottom: 2px solid red;
+                background-color: red;
+                    -moz-transition: width 0.5s ease;
+                        -webkit-transition: width 0.5s ease;
+                            transition: width 0.5s ease;                  
             }
-        }
-    
-    // Mobile styles
-    .container {
-        @include media($mobile) {
-            margin: 0 5px;
-        }
-    }
 
-    .row {
-        margin: 0;
-    }
+            label {
+                position: absolute;
+                right: 0;
+                margin-top: 5px;
+                display: block;
+                color: $white;
+            }
+        
+        #textarea span {
+            bottom: 6px;
+        }
 
-    .element {
-        @include media($mobile) {
-            @include span-columns(12 of 12);
-            @include linear-gradient(to top, red, pink);
+        input, 
+        input[type=submit],
+        textarea,
+        button,
+        select,
+        option {
+            // Remove focus glow
+            outline-color: transparent;
+            outline-style: none;        
         }
-        margin-bottom: 15px;
-    }
 
-    .element-1, 
-    .element-2, 
-    .element-3 {
-            @include media($mobile) {
-                @include span-columns(4 of 12);            
+        textarea {
+            height: 40px;
+
+            -webkit-transition: height 0.3s;
+            -o-transition: height 0.3s;
+            transition: height 0.3s;                      
         }
-    }
-    
-    .element-8 {
-        @include media($mobile) {
-            @include shift(0);
+
+        textarea:focus {
+            height: 150px;
         }
-    }
-    
+        
+        // Change color for textarea placeholder (value)
+        ::-webkit-input-placeholder { color: $white;}
+        ::-moz-placeholder { color: $white;}
+        :-ms-input-placeholder { color: $white;} 
+        :-o-input-placeholder { color: $white;} 
+
+        #btn-submit {
+            margin-top: 15px;
+            width: auto;
+            font-size: rem(25);
+            color: #FFF;
+            text-transform: uppercase;
+            background-color: transparent;
+            border: 3px solid $white;
+            height: 60px;
+            padding: 7px 15px;
+            line-height: 40px;
+            border-radius: 5px;
+        }
+
+        #btn-submit:hover {
+            background-color: red;                   
+            border: 3px solid red;
+            border-radius: 5px;
+        }
+    }     
+}
+
+@import "partials/_mobile";

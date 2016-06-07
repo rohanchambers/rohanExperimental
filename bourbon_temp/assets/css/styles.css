@@ -1,243 +1,214 @@
-/* Rohan Bourbon */
+/* Bourbon and Neat import */
 html {
   box-sizing: border-box; }
 
 *, *::after, *::before {
   box-sizing: inherit; }
 
-* {
-  margin: 0;
-  padding: 0; }
-
-body {
-  font-family: Arial, sans-serif;
-  font-size: 0.875rem; }
-
-h1, h2 {
+@font-face {
+  font-family: 'arial_blackregular';
+  src: url("../fonts/arial_black-webfont.eot");
+  src: url("../fonts/arial_black-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/arial_black-webfont.woff2") format("woff2"), url("../fonts/arial_black-webfont.woff") format("woff"), url("../fonts/arial_black-webfont.svg#arial_blackregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+h1 {
+  position: relative;
+  width: auto;
+  font-family: 'arial_blackregular', Arial, Verdana;
   font-size: 1.5rem;
+  text-transform: uppercase;
+  color: #FFF;
   margin-bottom: 10px; }
+
+h1:after {
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  content: "";
+  width: 225px;
+  height: 4px;
+  background-color: #FFF; }
 
 p {
-  line-height: 1.1em;
+  font-family: Helvetica, Verdana, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.5em;
+  color: #FFF;
   margin-bottom: 10px; }
 
-#mybutton {
-  border: 1px solid #b87700;
-  border-radius: 3px;
-  box-shadow: inset 0 1px 0 0 #f8be54;
-  color: #333333;
-  display: inline-block;
-  font-size: inherit;
-  font-weight: bold;
-  background-color: orange;
-  background-image: -webkit-linear-gradient(orange, #c78100);
-  background-image: linear-gradient(orange, #c78100);
-  padding: 7px 18px;
-  text-decoration: none;
-  text-shadow: 0 1px 0 #ffac14;
-  background-clip: padding-box;
-  outline: 0; }
-  #mybutton:hover:not(:disabled) {
-    background-color: #e19305;
-    background-image: -webkit-linear-gradient(#e19305, #b87700);
-    background-image: linear-gradient(#e19305, #b87700);
-    box-shadow: inset 0 1px 0 0 #f7ac22;
-    cursor: pointer; }
-  #mybutton:active:not(:disabled), #mybutton:focus:not(:disabled) {
-    border: 1px solid #b87700;
-    box-shadow: inset 0 0 8px 4px #a86d00, inset 0 0 8px 4px #a86d00; }
-  #mybutton:disabled {
-    cursor: not-allowed;
-    opacity: 0.5; }
+a {
+  color: #FFF; }
 
-.element {
-  min-height: 100px;
-  padding: 15px;
-  background-color: red;
-  background-image: -webkit-linear-gradient(bottom, red, orange);
-  background-image: linear-gradient(to top,red, orange); }
-  .element h1 {
-    font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-    -moz-text-decoration: underline double #7cd5e0; }
+a:hover {
+  text-decoration: none; }
 
-.container {
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased; }
+
+#header,
+#contact {
   max-width: 1024px;
   margin-left: auto;
   margin-right: auto; }
-  .container::after {
+  #header::after,
+  #contact::after {
     clear: both;
     content: "";
     display: table; }
 
+#contact-outer {
+  position: relative;
+  width: 100%;
+  background: #000 url(../img/sony_bg2.png) no-repeat right bottom;
+  background-size: 50%; }
+
 .row {
   display: block;
-  margin: 0 0 15px 0; }
+  padding: 15px; }
+  .row::after {
+    clear: both;
+    content: "";
+    display: table; }
   .row::after {
     clear: both;
     content: "";
     display: table; }
 
-#full-bg-image {
-  background-color: red;
-  background-image: -webkit-linear-gradient(bottom, red, yellow);
-  background-image: linear-gradient(to top,red, yellow); }
-
-#half-bg-image {
-  min-height: 450px; }
-
-.element-1 {
-  float: left;
-  display: block;
-  margin-right: 1.20482%;
-  width: 32.53012%; }
-  .element-1:last-child {
-    margin-right: 0; }
-
-.element-2 {
-  float: left;
-  display: block;
-  margin-right: 1.20482%;
-  width: 32.53012%; }
-  .element-2:last-child {
-    margin-right: 0; }
-
-.element-3 {
-  float: left;
-  display: block;
-  margin-right: 1.20482%;
-  width: 32.53012%; }
-  .element-3:last-child {
-    margin-right: 0; }
-
-.element-4 {
-  float: left;
-  display: block;
-  margin-right: 1.20482%;
-  width: 49.39759%; }
-  .element-4:last-child {
-    margin-right: 0; }
-
-.element-5 {
-  float: left;
-  display: block;
-  margin-right: 1.20482%;
-  width: 49.39759%; }
-  .element-5:last-child {
-    margin-right: 0; }
-
-.element-6 {
-  float: left;
-  display: block;
-  margin-right: 1.20482%;
-  width: 24.09639%; }
-  .element-6:last-child {
-    margin-right: 0; }
-
-.element-7 {
-  float: left;
-  display: block;
-  margin-right: 1.20482%;
-  width: 74.6988%; }
-  .element-7:last-child {
-    margin-right: 0; }
-
-.element-8 {
-  float: left;
-  display: block;
-  margin-right: 1.20482%;
-  width: 32.53012%;
-  margin-left: 67.46988%; }
-  .element-8:last-child {
-    margin-right: 0; }
-
-.element-9 {
-  float: left;
-  display: block;
-  margin-right: 1.20482%;
-  width: 100%; }
-  .element-9:last-child {
-    margin-right: 0; }
-
-.element-10 {
-  float: left;
-  display: block;
-  width: 50.60241%;
-  min-height: 450px;
+footer {
   position: relative;
-  z-index: 1; }
-  .element-10:last-child {
-    width: 49.39759%; }
+  height: 300px; }
 
-.bg-color-filler {
-  position: absolute;
-  z-index: 0;
-  left: 0;
-  width: 50%;
-  min-height: 450px;
-  background-color: red;
-  background-image: -webkit-linear-gradient(bottom, red, yellow);
-  background-image: linear-gradient(to top,red, yellow); }
+#header {
+  position: relative;
+  background-color: #FFF;
+  width: 100%; }
+  #header img {
+    position: relative;
+    height: 100px;
+    z-index: 10; }
+  #header #particle-canvas {
+    position: absolute !important;
+    z-index: 0;
+    bottom: 0;
+    right: 0;
+    width: 80%;
+    height: 200px; }
+    #header #particle-canvas div {
+      background: transparent !important; }
+    #header #particle-canvas canvas {
+      width: 100%; }
 
-.element-11 {
-  width: 50%;
-  min-height: 450px;
-  position: absolute;
-  right: 0;
-  background: url(../img/android-phone.jpg) no-repeat center center;
-  background-size: cover; }
-  .element-11 h1, .element-11 p, .element-11 button {
-    display: none !important; }
-
-@media screen and (max-width: 1030px) {
-  .container {
-    margin: 0 40px; } }
-
-@media screen and (max-width: 867px) {
-  .container {
-    margin: 0 15px; } }
-
-@media screen and (max-width: 867px) {
-  .element {
-    background-color: blue;
-    background-image: -webkit-linear-gradient(bottom, blue, purple);
-    background-image: linear-gradient(to top,blue, purple); } }
-
-@media screen and (max-width: 667px) {
-  .container {
-    margin: 0 5px; } }
-
-.row {
-  margin: 0; }
-
-.element {
-  margin-bottom: 15px; }
-  @media screen and (max-width: 667px) {
-    .element {
-      float: left;
-      display: block;
-      margin-right: 1.20482%;
-      width: 100%;
-      background-color: red;
-      background-image: -webkit-linear-gradient(bottom, red, pink);
-      background-image: linear-gradient(to top,red, pink); }
-      .element:last-child {
-        margin-right: 0; } }
-
-@media screen and (max-width: 667px) {
-  .element-1,
-  .element-2,
-  .element-3 {
-    float: left;
+#contact #intro p {
+  width: 60%; }
+#contact #contact-form {
+  position: relative;
+  z-index: 1;
+  width: 50%; }
+  #contact #contact-form fieldset {
+    border: none;
+    margin: 0;
+    padding: 0; }
+  #contact #contact-form legend {
+    color: #FFF;
+    margin-bottom: 30px; }
+  #contact #contact-form p {
+    position: relative;
+    margin-bottom: 20px; }
+  #contact #contact-form input[type="text"], #contact #contact-form input[type="email"], #contact #contact-form textarea {
+    width: 100%;
+    height: 40px;
+    padding: 0 0px;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid #FFF;
+    color: #FFF;
+    -webkit-appearance: none; }
+    #contact #contact-form input[type="text"]::after, #contact #contact-form input[type="email"]::after, #contact #contact-form textarea::after {
+      clear: both;
+      content: "";
+      display: table; }
+  #contact #contact-form input[type="checkbox"] {
+    margin-right: 10px; }
+  #contact #contact-form label[for="privacy"] {
+    position: relative;
+    display: inline; }
+  #contact #contact-form #privacy-error {
+    position: absolute;
+    left: 0;
+    bottom: -23px; }
+  #contact #contact-form .dropdown label {
+    position: relative;
+    margin: 0 0 5px 0; }
+  #contact #contact-form span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
     display: block;
-    margin-right: 1.20482%;
-    width: 32.53012%; }
-    .element-1:last-child,
-    .element-2:last-child,
-    .element-3:last-child {
-      margin-right: 0; } }
+    width: 0%;
+    height: 2px;
+    border-bottom: 2px solid red;
+    background-color: red;
+    -moz-transition: width 0.5s ease;
+    -webkit-transition: width 0.5s ease;
+    transition: width 0.5s ease; }
+  #contact #contact-form label {
+    position: absolute;
+    right: 0;
+    margin-top: 5px;
+    display: block;
+    color: #FFF; }
+  #contact #contact-form #textarea span {
+    bottom: 6px; }
+  #contact #contact-form input,
+  #contact #contact-form input[type=submit],
+  #contact #contact-form textarea,
+  #contact #contact-form button,
+  #contact #contact-form select,
+  #contact #contact-form option {
+    outline-color: transparent;
+    outline-style: none; }
+  #contact #contact-form textarea {
+    height: 40px;
+    -webkit-transition: height 0.3s;
+    -o-transition: height 0.3s;
+    transition: height 0.3s; }
+  #contact #contact-form textarea:focus {
+    height: 150px; }
+  #contact #contact-form ::-webkit-input-placeholder {
+    color: #FFF; }
+  #contact #contact-form ::-moz-placeholder {
+    color: #FFF; }
+  #contact #contact-form :-ms-input-placeholder {
+    color: #FFF; }
+  #contact #contact-form :-o-input-placeholder {
+    color: #FFF; }
+  #contact #contact-form #btn-submit {
+    margin-top: 15px;
+    width: auto;
+    font-size: 1.5625rem;
+    color: #FFF;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 3px solid #FFF;
+    height: 60px;
+    padding: 7px 15px;
+    line-height: 40px;
+    border-radius: 5px; }
+  #contact #contact-form #btn-submit:hover {
+    background-color: red;
+    border: 3px solid red;
+    border-radius: 5px; }
 
-@media screen and (max-width: 667px) {
-  .element-8 {
-    margin-left: 0%; } }
+@media screen and (min-width: 1025px) {
+  #contact-outer {
+    background: #000 url(../img/sony_bg2.png) no-repeat right 0;
+    background-size: 40%; } }
+@media screen and (max-width: 479px) {
+  #contact #intro p {
+    width: 100%; }
+  #contact #contact-form {
+    width: 100%; } }
 
 /*# sourceMappingURL=styles.css.map */
