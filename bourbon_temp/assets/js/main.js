@@ -1,45 +1,29 @@
-// Age gate to allow users to access page depending on the age that they are.
+//Age gate to allow users to access page depending on the age that they are.
 function ageGate() {
-    $('#dobYear').change(function(){
-        var minYear = 2002;
-        var selectedYear = $(this).find('option:selected').html();
-        console.log(selectedYear)
-        if(selectedYear > minYear) {
-            alert('I am sorry but you are not over the age of 14!');
-        }        
-    });
-}
-
-$.validator.addMethod("check_date_of_birth", function(value, element) {
-
     var day = $("#dob_day").val();
     var month = $("#dob_month").val();
     var year = $("#dob_year").val();
-    var age =  14;
-
+    var age = 14;
     var mydate = new Date();
-    mydate.setFullYear(year, month-1, day-1);
+    mydate.setFullYear(year, month-1, day);
 
     var currdate = new Date();
     currdate.setFullYear(currdate.getFullYear() - age);
-
-    return currdate > mydate;
-
-}, "You must be at least 14 years of age.");
+    
+    if ((currdate - mydate) < 0){
+        alert("Sorry, only persons over the age of " + age + " may enter this site");
+        
+        // Reset dob_year back to default so it gets required message
+        if(currdate > 2002){
+            $("#dob_year").val('');    
+        }
+        
+        return false;
+    }
+    return true;  
+}
 
 $(document).ready(function(){
-    // Constellations init
-    var canvasDiv = document.getElementById('particle-canvas');
-    
-    var options = {
-      particleColor: '#000',
-      interactive: true,
-      speed: 'high',
-      density: 'high'
-    };
-
-    var particleCanvas = new ParticleNetwork(canvasDiv, options);
-
     // Show hide value of form inputs
     $('#contact-form input').each(function(){
         var txtval = $(this).val();
@@ -57,13 +41,23 @@ $(document).ready(function(){
         });
     });
 
+    // Constellations initialise
+    var canvasDiv = document.getElementById('particle-canvas');
+    
+    var options = {
+      particleColor: '#000',
+      interactive: true,
+      speed: 'high',
+      density: 'high'
+    };
+
+    var particleCanvas = new ParticleNetwork(canvasDiv, options);
+
     // jQuery validate form and submit form    
-    $('#contact-form').validate({
-        rules: {
-            dob_year: { check_date_of_birth: true }
-        },
-        submitHandler: function(form) {
-            form.submit(); //submit it the form
-        }
+    $('#contact-form').validate();
+
+    // Submit form but check user is of age
+    $('#contact-form').submit( function(){
+        ageGate();
     });
 });
