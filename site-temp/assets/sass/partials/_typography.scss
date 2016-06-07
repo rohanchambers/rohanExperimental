@@ -9,38 +9,10 @@
     font-style: normal;
 }
 
-h1 {
-    position: relative;
-    width: auto;
-    font-family: 'arial_blackregular', Arial, Verdana;
-    font-size: rem(24);
-    text-transform: uppercase;
-    color: $white;
-    margin-bottom: 10px;
-}
-
-    h1:after {
-        position: absolute;
-        left: 0;
-        bottom: -3px;
-        content: "";
-        width: 225px;
-        height: 4px;
-        background-color: $white;
-    }
-
 p {
 	font-family: $text-font;
 	font-size: $text-size;
     line-height: 1.5em; 
     color: $white;
-    margin-bottom: 10px;    
-}
-
-a {
-    color: $white;
-}
-
-a:hover {
-    text-decoration: none;
+    margin-bottom: 8px;    
 }

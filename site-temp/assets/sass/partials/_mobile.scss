@@ -1,9 +1,5 @@
 // DESKTOP LARGE | Min 1024px
 @include media($large-desktop) {
-	#contact-outer {
-		background: $black url(../img/sony_bg2.png) no-repeat right 0;
-		background-size: 40%;
-	}
 }
 
 // DESKTOP | Max 1024px
@@ -16,16 +12,6 @@
 
 // MOBILE | max width 479px
 @include media($mobile) {
-
-	#contact {
-		#intro p {
-			width: 100%;
-		}
-
-	    #contact-form {
-	        width: 100%;
-	     }
-	}
 }
 
 // MOBILE SMALL | max width 320px

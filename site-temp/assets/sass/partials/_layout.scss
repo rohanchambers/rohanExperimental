@@ -1,24 +1,10 @@
 // NEAT GRID LAYOUT FOR SECTIONS
-#header,
-#contact {
+.container {
 	@include outer-container(1024px);
 }
 
-#contact-outer {
-    position: relative;	
-	width: 100%;
-    background: $black url(../img/sony_bg2.png) no-repeat right bottom;
-    background-size: 50%;  	
-}
-
-    // Define rows
+    // Row
     .row {
         @include row( $display: default, $direction: LTR);
-        @include clearfix;
         @include pad(15px);
     }
-
-footer {
-	position: relative;
-	height: 300px;
-}
