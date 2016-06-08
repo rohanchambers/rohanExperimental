@@ -10,3 +10,49 @@
 @import "partials/_mixins";
 @import "partials/_layout";
 @import "partials/_mobile";
+
+// Two columms
+.col-1 {
+	height: 200px;
+	@include span-columns(12);
+}
+
+// Two columms
+.col-2 {
+	height: 200px;
+	@include span-columns(6);
+}
+
+// Three columms
+.col-3 {
+	height: 200px;
+	@include span-columns(4);
+}
+
+.element {
+    @include pad(15px);
+}
+
+#element-1 {
+	background-color: red;
+}
+
+#element-2 {
+	background-color: orange;
+}
+
+#element-3 {
+	background-color: green;
+}
+
+#element-4 {
+	background-color: blue;
+}
+
+#element-5 {
+	background-color: pink;
+}
+
+#element-6 {
+	background-color: purple;
+}
