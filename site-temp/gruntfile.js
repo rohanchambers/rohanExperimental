@@ -69,61 +69,69 @@ module.exports = function(grunt){
         },
 
         // Minify HTML
-		htmlmin: {                                     	 // Task
-			dist: {                                      // Target
-			  options: {                                 // Target options
-			  },
-			  files: {                           // Dictionary of files
-			    'index.php': 'index-dev.php'     // 'destination': 'source'
-			  }
+		htmlmin: {
+			file: {
+				options: {
+					removeComments: true,
+					collapseWhitespace: true
+				}, files: { 
+					'index.html': 'index.html'
+				}
 			}
+
 		}, 
 
-		// Production / Dev 
+		// Environment Production, Dev
 		targethtml: {
-		  dist: {
-		    files: {
-		      'index.php': 'index-dev.php'
-		    }
-		  }
+			dist: {
+				files: {
+				  'index.html': 'index-dev.html'
+				}
+			}
 		},
 
 		// Using the BrowserSync Server for your static .html files.
 		browserSync: {
-		  default_options: {
-		    bsFiles: {
-		      src: [
-		        "assets/css/*.css",
-		        "assets/js/**/*.js",
-		        "*.php",
-		        "incl/*.php"
-		      ]
-		    },
-		    options: {
-		      watchTask: true,
-				proxy: "sdd.dev/index-dev.php"
-		    }
-		  }
+			default_options: {
+				files: {
+					src: [
+						"assets/css/*.css",
+						"assets/js/**/*.js",
+						"*.html",
+						"*.php",
+						"incl/*.php"
+					]
+				},
+				options: {
+					watchTask: true,
+					proxy: "http://localhost/~rohan/rohanExperimental/site-temp/index.html"
+				}
+			}
 		},
 
  		// Watch task config
 		watch: {
 			css: {
-				files: 'assets/sass/**/*.scss'
-				//tasks: ['sass', 'concat', 'cssmin', 'jshint', 'uglify']
+				files: 'assets/sass/**/*.scss',
+				tasks: ['sass']
 			}
-		}		
+		}
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-concat');
-	grunt.loadNpmTasks('grunt-contrib-cssmin');		
+	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-targethtml');
 	grunt.loadNpmTasks('grunt-contrib-htmlmin');
-	grunt.loadNpmTasks('grunt-browser-sync');		
+	grunt.loadNpmTasks('grunt-browser-sync');
 
-	grunt.registerTask('default', ['watch', 'sass', 'concat' ,'cssmin', 'jshint', 'uglify']);
+	// Dev
+	grunt.registerTask('default', ['browserSync', 'sass', 'jshint', 'watch']);	
+	
+	// Production
+	grunt.registerTask('production', ['browserSync', 'sass', 'concat' ,'cssmin', 'jshint', 'uglify', 'targethtml', 'htmlmin', 'watch']);
+	
 };

@@ -10,3 +10,5 @@ all packages: bower update
 Grunt
 npm install creates package.json
 npm install grunt-contrib-uglify --save-dev
+
+*NB Grunt Watch task should always be the last in the registerTalk.
