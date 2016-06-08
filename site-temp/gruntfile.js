@@ -129,9 +129,9 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-browser-sync');
 
 	// Dev
-	grunt.registerTask('default', ['browserSync', 'sass', 'jshint', 'watch']);	
+	grunt.registerTask('default', ['sass', 'jshint', 'watch']);	
 	
 	// Production
-	grunt.registerTask('production', ['browserSync', 'sass', 'concat' ,'cssmin', 'jshint', 'uglify', 'targethtml', 'htmlmin', 'watch']);
+	grunt.registerTask('production', ['sass', 'concat' ,'cssmin', 'jshint', 'uglify', 'targethtml', 'watch']);
 	
 };

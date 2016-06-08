@@ -11,4 +11,5 @@ Grunt
 npm install creates package.json
 npm install grunt-contrib-uglify --save-dev
 
-*NB Grunt Watch task should always be the last in the registerTalk.
+*NB Grunt Watch task should always be the last in the registerTalk call. 
+To update other tasks on watch i.e. cssmin or combine, on watch add them to the tasks list
