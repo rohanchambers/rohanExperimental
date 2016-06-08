@@ -1,0 +1,24 @@
+{
+  "name": "site-template",
+  "description": "template",
+  "main": "index.html",
+  "authors": [
+    "Rohan Chambers <rohanchambers888@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/rohanchambers/rohanExperimental",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery-validation": "^1.15.0",
+    "bourbon": "^4.2.7",
+    "jquery": "^2.2.4",
+    "neat": "^1.7.4"
+  }
+}
