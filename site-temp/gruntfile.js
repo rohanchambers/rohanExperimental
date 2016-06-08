@@ -15,19 +15,6 @@ module.exports = function(grunt){
 			}
 		},
 
- 		// Watch task config
-		watch: {
-			css: {
-				files: 'assets/sass/**/*.scss',
-				tasks: ['sass', 'cssmin']
-			}
-
-            // javaScript: {
-            //     files: 'assets/js/**.js',
-            //     tasks: 'jshint'
-            // }
-		},
-
 		concat: {
 			css: {
 				src: ['bower_components/normalize-css/normalize.css', 'assets/css/styles.css'],
@@ -53,15 +40,6 @@ module.exports = function(grunt){
 			}
 		},
 
-        // Minify JS
-        uglify: {
-            all: {
-                files: {
-                    'assets/js/compiled.min.js': 'assets/js/compiled.js',
-                }
-            }
-        },
-
 		// JShint for scripts
         jshint: {
             all: {
@@ -81,6 +59,35 @@ module.exports = function(grunt){
             }
         },
 
+        // Minify JS
+        uglify: {
+            all: {
+                files: {
+                    'assets/js/compiled.min.js': 'assets/js/compiled.js',
+                }
+            }
+        },
+
+        // Minify HTML
+		htmlmin: {                                     	 // Task
+			dist: {                                      // Target
+			  options: {                                 // Target options
+			  },
+			  files: {                           // Dictionary of files
+			    'index.php': 'index-dev.php'     // 'destination': 'source'
+			  }
+			}
+		}, 
+
+		// Production / Dev 
+		targethtml: {
+		  dist: {
+		    files: {
+		      'index.php': 'index-dev.php'
+		    }
+		  }
+		},
+
 		// Using the BrowserSync Server for your static .html files.
 		browserSync: {
 		  default_options: {
@@ -99,37 +106,24 @@ module.exports = function(grunt){
 		  }
 		},
 
-		// This is graet 
-		targethtml: {
-		  dist: {
-		    files: {
-		      'index.php': 'index-dev.php'
-		    }
-		  }
-		},
-
-		htmlmin: {                                     	 // Task
-			dist: {                                      // Target
-			  options: {                                 // Target options
-			  },
-			  files: {                           // Dictionary of files
-			    'index.php': 'index-dev.php'     // 'destination': 'source'
-			  }
+ 		// Watch task config
+		watch: {
+			css: {
+				files: 'assets/sass/**/*.scss'
+				//tasks: ['sass', 'concat', 'cssmin', 'jshint', 'uglify']
 			}
-		}
+		}		
 	});
 
-	grunt.loadNpmTasks('grunt-browser-sync');
+	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-contrib-sass');
+	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-cssmin');		
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
-	grunt.loadNpmTasks('grunt-contrib-sass');
-	grunt.loadNpmTasks('grunt-contrib-cssmin');
-	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-targethtml');
 	grunt.loadNpmTasks('grunt-contrib-htmlmin');
+	grunt.loadNpmTasks('grunt-browser-sync');		
 
-	grunt.registerTask('default', ['concat', 'cssmin', 'uglify', 'watch']);
-	//grunt.registerTask('default', ['browserSync', 'concat', 'cssmin', 'uglify', 'targethtml', 'watch']);
-
+	grunt.registerTask('default', ['watch', 'sass', 'concat' ,'cssmin', 'jshint', 'uglify']);
 };

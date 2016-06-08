@@ -1,0 +1,12 @@
+Bower
+When intsalling bower packages use -save (This makes it a dependency)
+eg. bower install bourbon --save
+
+Update bower packages
+eg. bower bourbon update
+all packages: bower update
+
+
+Grunt
+npm install creates package.json
+npm install grunt-contrib-uglify --save-dev
