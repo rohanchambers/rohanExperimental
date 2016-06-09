@@ -453,13 +453,61 @@ p {
 
 .row {
   display: block;
-  padding: 15px; }
+  margin-bottom: 10px; }
   .row::after {
     clear: both;
     content: "";
     display: table; }
 
 body {
+  background-color: pink; }
+
+.col-1 {
+  height: 200px;
+  float: left;
+  display: block;
+  margin-right: 0.95602%;
+  width: 100%; }
+  .col-1:last-child {
+    margin-right: 0; }
+
+.col-2 {
+  height: 200px;
+  float: left;
+  display: block;
+  margin-right: 0.95602%;
+  width: 49.52199%; }
+  .col-2:last-child {
+    margin-right: 0; }
+
+.col-3 {
+  height: 200px;
+  float: left;
+  display: block;
+  margin-right: 0.95602%;
+  width: 32.69598%; }
+  .col-3:last-child {
+    margin-right: 0; }
+
+.element {
+  padding: 15px; }
+
+#element-1 {
+  background-color: red; }
+
+#element-2 {
+  background-color: orange; }
+
+#element-3 {
+  background-color: green; }
+
+#element-4 {
   background-color: blue; }
+
+#element-5 {
+  background-color: pink; }
+
+#element-6 {
+  background-color: purple; }
 
 /*# sourceMappingURL=styles.css.map */

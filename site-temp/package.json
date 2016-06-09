@@ -10,6 +10,7 @@
     "grunt-browser-sync": "^2.2.0",
     "grunt-browserify": "^5.0.0",
     "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-connect": "^1.0.2",
     "grunt-contrib-cssmin": "^1.0.1",
     "grunt-contrib-htmlmin": "^1.4.0",
     "grunt-contrib-jshint": "^1.0.0",

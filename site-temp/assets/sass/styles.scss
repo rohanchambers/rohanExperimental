@@ -11,6 +11,10 @@
 @import "partials/_layout";
 @import "partials/_mobile";
 
+body {
+	background-color: pink;
+}
+
 // Two columms
 .col-1 {
 	height: 200px;

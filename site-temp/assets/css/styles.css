@@ -39,6 +39,9 @@ p {
     content: "";
     display: table; }
 
+body {
+  background-color: pink; }
+
 .col-1 {
   height: 200px;
   float: left;

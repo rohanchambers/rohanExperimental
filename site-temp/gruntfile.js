@@ -104,17 +104,38 @@ module.exports = function(grunt){
 				},
 				options: {
 					watchTask: true,
-					proxy: "http://localhost/~rohan/rohanExperimental/site-temp/index.html"
+					proxy: "localhost:3000/index-dev.html"
+				}
+			}
+		},
+
+		connect: {
+			server: {
+				options: {
+					port: 3000,
+					hostname: '*',
+					onCreateServer: function(server, connect, options) {
+					  var io = require('socket.io').listen(server);
+					  io.sockets.on('connection', function(socket) {
+					    // do something with socket
+					  });
+					}
 				}
 			}
 		},
 
  		// Watch task config
 		watch: {
+			html: {
+				files: '/',
+			},
 			css: {
 				files: 'assets/sass/**/*.scss',
 				tasks: ['sass']
-			}
+			},
+			js: {
+				files: 'assets/js/**/*.js',
+			}			
 		}
 	});
 
@@ -127,11 +148,11 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-targethtml');
 	grunt.loadNpmTasks('grunt-contrib-htmlmin');
 	grunt.loadNpmTasks('grunt-browser-sync');
+	grunt.loadNpmTasks('grunt-contrib-connect');
 
 	// Dev
-	grunt.registerTask('default', ['sass', 'jshint', 'watch']);	
+	grunt.registerTask('default', ['connect', 'browserSync', 'jshint', 'watch']);	
 	
-	// Production
-	grunt.registerTask('production', ['sass', 'concat' ,'cssmin', 'jshint', 'uglify', 'targethtml', 'watch']);
-	
+	// Production - Build app
+	grunt.registerTask('prod', ['concat' ,'cssmin', 'jshint', 'uglify', 'targethtml', 'watch']);
 };
