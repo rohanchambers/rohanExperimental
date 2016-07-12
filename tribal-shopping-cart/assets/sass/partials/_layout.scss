@@ -1,0 +1,10 @@
+// NEAT GRID LAYOUT FOR SECTIONS
+.container {
+	@include outer-container($max-width);
+}
+
+    // Row
+    .row {
+        @include row( $display: default, $direction: LTR);
+        margin-bottom: 10px;
+    }
