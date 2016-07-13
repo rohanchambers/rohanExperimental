@@ -1,10 +1,55 @@
 // NEAT GRID LAYOUT FOR SECTIONS
-.container {
-	@include outer-container($max-width);
+.site-width {
+	width: $site-width;
+	margin: 0 auto;
 }
 
-    // Row
-    .row {
-        @include row( $display: default, $direction: LTR);
-        margin-bottom: 10px;
-    }
+#site-header-wrapper {
+	width: 100%;
+	background-color: #1a1a1a;
+	border-bottom: 4px solid $blue;
+
+	#site-header {
+		min-height: 50px;
+		padding: 25px 0;
+	}	
+}
+
+#site-wrapper {
+    background: #f6f6f6; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#f6f6f6, #d6d6d6); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#f6f6f6, #d6d6d6); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#f6f6f6, #d6d6d6); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#f6f6f6, #d6d6d6); /* Standard syntax */
+
+	.container {
+		#content {
+			padding: 30px 0;
+			@extend .clearfix;
+			
+			#product-img {
+				float: left;
+				width: 50%;
+				min-height: 657px;
+			}
+
+			#product-details {
+				float: right;
+				width: 50%;
+				min-height: 657px;
+				background-color: $white;				
+			}
+		}
+
+		#user-profile {
+			min-height: 100px;
+			background-color: $white;
+		}		
+	}
+}
+
+footer {
+	min-height: 70px;
+	margin: 30px auto;
+	background-color: #222;
+}

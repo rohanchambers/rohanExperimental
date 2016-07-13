@@ -1,19 +1,7 @@
-Bower
-When intsalling bower packages use -save (This makes it a dependency)
-eg. bower install bourbon --save
+What I would have done wit libraries that wasn't mentioned in instructions
 
-Update bower packages
-eg. bower bourbon update
-all packages: bower update
-
-
-Grunt
-npm install creates package.json
-npm install grunt-contrib-uglify --save-dev
-
-*NB Grunt Watch task should always be the last in the registerTalk call. 
-To update other tasks on watch i.e. cssmin or combine, on watch add them to the tasks list
-
-BrowserSync sometimes needs to be removed from registered tasks and connect needs to run alone. Then bring sync back in.
-
-Added a .gitignore for all Grunt’s node_modules and .sass-cache
+- Bourbon and Neat grid
+- Mobile first
+- Three types of black in the psd. Would speak to designer to see if we can use one black
+- I would have used Font awesome for icons
+- Heart icon is a little shopped off at the bottom

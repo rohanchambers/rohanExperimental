@@ -10,16 +10,14 @@
 .antialiased {
 	-webkit-font-smoothing: antialiased;
 		-moz-font-smoothing: antialiased;
-			-o-font-smoothing: antialiased;		
+			-o-font-smoothing: antialiased;
 }
 
-// -------------------------------------------------------------------
-// Omega Reset for Bourbon Neat
-//
-// http://joshfry.me/notes/omega-reset-for-bourbon-neat
-// -------------------------------------------------------------------
 
-@mixin omega-reset($nth) {
-  &:nth-child(#{$nth}) { margin-right: flex-gutter($grid-columns, $gutter); }
-  &:nth-child(#{$nth}+1) { clear: none }
+.clearfix {
+	&:after {
+	content: "";
+	display: table;
+	clear: both;
+	}
 }
