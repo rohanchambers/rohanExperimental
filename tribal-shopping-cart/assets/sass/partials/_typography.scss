@@ -20,9 +20,9 @@ h1 {
 }
 
 // Lato Regular font
-footer a {
+footer a, 
+#user-profile li span {
     font-family: $regular;
-    text-transform: uppercase;
 }
 
 // Lato Bold font
@@ -33,11 +33,17 @@ footer a {
     font-size: 12px;
 }
 
+// Uppercase
+footer a {
+    text-transform: uppercase;
+}
+
+
 p {
 	font-family: $text-font;
 	font-size: $text-size;
     line-height: 1.5em; 
-    color: $white;
+    color: $black;
     margin-bottom: 8px;    
 }
 

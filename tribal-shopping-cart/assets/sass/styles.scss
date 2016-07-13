@@ -10,11 +10,12 @@ body {
 }
 
 #site-header {
+
 	#logo {
 		float: left;
 	}
 
-	#user-profile {
+	#user-shop {
 		float: right;
 		margin: 13px 20px 0;
 
@@ -33,10 +34,7 @@ body {
 					font-size: 12px;
 					text-align: center;
 					line-height: 25px;
-					border-radius: 25px 25px 25px 25px;
-					-moz-border-radius: 25px 25px 25px 25px;
-					-webkit-border-radius: 25px 25px 25px 25px;
-					border: 0px solid #000000;
+					@include border-radius(25px);
 				}
 			}
 
@@ -69,6 +67,73 @@ body {
 			}			
 	}
 
+}
+
+.container {
+	#content {
+		#product-details {
+			padding: 60px 40px 20px 50px;
+			box-sizing: border-box;
+		}
+	}
+
+	#user-profile {
+
+		ul {
+			height: 50px;
+			margin: 0;
+			padding: 25px 0;
+
+			li {
+				float: left;
+				width: 25%;
+				height: auto;
+				text-align: center;
+				line-height: 50px;
+
+				span {
+					display: inline-block;
+					min-height: 30px;
+					font-size: 14px;
+				}
+			}
+
+			li.favourites span {
+				background: url(../img/icon_heart_black.png) no-repeat left center;
+				padding-left: 40px;							
+			}
+
+			li.notification span {
+				background: url(../img/icon_notification.png) no-repeat left center;
+				padding-left: 55px;								
+			}
+
+			li.total-price {
+				span {
+					display: block;
+					line-height: normal;
+					min-height: auto;
+				}
+
+				span:nth-child(2) {
+					font-size: 24px;
+				}
+			}
+
+			li.payment-cards {
+				padding-top: 0px;
+				line-height: normal;
+					span {
+						min-height: 25px;
+					}
+
+					span:nth-child(2) {
+						display: block;
+						background: url(../img/icon_payment.png) no-repeat bottom center;	
+					}				
+			}
+		}	
+	}
 }
 
 footer ul {

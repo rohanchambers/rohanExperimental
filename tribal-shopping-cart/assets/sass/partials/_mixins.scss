@@ -6,13 +6,21 @@
 				transition: all 300ms ease;
 }
 
+@mixin border-radius($radius) {
+	border-radius: $radius;
+		-webkit-border-radius: $radius;
+			-moz-border-radius: $radius;
+				-ms-border-radius: $radius;
+					-o-border-radius: $radius;
+	border: 0px solid #000000;	
+}
+
 // Extends
 .antialiased {
 	-webkit-font-smoothing: antialiased;
 		-moz-font-smoothing: antialiased;
 			-o-font-smoothing: antialiased;
 }
-
 
 .clearfix {
 	&:after {
