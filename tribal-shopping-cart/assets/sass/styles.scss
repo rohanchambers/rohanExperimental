@@ -6,7 +6,7 @@
 @import "partials/_mobile";
 
 body {
-    background: #d6d6d6; /* For browsers that do not support gradients */
+    background: #d6d6d6;
 }
 
 #site-header {
@@ -19,12 +19,12 @@ body {
 		float: right;
 		margin: 13px 20px 0;
 
-			#cart, 
+			#cart,
 			#favourites {
 				position: relative;
 				display: block;
 				float: left;
-				
+
 				.total-count {
 					position: absolute;
 					background-color: $blue;
@@ -43,7 +43,7 @@ body {
 				height: 29px;
 				background: url(../img/icon_cart.png) no-repeat;
 				padding-left: 10px;
-					
+
 					.total-count {
 						top: -11px;
 						left: 30px;
@@ -61,10 +61,10 @@ body {
 				background: url(../img/icon_heart.png) no-repeat;
 
 					.total-count {
-						top: -11px;						
+						top: -11px;
 						right: -15px;
 					}
-			}			
+			}
 	}
 
 }
@@ -72,8 +72,70 @@ body {
 .container {
 	#content {
 		#product-details {
-			padding: 60px 40px 20px 50px;
 			box-sizing: border-box;
+			padding: 60px 40px 20px 50px;
+
+			span {
+				display: block;
+			}
+
+			#category {
+				font-weight: $bold;
+				color: #333;
+				text-transform: uppercase;
+			}
+
+			#product-id {
+				float: right;
+				color: #BBB;
+			}
+
+			#product-title {
+				font-size: 30px;
+				font-weight: $light;
+			}
+
+			#orginal-price {
+				float: left;
+				display: inline;
+				font-size: 24px;
+				font-weight: $regular;
+				color: #e51e1a;
+				text-decoration: line-through;
+			}
+
+			#sale-price {
+				display: inline-block;
+				font-size: 24px;
+				font-weight: $light;
+				color: #333;
+			}
+
+			#retail-price {
+				color: #BBB;
+			}
+
+			#add-product {
+				float: right;
+				display: inline-block;
+				width: 200px;
+				padding: 20px 50px;
+				color: $white;
+				background-color: $blue;
+				text-decoration: none;
+				font-weight: $bold;
+				text-transform: uppercase;
+				@include border-radius(5px);
+				@extend .clearfix;
+			}
+
+			#stock-details {}
+
+			#rating {}
+
+			#rating-score {}
+
+			#totat-reviews {}
 		}
 	}
 
@@ -100,12 +162,12 @@ body {
 
 			li.favourites span {
 				background: url(../img/icon_heart_black.png) no-repeat left center;
-				padding-left: 40px;							
+				padding-left: 40px;
 			}
 
 			li.notification span {
 				background: url(../img/icon_notification.png) no-repeat left center;
-				padding-left: 55px;								
+				padding-left: 55px;
 			}
 
 			li.total-price {
@@ -121,21 +183,25 @@ body {
 			}
 
 			li.payment-cards {
-				padding-top: 0px;
+				box-sizing: border-box;
+				padding-left: 40px;
+				text-align: left;
 				line-height: normal;
+
 					span {
 						min-height: 25px;
 					}
 
 					span:nth-child(2) {
 						display: block;
-						background: url(../img/icon_payment.png) no-repeat bottom center;	
-					}				
+						background: url(../img/icon_payment.png) no-repeat bottom left;
+					}
 			}
-		}	
+		}
 	}
 }
 
+// Footer
 footer ul {
 	margin: 0;
 	padding: 0;

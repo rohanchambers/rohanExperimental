@@ -1,25 +1,18 @@
-@font-face {
-    font-family: 'arial_blackregular';
-    src: url('../fonts/arial_black-webfont.eot');
-    src: url('../fonts/arial_black-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/arial_black-webfont.woff2') format('woff2'),
-         url('../fonts/arial_black-webfont.woff') format('woff'),
-         url('../fonts/arial_black-webfont.svg#arial_blackregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
+$site-font: 'Lato', arial, sans-serif;
+$light: 300;
+$regular: 400;
+$bold: 700;
+
+body {
+    font-family: $site-font;
+    font-size: 12px;
 }
 
-// Lato fonts
-$regular: 'Lato', arial, sans-serif;
-$light: 'Lato', arial, sans-serif;
-$bold: 'Lato', arial, sans-serif;
 
-h1 {
-    font-family: 'Lato', arial, sans-serif;
-    font-weight: 300;
-}
 
 // Lato Regular font
+p,
+a,
 footer a, 
 #user-profile li span {
     font-family: $regular;
@@ -40,7 +33,6 @@ footer a {
 
 
 p {
-	font-family: $text-font;
 	font-size: $text-size;
     line-height: 1.5em; 
     color: $black;

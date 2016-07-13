@@ -1,11 +1,11 @@
 What I would have done wit libraries that wasn't mentioned in instructions
 
 - Bourbon and Neat grid
-- Mobile first
+- Mobile first approach
 - Three types of black in the psd. Would speak to designer to see if we can use one black
 - I would have used Font awesome for icons
 - Heart icon is a little shopped off at the bottom
 
 
 Hours total
-day 1: 11pm - 2:30
+day 1: 11pm - 3:30am = 4.5hrs
