@@ -154,5 +154,5 @@ module.exports = function(grunt){
 	grunt.registerTask('default', ['connect', 'browserSync', 'jshint', 'watch']);	
 	
 	// Production - Build app
-	grunt.registerTask('prod', ['concat' ,'cssmin', 'jshint', 'uglify', 'targethtml', 'watch']);
+	grunt.registerTask('prod', ['concat' ,'cssmin', 'jshint', 'uglify', 'targethtml', 'htmlmin', 'watch']);
 };

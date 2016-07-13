@@ -2,13 +2,16 @@ What I would have done wit libraries that wasn't mentioned in instructions
 
 - Bourbon and Neat grid
 - Mobile first approach
-- Three types of black in the psd. Would speak to designer to see if we can use one black
-- I would have used Font awesome for icons
+- Three types of black and 3 types of Grey in the psd. Would probably speak to designer to see if we can narrow it down to have continuity.
+- I would have used Font awesome for icons but in this case I cut them out. 
+- Would have also used a CSS sprite image if there were hovers provided.
 - Heart icon is a little shopped off at the bottom
-- Would have also used a sprite if there were hovers provided.
 - Bullets were a lot smaller so used a gif. But would probaly speak to designer and ask to be done as css size.
 
 
-
 Hours total
-day 1: 11pm - 3:30am = 4.5hrs
+Desktop complete
+day 1: 11pm - 3:30am = 5.5hrs
+day 2: 13:00 - 15:50 = 3.0hrs
+
+Mobile

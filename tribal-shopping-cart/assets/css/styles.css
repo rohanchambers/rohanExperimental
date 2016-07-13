@@ -1,7 +1,13 @@
 @charset "UTF-8";
+html {
+  font-size: 62.5%; }
+
 body {
   font-family: "Lato", arial, sans-serif;
-  font-size: 12px; }
+  font-size: 1.2rem; }
+
+ul li {
+  list-style-type: none; }
 
 a {
   color: #000; }
@@ -9,23 +15,19 @@ a {
 a:hover {
   text-decoration: none; }
 
-p,
-a,
-footer a,
-#user-profile li span {
-  font-family: 400; }
-
-#cart .total-cost {
-  font-family: 700;
+#total-cost,
+#category,
+#add-product,
+#country,
+#rating-score {
   font-weight: 700;
-  color: #bbb;
-  font-size: 12px; }
+  color: #BBB; }
 
+#add-product,
+#country,
+#category,
 footer a {
   text-transform: uppercase; }
-
-ul li {
-  list-style-type: none; }
 
 .antialiased {
   -webkit-font-smoothing: antialiased;
@@ -96,13 +98,12 @@ body {
     #site-header #user-shop #cart .total-count,
     #site-header #user-shop #favourites .total-count {
       position: absolute;
-      background-color: #00aeef;
       color: #FFF;
       width: 25px;
       height: 25px;
-      font-size: 12px;
       text-align: center;
       line-height: 25px;
+      background-color: #00aeef;
       border-radius: 25px;
       -webkit-border-radius: 25px;
       -moz-border-radius: 25px;
@@ -117,7 +118,7 @@ body {
     #site-header #user-shop #cart .total-count {
       top: -11px;
       left: 30px; }
-    #site-header #user-shop #cart .total-cost {
+    #site-header #user-shop #cart #total-cost {
       padding-left: 50px;
       line-height: 30px; }
   #site-header #user-shop #favourites {
@@ -135,14 +136,12 @@ body {
     display: block; }
   .container #content #product-details #category {
     float: left;
-    font-weight: 700;
-    color: #333;
-    text-transform: uppercase; }
+    color: #333; }
   .container #content #product-details #product-id {
     float: right;
     color: #BBB; }
   .container #content #product-details #product-title {
-    font-size: 30px;
+    font-size: 3.0rem;
     font-weight: 300; }
   .container #content #product-details #price-container {
     float: left;
@@ -151,16 +150,17 @@ body {
       float: left;
       display: inline;
       margin-right: 10px;
-      font-size: 24px;
+      font-size: 2.4rem;
       font-weight: 400;
       color: #e51e1a;
       text-decoration: line-through; }
     .container #content #product-details #price-container #sale-price {
       display: inline-block;
-      font-size: 24px;
+      font-size: 2.4rem;
       font-weight: 300;
       color: #333; }
     .container #content #product-details #price-container #retail-price {
+      margin-top: 5px;
       color: #BBB; }
   .container #content #product-details #add-product {
     float: right;
@@ -171,8 +171,7 @@ body {
     color: #FFF;
     background-color: #00aeef;
     text-decoration: none;
-    font-weight: 700;
-    text-transform: uppercase;
+    font-size: 1.2rem;
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -180,7 +179,7 @@ body {
     -o-border-radius: 5px;
     border: 0px solid #000000; }
   .container #content #product-details #add-product:hover {
-    background-color: #02baff;
+    background-color: #63d5ff;
     -webkit-transition: all 0.3s ease-out;
     /* Chrome 1-25, Safari 3.2+ */
     -moz-transition: all 0.3s ease-out;
@@ -190,10 +189,9 @@ body {
     transition: all 0.3s ease-out;
     /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */ }
   .container #content #product-details #country {
-    padding: 50px 0 20px 0;
+    padding: 35px 0 20px 0;
     clear: both;
-    text-transform: uppercase;
-    font-weight: 700; }
+    color: #333; }
     .container #content #product-details #country span {
       display: inline-block;
       font-weight: 400;
@@ -202,7 +200,8 @@ body {
     .container #content #product-details #country a {
       text-transform: none; }
   .container #content #product-details #stock-details {
-    color: #BBB; }
+    color: #BBB;
+    font-size: 1.2rem; }
   .container #content #product-details #item-details {
     margin: 0;
     padding: 0; }
@@ -212,7 +211,7 @@ body {
       background: url(../img/list_bullet.png) no-repeat left center;
       vertical-align: middle; }
   .container #content #product-details p, .container #content #product-details li {
-    font-size: 14px; }
+    font-size: 1.4rem; }
   .container #content #product-details #rating {
     float: left;
     margin: 0;
@@ -241,8 +240,6 @@ body {
     display: block;
     margin-left: 10px;
     line-height: 1.5em; }
-  .container #content #product-details #rating-score {
-    font-weight: 700; }
   .container #content #product-details #total-reviews {
     margin-left: 30px; }
 .container #user-profile ul {
@@ -258,7 +255,7 @@ body {
     .container #user-profile ul li span {
       display: inline-block;
       min-height: 30px;
-      font-size: 14px; }
+      font-size: 1.4rem; }
   .container #user-profile ul li.favourites span {
     background: url(../img/icon_heart_black.png) no-repeat left center;
     padding-left: 40px; }
@@ -270,7 +267,7 @@ body {
     line-height: normal;
     min-height: auto; }
   .container #user-profile ul li.total-price span:nth-child(2) {
-    font-size: 24px; }
+    font-size: 2.4rem; }
   .container #user-profile ul li.payment-cards {
     box-sizing: border-box;
     padding-left: 40px;
@@ -293,7 +290,6 @@ footer ul {
       display: block;
       width: 100%;
       height: 100%;
-      font-size: 12px;
       line-height: 70px;
       text-align: center;
       color: #888;
@@ -301,5 +297,55 @@ footer ul {
     footer ul li a:hover {
       border-bottom: 4px solid #00aeef;
       color: #f6f6f6; }
+
+@media all and (max-width: 1280px) {
+  #site-wrapper,
+  #site-header {
+    width: 90%;
+    margin: 0 5%; }
+    #site-wrapper .container,
+    #site-header .container {
+      width: 100%; }
+
+  #product-img img {
+    max-width: 100%;
+    height: auto; } }
+@media all and (max-width: 1060px) {
+  .container #content #product-details {
+    padding: 20px;
+    overflow: hidden; }
+    .container #content #product-details #add-product {
+      float: left;
+      clear: both; }
+    .container #content #product-details #price-container {
+      margin-top: 0; } }
+@media all and (max-width: 1024px) {
+  .container #user-profile ul {
+    height: auto;
+    overflow: hidden; }
+    .container #user-profile ul li {
+      width: 100%;
+      margin-bottom: 20px; }
+    .container #user-profile ul li.payment-cards {
+      text-align: center; }
+      .container #user-profile ul li.payment-cards span:nth-child(2) {
+        background-position: bottom center; } }
+@media all and (max-width: 768px) {
+  #site-wrapper .container #content {
+    padding: 0; }
+    #site-wrapper .container #content #product-img,
+    #site-wrapper .container #content #product-details {
+      min-height: auto;
+      width: 100%;
+      float: none;
+      display: block; }
+    #site-wrapper .container #content #product-img {
+      min-height: auto;
+      float: none;
+      display: block; } }
+@media all and (max-width: 600px) {
+  footer ul li {
+    float: none;
+    width: 100%; } }
 
 /*# sourceMappingURL=styles.css.map */

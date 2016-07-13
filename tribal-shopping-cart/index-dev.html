@@ -11,8 +11,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" href="" type="image/x-icon">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
-    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,300' rel='stylesheet' type='text/css'>
-    <!--(if target dev)><!-->
+<!--     <link href='https://fonts.googleapis.com/css?family=Lato:400,700,300' rel='stylesheet' type='text/css'>
+ -->    <!--(if target dev)><!-->
     <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 
@@ -42,7 +42,7 @@
     <meta name="twitter:image:src"      content="">
     <meta name="twitter:domain"         content="">
 </head>
-<body id="page-product">
+<body>
 
     <div id="site-header-wrapper">
         <header id="site-header" class="site-width">
@@ -51,7 +51,7 @@
             </div>
             <div id="user-shop">
                 <div id="cart">
-                    <span class="total-cost">£59.00</span>
+                    <span id="total-cost">£59.00</span>
                     <span class="total-count">3</span>
                 </div>
                 <div id="favourites">
@@ -63,24 +63,29 @@
 
     <div id="site-wrapper">
     	<div class="container site-width">
-            <div id="content" class="product product-id-001">
-                <div id="product-img">
-                    <img src="assets/img/product_ps4.jpg" alt="PS4">
-                </div>
+            <section id="content">
 
-                <div id="product-details">
+                <aside id="product-img">
+                    <img src="assets/img/product_ps4.jpg" alt="PS4">
+                </aside>
+
+                <article id="product-details">
                     <span id="category">Lorem</span>
+                    
                     <span id="product-id">Lorem Ipsum: 4718206</span>
+                    
                     <h1 id="product-title">Lorem Ipsum</h1>
+                    
                     <div id="price-container">
                         <span id="orginal-price">£20.99</span><span id="sale-price">£12.99</span>
-                        <span id="retail-price">RRP:  £27.990  (Lorem ipsum 20%)</span> </div>
-                    <a href="#" id="add-product">Add to basket</a>
-
+                        <span id="retail-price">RRP: £27.990 (Lorem ipsum 20%)</span> 
+                    </div>
+                    
+                    <p><a href="#" id="add-product">Add to basket</a></p>
 
                     <span id="country">Lorem ipsum: <span>UK</span> <a href="#">Change</a></span>
 
-                    <span id="stock-details">In stock. More than 10 available online. Order in the next 10 mins for next day delivery.</span>
+                    <p id="stock-details">In stock. More than 10 available online. Order in the next 10 mins for next day delivery.</p>
 
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
 
@@ -101,10 +106,11 @@
 
                     <span id="rating-score">4.5 / 5</span>
                     <a href="#" id="total-reviews">112 lorem ipsum</a>
-                </div><!-- End of product details -->
-            </div><!-- End of Content -->
+                </article><!-- End of product details -->
 
-            <div id="user-profile">
+            </section><!-- End of Content section -->
+
+            <section id="user-profile">
                 <ul>
                     <li class="favourites">
                         <span>Lorem ipsum</span>
@@ -121,7 +127,7 @@
                         <span></span>
                     </li>
                 </ul>
-            </div>
+            </section><!-- End of User profile -->
 
             <footer>
                 <nav>

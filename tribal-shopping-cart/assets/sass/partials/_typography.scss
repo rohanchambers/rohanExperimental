@@ -2,10 +2,19 @@ $site-font: 'Lato', arial, sans-serif;
 $light: 300;
 $regular: 400;
 $bold: 700;
+$text-size: 1.2rem; // 1rem = 10px
 
-body {
+html {
+    font-size: 62.5%;
+}
+
+body {    
     font-family: $site-font;
-    font-size: 12px;
+    font-size: $text-size;
+}
+
+ul li {
+    list-style-type: none;
 }
 
 a {
@@ -16,27 +25,22 @@ a:hover {
     text-decoration: none;
 }
 
-// Lato Regular font
-p,
-a,
-footer a, 
-#user-profile li span {
-    font-family: $regular;
-}
 
-// Lato Bold font
-#cart .total-cost {
-    font-family: $bold;
-    font-weight: 700;
-    color: #bbb;
-    font-size: 12px;
+// Lato Bold
+#total-cost,
+#category,
+#add-product,
+#country,
+#rating-score { 
+    font-weight: $bold;
+    color: $grey;    
 }
 
 // Uppercase
+#add-product,
+#country,
+#category,
 footer a {
     text-transform: uppercase;
 }
 
-ul li {
-    list-style-type: none;
-}

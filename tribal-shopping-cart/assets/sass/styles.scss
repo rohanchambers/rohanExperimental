@@ -3,7 +3,6 @@
 @import "partials/_typography";
 @import "partials/_mixins";
 @import "partials/_layout";
-@import "partials/_mobile";
 
 body {
     background: #d6d6d6;
@@ -27,13 +26,12 @@ body {
 
 				.total-count {
 					position: absolute;
-					background-color: $blue;
 					color: $white;
 					width: 25px;
 					height: 25px;
-					font-size: 12px;
 					text-align: center;
 					line-height: 25px;
+					background-color: $blue;
 					@include border-radius(25px);
 				}
 			}
@@ -49,7 +47,7 @@ body {
 						left: 30px;
 					}
 
-					.total-cost {
+					#total-cost {
 						padding-left: 50px;
 						line-height: 30px;
 					}
@@ -81,21 +79,19 @@ body {
 
 			#category {
 				float: left;
-				font-weight: $bold;
 				color: #333;
-				text-transform: uppercase;
 			}
 
 			#product-id {
 				float: right;
-				color: #BBB;
+				color: $grey;
 			}
 
 			#product-title {
-				font-size: 30px;
+				font-size: 3.0rem;
 				font-weight: $light;
 			}
-			
+
 			#price-container {
 				float: left;
 				margin-top: 20px;
@@ -104,7 +100,7 @@ body {
 					float: left;
 					display: inline;
 					margin-right: 10px;
-					font-size: 24px;
+					font-size: 2.4rem;
 					font-weight: $regular;
 					color: #e51e1a;
 					text-decoration: line-through;
@@ -112,16 +108,16 @@ body {
 
 				#sale-price {
 					display: inline-block;
-					font-size: 24px;
+					font-size: 2.4rem;
 					font-weight: $light;
 					color: #333;
 				}
 
 				#retail-price {
-					color: #BBB;
-				}				
+					margin-top: 5px;
+					color: $grey;
+				}
 			}
-
 
 			#add-product {
 				float: right;
@@ -132,28 +128,26 @@ body {
 				color: $white;
 				background-color: $blue;
 				text-decoration: none;
-				font-weight: $bold;
-				text-transform: uppercase;
+				font-size: 1.2rem;
 				@include border-radius(5px);
 				@extend .clearfix;
 			}
 
-			#add-product:hover {
-				background-color: #02baff;
-				  -webkit-transition: all 0.3s ease-out;  /* Chrome 1-25, Safari 3.2+ */
-				     -moz-transition: all 0.3s ease-out;  /* Firefox 4-15 */
-				       -o-transition: all 0.3s ease-out;  /* Opera 10.50–12.00 */
-				          transition: all 0.3s ease-out;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+				#add-product:hover {
+					background-color: #63d5ff;
+					  -webkit-transition: all 0.3s ease-out;  /* Chrome 1-25, Safari 3.2+ */
+					     -moz-transition: all 0.3s ease-out;  /* Firefox 4-15 */
+					       -o-transition: all 0.3s ease-out;  /* Opera 10.50–12.00 */
+					          transition: all 0.3s ease-out;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
 
-			}
-	
+				}
+
 			#country {
 				@extend .clearfix;
-				padding: 50px 0 20px 0;
+				padding: 35px 0 20px 0;
 				clear: both;
-				text-transform: uppercase;
-				font-weight: $bold;
-					
+				color: #333;
+
 					span {
 						display: inline-block;
 						font-weight: $regular;
@@ -167,23 +161,24 @@ body {
 			}
 
 			#stock-details {
-				color: #BBB;
+				color: $grey;
+				font-size: $text-size;
 			}
-			
+
 			#item-details {
 				margin: 0;
 				padding: 0;
-		
+
 					li {
 						margin-bottom: 5px;
 						padding-left: 35px;
 						background: url(../img/list_bullet.png) no-repeat left center;
-						vertical-align: middle;			
+						vertical-align: middle;
 					}
 			}
-			
+
 			p, li {
-				font-size: 14px;
+				font-size: 1.4rem;
 			}
 
 			#rating {
@@ -195,23 +190,23 @@ body {
 					display: inline-block;
 					width: 18px;
 					height: 17px;
-					padding: 0;					
+					padding: 0;
 
 					a {
 						display: block;
 						width: 100%;
-						height: 100%;						
+						height: 100%;
 						background: url(../img/icon_star_grey.png) no-repeat;
 					}
 
 					a:hover,
 					a.active {
-						background: url(../img/icon_star_blue.png) no-repeat;	
-					}					
+						background: url(../img/icon_star_blue.png) no-repeat;
+					}
 				}
 
 			}
-			
+
 			hr {
 				width: 116%;
 				border-color: #eee;
@@ -220,20 +215,16 @@ body {
 			}
 
 			#rating-score,
-			#total-reviews { 
-				float: left;				
+			#total-reviews {
+				float: left;
 				display: block;
 				margin-left: 10px;
 				line-height: 1.5em;
 			}
-			
-			#rating-score {
-				font-weight: $bold;
-			}
 
 			#total-reviews {
 				margin-left: 30px;
-			}			
+			}
 		}
 	}
 
@@ -254,7 +245,7 @@ body {
 				span {
 					display: inline-block;
 					min-height: 30px;
-					font-size: 14px;
+					font-size: 1.4rem;
 				}
 			}
 
@@ -276,7 +267,7 @@ body {
 				}
 
 				span:nth-child(2) {
-					font-size: 24px;
+					font-size: 2.4rem;
 				}
 			}
 
@@ -313,7 +304,6 @@ footer ul {
 				display: block;
 				width: 100%;
 				height: 100%;
-				font-size: 12px;
 				line-height: 70px;
 				text-align: center;
 				color: #888;
@@ -326,3 +316,5 @@ footer ul {
 			}
 		}
 }
+
+@import "partials/_mobile";
