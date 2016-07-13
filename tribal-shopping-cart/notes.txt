@@ -5,6 +5,9 @@ What I would have done wit libraries that wasn't mentioned in instructions
 - Three types of black in the psd. Would speak to designer to see if we can use one black
 - I would have used Font awesome for icons
 - Heart icon is a little shopped off at the bottom
+- Would have also used a sprite if there were hovers provided.
+- Bullets were a lot smaller so used a gif. But would probaly speak to designer and ask to be done as css size.
+
 
 
 Hours total

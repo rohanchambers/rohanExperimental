@@ -8,7 +8,13 @@ body {
     font-size: 12px;
 }
 
+a {
+    color: $black;
+}
 
+a:hover {
+    text-decoration: none;
+}
 
 // Lato Regular font
 p,
@@ -29,14 +35,6 @@ footer a,
 // Uppercase
 footer a {
     text-transform: uppercase;
-}
-
-
-p {
-	font-size: $text-size;
-    line-height: 1.5em; 
-    color: $black;
-    margin-bottom: 8px;    
 }
 
 ul li {
