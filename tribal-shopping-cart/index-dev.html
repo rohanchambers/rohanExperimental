@@ -11,8 +11,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" href="" type="image/x-icon">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
-<!--     <link href='https://fonts.googleapis.com/css?family=Lato:400,700,300' rel='stylesheet' type='text/css'>
- -->    <!--(if target dev)><!-->
+    <!-- <link href='https://fonts.googleapis.com/css?family=Lato:400,700,300' rel='stylesheet' type='text/css'> -->
+    <!--(if target dev)><!-->
     <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 
@@ -51,8 +51,24 @@
             </div>
             <div id="user-shop">
                 <div id="cart">
-                    <span id="total-cost">£59.00</span>
-                    <span class="total-count">3</span>
+                    <a href="#" id="open-cart-list">
+                        <span id="total-cost">£59.00</span>
+                        <span class="total-count">3</span>
+                    </a>
+                    <ul id="cart-list">
+                        <li>Item
+                            <a href="#" class="remove"><span>x</span></a>
+                            <a href="#" class="fav"><span></span></a>
+                        </li>
+                        <li>Item
+                            <a href="#" class="remove"><span>x</span></a>
+                            <a href="#" class="fav"><span></span></a>
+                         </li>
+                        <li>Item
+                            <a href="#" class="remove"><span>x</span></a>
+                            <a href="#" class="fav"><span></span></a>
+                        </li>
+                    </ul>
                 </div>
                 <div id="favourites">
                     <span class="total-count">2</span>

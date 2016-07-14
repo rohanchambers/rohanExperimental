@@ -51,6 +51,45 @@ body {
 						padding-left: 50px;
 						line-height: 30px;
 					}
+
+					#cart-list {
+						width: 150px;
+						padding: 0;
+						background-color: $white;						
+						// /display: none;
+
+						li {
+							position: relative;
+							border-bottom: 1px solid $grey;
+							padding: 5px;
+
+							a {
+								text-decoration: none;
+							}
+						}
+
+						li .remove {
+							position: absolute;
+							right: 10px;
+							content: "x";
+							@include border-radius(15px);
+							background-color: red;
+							width: 15px;
+							height: 15px;
+							text-align: center;
+							line-height: 15px;
+							color: $white;
+						}
+
+						li .fav {
+							position: absolute;
+							right: 35px;							
+							width: 15px;
+							height: 15px;							
+							background: url(../img/icon_heart.png) no-repeat 0 2px;
+							background-size: 100%;
+						}
+					}
 			}
 
 			#favourites {

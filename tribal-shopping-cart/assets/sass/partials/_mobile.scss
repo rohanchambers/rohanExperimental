@@ -38,7 +38,7 @@
 
 // // DESKTOP | Max 1024px
  @media all and (max-width: 1024px) {
-	.container {	
+	.container {
 		#user-profile {
 
 			ul {
@@ -52,7 +52,7 @@
 
 				li.payment-cards {
 					text-align: center;
-					
+
 					span:nth-child(2) {
 						background-position: bottom center;
 					}
@@ -92,7 +92,7 @@
 	footer ul li {
 		float: none;
 		width: 100%;
-	} 	
+	}
 }
 
 // // MOBILE SMALL | max width 320px
