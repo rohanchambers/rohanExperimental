@@ -3,9 +3,14 @@ var basketCount = 3;
 var favCount = 2;
 
 function addToBasketItem() {
-	basketCount++;
+	// Product var
+	var productName = $('#product-name').html();
+	// Update Basket count
+	basketCount++; 
+	// Get product name from ID
 	$('#cart .total-count').html(basketCount);
-	$('#cart-list').append('<li>Lorem ipsum<a href="#" class="remove"><span>x</span></a><a href="#" class="fav"><span></span></a></li>');
+	// Add product to cart
+	$('#cart-list').append('<li>' + productName + '<a href="#" class="remove"><span>x</span></a><a href="#" class="fav"><span></span></a></li>');
 }
 
 function addToFavourites() {
@@ -15,13 +20,13 @@ function addToFavourites() {
 
 function deleteBasketItem() {
 	basketCount--;
-	$('#cart .total-count').html(basketCount)
+	$('#cart .total-count').html(basketCount);
 }
 
 $(document).ready(function(){
 	// Show basket
 	$('#open-cart-list').click( function(){
-		//$('#cart-list').slideToggle();
+		$('#cart-list').stop().slideToggle();
 	});
 
 	// Add product to cart
@@ -29,13 +34,15 @@ $(document).ready(function(){
 		addToBasketItem();
 	});
 
-	// Add to favourites
-	$('#cart-list li .fav').click( function(){
-		addToFavourites();
-	});	
+	// Add to Favourites
+	$('#cart-list').on('click', '.fav', function(e){
+		e.preventDefault();
+		addToFavourites();		
+	});
 
-	// Delete product from cart
-	$('#cart-list li .remove').on('click', function(){
+	// Delete current and newly added products from cart
+	$('#cart-list').on('click', '.remove', function(e){
+		e.preventDefault();
 		deleteBasketItem();
 		$(this).parent().remove();
 	});

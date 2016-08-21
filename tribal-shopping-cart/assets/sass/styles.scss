@@ -37,6 +37,7 @@ body {
 			}
 
 			#cart {
+				position: relative;
 				width: 125px;
 				height: 29px;
 				background: url(../img/icon_cart.png) no-repeat;
@@ -56,7 +57,7 @@ body {
 						width: 150px;
 						padding: 0;
 						background-color: $white;						
-						// /display: none;
+						display: none;
 
 						li {
 							position: relative;
@@ -126,7 +127,7 @@ body {
 				color: $grey;
 			}
 
-			#product-title {
+			#product-name {
 				font-size: 3.0rem;
 				font-weight: $light;
 			}

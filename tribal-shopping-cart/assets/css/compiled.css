@@ -531,6 +531,7 @@ body {
       -o-border-radius: 25px;
       border: 0px solid #000000; }
   #site-header #user-shop #cart {
+    position: relative;
     width: 125px;
     height: 29px;
     background: url(../img/icon_cart.png) no-repeat;
@@ -541,6 +542,40 @@ body {
     #site-header #user-shop #cart #total-cost {
       padding-left: 50px;
       line-height: 30px; }
+    #site-header #user-shop #cart #cart-list {
+      width: 150px;
+      padding: 0;
+      background-color: #FFF;
+      display: none; }
+      #site-header #user-shop #cart #cart-list li {
+        position: relative;
+        border-bottom: 1px solid #BBB;
+        padding: 5px; }
+        #site-header #user-shop #cart #cart-list li a {
+          text-decoration: none; }
+      #site-header #user-shop #cart #cart-list li .remove {
+        position: absolute;
+        right: 10px;
+        content: "x";
+        border-radius: 15px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
+        border: 0px solid #000000;
+        background-color: red;
+        width: 15px;
+        height: 15px;
+        text-align: center;
+        line-height: 15px;
+        color: #FFF; }
+      #site-header #user-shop #cart #cart-list li .fav {
+        position: absolute;
+        right: 35px;
+        width: 15px;
+        height: 15px;
+        background: url(../img/icon_heart.png) no-repeat 0 2px;
+        background-size: 100%; }
   #site-header #user-shop #favourites {
     width: 35px;
     height: 30px;
@@ -560,7 +595,7 @@ body {
   .container #content #product-details #product-id {
     float: right;
     color: #BBB; }
-  .container #content #product-details #product-title {
+  .container #content #product-details #product-name {
     font-size: 3.0rem;
     font-weight: 300; }
   .container #content #product-details #price-container {
