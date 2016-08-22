@@ -9,7 +9,9 @@
 @import "partials/_typography";
 @import "partials/_mixins";
 @import "partials/_layout";
+@import "modules/_common";
 @import "partials/_mobile";
+@import "vendor/_hamburgers";
 
 body {
 	background-color: pink;
@@ -54,7 +56,7 @@ body {
 }
 
 #element-5 {
-	background-color: pink;
+	background-color: turqupoise;
 }
 
 #element-6 {

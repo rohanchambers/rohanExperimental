@@ -17,6 +17,7 @@
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-uglify": "^1.0.1",
     "grunt-contrib-watch": "^1.0.0",
+    "grunt-php": "^1.5.1",
     "grunt-targethtml": "^0.2.6"
   },
   "scripts": {

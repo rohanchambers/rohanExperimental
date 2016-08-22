@@ -1,4 +1,23 @@
 $text-font: Helvetica, Verdana, sans-serif;
-$text-size: rem(14);
+$text-size: 1.4rem; // 1rem = 10px
+
+// Color Scheme
 $black: #000;
 $white: #FFF;
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: $text-font;
+    font-size: $text-size;
+}
+
+h1, h2, p {
+	margin: 0;
+}
+
+ul li {
+    list-style-type: none;
+}

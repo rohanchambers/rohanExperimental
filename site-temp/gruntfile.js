@@ -75,22 +75,35 @@ module.exports = function(grunt){
 					removeComments: true,
 					collapseWhitespace: true
 				}, files: { 
-					'index.html': 'index.html'
+					'dist/index.php': 'src/index-dev.php',
 				}
 			}
-
 		}, 
 
 		// Environment Production, Dev
 		targethtml: {
 			dist: {
 				files: {
-				  'index.html': 'index-dev.html'
+				  'dist/index.php': 'src/index-dev.php'
 				}
 			}
 		},
 
-		// Using the BrowserSync Server for your static .html files.
+		// For quick start up projects and host setup needed
+	    php: {
+	        dist: {
+	            options: {
+	                hostname: 'localhost',
+	                port: 3000,
+	                base: '', // Project root
+	                keepalive: false,
+	                open: false
+	            }
+
+	        }
+	    },
+
+		// Using the BrowserSync Server for your static .html files and PHP needs hosts setup.
 		browserSync: {
 			default_options: {
 				files: {
@@ -104,22 +117,7 @@ module.exports = function(grunt){
 				},
 				options: {
 					watchTask: true,
-					proxy: "localhost:3000/index-dev.html"
-				}
-			}
-		},
-
-		connect: {
-			server: {
-				options: {
-					port: 3000,
-					hostname: '*',
-					onCreateServer: function(server, connect, options) {
-					  var io = require('socket.io').listen(server);
-					  io.sockets.on('connection', function(socket) {
-					    // do something with socket
-					  });
-					}
+					proxy: "sitetemp.dev/src/index-dev.php"
 				}
 			}
 		},
@@ -147,11 +145,11 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-targethtml');
 	grunt.loadNpmTasks('grunt-contrib-htmlmin');
-	grunt.loadNpmTasks('grunt-browser-sync');
-	grunt.loadNpmTasks('grunt-contrib-connect');
+	grunt.loadNpmTasks('grunt-browser-sync');;
+	grunt.loadNpmTasks('grunt-php');
 
 	// Dev
-	grunt.registerTask('default', ['connect', 'browserSync', 'jshint', 'watch']);	
+	grunt.registerTask('default', ['browserSync', 'jshint', 'watch']);	
 	
 	// Production - Build app
 	grunt.registerTask('prod', ['concat' ,'cssmin', 'jshint', 'uglify', 'targethtml', 'watch']);
