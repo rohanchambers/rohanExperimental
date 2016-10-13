@@ -110,8 +110,7 @@ module.exports = function(grunt){
 					src: [
 						"assets/css/*.css",
 						"assets/js/**/*.js",
-						"*.html",
-						"*.php",
+						"src/*.php",
 						"incl/*.php"
 					]
 				},

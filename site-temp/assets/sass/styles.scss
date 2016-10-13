@@ -17,28 +17,7 @@ body {
 	background-color: pink;
 }
 
-// Two columms
-.col-1 {
-	height: 200px;
-	@include span-columns(12);
-}
-
-// Two columms
-.col-2 {
-	height: 200px;
-	@include span-columns(6);
-}
-
-// Three columms
-.col-3 {
-	height: 200px;
-	@include span-columns(4);
-}
-
-.element {
-    @include pad(15px);
-}
-
+// Temp. Elements
 #element-1 {
 	background-color: red;
 }
@@ -56,7 +35,7 @@ body {
 }
 
 #element-5 {
-	background-color: turqupoise;
+	background-color: turquoise;
 }
 
 #element-6 {

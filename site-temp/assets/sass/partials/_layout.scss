@@ -1,10 +1,72 @@
 // NEAT GRID LAYOUT FOR SECTIONS
 .container {
 	@include outer-container($max-width);
+	margin-bottom: 10px;
+
+	// DESKTOP Max. 1024px
+	@include media($desktop) {
+		padding: 0 4%;
+		@include transition();
+	}
+
+	// TABLET
+	@include media($tablet) {
+		padding: 0 2%;
+		@include transition();
+	}	
 }
 
     // Row
     .row {
         @include row( $display: default, $direction: LTR);
-        margin-bottom: 10px;
     }
+
+    .col {
+		height: 200px;
+	}
+
+	.element {
+	    @include pad(15px);
+	}
+
+
+#section-1 {
+	article {
+		@include span-columns(4);
+
+		// TABLET | Max width 800px
+		@include media($tablet) {
+			@include span-columns(6);
+			@include omega(2n);
+
+			&:last-child {
+				@include span-columns(12);
+			}
+		}
+
+		// MOBILE | max width 479px
+		@include media($mobile) {
+			@include span-columns(12);
+		}
+	}
+}
+
+#section-2 {
+	article {
+		@include span-columns(6);
+		//@include omega();
+
+		// MOBILE | max width 479px
+		@include media($mobile) {
+			@include span-columns(12);
+		}
+	}
+}
+
+#section-3 {
+	background-color: black;
+	article {
+		@include span-columns(12);
+	}
+}
+

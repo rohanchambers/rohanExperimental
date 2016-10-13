@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">        
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<title>Site template</title>
 	<meta name="title" content="">
 	<meta name="author" content="">
@@ -21,7 +21,7 @@
     <!--(if target dev)><!-->
     <script src="../assets/js/vendor/modernizr-custom.js"></script>
     <!--<!(endif)-->
-    
+
     <!-- Open graph tags -->
     <meta property="og:image"           content="">
     <meta property="og:title"           content="">
@@ -38,25 +38,36 @@
     <meta name="twitter:description"    content="">
     <meta name="twitter:creator"        content="">
     <meta name="twitter:image:src"      content="">
-    <meta name="twitter:domain"         content="">	
+    <meta name="twitter:domain"         content="">
 </head>
 <body>
-	<div class="container">
-		<div class="row">
-			<div id="element-1" class="col-3 element">Site template</div>
-			<div id="element-2" class="col-3"></div>
-			<div id="element-3" class="col-3"></div>
-		</div>
+    <section id="section-1">
+    	<div class="container">
+            <div class="row">
+    			<article id="element-1" class="col element">Third column</article>
+    			<article id="element-2" class="col element">Third column</article>
+    			<article id="element-3" class="col element">Third column</article>
+            </div>
+        </div><!-- End of container -->
+    </section>
 
-        <div class="row">
-            <div id="element-4" class="col-2"></div>
-            <div id="element-5" class="col-2"></div>
-        </div>
+    <section id="section-2">
+        <div class="container">
+            <div class="row">
+                <article id="element-4" class="col element">Half column</article>
+                <article id="element-5" class="col element">Half column</article>
+            </div>
+        </div><!-- End of container -->
+    </section>
 
-        <div class="row">
-            <div id="element-6" class="col-1"></div>
-        </div>                
-	</div>
+    <section id="section-3">
+        <div class="container">
+            <div class="row">
+                <article id="element-6" class="col element">Full column</article>
+            </div>
+        </div><!-- End of container -->
+    </section>
+
     <!--(if target dev)><!-->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/jquery-validation/dist/jquery.validate.js"></script>

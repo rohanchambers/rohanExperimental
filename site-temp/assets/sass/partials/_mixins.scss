@@ -6,12 +6,20 @@
 				transition: all 300ms ease;
 }
 
+@mixin transition() {
+    transition:all .5s linear;
+    	-o-transition:all .5s linear;
+    		-moz-transition:all .5s linear;
+    			-webkit-transition:all .5s linear;
+}
+
 // Extends
 .antialiased {
 	-webkit-font-smoothing: antialiased;
 		-moz-font-smoothing: antialiased;
 			-o-font-smoothing: antialiased;		
 }
+
 
 // -------------------------------------------------------------------
 // Omega Reset for Bourbon Neat
@@ -20,6 +28,6 @@
 // -------------------------------------------------------------------
 
 @mixin omega-reset($nth) {
-  &:nth-child(#{$nth}) { margin-right: flex-gutter($grid-columns, $gutter); }
-  &:nth-child(#{$nth}+1) { clear: none }
+	&:nth-child(#{$nth}) { margin-right: flex-gutter($grid-columns, $gutter); }
+	&:nth-child(#{$nth}+1) { clear: none }
 }
