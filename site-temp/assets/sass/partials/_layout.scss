@@ -32,7 +32,7 @@
 
 #section-1 {
 	article {
-		@include span-columns(4);
+		@include span-columns(4);		
 
 		// TABLET | Max width 800px
 		@include media($tablet) {
@@ -54,7 +54,9 @@
 #section-2 {
 	article {
 		@include span-columns(6);
-		//@include omega();
+		// To remove gutter from elements
+		// @include omega();
+		// @include span-columns(6 of 12, block-collapse);
 
 		// MOBILE | max width 479px
 		@include media($mobile) {

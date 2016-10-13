@@ -75,7 +75,7 @@ module.exports = function(grunt){
 					removeComments: true,
 					collapseWhitespace: true
 				}, files: { 
-					'dist/index.php': 'src/index-dev.php',
+					'dist/index.php': 'dist/index.php',
 				}
 			}
 		}, 
@@ -133,7 +133,22 @@ module.exports = function(grunt){
 			js: {
 				files: 'assets/js/**/*.js',
 			}			
-		}
+		},
+
+		imagemin: {
+		   home: {
+		      options: {
+		        optimizationLevel: 5
+		      },
+
+		      files: [{
+		         expand: true,
+		         cwd: 'assets/img-uncompressed',
+		         src: ['**/*.{png,jpg,gif}'],
+		         dest: 'assets/img'
+		      }]
+		   }
+		}		
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-watch');
@@ -146,10 +161,14 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-contrib-htmlmin');
 	grunt.loadNpmTasks('grunt-browser-sync');;
 	grunt.loadNpmTasks('grunt-php');
+	grunt.loadNpmTasks('grunt-contrib-imagemin');
 
 	// Dev
 	grunt.registerTask('default', ['browserSync', 'jshint', 'watch']);	
 	
 	// Production - Build app
-	grunt.registerTask('prod', ['concat' ,'cssmin', 'jshint', 'uglify', 'targethtml', 'watch']);
+	grunt.registerTask('prod', ['browserSync', 'concat' ,'cssmin', 'jshint', 'uglify', 'targethtml', 'htmlmin', 'watch']);
+
+	// Minify images
+	grunt.registerTask('minifyImg', ['imagemin']);
 };
