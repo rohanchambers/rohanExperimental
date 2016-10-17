@@ -99,7 +99,6 @@ module.exports = function(grunt){
 	                keepalive: false,
 	                open: false
 	            }
-
 	        }
 	    },
 
@@ -148,7 +147,21 @@ module.exports = function(grunt){
 		         dest: 'assets/img'
 		      }]
 		   }
-		}		
+		},
+
+		assets_versioning: {
+		    deployment: {
+		        options: {
+		        	tag: 'hash',
+					hashLength: 6,
+		            versionsMapFle: 'assets.json'
+		        },
+		        files: { 
+		            'assets/js/compiled.min.js': ['assets/js/compiled.min.js'],
+		            'assets/css/compiled.min.css': ['assets/css/compiled.min.css']
+		        }
+		    }
+		}		  
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-watch');
@@ -162,12 +175,16 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-browser-sync');;
 	grunt.loadNpmTasks('grunt-php');
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
+	grunt.loadNpmTasks('grunt-assets-versioning');
 
 	// Dev
 	grunt.registerTask('default', ['browserSync', 'jshint', 'watch']);	
 	
 	// Production - Build app
-	grunt.registerTask('prod', ['browserSync', 'concat' ,'cssmin', 'jshint', 'uglify', 'targethtml', 'htmlmin', 'watch']);
+	grunt.registerTask('prod', ['browserSync', 'concat' ,'cssmin', 'jshint', 'uglify', 'targethtml', 'htmlmin', 'assets_versioning', 'watch']);
+
+	// Minify images
+	grunt.registerTask('vers', ['assets_versioning']);
 
 	// Minify images
 	grunt.registerTask('minifyImg', ['imagemin']);
