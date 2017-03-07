@@ -5,13 +5,26 @@ module.exports = function(grunt){
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
-		
+
 		// SASS task config
 		sass: {
 			dist: {
 				files: {
 					'assets/css/styles.css' : 'assets/sass/styles.scss'
 				}
+			}
+		},
+
+		postcss: {
+			options: {
+			map: false, // inline sourcemaps
+
+			processors: [
+				require('autoprefixer')({browsers: 'last 2 versions'}), // add vendor prefixes
+			]
+			},
+			dist: {
+				src: 'assets/css/styles.css'
 			}
 		},
 
@@ -29,7 +42,7 @@ module.exports = function(grunt){
 			}
 		},
 
-		// CSS min styles.css 
+		// CSS min styles.css
 		cssmin : {
 			minify : {
 				expand : true,
@@ -74,14 +87,20 @@ module.exports = function(grunt){
 				options: {
 					removeComments: true,
 					collapseWhitespace: true
-				}, files: { 
+				}, files: {
 					'dist/index.php': 'dist/index.php',
 				}
 			}
-		}, 
+		},
 
 		// Environment Production, Dev
 		targethtml: {
+			options: {
+				curlyTags: {
+					rlsdate: '<%= grunt.template.today("yyyymmdd") %>'
+				}
+			},
+
 			dist: {
 				files: {
 				  'dist/index.php': 'src/index-dev.php'
@@ -127,11 +146,11 @@ module.exports = function(grunt){
 			},
 			css: {
 				files: 'assets/sass/**/*.scss',
-				tasks: ['sass']
+				tasks: ['sass', 'postcss']
 			},
 			js: {
 				files: 'assets/js/**/*.js',
-			}			
+			}
 		},
 
 		imagemin: {
@@ -149,19 +168,20 @@ module.exports = function(grunt){
 		   }
 		},
 
+		// Another form for caching assets manually creating the file with version number
 		assets_versioning: {
 		    deployment: {
 		        options: {
 		        	tag: 'hash',
 					hashLength: 6,
-		            versionsMapFle: 'assets.json'
+		            versionsMapFile: 'assets.json'
 		        },
-		        files: { 
+		        files: {
 		            'assets/js/compiled.min.js': ['assets/js/compiled.min.js'],
 		            'assets/css/compiled.min.css': ['assets/css/compiled.min.css']
 		        }
 		    }
-		}		  
+		}
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-watch');
@@ -172,18 +192,20 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-targethtml');
 	grunt.loadNpmTasks('grunt-contrib-htmlmin');
-	grunt.loadNpmTasks('grunt-browser-sync');;
+	grunt.loadNpmTasks('grunt-browser-sync');
 	grunt.loadNpmTasks('grunt-php');
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.loadNpmTasks('grunt-assets-versioning');
+	grunt.loadNpmTasks('grunt-postcss');
 
 	// Dev
-	grunt.registerTask('default', ['browserSync', 'jshint', 'watch']);	
-	
-	// Production - Build app
-	grunt.registerTask('prod', ['browserSync', 'concat' ,'cssmin', 'jshint', 'uglify', 'targethtml', 'htmlmin', 'assets_versioning', 'watch']);
+	grunt.registerTask('default', ['browserSync', 'watch']);
 
-	// Minify images
+	// Production - Build app
+	grunt.registerTask('prod', ['browserSync', 'concat' ,'cssmin', 'jshint', 'uglify', 'targethtml', 'htmlmin', 'watch']);
+	// 'assets_versioning',
+
+	// Asset versioning
 	grunt.registerTask('vers', ['assets_versioning']);
 
 	// Minify images

@@ -15,12 +15,14 @@ npm install grunt-contrib-uglify --save-dev
 To update other tasks on watch i.e. cssmin or combine, on watch add them to the tasks list
 
 BrowserSync sometimes needs to be removed from registered tasks and connect needs to run alone. Then bring sync back in.
+Needs host setup
 
 Server setup for project
 case 1: Either use browserfy on its own and that loads up your page however then you have to setup a host file and etc... Proxy should be the file to load
 
-case 2: Use Grunt php to setup a quick server. Can't seem to get it to work with BrowserSync. Pros don't have to play around with host files etc...
+case 2: Use Grunt php to setup a quick server. Can't seem to get it to work with BrowserSync. Pro’s to doing this is you don't have to play around with host files etc...
 
+When using Grunt targethtml for cache busting and going live, take the latest dated version reupload the index.php and dist/include files.
 
 Added a .gitignore for all Grunt’s node_modules and .sass-cache
 

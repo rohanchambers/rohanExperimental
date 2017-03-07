@@ -1,11 +1,12 @@
 $text-font: Helvetica, Verdana, sans-serif;
-$text-size: 1.4rem; // 1rem = 10px
+$text-size: 1.6rem; // 1rem = 10px
 
 // Color Scheme
 $black: #000;
 $white: #FFF;
 
 html {
+	// Reset so that 1rem - 10px
     font-size: 62.5%;
 }
 

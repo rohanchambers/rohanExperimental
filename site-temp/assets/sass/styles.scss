@@ -5,21 +5,35 @@
 @import "grid-settings";
 
 // Custom SASS imports
+
+// Partials
 @import "partials/_base";
 @import "partials/_typography";
-@import "partials/_mixins";
+@import "partials/_nav";
 @import "partials/_layout";
+
+// Modules
 @import "modules/_common";
-@import "partials/_mobile";
+@import "modules/_mixins";
+
+// Vendor
 @import "vendor/_hamburgers";
 
 body {
 	background-color: pink;
 }
 
+
+
 // Temp. Elements
 #element-1 {
+	float: right;
+	position: relative; 
 	background-color: red;
+	// Testing autoprefixing with postcss in grunt
+	display: flex;
+	column-count: 2;
+	appearance: none;
 }
 
 #element-2 {
@@ -41,3 +55,5 @@ body {
 #element-6 {
 	background-color: purple;
 }
+
+@import "partials/_mobile";
