@@ -81,18 +81,6 @@ module.exports = function(grunt){
             }
         },
 
-        // Minify HTML
-		htmlmin: {
-			file: {
-				options: {
-					removeComments: true,
-					collapseWhitespace: true
-				}, files: {
-					'dist/index.php': 'dist/index.php',
-				}
-			}
-		},
-
 		// Environment Production, Dev
 		targethtml: {
 			options: {
@@ -104,6 +92,18 @@ module.exports = function(grunt){
 			dist: {
 				files: {
 				  'dist/index.php': 'src/index-dev.php'
+				}
+			}
+		},
+
+        // Minify HTML
+		htmlmin: {
+			file: {
+				options: {
+					removeComments: true,
+					collapseWhitespace: true
+				}, files: {
+					'dist/index.php': 'dist/index.php',
 				}
 			}
 		},

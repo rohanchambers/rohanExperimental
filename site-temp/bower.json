@@ -16,9 +16,13 @@
     "tests"
   ],
   "dependencies": {
-    "jquery-validation": "^1.15.0",
-    "bourbon": "^4.2.7",
-    "jquery": "^2.2.4",
-    "neat": "^1.7.4"
+    "jquery-validation": "^1.16.0",
+    "bourbon": "^4.3.3",
+    "jquery": "^3.1.1",
+    "neat": "^2.0.0"
+  },
+  "resolutions": {
+    "jquery": "^3.1.1",
+    "neat": "^2.0.0"
   }
 }

@@ -5,6 +5,7 @@ eg. bower install bourbon --save
 Update bower packages
 eg. bower bourbon update
 all packages: bower update
+bower-update-all
 
 
 Grunt

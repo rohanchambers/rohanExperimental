@@ -1,10 +1,11 @@
 var APP = {
 };
 
-// DOM ready
+// // DOM ready
 $(function(){
 	APP.newFunction();
 });
 
 APP.newFunction = function() {
+	console.log('jQuery!');
 };

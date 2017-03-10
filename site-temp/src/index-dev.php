@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="../assets/css/compiled.min.css?{{rlsdate}}">
     <!(endif)-->
     <!--(if target dev)><!-->
-    <script src="../assets/js/vendor/modernizr-custom.js"></script>
+    <!-- <script src="../assets/js/vendor/modernizr-custom.js"></script> -->
     <!--<!(endif)-->
 
     <!-- Open graph tags -->
@@ -73,6 +73,7 @@
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/jquery-validation/dist/jquery.validate.js"></script>
     <script src="../assets/js/main.js"></script>
+
     <!--<!(endif)-->
     <!--(if target dist)>
     <script src="../assets/js/compiled.min.js?{{rlsdate}}"></script>
