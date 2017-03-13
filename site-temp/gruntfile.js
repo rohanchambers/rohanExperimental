@@ -10,7 +10,7 @@ module.exports = function(grunt){
 		sass: {
 			dist: {
 				files: {
-					'assets/css/styles.css' : 'assets/sass/styles.scss'
+					'assets/css/styles.css' : 'assets/scss/styles.scss'
 				}
 			}
 		},
@@ -145,7 +145,7 @@ module.exports = function(grunt){
 				files: '/',
 			},
 			css: {
-				files: 'assets/sass/**/*.scss',
+				files: 'assets/scss/**/*.scss',
 				tasks: ['sass', 'postcss']
 			},
 			js: {

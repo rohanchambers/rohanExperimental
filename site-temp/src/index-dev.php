@@ -73,7 +73,6 @@
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/jquery-validation/dist/jquery.validate.js"></script>
     <script src="../assets/js/main.js"></script>
-
     <!--<!(endif)-->
     <!--(if target dist)>
     <script src="../assets/js/compiled.min.js?{{rlsdate}}"></script>

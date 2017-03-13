@@ -68,7 +68,7 @@ p {
   .container::after {
     clear: both;
     content: "";
-    display: table; }
+    display: block; }
   @media screen and (max-width: 1040px) {
     .container {
       padding: 0 4%;
@@ -86,7 +86,7 @@ p {
   .row::after {
     clear: both;
     content: "";
-    display: table; }
+    display: block; }
 
 .col {
   height: 200px; }
@@ -171,9 +171,7 @@ p {
     height: 100%; }
 
 .antialiased {
-  -webkit-font-smoothing: antialiased;
-  -moz-font-smoothing: antialiased;
-  -o-font-smoothing: antialiased; }
+  smoothing: antialiased; }
 
 /*!
  * Hamburgers
