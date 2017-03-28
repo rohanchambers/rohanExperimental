@@ -10,11 +10,12 @@
     <meta name="keywords" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="" type="image/x-icon">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
-    <!--(if target dev)><!-->
-    <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <!-- build:../assets/css style.min.css -->
+    
     <link rel="stylesheet" href="../assets/css/styles.css">
-    <!--<!(endif)-->
+    <!-- /build -->
+
     <!--(if target dist)>
     <link rel="stylesheet" href="../assets/css/compiled.min.css?{{rlsdate}}">
     <!(endif)-->

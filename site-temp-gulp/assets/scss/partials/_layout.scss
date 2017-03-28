@@ -6,13 +6,13 @@
 	// DESKTOP Max. 1024px
 	@include media($desktop) {
 		padding: 0 4%;
-		@include transition();
+		@include transitionPad();
 	}
 
 	// TABLET
 	@include media($tablet) {
 		padding: 0 2%;
-		@include transition();
+		@include transitionPad();
 	}
 
 	// MOBILE | max width 479px
@@ -20,7 +20,7 @@
 		.element:first-child {
 			margin-bottom: 10px;
 		}
-	}	
+	}
 }
 
     // Row

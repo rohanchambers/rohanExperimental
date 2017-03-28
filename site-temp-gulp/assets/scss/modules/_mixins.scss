@@ -3,8 +3,8 @@
 	transition: all 300ms ease;
 }
 
-@mixin transition() {
-    transition:all .5s linear;
+@mixin transitionPad() {
+    transition: all .5s linear;
 }
 
 // Extends

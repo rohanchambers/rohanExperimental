@@ -10,12 +10,13 @@
 // Partials
 @import "partials/_base";
 @import "partials/_typography";
+@import "modules/_mixins";
 @import "partials/_nav";
 @import "partials/_layout";
 
 // Modules
 @import "modules/_common";
-@import "modules/_mixins";
+
 
 // Vendor
 @import "vendor/_hamburgers";
