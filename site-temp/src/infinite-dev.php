@@ -45,9 +45,7 @@
     <section id="section-1">
     	<div class="container">
             <div class="row">
-    			<article id="element-1" class="col element">Third column</article>
-    			<article id="element-2" class="col element">Third column</article>
-    			<article id="element-3" class="col element">Third column</article>
+                <ul id="infinite-scroll"></ul>
             </div>
         </div><!-- End of container -->
     </section>
