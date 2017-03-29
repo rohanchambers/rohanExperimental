@@ -42,17 +42,17 @@
 </head>
 
 <body>
-    <section id="section-1">
+    <section id="infinite-scroll">
     	<div class="container">
             <div class="row">
-                <ul id="infinite-scroll"></ul>
+                <ul id="img-list"></ul>
             </div>
         </div><!-- End of container -->
     </section>
 
     <!--(if target dev)><!-->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
-    <script src="../bower_components/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="../bower_components/isotope/dist/isotope.pkgd.min.js"></script>
     <script src="../assets/js/main.js"></script>
     <!--<!(endif)-->
     <!--(if target dist)>

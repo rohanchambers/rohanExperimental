@@ -4,13 +4,14 @@ var APP = {
 // // DOM ready
 $(function(){
 	APP.infinteScroll();
+	APP.isotope();
 });
 
 APP.infinteScroll = function() {
 
 	var token = '348944636.922990d.14b754c204514b78bb405dbdaf8801e5', // learn how to obtain it below
 	    userid = 348944636, // User ID - get it in source HTML of your Instagram profile or look at the next example :)
-	    num_photos = 10; // how much photos do you want to get
+	    num_photos = 8; // how much photos do you want to get
 	 
 	$.ajax({
 		url: 'https://api.instagram.com/v1/users/' + userid + '/media/recent', // or /users/self/media/recent for Sandbox
@@ -32,4 +33,12 @@ APP.infinteScroll = function() {
 	});
 
 	console.log('jQuery!');
+};
+
+
+APP.isotope = function() {
+	$grid.isotope({
+		itemSelector: '.element-item',
+		layoutMode: 'fitRows'
+	});
 };

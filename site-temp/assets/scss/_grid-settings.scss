@@ -12,7 +12,7 @@ $tablet: new-breakpoint(max-width 768px 12);
 $desktop: new-breakpoint(max-width 1040px 12);
 $large-desktop: new-breakpoint(min-width 1025px 12);
 
-$visual-grid: true;
+$visual-grid: false;
 $visual-grid-color: red;
 $visual-grid-index: front;
 $visual-grid-opacity: 0.1;

@@ -25,34 +25,40 @@ body {
 }
 
 // Temp. Elements
-#element-1 {
-	float: right;
-	position: relative; 
-	background-color: red;
-	// Testing autoprefixing with postcss in grunt
-	display: flex;
-	column-count: 2;
-	appearance: none;
-}
+#infinite-scroll {
+	ul {
+		margin: 0;
+		padding: 0;
 
-#element-2 {
-	background-color: orange;
-}
+			li {
+				@include span-columns(3);
+				@include omega();
+				height: 250px;
 
-#element-3 {
-	background-color: green;
-}
+				img {
+					width: 100%;
+					height: auto;
 
-#element-4 {
-	background-color: blue;
-}
+				}
 
-#element-5 {
-	background-color: turquoise;
-}
+				// TABLET | Max width 800px
+				@include media($tablet) {
+					@include span-columns(6);
+					@include omega(2n);
 
-#element-6 {
-	background-color: purple;
+					&:last-child {
+						@include span-columns(12);
+						margin-top: 10px;
+					}
+				}
+
+				// MOBILE | max width 479px
+				@include media($mobile) {
+					@include span-columns(12);
+				}
+			}
+
+	}
 }
 
 @import "partials/_mobile";
