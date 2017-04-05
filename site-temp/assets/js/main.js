@@ -29,7 +29,7 @@ function getposts() {
 			}
 	}).then(function(){
 
-		$('.grid').isotope({
+		var $grid = $('.grid').isotope({
 		  	// Options
 			itemSelector: '.grid-item',
 			//percentPosition: true,
@@ -38,6 +38,10 @@ function getposts() {
 			masonry: {
 				gutter: 8
 			}
+		});
+
+		$grid.imagesLoaded().progress( function() {
+			$grid.isotope('layout');
 		});
 
 	});

@@ -55,6 +55,7 @@
     <!--(if target dev)><!-->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/isotope/dist/isotope.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
     <script src="../assets/js/main.js"></script>
     <!--<!(endif)-->
     <!--(if target dist)>
