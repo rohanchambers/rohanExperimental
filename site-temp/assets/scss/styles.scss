@@ -21,38 +21,69 @@
 @import "vendor/_hamburgers";
 
 body {
-	background-color: pink;
+	//background-color: black;
+}
+
+.container {
+	//background: red;
 }
 
 // Temp. Elements
 #infinite-scroll {
+
 	ul {
 		margin: 0;
 		padding: 0;
 
-			li {
+			.grid-item {
+				position: relative;
 				@include span-columns(3);
 				@include omega();
-				height: 250px;
+				height: auto;
+				margin-bottom: 8px;	
 
-				img {
-					width: 100%;
-					height: auto;
+					img {
+						width: 100%;
+						height: auto;
+					}
 
-				}
+					.content {
+						width: 100%;
+						clear: both;
+						margin-top: 3px;
+
+							.avatar {
+								display: block;
+								float: left;
+								margin-right: 10px;
+								width: 30px;
+								height: 30px;
+								background-size: cover; 
+							}
+							
+								p {
+									margin: 0;
+									font-size: 1.3rem;
+									line-height: 1.2;
+
+										span {
+											font-weight: bold;
+										}
+								}
+
+								.username {
+									font-weight: bold;
+								}
+					}	
+
 
 				// TABLET | Max width 800px
 				@include media($tablet) {
 					@include span-columns(6);
-					@include omega(2n);
-
-					&:last-child {
-						@include span-columns(12);
-						margin-top: 10px;
-					}
+					@include omega();
 				}
 
-				// MOBILE | max width 479px
+				// // MOBILE | max width 479px
 				@include media($mobile) {
 					@include span-columns(12);
 				}

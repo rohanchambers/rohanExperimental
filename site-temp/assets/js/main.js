@@ -1,44 +1,48 @@
-var APP = {
-};
-
-// // DOM ready
-$(function(){
-	APP.infinteScroll();
-	APP.isotope();
-});
-
-APP.infinteScroll = function() {
-
+function getposts() {
 	var token = '348944636.922990d.14b754c204514b78bb405dbdaf8801e5', // learn how to obtain it below
-	    userid = 348944636, // User ID - get it in source HTML of your Instagram profile or look at the next example :)
-	    num_photos = 8; // how much photos do you want to get
-	 
+	userid = 348944636; // User ID - get it in source HTML of your Instagram profile or look at the next example :)
+	var nexturl = 'https://api.instagram.com/v1/users/' + userid + '/media/recent/?access_token=' + token;
+
 	$.ajax({
-		url: 'https://api.instagram.com/v1/users/' + userid + '/media/recent', // or /users/self/media/recent for Sandbox
-		dataType: 'jsonp',
 		type: 'GET',
-		data: {access_token: token, count: num_photos},
-		success: function(data){
-	 		console.log(data);
-			for( x in data.data ){
-				$('ul').append('<li><img src="'+data.data[x].images.low_resolution.url+'"></li>'); // data.data[x].images.low_resolution.url - URL of image, 306х306
-				// data.data[x].images.thumbnail.url - URL of image 150х150
-				// data.data[x].images.standard_resolution.url - URL of image 612х612
-				// data.data[x].link - Instagram post URL 
+		url: nexturl,
+		dataType: 'jsonp',
+		jsonp: "callback",
+		jsonpCallback: "jsonpcallback",
+		cache: false,
+		//data: {access_token: token},
+			success: function(data) {
+				console.log(data);
+
+				// Output data
+				$.each(data.data, function(index, item) {
+					var location = data.data[index].location;
+					//console.log(location);
+
+					var items = '<li class="grid-item"><a href="' + data.data[index].link + '"><img src="'+data.data[index].images.low_resolution.url+'"></a><div class="content"><div class="avatar" style="background-image: url(' + data.data[index].user.profile_picture + ')"></div><p>' +'</p><p class="username">' + data.data[index].user.username + '</p><p><span>Location:</span> ' + data.data[index].images.low_resolution.height +'</p><p><span>Title:</span> ' + data.data[index].caption.text.substring(60,length) + ' ...</p></div></li>';
+					$('.grid').append(items);					
+				});
+			},
+			error: function(data){
+				// Send the error notifications to console
+				console.log(data);
 			}
-		},
-		error: function(data){
-			console.log(data); // send the error notifications to console
-		}
+	}).then(function(){
+
+		$('.grid').isotope({
+		  	// Options
+			itemSelector: '.grid-item',
+			//percentPosition: true,
+			layoutMode: 'masonry',
+
+			masonry: {
+				gutter: 8
+			}
+		});
+
 	});
+}
 
-	console.log('jQuery!');
-};
-
-
-APP.isotope = function() {
-	$grid.isotope({
-		itemSelector: '.element-item',
-		layoutMode: 'fitRows'
-	});
-};
+$(function() {
+	getposts();
+});

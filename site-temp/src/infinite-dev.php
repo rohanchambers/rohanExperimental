@@ -44,9 +44,11 @@
 <body>
     <section id="infinite-scroll">
     	<div class="container">
-            <div class="row">
-                <ul id="img-list"></ul>
+
+            <div id="log"></div>
+                <ul class="grid"></ul>
             </div>
+
         </div><!-- End of container -->
     </section>
 
