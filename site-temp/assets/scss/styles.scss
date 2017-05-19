@@ -24,19 +24,34 @@ body {
 	background-color: pink;
 }
 
+// Social media icons in SVG
+#social-svg {
+	clear: both;
+	width: 175px;
+
+		svg {
+			fill: #000;
+			width: 35px;
+			height: 35px;
+			background-color: #FFF;
+			border-radius: 35px;
+			//border: 1px solid #FFF;
+		}
+}
+
 // Temp. Elements
 #element-1 {
-	float: right;
-	position: relative; 
+	// float: right;
+	// position: relative; 
 	background-color: red;
-	// Testing autoprefixing with postcss in grunt
-	display: flex;
-	column-count: 2;
-	appearance: none;
 }
 
 #element-2 {
 	background-color: orange;
+	// Testing autoprefixing with postcss in grunt
+	display: flex;
+	column-count: 2;
+	appearance: none;	
 }
 
 #element-3 {

@@ -258,10 +258,21 @@ p {
 body {
   background-color: pink; }
 
+#social-svg {
+  clear: both;
+  width: 175px; }
+  #social-svg svg {
+    fill: #000;
+    width: 35px;
+    height: 35px;
+    background-color: #FFF;
+    border-radius: 35px; }
+
 #element-1 {
-  float: right;
-  position: relative;
-  background-color: red;
+  background-color: red; }
+
+#element-2 {
+  background-color: orange;
   display: -ms-flexbox;
   display: flex;
   -moz-column-count: 2;
@@ -269,9 +280,6 @@ body {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none; }
-
-#element-2 {
-  background-color: orange; }
 
 #element-3 {
   background-color: green; }
