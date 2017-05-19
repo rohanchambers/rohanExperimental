@@ -44,18 +44,20 @@
 <body>
     <section id="infinite-scroll">
     	<div class="container">
-
-            <div id="log"></div>
+                <div id="test"></div>
                 <ul class="grid"></ul>
+                <div id="instafeed"></div>
+                <button id="load-more">Load more</button>
             </div>
-
         </div><!-- End of container -->
     </section>
-
     <!--(if target dev)><!-->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../assets/js/vendor/lightbox.min.js"></script>
+    <!-- <script src="../assets/js/vendor/instafeed.min.js"></script> -->
     <script src="../bower_components/isotope/dist/isotope.pkgd.min.js"></script>
     <script src="https://unpkg.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
+    <script src="../bower_components/mustache.js/mustache.min.js"></script>
     <script src="../assets/js/main.js"></script>
     <!--<!(endif)-->
     <!--(if target dist)>
