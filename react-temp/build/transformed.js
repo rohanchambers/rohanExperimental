@@ -9761,7 +9761,7 @@ var React = __webpack_require__(49);
 var ReactDOM = __webpack_require__(57);
 var App = __webpack_require__(184);
 
-ReactDOM.render(React.createElement(App, null), document.getElementById('app'));
+ReactDOM.render(React.createElement(Rohan, null), document.getElementById('app'));
 
 /***/ }),
 /* 84 */
@@ -22392,19 +22392,56 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-class Button extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
-  render() {
-    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      'button',
-      null,
-      this.props.text
-    );
-  }
+class Rohan extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
+
+	constructor(props) {
+		super(props);
+		this.state = { weather: 'sunny' };
+		this.changeWeather = this.changeWeather.bind(this);
+	}
+
+	// *todo Get this function setState to work
+	changeWeather() {
+		this.setState({
+			weather: 'rainy'
+		});
+	}
+
+	render() {
+		const name = 'Rohan';
+
+		return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+			'div',
+			null,
+			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+				'h1',
+				null,
+				'Hello world, yo! The weather is, ',
+				this.state.weather
+			),
+			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+				'h2',
+				null,
+				'The temperature is ',
+				3 * 10,
+				' degrees'
+			),
+			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+				'p',
+				null,
+				'Goodbye, ',
+				name,
+				' ',
+				this.props.lastName
+			)
+		);
+	}
 }
 
-Button.defaultProps = { text: 'I am a button' };
+// In case Rohan in render below has no attribute give it a default
+Rohan.defaultProps = { lastName: 'Jordan' };
 
-__WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Button, { text: 'Rohan' }), document.getElementById('app'));
+__WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Rohan, { lastName: 'Chambers' }), document.getElementById('app'));
 
 /***/ })
 /******/ ]);
