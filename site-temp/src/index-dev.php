@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="../assets/css/compiled.min.css?{{rlsdate}}">
     <!(endif)-->
     <!--(if target dev)><!-->
-    <!-- <script src="../assets/js/vendor/modernizr-custom.js"></script> -->
+    <script src="../assets/js/vendor/modernizr-custom.js"></script>
     <!--<!(endif)-->
 
     <!-- Open graph tags -->

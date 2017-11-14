@@ -34,7 +34,7 @@ module.exports = function(grunt){
 				options: {
 					separator: '\n;',
 				},
-				src: ['bower_components/jquery/dist/jquery.min.js', 'assets/js/vendor/**/*.js', 'assets/js/main.js'],
+				src: ['assets/js/modernizr-custom.js', 'bower_components/jquery/dist/jquery.min.js', 'assets/js/vendor/**/*.js', 'assets/js/main.js'],
 				dest: 'assets/js/compiled.js'
 			}
 		},
