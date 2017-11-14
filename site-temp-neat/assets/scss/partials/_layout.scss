@@ -1,82 +1,92 @@
 // NEAT GRID LAYOUT FOR SECTIONS
+
+//Grid visual
+$neat-grid: (
+  columns: 12,
+  gutter: 10px,
+  direction: ltr
+);
+
+$small-mobile: (
+	media: 320px,
+);
+
+$mobile: (
+	media: 479px,
+);
+
+$tablet: (
+  	media: 768px,
+);
+
+$desktop: (
+	media: 1024px,
+);
+
+$large-desktop: (
+	media: "(max-width 1280px)"
+);
+
 .container {
-	@include outer-container($max-width);
-	margin-bottom: 10px;
+	// @include grid-visual;
+	// This is a clear fix which is needed because Neat objects are floated.
+	@include grid-container;
 
-	// DESKTOP Max. 1024px
-	@include media($desktop) {
+	@include grid-media($tablet) {
 		padding: 0 4%;
-		transition:all .5s linear;
+		transition:all .5s linear;		
 	}
 
-	// TABLET
-	@include media($tablet) {
-		padding: 0 2%;
-		transition:all .5s linear;
+	@include grid-media($desktop) {
+		max-width: 1044px;
+		margin: 0 auto;		
+		padding: 0;	
 	}
 
-	// MOBILE | max width 479px
-	@include media($mobile) {
-		.element:first-child {
+		.element {
+			@include grid-column(12);
+			min-height: 200px;
 			margin-bottom: 10px;
 		}
-	}	
+
+		article {
+			padding: 10px;
+		}
 }
 
-    // Row
-    .row {
-        @include row( $display: default, $direction: LTR);
-    }
-
-    .col {
-		height: 200px;
-	}
-
-	.element {
-	    @include pad(15px);
-	}
-
-
 #section-1 {
-	article {
-		@include span-columns(4);
-
-		// TABLET | Max width 800px
-		@include media($tablet) {
-			@include span-columns(6);
-			@include omega(2n);
-
-			&:last-child {
-				@include span-columns(12);
-				margin-top: 10px;
-			}
+	.element {
+		@include grid-media($small-mobile) {
+			@include grid-column(12);
 		}
 
-		// MOBILE | max width 479px
-		@include media($mobile) {
-			@include span-columns(12);
+		@include grid-media($mobile) {
+			@include grid-column(6);
+			@include grid-container;
+		}
+
+		@include grid-media($tablet) {
+			@include grid-column(4);
+		}
+	}
+
+	#element-3 {
+		@include grid-column(12);
+
+		@include grid-media($tablet) {
+			@include grid-column(4);
 		}
 	}
 }
 
 #section-2 {
-	article {
-		@include span-columns(6);
-		// To remove gutter from elements
-		// @include omega();
-		// @include span-columns(6 of 12, block-collapse);
-
-		// MOBILE | max width 479px
-		@include media($mobile) {
-			@include span-columns(12);
+	.element {
+		@include grid-media($mobile) {
+			@include grid-column(6);
 		}
 	}
 }
 
 #section-3 {
 	background-color: black;
-	article {
-		@include span-columns(12);
-	}
 }
-
