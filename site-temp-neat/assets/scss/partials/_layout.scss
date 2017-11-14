@@ -1,0 +1,82 @@
+// NEAT GRID LAYOUT FOR SECTIONS
+.container {
+	@include outer-container($max-width);
+	margin-bottom: 10px;
+
+	// DESKTOP Max. 1024px
+	@include media($desktop) {
+		padding: 0 4%;
+		transition:all .5s linear;
+	}
+
+	// TABLET
+	@include media($tablet) {
+		padding: 0 2%;
+		transition:all .5s linear;
+	}
+
+	// MOBILE | max width 479px
+	@include media($mobile) {
+		.element:first-child {
+			margin-bottom: 10px;
+		}
+	}	
+}
+
+    // Row
+    .row {
+        @include row( $display: default, $direction: LTR);
+    }
+
+    .col {
+		height: 200px;
+	}
+
+	.element {
+	    @include pad(15px);
+	}
+
+
+#section-1 {
+	article {
+		@include span-columns(4);
+
+		// TABLET | Max width 800px
+		@include media($tablet) {
+			@include span-columns(6);
+			@include omega(2n);
+
+			&:last-child {
+				@include span-columns(12);
+				margin-top: 10px;
+			}
+		}
+
+		// MOBILE | max width 479px
+		@include media($mobile) {
+			@include span-columns(12);
+		}
+	}
+}
+
+#section-2 {
+	article {
+		@include span-columns(6);
+		// To remove gutter from elements
+		// @include omega();
+		// @include span-columns(6 of 12, block-collapse);
+
+		// MOBILE | max width 479px
+		@include media($mobile) {
+			@include span-columns(12);
+		}
+	}
+}
+
+#section-3 {
+	background-color: black;
+	article {
+		@include span-columns(12);
+	}
+}
+
