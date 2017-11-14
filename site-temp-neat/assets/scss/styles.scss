@@ -1,22 +1,20 @@
-// Bourbon and Neat import
-// Silence warnings due to bourbon update and deprecated
-//$output-bourbon-deprecation-warnings: false;
+// Bourbon and Neat importalse;
+@import "../../bower_components/bourbon/app/assets/stylesheets/bourbon";
 @import "../../bower_components/neat/core/neat";
 
 // Custom SASS imports
-
 // Partials
-// @import "partials/_base";
-// @import "partials/_typography";
-// @import "partials/_nav";
+@import "partials/_base";
+@import "partials/_typography";
+@import "partials/_nav";
 @import "partials/_layout";
 
 // // Modules
-// @import "modules/_common";
-// @import "modules/_mixins";
+@import "modules/_common";
+@import "modules/_mixins";
 
 // // Vendor
-// @import "vendor/_hamburgers";
+@import "vendor/_hamburgers";
 
 body {
 	background-color: pink;
@@ -66,5 +64,3 @@ body {
 #element-6 {
 	background-color: purple;
 }
-
-//@import "partials/_mobile";

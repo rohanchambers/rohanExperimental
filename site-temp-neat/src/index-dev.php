@@ -42,6 +42,14 @@
 </head>
 
 <body>
+    <div class="container">
+        <button class="hamburger hamburger--squeeze" type="button">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+    </div>
+
     <section id="section-1" class="container">
 		<div id="element-1" class="element"><article>Third column</article></div>
 		<div id="element-2" class="element"><article>Third column</article></div>
