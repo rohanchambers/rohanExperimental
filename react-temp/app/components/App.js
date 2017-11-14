@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 class Rohan extends React.Component {
-
 	constructor(props) {
 		super(props);
 		this.state = { weather: 'sunny'};
@@ -21,13 +20,12 @@ class Rohan extends React.Component {
 
 		return (
 			<div>
-				<h1>Hello world, yo! 
-				The weather is, {this.state.weather}</h1>
+				<h1>Hello world, yo! The weather is, {this.state.weather}</h1>
 				<h2>The temperature is {3 * 10} degrees</h2>
 				<p>Goodbye, {name} {this.props.lastName}</p>
 			</div>
 		)
-	}	
+	}
 }
 
 // In case Rohan in render below has no attribute give it a default

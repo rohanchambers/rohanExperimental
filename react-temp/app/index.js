@@ -3,6 +3,6 @@ var ReactDOM = require('react-dom');
 var App = require('./components/App');
 
 ReactDOM.render(
-	<Rohan />, 
+	<Rohan />,
 	document.getElementById('app')
 );
