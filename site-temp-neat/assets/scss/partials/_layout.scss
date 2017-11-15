@@ -29,8 +29,13 @@ $large-desktop: (
 
 .container {
 	// @include grid-visual;
-	// This is a clear fix which is needed because Neat objects are floated.
+	// This is a clear
 	@include grid-container;
+
+	@include grid-media($mobile) {
+		padding: 0 2%;
+		transition:all .5s linear;
+	}
 
 	@include grid-media($tablet) {
 		padding: 0 4%;
@@ -42,17 +47,26 @@ $large-desktop: (
 		margin: 0 auto;
 		padding: 0;
 	}
-
-		.element {
-			@include grid-column(12);
-			min-height: 200px;
-			margin-bottom: 10px;
-		}
-
-		article {
-			padding: 10px;
-		}
 }
+
+.full-container {
+ 	@include grid-collapse;
+ 	padding: 0;
+ 	
+ 		article {
+ 			min-height: 180px;
+ 		}
+}
+
+	.element {
+		@include grid-column(12);
+		min-height: 200px;
+		margin-bottom: 10px;
+	}
+
+	article {
+		padding: 10px;
+	}
 
 #section-1 {
 	.element {
@@ -89,4 +103,38 @@ $large-desktop: (
 
 #section-3 {
 	background-color: black;
+}
+
+#section-4 {
+	@include grid-media($mobile) {
+		@include grid-collapse;
+	}
+
+	.element {
+		@include grid-collapse;
+		@include grid-column(12);
+
+		@include grid-media($mobile) {
+			@include grid-column(6);
+		}
+
+			.container {
+				@include grid-column(12);
+
+					@include grid-media($desktop) {
+						@include grid-collapse;
+					}
+
+					article {
+						@include grid-column(12);
+						background: blue;
+						margin-left: 0;
+
+							@include grid-media($desktop) {
+								float: right;
+								width: 497px;
+							}
+					}
+			}
+	}
 }

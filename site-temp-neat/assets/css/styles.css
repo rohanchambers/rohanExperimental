@@ -28,6 +28,10 @@ p {
   clear: both;
   content: "";
   display: block; }
+@media only screen and (min-width: 479px) {
+  .container {
+    padding: 0 2%;
+    transition: all .5s linear; } }
 @media only screen and (min-width: 768px) {
   .container {
     padding: 0 4%;
@@ -37,13 +41,23 @@ p {
     max-width: 1044px;
     margin: 0 auto;
     padding: 0; } }
-.container .element {
+
+.full-container {
+  margin-left: -10px;
+  margin-right: -10px;
+  width: calc(100% + 20px);
+  padding: 0; }
+  .full-container article {
+    min-height: 180px; }
+
+.element {
   width: calc(100% - 20px);
   float: left;
   margin-left: 10px;
   min-height: 200px;
   margin-bottom: 10px; }
-.container article {
+
+article {
   padding: 10px; }
 
 @media only screen and (min-width: 320px) {
@@ -83,6 +97,43 @@ p {
 
 #section-3 {
   background-color: black; }
+
+@media only screen and (min-width: 479px) {
+  #section-4 {
+    margin-left: -10px;
+    margin-right: -10px;
+    width: calc(100% + 20px); } }
+#section-4 .element {
+  margin-left: -10px;
+  margin-right: -10px;
+  width: calc(100% + 20px);
+  width: calc(100% - 20px);
+  float: left;
+  margin-left: 10px; }
+  @media only screen and (min-width: 479px) {
+    #section-4 .element {
+      width: calc(50% - 15px);
+      float: left;
+      margin-left: 10px; } }
+  #section-4 .element .container {
+    width: calc(100% - 20px);
+    float: left;
+    margin-left: 10px; }
+    @media only screen and (min-width: 1024px) {
+      #section-4 .element .container {
+        margin-left: -10px;
+        margin-right: -10px;
+        width: calc(100% + 20px); } }
+    #section-4 .element .container article {
+      width: calc(100% - 20px);
+      float: left;
+      margin-left: 10px;
+      background: blue;
+      margin-left: 0; }
+      @media only screen and (min-width: 1024px) {
+        #section-4 .element .container article {
+          float: right;
+          width: 497px; } }
 
 .videoWrapper {
   position: relative;
@@ -252,3 +303,9 @@ body {
 
 #element-6 {
   background-color: purple; }
+
+#element-7 {
+  background-color: red; }
+
+#element-8 {
+  background-color: orange; }

@@ -67,6 +67,17 @@
         </div>
     </section>
 
+    <section id="section-4">
+        <div class="full-container">
+            <div id="element-7" class="element">
+                <div class="container">
+                    <article>Third column</article>
+                </div>
+            </div>
+            <div id="element-8" class="element"><article>Third column</article></div>
+        </div>
+    </section>
+
     <!--(if target dev)><!-->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/jquery-validation/dist/jquery.validate.js"></script>
