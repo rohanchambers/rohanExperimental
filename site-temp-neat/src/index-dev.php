@@ -51,30 +51,41 @@
     </div>
 
     <section id="section-1" class="container">
-		<div id="element-1" class="element"><article>Third column</article></div>
-		<div id="element-2" class="element"><article>Third column</article></div>
-		<div id="element-3" class="element"><article>Third column</article></div>
+		<article id="element-1">Third column</article>
+		<article id="element-2">Third column</article>
+		<article id="element-3">Third column</article>
     </section>
 
     <section id="section-2" class="container">
-        <div id="element-4" class="element"><article>Third column</article></div>
-        <div id="element-5" class="element"><article>Third column</article></div>
+        <article id="element-4">Third column</article>
+        <article id="element-5">Third column</article>
     </section>
 
     <section id="section-3">
         <div class="container">
-            <div id="element-6" class="element"><article>Third column</article></div>
+            <article id="element-6">Third column</article>
         </div>
     </section>
 
     <section id="section-4">
         <div class="full-container">
-            <div id="element-7" class="element">
+            <article id="element-7">
                 <div class="container">
-                    <article>Third column</article>
+                    <div>Third column</div>
                 </div>
-            </div>
-            <div id="element-8" class="element"><article>Third column</article></div>
+            </article>
+            <article id="element-8"></article>
+        </div>
+    </section>
+
+    <section id="section-5">
+        <div class="full-container">
+            <article id="element-8"></article>
+            <article id="element-7">
+                <div class="container">
+                    <div>Third column</div>
+                </div>
+            </article>
         </div>
     </section>
 

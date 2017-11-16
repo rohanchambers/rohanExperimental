@@ -28,8 +28,8 @@ $large-desktop: (
 );
 
 .container {
-	// @include grid-visual;
-	// This is a clear
+	//@include grid-visual;
+	//This is a clear
 	@include grid-container;
 
 	@include grid-media($mobile) {
@@ -52,24 +52,18 @@ $large-desktop: (
 .full-container {
  	@include grid-collapse;
  	padding: 0;
- 	
- 		article {
- 			min-height: 180px;
- 		}
 }
 
-	.element {
+	article {
 		@include grid-column(12);
 		min-height: 200px;
 		margin-bottom: 10px;
-	}
-
-	article {
 		padding: 10px;
+		box-sizing: border-box;
 	}
 
 #section-1 {
-	.element {
+	article {
 		@include grid-media($small-mobile) {
 			@include grid-column(12);
 		}
@@ -94,7 +88,7 @@ $large-desktop: (
 }
 
 #section-2 {
-	.element {
+	article {
 		@include grid-media($mobile) {
 			@include grid-column(6);
 		}
@@ -102,39 +96,54 @@ $large-desktop: (
 }
 
 #section-3 {
+	margin-bottom: 10px;
 	background-color: black;
 }
 
-#section-4 {
+#section-4,
+#section-5 {
 	@include grid-media($mobile) {
 		@include grid-collapse;
 	}
 
-	.element {
+	article {
+		margin-bottom: 0;
+		
 		@include grid-collapse;
 		@include grid-column(12);
 
 		@include grid-media($mobile) {
 			@include grid-column(6);
+			padding: 0;
 		}
 
 			.container {
-				@include grid-column(12);
+				padding-right: 0;
+				div {
+					box-sizing: border-box;
+					margin-left: 0;
+					min-height: 200px;
+					padding: 10px;
+					background: blue;
 
-					@include grid-media($desktop) {
-						@include grid-collapse;
-					}
-
-					article {
-						@include grid-column(12);
-						background: blue;
-						margin-left: 0;
-
-							@include grid-media($desktop) {
-								float: right;
-								width: 497px;
-							}
-					}
+						@include grid-media($desktop) {
+							float: right;
+							width: 507px;
+						}
+				}
 			}
+	}
+}
+
+#section-5 {
+	article {
+		.container {
+			padding-left: 0;
+			div {
+				@include grid-media($desktop) {
+					float: left;
+				}
+			}
+		}
 	}
 }
