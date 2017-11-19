@@ -165,6 +165,8 @@ article {
  * @link https://github.com/jonsuh/hamburgers
  */
 .hamburger {
+  position: relative;
+  z-index: 1000;
   padding: 15px 15px;
   float: right;
   display: inline-block;
@@ -256,21 +258,71 @@ article {
 .hamburger--squeeze.is-active .hamburger-inner {
   transform: rotate(45deg);
   transition-delay: 0.12s;
-  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  background-color: #FFF; }
 
 .hamburger--squeeze.is-active .hamburger-inner::before {
   top: 0;
   opacity: 0;
-  transition: top 0.075s ease, opacity 0.075s 0.12s ease; }
+  transition: top 0.075s ease, opacity 0.075s 0.12s ease;
+  background-color: #FFF; }
 
 .hamburger--squeeze.is-active .hamburger-inner::after {
   bottom: 0;
   transform: rotate(-90deg);
-  transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
+  transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+  background-color: #FFF; }
 
-@media only screen and (min-width: 768px) {
-  .hamburger {
-    display: none; } }
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-y: hidden;
+  transition: 0.5s; }
+
+.overlay.isActive {
+  height: 100%; }
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px; }
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s; }
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1; }
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px; }
+
+@media screen and (max-height: 450px) {
+  .overlay {
+    overflow-y: auto; }
+
+  .overlay a {
+    font-size: 20px; }
+
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px; } }
 body {
   background-color: pink; }
 

@@ -42,6 +42,17 @@
 </head>
 
 <body>
+    <!-- The overlay -->
+    <div id="myNav" class="overlay">
+        <!-- Overlay content -->
+        <div class="overlay-content">
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>   
+
     <div class="container">
         <button class="hamburger hamburger--squeeze" type="button">
             <span class="hamburger-box">
@@ -88,6 +99,8 @@
             </article>
         </div>
     </section>
+
+ 
 
     <!--(if target dev)><!-->
     <script src="../bower_components/jquery/dist/jquery.js"></script>

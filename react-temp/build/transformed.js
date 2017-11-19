@@ -22393,7 +22393,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 class Rohan extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
-
 	constructor(props) {
 		super(props);
 		this.state = { weather: 'sunny' };

@@ -9,12 +9,13 @@
 @import "partials/_nav";
 @import "partials/_layout";
 
-// // Modules
+// Modules
 @import "modules/_common";
 @import "modules/_mixins";
 
-// // Vendor
+// Vendor
 @import "vendor/_hamburgers";
+@import "vendor/_overlay";
 
 body {
 	background-color: pink;

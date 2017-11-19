@@ -8,6 +8,8 @@
 
 
 .hamburger {
+  position: relative;
+  z-index: 1000;
   padding: 15px 15px;
   float: right;
   display: inline-block;
@@ -97,19 +99,19 @@
 .hamburger--squeeze.is-active .hamburger-inner {
   transform: rotate(45deg);
   transition-delay: 0.12s;
-  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);   background-color: #FFF;}
   .hamburger--squeeze.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    transition: top 0.075s ease, opacity 0.075s 0.12s ease; }
+    transition: top 0.075s ease, opacity 0.075s 0.12s ease;   background-color: #FFF;}
   .hamburger--squeeze.is-active .hamburger-inner::after {
     bottom: 0;
     transform: rotate(-90deg);
-    transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }   
+    transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);   background-color: #FFF;}   
     
 
-      @include grid-media($tablet) {
-    .hamburger {
-      display: none;
-    }
-  }         
+  //     @include grid-media($tablet) {
+  //   .hamburger {
+  //     display: none;
+  //   }
+  // }         
