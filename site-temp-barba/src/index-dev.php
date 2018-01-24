@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Site template Neat 2.1</title>
+    <title>Site template Barba JS</title>
     <meta name="title" content="">
     <meta name="author" content="">
     <meta name="description" content="">
