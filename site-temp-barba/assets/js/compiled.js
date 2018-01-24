@@ -11,9 +11,12 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
 
 // // DOM ready
 $(function(){
-	APP.newFunction();
+	APP.hamburger();
 });
 
-APP.newFunction = function() {
-	console.log('jQuery!');
+APP.hamburger = function() {
+	$('.hamburger').click( function(){
+		$(this).toggleClass('is-active');
+		$('#myNav').toggleClass('isActive');
+	});
 };
