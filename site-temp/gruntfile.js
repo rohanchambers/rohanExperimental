@@ -131,7 +131,7 @@ module.exports = function(grunt){
 				},
 				options: {
 					watchTask: true,
-					proxy: "sitetemp.local/src/index-dev.php"
+					proxy: "sitetemp.dev/src/index-dev.php"
 				}
 			}
 		},
