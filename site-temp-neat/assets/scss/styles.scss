@@ -17,59 +17,22 @@
 @import "vendor/_hamburgers";
 @import "vendor/_overlay";
 
-body {
-	background-color: pink;
+.slide  {
+	position: absolute;
+	top: 0;
+	display: block;
+	width: 100%;
+	height: 100%;	
 }
 
-// Social media icons in SVG
-#social-svg {
-	clear: both;
-	width: 175px;
-
-		svg {
-			fill: #000;
-			width: 35px;
-			height: 35px;
-			background-color: #FFF;
-			border-radius: 35px;
-		}
-}
-
-// Temp. Elements
-#element-1 {
-	// float: right;
-	// position: relative; 
-	background-color: red;
-}
-
-#element-2 {
-	background-color: orange;
-	// Testing autoprefixing with postcss in grunt
-	display: flex;
-	column-count: 2;
-	appearance: none;	
-}
-
-#element-3 {
-	background-color: green;
-}
-
-#element-4 {
+.aa {
 	background-color: blue;
 }
 
-#element-5 {
-	background-color: turquoise;
-}
-
-#element-6 {
-	background-color: purple;
-}
-
-#element-7 {
+.bb {
 	background-color: red;
 }
 
-#element-8 {
+.cc {
 	background-color: orange;
 }

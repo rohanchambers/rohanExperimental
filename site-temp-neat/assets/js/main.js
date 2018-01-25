@@ -4,6 +4,8 @@ var APP = {
 // // DOM ready
 $(function(){
 	APP.hamburger();
+
+	$('#main').smoothState();
 });
 
 APP.hamburger = function() {
