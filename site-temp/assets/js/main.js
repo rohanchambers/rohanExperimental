@@ -1,5 +1,5 @@
 function getposts() {
-	var token = '348944636.922990d.14b754c204514b78bb405dbdaf8801e5', // learn how to obtain it below
+	var token = '348944636.06437e2.a61abe8767234f368b295176d5984115', // learn how to obtain it below
 	userid = 348944636; // User ID - get it in source HTML of your Instagram profile or look at the next example :)
 	var nexturl = 'https://api.instagram.com/v1/users/' + userid + '/media/recent/?access_token=' + token;
 
