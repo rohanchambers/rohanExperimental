@@ -16,23 +16,78 @@
 // Vendor
 @import "vendor/_hamburgers";
 @import "vendor/_overlay";
+@import "vendor/_keyframes";
 
-.slide  {
+.page  {
 	position: absolute;
 	top: 0;
-	display: block;
+	left: 0;
 	width: 100%;
 	height: 100%;	
 }
 
-.aa {
-	background-color: blue;
+.page-home {
+	background-color: orange;
 }
 
-.bb {
+.page-about {
 	background-color: red;
 }
 
-.cc {
-	background-color: orange;
+.slide {
+	width: 600px;
+	margin: 0 auto;
+}
+
+/* @mixin respond-to
+------------------------------------------------------------------- */
+/* line 6, /Users/miguelperez/Sites/csstricks/source/stylesheets/pageTransitions.css.scss */
+.page .slide {
+  -webkit-animation-duration: 0.25s;
+  animation-duration: 0.25s;
+  -webkit-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
+/* line 17, /Users/miguelperez/Sites/csstricks/source/stylesheets/pageTransitions.css.scss */
+.page .slide--fadein {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn; }
+/* line 22, /Users/miguelperez/Sites/csstricks/source/stylesheets/pageTransitions.css.scss */
+.page .slide--fadeinup {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp; }
+/* line 27, /Users/miguelperez/Sites/csstricks/source/stylesheets/pageTransitions.css.scss */
+.page .slide--fadeinright {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight; }
+  .page .slide--fadeinleft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft; }
+/* line 32, /Users/miguelperez/Sites/csstricks/source/stylesheets/pageTransitions.css.scss */
+.page .slide--delayed {
+  -webkit-animation-delay: 0.25s;
+  animation-delay: 0.25s; }
+/* line 37, /Users/miguelperez/Sites/csstricks/source/stylesheets/pageTransitions.css.scss */
+.page.is-exiting .slide {
+  -webkit-animation-direction: alternate-reverse;
+  animation-direction: alternate-reverse; }
+/* line 42, /Users/miguelperez/Sites/csstricks/source/stylesheets/pageTransitions.css.scss */
+.page.is-exiting .slide--delayed {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s; }
+/* line 47, /Users/miguelperez/Sites/csstricks/source/stylesheets/pageTransitions.css.scss */
+.page.is-exiting .slide--noexiting {
+  -webkit-animation-direction: alternate-reverse;
+  animation-direction: alternate-reverse; }
+
+@media screen and (min-width: 768px) {
+  /* line 58, /Users/miguelperez/Sites/csstricks/source/stylesheets/pageTransitions.css.scss */
+  .page .slide--fadeinright-wide {
+    -webkit-animation-name: fadeInRight;
+    animation-name: fadeInRight; } }
+
+.is-loading,
+.is-loading a {
+  cursor: progress;
 }

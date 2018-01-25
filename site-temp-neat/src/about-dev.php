@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Site template Neat Smooth Sate - Home</title>
+    <title>Site template Neat Smooth Sate - About</title>
     <meta name="title" content="">
     <meta name="author" content="">
     <meta name="description" content="">
@@ -42,13 +42,14 @@
 </head>
 
 <body>
-    <div id="main" class="page page-home">
-        <div class="slide slide--fadeinup">
-            <h1>Home</h1>
-            <p>Home where everbody knows my name!</p>
-            <a href="about-dev.php">About us</a>
+    <div id="main" class="page page-about">
+        <div class="slide slide--fadeinleft">
+            <h1>About us</h1>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+            <a href="index-dev.php">Go back Home</a>
         </div>
     </div>
+
     <!--(if target dev)><!-->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../assets/js/vendor/jquery.smoothState.min.js"></script>
