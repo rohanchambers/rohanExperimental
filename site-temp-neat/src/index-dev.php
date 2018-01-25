@@ -42,7 +42,7 @@
 </head>
 
 <body>
-    <main>test</main>
+    <main>This is testing if a new branch is going to start!</main>
 
     <!--(if target dev)><!-->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
