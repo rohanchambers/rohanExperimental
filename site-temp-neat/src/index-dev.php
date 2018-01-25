@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Site template Neat 2.1</title>
+    <title>Site template Neat Barba JS</title>
     <meta name="title" content="">
     <meta name="author" content="">
     <meta name="description" content="">
@@ -42,67 +42,11 @@
 </head>
 
 <body>
-    <!-- The overlay -->
-    <div id="myNav" class="overlay">
-        <!-- Overlay content -->
-        <div class="overlay-content">
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Clients</a>
-            <a href="#">Contact</a>
-        </div>
-    </div>   
-
-    <div class="container">
-        <button class="hamburger hamburger--squeeze" type="button">
-            <span class="hamburger-box">
-                <span class="hamburger-inner"></span>
-            </span>
-        </button>
-    </div>
-
-    <section id="section-1" class="container">
-		<article id="element-1">Third column</article>
-		<article id="element-2">Third column</article>
-		<article id="element-3">Third column</article>
-    </section>
-
-    <section id="section-2" class="container">
-        <article id="element-4">Third column</article>
-        <article id="element-5">Third column</article>
-    </section>
-
-    <section id="section-3">
-        <div class="container">
-            <article id="element-6">Third column</article>
-        </div>
-    </section>
-
-    <section id="section-4">
-        <div class="full-container">
-            <article id="element-7">
-                <div class="container">
-                    <div>Third column</div>
-                </div>
-            </article>
-            <article id="element-8"></article>
-        </div>
-    </section>
-
-    <section id="section-5">
-        <div class="full-container">
-            <article id="element-8"></article>
-            <article id="element-7">
-                <div class="container">
-                    <div>Third column</div>
-                </div>
-            </article>
-        </div>
-    </section>
+    <main>test</main>
 
     <!--(if target dev)><!-->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
-    <script src="../bower_components/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="../assets/js/vendor/jquery.smoothState.min.js"></script>
     <script src="../assets/js/main.js"></script>
     <!--<!(endif)-->
     <!--(if target dist)>
