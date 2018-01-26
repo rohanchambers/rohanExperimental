@@ -47,6 +47,17 @@
         <a href="about-dev.php">About</a>
         <a href="services-dev.php">Services</a>
 
+        <!-- The overlay -->
+        <div id="myNav" class="overlay">
+            <!-- Overlay content -->
+            <div class="overlay-content">
+            <a href="about-dev.php">About</a>
+            <a href="services-dev.php">Services</a>
+                <a href="#">Clients</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>   
+        
         <div class="scene scene--fadeinleft">
             <div class="container">
                 <button class="hamburger hamburger--squeeze" type="button">

@@ -51,8 +51,8 @@
         <div id="myNav" class="overlay">
             <!-- Overlay content -->
             <div class="overlay-content">
-                <a href="about.html">About</a>
-                <a href="services.html">Services</a>
+                <a href="about-dev.php">About</a>
+                <a href="services-dev.php">Services</a>
                 <a href="#">Clients</a>
                 <a href="#">Contact</a>
             </div>

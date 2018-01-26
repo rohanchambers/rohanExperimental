@@ -1,4 +1,20 @@
+var APP = {
+};
+
+// // DOM ready
 $(function(){
+	APP.hamburger();
+	APP.smoothState();
+});
+
+APP.hamburger = function() {
+	$('.hamburger').click( function(){
+		$(this).toggleClass('is-active');
+		$('#myNav').toggleClass('isActive');
+	});
+};
+
+APP.smoothState = function() {
   'use strict';
   var $page = $('#main'),
       options = {
@@ -25,4 +41,4 @@ $(function(){
         }
       },
       smoothState = $page.smoothState(options).data('smoothState');
-});
+}
