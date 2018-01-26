@@ -42,11 +42,69 @@
 </head>
 
 <body>
-    <div id="main" class="page page-home">
-        <div class="slide slide--fadeinup">
-            <h1>Home</h1>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-            <a href="about-dev.php">About us</a>
+    <div id="main" class="page">
+        <a href="index-dev.php">Home</a>
+        <a href="about-dev.php">About</a>
+        <a href="services-dev.php">Services</a>
+
+        <!-- The overlay -->
+        <div id="myNav" class="overlay">
+            <!-- Overlay content -->
+            <div class="overlay-content">
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="#">Clients</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>   
+        
+        <div class="scene scene--fadeinleft">
+            <div class="container">
+                <button class="hamburger hamburger--squeeze" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+            </div>
+
+            <section id="section-1" class="container">
+                <article id="element-1">Third column</article>
+                <article id="element-2">Third column</article>
+                <article id="element-3">Third column</article>
+            </section>
+
+            <section id="section-2" class="container">
+                <article id="element-4">Third column</article>
+                <article id="element-5">Third column</article>
+            </section>
+
+            <section id="section-3">
+                <div class="container">
+                    <article id="element-6">Third column</article>
+                </div>
+            </section>
+
+            <section id="section-4">
+                <div class="full-container">
+                    <article id="element-7">
+                        <div class="container">
+                            <div>Third column</div>
+                        </div>
+                    </article>
+                    <article id="element-8"></article>
+                </div>
+            </section>
+
+            <section id="section-5">
+                <div class="full-container">
+                    <article id="element-8"></article>
+                    <article id="element-7">
+                        <div class="container">
+                            <div>Third column</div>
+                        </div>
+                    </article>
+                </div>
+            </section>
         </div>
     </div>
     <!--(if target dev)><!-->

@@ -18,7 +18,65 @@
 @import "vendor/_overlay";
 @import "vendor/_keyframes";
 
-.page  {
+body {
+  background-color: pink;
+}
+
+// Social media icons in SVG
+#social-svg {
+  clear: both;
+  width: 175px;
+
+    svg {
+      fill: #000;
+      width: 35px;
+      height: 35px;
+      background-color: #FFF;
+      border-radius: 35px;
+    }
+}
+
+// Temp. Elements
+#element-1 {
+  // float: right;
+  // position: relative; 
+  background-color: red;
+}
+
+#element-2 {
+  background-color: orange;
+  // Testing autoprefixing with postcss in grunt
+  display: flex;
+  column-count: 2;
+  appearance: none; 
+}
+
+#element-3 {
+  background-color: green;
+}
+
+#element-4 {
+  background-color: blue;
+}
+
+#element-5 {
+  background-color: turquoise;
+}
+
+#element-6 {
+  background-color: purple;
+}
+
+#element-7 {
+  background-color: red;
+}
+
+#element-8 {
+  background-color: orange;
+}
+
+.page-about,
+.page-services  {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -26,27 +84,23 @@
 	height: 100%;	
 }
 
-.page-home {
-	background-color: orange;
-}
+// .page-home {
+// 	background-color: orange;
+// }
 
-.page-about {
-	background-color: red;
-}
+// .page-about {
+// 	background-color: red;
+// }
 
-.page-services {
-  background-color: blue;
-}
+// .page-services {
+//   background-color: blue;
+// }
 
-.slide {
-	width: 600px;
-	margin: 0 auto;
-}
 
 /* @mixin respond-to
 ------------------------------------------------------------------- */
 /* line 6, /Users/miguelperez/Sites/csstricks/source/stylesheets/pageTransitions.css.scss */
-.page .slide {
+.page .scene {
   -webkit-animation-duration: 0.25s;
   animation-duration: 0.25s;
   -webkit-transition-timing-function: ease-in;
@@ -54,40 +108,40 @@
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both; }
 /* line 17, /Users/miguelperez/Sites/csstricks/source/stylesheets/pageTransitions.css.scss */
-.page .slide--fadein {
+.page .scene--fadein {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn; }
 /* line 22, /Users/miguelperez/Sites/csstricks/source/stylesheets/pageTransitions.css.scss */
-.page .slide--fadeinup {
+.page .scene--fadeinup {
   -webkit-animation-name: fadeInUp;
   animation-name: fadeInUp; }
 /* line 27, /Users/miguelperez/Sites/csstricks/source/stylesheets/pageTransitions.css.scss */
-.page .slide--fadeinright {
+.page .scene--fadeinright {
   -webkit-animation-name: fadeInRight;
   animation-name: fadeInRight; }
-  .page .slide--fadeinleft {
+  .page .scene--fadeinleft {
   -webkit-animation-name: fadeInLeft;
   animation-name: fadeInLeft; }
 /* line 32, /Users/miguelperez/Sites/csstricks/source/stylesheets/pageTransitions.css.scss */
-.page .slide--delayed {
+.page .scene--delayed {
   -webkit-animation-delay: 0.25s;
   animation-delay: 0.25s; }
 /* line 37, /Users/miguelperez/Sites/csstricks/source/stylesheets/pageTransitions.css.scss */
-.page.is-exiting .slide {
+.page.is-exiting .scene {
   -webkit-animation-direction: alternate-reverse;
   animation-direction: alternate-reverse; }
 /* line 42, /Users/miguelperez/Sites/csstricks/source/stylesheets/pageTransitions.css.scss */
-.page.is-exiting .slide--delayed {
+.page.is-exiting .scene--delayed {
   -webkit-animation-delay: 0s;
   animation-delay: 0s; }
 /* line 47, /Users/miguelperez/Sites/csstricks/source/stylesheets/pageTransitions.css.scss */
-.page.is-exiting .slide--noexiting {
+.page.is-exiting .scene--noexiting {
   -webkit-animation-direction: alternate-reverse;
   animation-direction: alternate-reverse; }
 
 @media screen and (min-width: 768px) {
   /* line 58, /Users/miguelperez/Sites/csstricks/source/stylesheets/pageTransitions.css.scss */
-  .page .slide--fadeinright-wide {
+  .page .scene--fadeinright-wide {
     -webkit-animation-name: fadeInRight;
     animation-name: fadeInRight; } }
 

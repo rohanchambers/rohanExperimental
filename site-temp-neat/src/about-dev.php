@@ -43,10 +43,30 @@
 
 <body>
     <div id="main" class="page page-about">
-        <div class="slide slide--fadeinleft">
-            <h1>About us</h1>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-            <a href="services-dev.php">Services</a>
+        <a href="index-dev.php">Home</a>
+        <a href="about-dev.php">About</a>
+        <a href="services-dev.php">Services</a>
+                
+        <div class="scene scene--fadeinleft">
+            <div class="container">
+                <button class="hamburger hamburger--squeeze" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+            </div>
+
+            <section id="section-1" class="container">
+                <article id="element-1">Third column</article>
+                <article id="element-2">Third column</article>
+                <article id="element-3">Third column</article>
+            </section>
+
+            <section id="section-2" class="container">
+                <article id="element-4">Third column</article>
+                <article id="element-5">Third column</article>
+            </section>
+
         </div>
     </div>
 
