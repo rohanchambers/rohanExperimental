@@ -1166,7 +1166,7 @@ Copyright (c) 2014 Daniel Eden
   animation-name: zoomOutUp; }
 
 .page {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -1177,6 +1177,9 @@ Copyright (c) 2014 Daniel Eden
 
 .page-about {
   background-color: red; }
+
+.page-services {
+  background-color: blue; }
 
 .slide {
   width: 600px;
