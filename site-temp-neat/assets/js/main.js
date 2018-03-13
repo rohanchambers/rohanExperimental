@@ -7,16 +7,10 @@ $(function(){
 	APP.smoothState();
 });
 
-APP.hamburger = function() {
-	$('.hamburger').click( function(){
-		$(this).toggleClass('is-active');
-		$('#myNav').toggleClass('isActive');
-	});
-};
-
 APP.smoothState = function() {
   'use strict';
-  var $page = $('#main'),
+  var $page = $('#main .scene'),
+
       options = {
         debug: true,
         prefetch: true,
@@ -30,6 +24,14 @@ APP.smoothState = function() {
             smoothState.restartCSSAnimations();
           }
         },
+        onProgress: {
+          // How long this animation takes
+          duration: 10000,
+          // A function that dictates the animations that take place
+          render: function ($container) {
+            console.log('Testing this on progress!')
+          }
+        },        
         onReady: {
           duration: 0,
           render: function ($container, $newContent) {
@@ -42,3 +44,11 @@ APP.smoothState = function() {
       },
       smoothState = $page.smoothState(options).data('smoothState');
 }
+
+APP.hamburger = function() {
+  $('.hamburger').click( function(){
+    console.log(0);
+    $(this).toggleClass('is-active');
+    $('#myNav').toggleClass('isActive');
+  });
+};

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Site template Neat Smooth Sate - About</title>
+    <title>Smooth State - About</title>
     <meta name="title" content="">
     <meta name="author" content="">
     <meta name="description" content="">
@@ -45,28 +45,29 @@
     <div id="main" class="page page-about">
         <a href="index-dev.php">Home</a>
         <a href="about-dev.php">About</a>
-        <a href="services-dev.php">Services</a>
+        <a href="services-dev.php">Services</a>  
 
         <!-- The overlay -->
         <div id="myNav" class="overlay">
             <!-- Overlay content -->
             <div class="overlay-content">
+                <a href="index-dev.php">Home</a>
                 <a href="about-dev.php">About</a>
                 <a href="services-dev.php">Services</a>
                 <a href="#">Clients</a>
                 <a href="#">Contact</a>
             </div>
-        </div>   
-                        
-        <div class="scene scene--fadeinleft">
-            <div class="container">
-                <button class="hamburger hamburger--squeeze" type="button">
-                    <span class="hamburger-box">
-                        <span class="hamburger-inner"></span>
-                    </span>
-                </button>
-            </div>
+        </div>  
 
+        <div class="container">
+            <button class="hamburger hamburger--squeeze" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+        </div>
+                                
+        <div id="scene-a" class="scene scene--fadein">
             <section id="section-1" class="container">
                 <article id="element-1">Third column</article>
                 <article id="element-2">Third column</article>

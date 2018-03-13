@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Site template Neat Smooth Sate - Services</title>
+    <title>Smooth State - Services</title>
     <meta name="title" content="">
     <meta name="author" content="">
     <meta name="description" content="">
@@ -51,22 +51,22 @@
         <div id="myNav" class="overlay">
             <!-- Overlay content -->
             <div class="overlay-content">
-            <a href="about-dev.php">About</a>
-            <a href="services-dev.php">Services</a>
+                <a href="index-dev.php">Home</a>
+                <a href="about-dev.php">About</a>
+                <a href="services-dev.php">Services</a>
                 <a href="#">Clients</a>
                 <a href="#">Contact</a>
             </div>
-        </div>   
-        
-        <div class="scene scene--fadeinleft">
-            <div class="container">
-                <button class="hamburger hamburger--squeeze" type="button">
-                    <span class="hamburger-box">
-                        <span class="hamburger-inner"></span>
-                    </span>
-                </button>
-            </div>
-                        
+        </div>  
+
+        <div class="container">
+            <button class="hamburger hamburger--squeeze" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+        </div>        
+        <div id="scene-a" class="scene scene--fadein">                                                
             <section id="section-4">
                 <div class="full-container">
                     <article id="element-7">
