@@ -1,5 +1,7 @@
 function getposts() {
-	var token = '348944636.06437e2.a61abe8767234f368b295176d5984115', // learn how to obtain it below
+	var token = '348944636.06437e2.471371f8232d413795b11b1bde13f353', // learn how to obtain it below
+	// This token might run out of date in which case follow instructions to get new one at
+	// https://jelled.com/instagram/access-token
 	userid = 348944636; // User ID - get it in source HTML of your Instagram profile or look at the next example :)
 	var nexturl = 'https://api.instagram.com/v1/users/' + userid + '/media/recent/?access_token=' + token;
 
