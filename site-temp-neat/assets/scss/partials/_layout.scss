@@ -63,18 +63,19 @@ $large-desktop: (
 	}
 
 #section-1 {
+	background: orange;
 	article {
 		@include grid-media($small-mobile) {
 			@include grid-column(12);
 		}
 
 		@include grid-media($mobile) {
-			@include grid-column(6);
 			@include grid-container;
 		}
 
 		@include grid-media($tablet) {
 			@include grid-column(4);
+			@include grid-push(4);
 		}
 	}
 
@@ -88,51 +89,59 @@ $large-desktop: (
 }
 
 #section-2 {
+	background: blue;	
 	article {
+		@include grid-media($small-mobile) {
+			@include grid-column(12);
+		}
+
 		@include grid-media($mobile) {
-			@include grid-column(6);
+			@include grid-container;
+		}
+
+		@include grid-media($tablet) {
+			@include grid-column(4);
+			@include grid-push(4);
 		}
 	}
 }
 
 #section-3 {
-	margin-bottom: 10px;
-	background-color: black;
-}
-
-#section-4,
-#section-5 {
-	@include grid-media($mobile) {
-		@include grid-collapse;
-	}
-
+	background-color: turquoise;
+	
 	article {
-		margin-bottom: 0;
-		
-		@include grid-collapse;
-		@include grid-column(12);
-
-		@include grid-media($mobile) {
-			@include grid-column(6);
-			padding: 0;
+		@include grid-media($small-mobile) {
+			@include grid-column(12);
 		}
 
-			.container {
-				padding-right: 0;
-				div {
-					box-sizing: border-box;
-					margin-left: 0;
-					min-height: 200px;
-					padding: 10px;
-					background: blue;
+		@include grid-media($mobile) {
+			@include grid-container;
+		}
 
-						@include grid-media($desktop) {
-							float: right;
-							width: 507px;
-						}
-				}
-			}
-	}
+		@include grid-media($tablet) {
+			@include grid-column(4);
+			@include grid-push(4);
+		}
+	}	
+}
+
+#section-4 {
+	background-color: purple;
+	
+	article {
+		@include grid-media($small-mobile) {
+			@include grid-column(12);
+		}
+
+		@include grid-media($mobile) {
+			@include grid-container;
+		}
+
+		@include grid-media($tablet) {
+			@include grid-column(4);
+			@include grid-push(4);
+		}
+	}	
 }
 
 #section-5 {
