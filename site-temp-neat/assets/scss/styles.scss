@@ -4,24 +4,206 @@
 
 // Custom SASS imports
 // Partials
-@import "partials/_base";
-@import "partials/_typography";
-@import "partials/_nav";
-@import "partials/_layout";
-
-// Modules
-@import "modules/_common";
-@import "modules/_mixins";
-
-// Vendor
-@import "vendor/_hamburgers";
-@import "vendor/_overlay";
-
-.section {
-	height: 1000px;
-	width: 100%;
+.parallaxParent {
+	height: 100vh;
 	overflow: hidden;
 }
+.parallaxParent > .image {
+	height: 200%;
+	position: relative;
+	top: -100%;
+}
+.content {
+	position: absolute;
+	width: 100%;
+	height: 200px;
+	text-align: center;
+	color: black;
+	z-index: 1;
+}
+.spacer.s_viewport {
+	min-width: 100%;
+	min-height: 100%;
+}
+.spacer {
+	text-align: center;
+	min-height: 100px;
+	background: #c7e1ff url("../img/example_bg_spacer_v.gif");
+}
+
+
+.spacer.s0 {
+	min-height: 1px;
+}
+.spacer.s1 {
+	min-height: 100px;
+}
+.spacer.s2 {
+	min-height: 200px;
+}
+.spacer.s3 {
+	min-height: 300px;
+}
+.spacer.s4 {
+	min-height: 400px;
+}
+.spacer.s5 {
+	min-height: 500px;
+}
+.spacer.s6 {
+	min-height: 600px;
+}
+.spacer.s7 {
+	min-height: 700px;
+}
+.spacer.s8 {
+	min-height: 800px;
+}
+.spacer.s9 {
+	min-height: 900px;
+}
+.spacer.s10 {
+	min-height: 1000px;
+}
+.spacer.s_viewport {
+	min-height: 100%;
+}
+.horizontal .spacer {
+	background-image: url("../img/example_bg_spacer_h.gif");
+	margin-bottom: 0;
+	min-height: initial;
+	min-width: 100px;
+	height: 100%;
+	display: inline-block;
+	vertical-align: top;
+}
+.horizontal .spacer.s0 {
+	min-width: 1px;
+}
+.horizontal .spacer.s1 {
+	min-width: 100px;
+}
+.horizontal .spacer.s2 {
+	min-width: 200px;
+}
+.horizontal .spacer.s3 {
+	min-width: 300px;
+}
+.horizontal .spacer.s4 {
+	min-width: 400px;
+}
+.horizontal .spacer.s5 {
+	min-width: 500px;
+}
+.horizontal .spacer.s6 {
+	min-width: 600px;
+}
+.horizontal .spacer.s7 {
+	min-width: 700px;
+}
+.horizontal .spacer.s8 {
+	min-width: 800px;
+}
+.horizontal .spacer.s9 {
+	min-width: 900px;
+}
+.horizontal .spacer.s10 {
+	min-width: 1000px;
+}
+.spacer.s_viewport {
+	min-width: 100%;
+}
+
+
+
+
+.box1, .box2, .box3 {
+	display: inline-block;
+	position: relative;
+	border-radius: 8px;
+	border: 0px solid white;
+	text-align: center;
+	vertical-align: middle;
+	padding: 0 5px;
+}
+.box1 {
+	min-width: 100px;
+	height: 100px;
+	margin: 0 auto 0 auto;
+}
+.box2 {
+	min-width: 50px;
+	height: 50px;
+	margin: 25px auto 25px auto;
+}
+.box3 {
+	min-width: 26px;
+	height: 26px;
+	margin: 37px auto 37px auto;
+}
+.horizontal .box1 {
+	top: 50%;
+	max-height: 100px;
+	margin: -50px 0 auto 0;
+}
+.horizontal .box2 {
+	top: 50%;
+	max-height: 50px;
+	margin: -25px 25px auto 25px;
+}
+.horizontal .box3 {
+	top: 50%;
+	max-height: 26px;
+	margin: -13px 37px auto 37px;
+}
+.box1 p, .box2 p, .box3 p {
+	margin: 5px 15px 5px 15px;
+	font-size: 13px;
+	font-weight: lighter;
+	color: black;
+}
+.box1 p:first-child {
+	margin-top: 27px;
+}
+.box1 a, .box2 a, .box3 a {
+	color: black;
+}
+
+
+
+
+
+
+.container {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.section {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+// Temp. Elements
+#section-1 {
+	background-color: blue;
+}
+
+#section-2 {
+	background-color: red;
+}
+
+#section-3 {
+	background-color: orange;
+}
+
+#section-4 {
+	background-color: green;
+}
+
 
 // Temp. Elements
 #element-1 {

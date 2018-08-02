@@ -24,25 +24,78 @@
 </head>
 
 <body>
-    <section id="section-1" class="section">
-        <h1>Section 1</h1>
-		<article id="element-1">Third column</article>
-    </section>
+    <!-- <div class="spacer s0"></div> -->
+    <div id="parallax1" class="parallaxParent">
+        <div class="content">
+            <h2>Lager, The Beauty of Brewing (Slide 1)</h2>
+        </div>        
+        <div class="image" style="background-image: url(../assets/img/example_parallax_bg1.png);"></div>
+    </div>
 
-    <section id="section-2" class="section">
-        <h1>Section 2</h1>
-        <article id="element-2">Third column</article>
-    </section>
+<!--     <div class="spacer s1">
+        <div class="box2 blue">
+            <p>Content 1</p>
+        </div>
+    </div>
+    <div class="spacer s0"></div> -->
 
-    <section id="section-3" class="section">
-        <h1>Section 3</h1>
-        <article id="element-3">Third column</article>
-    </section>
 
-    <section id="section-4" class="section">
-        <h1>Section 4</h1>
-        <article id="element-4">Third column</article>
-    </section>    
+    <div id="parallax2" class="parallaxParent">
+        <div class="content">
+            <h2>An introduction (Slide 2)</h2>
+        </div>   
+        <div class="image" style="background-image: url(../assets/img/example_parallax_bg2.png);"></div>
+    </div>
+
+<!--     <div class="spacer s1">
+        <div class="box2 blue">
+            <p>Content 2</p>
+        </div>
+    </div>
+    <div class="spacer s0"></div> -->
+
+
+    <div id="parallax3" class="parallaxParent">
+        <div class="content">
+            <h2>It all starts with the Barley (Slide 3)</h2>
+        </div>             
+        <div class="image" style="background-image: url(../assets/img/example_parallax_bg3.png);"></div>
+    </div>
+<!--     <div class="spacer s2"></div>
+    <div class="spacer s0"></div> -->
+
+
+    <div id="parallax4" class="parallaxParent">
+        <div class="content">
+            <h2>Barley 360 animation (Slide 4)</h2>
+        </div>               
+        <div class="image" style="background-image: url(../assets/img/example_parallax_bg1.png);"></div>
+    </div>
+    <!-- <div class="spacer s2"></div>   -->  
+
+    <div class="spacer s4">
+        <div class="box2 blue">
+            <p>Content 2</p>
+        </div>
+    </div>
+    <div class="spacer s0"></div>
+
+
+    <div id="parallax5" class="parallaxParent">
+        <div class="content">
+            <h2>Water (Slide 5)</h2>
+        </div>               
+        <div class="image" style="background-image: url(../assets/img/example_parallax_bg2.png);"></div>
+    </div>
+
+    <div id="parallax6" class="parallaxParent">
+        <div class="content">
+            <h2>Bubbles (Slide 6)</h2>
+        </div>               
+        <div class="image" style="background-image: url(../assets/img/example_parallax_bg3.png);"></div>
+    </div>
+    <div class="spacer s8"></div>  
+
 
     <!--(if target dev)><!-->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
