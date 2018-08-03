@@ -1,4 +1,5 @@
 .parallaxParent {
+  position: relative;
   height: 100vh;
   overflow: hidden; }
 
@@ -14,6 +15,35 @@
   text-align: center;
   color: black;
   z-index: 1; }
+
+.element {
+  position: absolute;
+  z-index: 0;
+  width: 350px;
+  height: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white; }
+
+#element-1 {
+  background-color: blue;
+  bottom: 35%; }
+
+#element-2 {
+  background-color: orange;
+  bottom: -15%;
+  left: 50%; }
+
+#element-3 {
+  background-color: red;
+  bottom: -15%;
+  left: 50%; }
+
+#element-4 {
+  background-color: green;
+  bottom: -15%;
+  left: 50%; }
 
 .spacer.s_viewport {
   min-width: 100%;
@@ -59,48 +89,6 @@
 
 .spacer.s_viewport {
   min-height: 100%; }
-
-.horizontal .spacer {
-  background-image: url("../img/example_bg_spacer_h.gif");
-  margin-bottom: 0;
-  min-height: initial;
-  min-width: 100px;
-  height: 100%;
-  display: inline-block;
-  vertical-align: top; }
-
-.horizontal .spacer.s0 {
-  min-width: 1px; }
-
-.horizontal .spacer.s1 {
-  min-width: 100px; }
-
-.horizontal .spacer.s2 {
-  min-width: 200px; }
-
-.horizontal .spacer.s3 {
-  min-width: 300px; }
-
-.horizontal .spacer.s4 {
-  min-width: 400px; }
-
-.horizontal .spacer.s5 {
-  min-width: 500px; }
-
-.horizontal .spacer.s6 {
-  min-width: 600px; }
-
-.horizontal .spacer.s7 {
-  min-width: 700px; }
-
-.horizontal .spacer.s8 {
-  min-width: 800px; }
-
-.horizontal .spacer.s9 {
-  min-width: 900px; }
-
-.horizontal .spacer.s10 {
-  min-width: 1000px; }
 
 .spacer.s_viewport {
   min-width: 100%; }
@@ -156,18 +144,6 @@
 .box1 a, .box2 a, .box3 a {
   color: black; }
 
-.container {
-  width: 100%;
-  height: 100%;
-  overflow: hidden; }
-
-.section {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0; }
-
 #section-1 {
   background-color: blue; }
 
@@ -179,18 +155,6 @@
 
 #section-4 {
   background-color: green; }
-
-#element-1 {
-  background-color: blue;
-  margin-top: 400px; }
-
-#element-2 {
-  background-color: red; }
-
-#element-3 {
-  background-color: green;
-  margin-top: -250px;
-  opacity: 0; }
 
 #element-4 {
   background-color: blue; }

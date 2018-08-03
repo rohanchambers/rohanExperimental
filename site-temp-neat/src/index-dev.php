@@ -26,10 +26,10 @@
 <body>
     <!-- <div class="spacer s0"></div> -->
     <div id="parallax1" class="parallaxParent">
-        <div class="content">
+        <div class="image" style="background-image: url(../assets/img/example_parallax_bg1.png);"></div>
+        <div id="element-1" class="element">
             <h2>Lager, The Beauty of Brewing (Slide 1)</h2>
         </div>        
-        <div class="image" style="background-image: url(../assets/img/example_parallax_bg1.png);"></div>
     </div>
 
 <!--     <div class="spacer s1">
@@ -45,6 +45,17 @@
             <h2>An introduction (Slide 2)</h2>
         </div>   
         <div class="image" style="background-image: url(../assets/img/example_parallax_bg2.png);"></div>
+        <div id="element-2" class="element">
+            <h2>Barley</h2>
+        </div>   
+
+        <div id="element-3" class="element">
+            <h2>Water</h2>
+        </div>   
+
+        <div id="element-4" class="element">
+            <h2>Hops</h2>
+        </div>                           
     </div>
 
 <!--     <div class="spacer s1">
