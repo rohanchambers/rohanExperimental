@@ -8,6 +8,24 @@
   position: relative;
   top: -100%; }
 
+#parallax1 .image {
+  background-image: url(../../assets/img/example_parallax_bg1.png); }
+
+#parallax2 .image {
+  background-image: url(../../assets/img/example_parallax_bg2.png); }
+
+#parallax3 .image {
+  background-image: url(../../assets/img/example_parallax_bg3.png); }
+
+#parallax4 .image {
+  background-image: url(../../assets/img/example_parallax_bg1.png); }
+
+#parallax5 .image {
+  background-image: url(../../assets/img/example_parallax_bg2.png); }
+
+#parallax6 .image {
+  background-image: url(../../assets/img/example_parallax_bg3.png); }
+
 .content {
   position: absolute;
   width: 100%;
@@ -26,24 +44,44 @@
   text-align: center;
   color: white; }
 
-#element-1 {
+#element-1,
+#element-5 {
   background-color: blue;
   bottom: 35%; }
 
 #element-2 {
   background-color: orange;
-  bottom: -15%;
+  bottom: 0;
   left: 50%; }
 
 #element-3 {
   background-color: red;
-  bottom: -15%;
+  bottom: 0;
   left: 50%; }
 
 #element-4 {
   background-color: green;
-  bottom: -15%;
+  bottom: 0;
   left: 50%; }
+
+#element-5 {
+  z-index: 1;
+  bottom: 0; }
+
+#element-6 {
+  background-color: purple;
+  height: 400px;
+  bottom: 0;
+  left: auto;
+  right: 0;
+  transform: none;
+  z-index: 1; }
+
+#element-7 {
+  background-color: red;
+  top: 0%;
+  left: 50%;
+  z-index: 1; }
 
 .spacer.s_viewport {
   min-width: 100%;
@@ -143,30 +181,3 @@
 
 .box1 a, .box2 a, .box3 a {
   color: black; }
-
-#section-1 {
-  background-color: blue; }
-
-#section-2 {
-  background-color: red; }
-
-#section-3 {
-  background-color: orange; }
-
-#section-4 {
-  background-color: green; }
-
-#element-4 {
-  background-color: blue; }
-
-#element-5 {
-  background-color: turquoise; }
-
-#element-6 {
-  background-color: purple; }
-
-#element-7 {
-  background-color: red; }
-
-#element-8 {
-  background-color: orange; }
