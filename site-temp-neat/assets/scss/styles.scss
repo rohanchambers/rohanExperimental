@@ -58,20 +58,24 @@
 
 #element-2 {
 	background-color: orange;
-	bottom: 0;	
+	bottom: 35%;	
 	left: 50%;	
+	height: 300px;	
 }
 
 #element-3 {
 	background-color: red;
-	bottom: 0;	
+	bottom: 35%;	
 	left: 50%;
+	height: 300px;		
+	z-index: 1;
 }
 
 #element-4 {
 	background-color: green;
-	bottom: 0;
+	bottom: 35%;
 	left: 50%;	
+	height: 300px;		
 }
 
 #element-5 {
@@ -91,8 +95,9 @@
 
 #element-7 {
 	background-color: red;
-	top: 0%;
-	left: 50%;	
+	top: -50%;
+	left: 50%;
+	// opacity: 1;	
 	z-index: 1;
 }
 
