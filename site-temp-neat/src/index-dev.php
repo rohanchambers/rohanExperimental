@@ -80,16 +80,32 @@
 
     <div id="parallax4" class="parallaxParent">
         <div id="element-7" class="element">
-            <h2>Big Barley</h2>
-        </div>            
+            <h2>Barley 360</h2>
+        </div>  
+
+        <div id="element-8" class="element">
+            <h2>Natural</h2>
+            <p>A grain bursting with goodness, naturally containing starch, protein and fibre.</p>
+        </div>  
+
+        <div id="element-9" class="element">
+            <h2>Soaking</h2>
+            <p>First the barley is carefully soaked to start the germination process. This naturally releases enzymes that unlock the goodness from the grain.</p>
+        </div>  
+
+        <div id="element-10" class="element">
+            <h2>Malting</h2>
+            <p>After soaking, the barley is gently heated to dry out over the course of a few days. This meticulous process is called malting.</p>
+        </div>                       
+
         <div class="image"></div>
     </div>
 
-    <div class="spacer s4">
+<!--     <div class="spacer s4">
         <div class="box2 blue">
             <p>Content 2</p>
         </div>
-    </div>
+    </div> -->
 
 
 
