@@ -8,6 +8,16 @@
   position: relative;
   top: -100%; }
 
+a, span {
+  display: inline-block;
+  background-color: white;
+  color: black;
+  padding: 5px;
+  text-decoration: underline; }
+  a:hover, span:hover {
+    text-decoration: none;
+    cursor: pointer; }
+
 #parallax1 .image {
   background-image: url(../../assets/img/example_parallax_bg1.png); }
 
@@ -89,17 +99,60 @@
 
 #element-8 {
   background: orange;
-  left: 25%;
+  left: 20%;
   bottom: -50%;
   z-index: 1; }
 
 #element-9 {
   background: orange;
-  left: 75%;
+  left: 80%;
   bottom: -50%;
   z-index: 1; }
 
 #element-10 {
+  background: orange;
+  left: 20%;
+  bottom: -50%;
+  z-index: 1; }
+
+#element-11 {
+  background: turquoise;
+  left: 25%;
+  bottom: 40%;
+  z-index: 1; }
+
+#element-12 {
+  background: black;
+  left: 50%;
+  bottom: -50%;
+  z-index: 10; }
+
+#element-13 {
+  background: red;
+  left: 75%;
+  bottom: -50%;
+  z-index: 1; }
+
+#element-14 {
+  background: blue;
+  left: 33%;
+  bottom: -50%;
+  z-index: 1; }
+
+#element-15 {
+  background: pink;
+  left: 66%;
+  bottom: -50%;
+  z-index: 1; }
+
+#element-16 {
+  background: blue;
+  left: 50%;
+  width: 800px;
+  bottom: -50%;
+  z-index: 1; }
+
+#element-17 {
   background: orange;
   left: 25%;
   bottom: -50%;

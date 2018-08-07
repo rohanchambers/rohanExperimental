@@ -29,22 +29,17 @@
         <div class="image"></div>
         <div id="element-1" class="element">
             <h2>Lager, The Beauty of Brewing (Slide 1)</h2>
+            <a href="#parallax2">Next slide</a>
         </div>        
     </div>
-
-<!--     <div class="spacer s1">
-        <div class="box2 blue">
-            <p>Content 1</p>
-        </div>
-    </div>
-    <div class="spacer s0"></div> -->
-
 
     <div id="parallax2" class="parallaxParent">
         <div class="content">
             <h2>An introduction (Slide 2)</h2>
+            <a href="#parallax3">Next slide</a>
         </div>   
         <div class="image"></div>
+
         <div id="element-2" class="element">
             <h2>Barley</h2>
         </div>   
@@ -58,23 +53,15 @@
         </div>                           
     </div>
 
-<!--     <div class="spacer s1">
-        <div class="box2 blue">
-            <p>Content 2</p>
-        </div>
-    </div>
-    <div class="spacer s0"></div> -->
-
-
     <div id="parallax3" class="parallaxParent">    
         <div id="element-5" class="element">
             <h2>It all start with the Barley (Slide 3)</h2>
+            <span class="cta-element-8">Next slide</span>
         </div>   
 
         <div id="element-6" class="element">
             <h2>Big Barley</h2>
         </div>           
-
         <div class="image"></div>
     </div>
 
@@ -86,43 +73,49 @@
         <div id="element-8" class="element">
             <h2>Natural</h2>
             <p>A grain bursting with goodness, naturally containing starch, protein and fibre.</p>
+            <span class="cta-element-9">Next slide</span>
         </div>  
 
         <div id="element-9" class="element">
             <h2>Soaking</h2>
             <p>First the barley is carefully soaked to start the germination process. This naturally releases enzymes that unlock the goodness from the grain.</p>
+            <span class="cta-element-10">Next slide</span>
         </div>  
 
         <div id="element-10" class="element">
             <h2>Malting</h2>
             <p>After soaking, the barley is gently heated to dry out over the course of a few days. This meticulous process is called malting.</p>
+            <a href="#parallax5">Next slide</a>
         </div>                       
 
         <div class="image"></div>
     </div>
 
-<!--     <div class="spacer s4">
-        <div class="box2 blue">
-            <p>Content 2</p>
-        </div>
-    </div> -->
-
-
-
     <div id="parallax5" class="parallaxParent">
-        <div class="content">
-            <h2>Water (Slide 5)</h2>
-        </div>               
-        <div class="image"></div>
+        <div id="element-11" class="element"></div>  
+        <div id="element-12" class="element">
+            <h2>Next we have water</h2>
+            <p>Water is the main ingredient in lager, it can make up an incredible 95% of the finished product.</p>
+            <a href="#parallax6">Next slide</a>     
+        </div>  
+        <div id="element-13" class="element"></div>                
+        <div id="element-14" class="element"></div>                
+        <div id="element-15" class="element"></div> 
+        <div id="element-16" class="element"></div> 
+        <div id="element-17" class="element"></div>         
+        
+        <div class="image"></div>                                
     </div>
 
     <div id="parallax6" class="parallaxParent">
         <div class="content">
-            <h2>Bubbles (Slide 6)</h2>
+            <h2>Video repeat (Slide 6)</h2>
+            <a href="#parallax1">Next slide</a>
         </div>               
         <div class="image"></div>
     </div>
-    <div class="spacer s8"></div>  
+
+    <!-- <div class="spacer s8"></div>   -->
 
 
     <!--(if target dev)><!-->
@@ -130,8 +123,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
     <script src="../bower_components/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js"></script>
     <script src="../bower_components/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/plugins/CSSPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/plugins/ScrollToPlugin.min.js"></script>    
     <script src="../bower_components/scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
     <script src="../assets/js/main.js"></script>
+
+
+
     <!--<!(endif)-->
     <!--(if target dist)>
     <script src="../assets/js/compiled.min.js?{{rlsdate}}"></script>
