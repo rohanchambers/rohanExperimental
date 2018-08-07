@@ -1,6 +1,21 @@
 // Bourbon and Neat  2.1
 @import "../../bower_components/bourbon/app/assets/stylesheets/bourbon";
 @import "../../bower_components/neat/core/neat";
+// Partials
+@import "partials/_base";
+@import "partials/_typography";
+
+footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	padding: 10px 0;
+	background: black;	
+	color: white;
+	z-index: 1000;
+	text-align: center;
+	font-size: 14px;
+}
 
 // Custom SASS imports
 // Partials
@@ -34,27 +49,39 @@ a, span {
 #parallax4 .image { background-image: url(../../assets/img/example_parallax_bg1.png);}
 #parallax5 .image { background-image: url(../../assets/img/example_parallax_bg2.png);}
 #parallax6 .image { background-image: url(../../assets/img/example_parallax_bg3.png);}
+#parallax7 .image { background-image: url(../../assets/img/example_parallax_bg1.png);}
 
 .content {
 	position: absolute;
-	width: 100%;
+	top: 2%;
+	width: 50%;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
 	height: 200px;
 	text-align: center;
-	color: black;
 	z-index: 1;
+		
+		p {
+			color: black;
+		}
 }
 
 .element {
+	box-sizing: border-box;
 	position: absolute;
 	z-index: 0;	
 	width: 350px;
-	height: 200px;
+	min-height: 200px;
+	padding: 10px;
 	left: 50%;
 	-webkit-transform: translateX(-50%);
 	transform: translateX(-50%);
 	text-align: center;
 	color: white;
 }
+
+
 
 // Temp. Elements
 #element-1,
@@ -69,12 +96,14 @@ a, span {
 	bottom: 35%;	
 	left: 50%;	
 	height: 300px;	
+	width: 300px;
 }
 
 #element-3 {
 	background-color: red;
 	bottom: 35%;	
 	left: 50%;
+	width: 300px;	
 	height: 300px;		
 	z-index: 1;
 }
@@ -82,8 +111,11 @@ a, span {
 #element-4 {
 	background-color: green;
 	bottom: 35%;
+	//left: auto;
 	left: 50%;	
-	height: 300px;		
+	width: 300px;	
+	height: 300px;	
+	z-index: 10;
 }
 
 #element-5 {
@@ -105,7 +137,6 @@ a, span {
 	background-color: red;
 	top: -50%;
 	left: 50%;
-	// opacity: 1;	
 	z-index: 1;
 }
 

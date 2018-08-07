@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Site template Neat 2.1 | Scroll magic 2.0.5</title>
+    <title>Site template Neat 2.1 | Scroll magic 2.0.5 | GSAP 2</title>
     <meta name="title" content="">
     <meta name="author" content="">
     <meta name="description" content="">
@@ -28,63 +28,67 @@
     <div id="parallax1" class="parallaxParent">
         <div class="image"></div>
         <div id="element-1" class="element">
-            <h2>Lager, The Beauty of Brewing (Slide 1)</h2>
+            <h2>Lorem Ipsum (Slide 1)</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus libero nec nibh rhoncus, nec hendrerit turpis cursus. Nullam mollis tempus purus, eu rhoncus lacus accumsan sit amet. </p>
             <a href="#parallax2">Next slide</a>
         </div>        
     </div>
 
     <div id="parallax2" class="parallaxParent">
         <div class="content">
-            <h2>An introduction (Slide 2)</h2>
+            <h2>Lorem Ipsum  (Slide 2)</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus libero nec nibh rhoncus, nec hendrerit turpis cursus.</p>
             <a href="#parallax3">Next slide</a>
         </div>   
         <div class="image"></div>
 
         <div id="element-2" class="element">
-            <h2>Barley</h2>
+            <h2>Lorem Ipsum 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus libero nec nibh rhoncus, nec hendrerit turpis cursus.</p>
         </div>   
 
         <div id="element-3" class="element">
-            <h2>Water</h2>
+            <h2>Lorem Ipsum 2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus libero nec nibh rhoncus, nec hendrerit turpis cursus.</p>
         </div>   
 
         <div id="element-4" class="element">
-            <h2>Hops</h2>
+            <h2>Lorem Ipsum 3</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus libero nec nibh rhoncus, nec hendrerit turpis cursus.</p>
         </div>                           
     </div>
 
     <div id="parallax3" class="parallaxParent">    
         <div id="element-5" class="element">
-            <h2>It all start with the Barley (Slide 3)</h2>
+            <h2>Lorem Ipsum (Slide 3)</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus libero nec nibh rhoncus, nec hendrerit turpis cursus.</p>
             <span class="cta-element-8">Next slide</span>
         </div>   
 
-        <div id="element-6" class="element">
-            <h2>Big Barley</h2>
-        </div>           
+        <div id="element-6" class="element"></div>           
         <div class="image"></div>
     </div>
 
     <div id="parallax4" class="parallaxParent">
         <div id="element-7" class="element">
-            <h2>Barley 360</h2>
+            <h2>(Slide 4)</h2>
         </div>  
 
         <div id="element-8" class="element">
-            <h2>Natural</h2>
-            <p>A grain bursting with goodness, naturally containing starch, protein and fibre.</p>
+            <h2>Lorem Ipsum</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus libero nec nibh rhoncus, nec hendrerit turpis cursus. Nullam mollis tempus purus, eu rhoncus lacus accumsan sit amet.</p>
             <span class="cta-element-9">Next slide</span>
         </div>  
 
         <div id="element-9" class="element">
-            <h2>Soaking</h2>
-            <p>First the barley is carefully soaked to start the germination process. This naturally releases enzymes that unlock the goodness from the grain.</p>
+            <h2>Lorem Ipsum</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus libero nec nibh rhoncus, nec hendrerit turpis cursus. Nullam mollis tempus purus, eu rhoncus lacus accumsan sit amet.</p>
             <span class="cta-element-10">Next slide</span>
         </div>  
 
         <div id="element-10" class="element">
-            <h2>Malting</h2>
-            <p>After soaking, the barley is gently heated to dry out over the course of a few days. This meticulous process is called malting.</p>
+            <h2>Lorem Ipsum</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus libero nec nibh rhoncus, nec hendrerit turpis cursus. Nullam mollis tempus purus, eu rhoncus lacus accumsan sit amet.</p>
             <a href="#parallax5">Next slide</a>
         </div>                       
 
@@ -94,8 +98,8 @@
     <div id="parallax5" class="parallaxParent">
         <div id="element-11" class="element"></div>  
         <div id="element-12" class="element">
-            <h2>Next we have water</h2>
-            <p>Water is the main ingredient in lager, it can make up an incredible 95% of the finished product.</p>
+            <h2>Lorem ipsum (Slide 5)</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus libero nec nibh rhoncus, nec hendrerit turpis cursus. Nullam mollis tempus purus, eu rhoncus lacus accumsan sit amet.</p>
             <a href="#parallax6">Next slide</a>     
         </div>  
         <div id="element-13" class="element"></div>                
@@ -109,26 +113,24 @@
 
     <div id="parallax6" class="parallaxParent">
         <div class="content">
-            <h2>Video repeat (Slide 6)</h2>
-            <a href="#parallax1">Next slide</a>
+            <h2>Lorem ipsum (Slide 6)</h2>
+            <p>Reveal Background Video Repeat</p>
+            <a href="#parallax1">Back to top</a>
         </div>               
         <div class="image"></div>
     </div>
 
-    <!-- <div class="spacer s8"></div>   -->
 
-
+    <footer>Protoype site by Slam Dunk Digital</footer>
     <!--(if target dev)><!-->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
+    <script src="../bower_components/gsap/src/minified/TweenMax.min.js"></script>
     <script src="../bower_components/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js"></script>
     <script src="../bower_components/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/plugins/CSSPlugin.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/plugins/ScrollToPlugin.min.js"></script>    
+    <script src="../bower_components/gsap/src/minified/plugins/CSSPlugin.min.js"></script>
+    <script src="../bower_components/gsap/src/minified/plugins/ScrollToPlugin.min.js"></script>    
     <script src="../bower_components/scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
     <script src="../assets/js/main.js"></script>
-
-
 
     <!--<!(endif)-->
     <!--(if target dist)>

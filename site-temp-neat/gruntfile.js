@@ -57,7 +57,7 @@ module.exports = function(grunt){
 	            options: {
 					camelcase: true,
 					noempty: true,
-					quotmark: 'single',
+					quotmark: 'double',
 				    curly: true,
 				    eqeqeq: true,
 				    eqnull: true,

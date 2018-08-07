@@ -5,45 +5,74 @@ var APP = {
 $(function(){
 	APP.scrollmagic();
 	APP.scrollToSections();
+	APP.smoothScrolling();
 });
 
-APP.scrollToSections = function() {
-	$(window).on('scroll', function() {
-	    console.log( $(this).scrollTop() );
+
+APP.smoothScrolling = function() {
+	var $window = $(window);		//Window object
+	
+	var scrollTime = 1.2;			//Scroll time
+	var scrollDistance = 170;		//Distance. Use smaller value for shorter scroll and greater value for longer scroll
+		
+	$window.on("mousewheel DOMMouseScroll", function(event){
+		
+		event.preventDefault();	
+										
+		var delta = event.originalEvent.wheelDelta/120 || -event.originalEvent.detail/3;
+		var scrollTop = $window.scrollTop();
+		var finalScroll = scrollTop - parseInt(delta*scrollDistance);
+			
+		TweenMax.to($window, scrollTime, {
+			scrollTo : { y: finalScroll, autoKill:true },
+				ease: Power1.easeOut,	//For more easing functions see https://api.greensock.com/js/com/greensock/easing/package-detail.html
+				autoKill: true,
+				overwrite: 5							
+			});
+					
 	});
+};
 
-	$('html, body').animate({
-		scrollTop: 3360
-	}, 500);
+APP.scrollToSections = function() {
+	// Get scrolltop position
+	// $(window).on('scroll', function() {
+	//     console.log( $(this).scrollTop() );
+	// });
 
-	$('a[href^="#"]').on('click', function(event) {
-	    var target = $( $(this).attr('href') );
+	// // Go to position
+	// $('html, body').animate({
+	// 	scrollTop: 110
+	// }, 500);
+
+	$("a[href^='#']").on("click", function(event) {
+	    var target = $( $(this).attr("href") );
 
 	    if( target.length ) {
 	        event.preventDefault();
-	        $('html, body').animate({
+	        $("html, body").animate({
 	            scrollTop: target.offset().top
 	        }, 1500);
 	    }
 	});
 
-	$('.cta-element-8').click( function(){
-		$('html, body').animate({scrollTop:3660}, 1500);
+	$(".cta-element-8").click( function(){
+		$("html, body").animate({scrollTop:3660}, 1500);
 	});
 
 
-	$('.cta-element-9').click( function(){
-		$('html, body').animate({scrollTop:5770}, 1500);
+	$(".cta-element-9").click( function(){
+		$("html, body").animate({scrollTop:5770}, 1500);
 	});
 
-	$('.cta-element-10').click( function(){
-		$('html, body').animate({scrollTop:7570}, 1500);
+	$(".cta-element-10").click( function(){
+		$("html, body").animate({scrollTop:7570}, 1500);
 	});
-}
+};
 
 APP.scrollmagic = function() {
 	// Init controller
 	var controller = new ScrollMagic.Controller();
+
 
 // ********** SLIDE 1 **********
 	new ScrollMagic.Scene({
@@ -74,23 +103,23 @@ APP.scrollmagic = function() {
 
 				new ScrollMagic.Scene({
 					triggerElement: "#parallax2",
-					triggerHook: 1,
-					duration: "200%"})
-						.setTween("#element-2", 0.5, { bottom: "35%", left: "15%", transform: "rotate(-10deg)"})
+					triggerHook: 0.75,
+					duration: "80%"})
+						.setTween("#element-2", 1, { bottom: "35%", left: "7%", transform: "rotate(-3deg)"})
 						.addTo(controller);
 
 				new ScrollMagic.Scene({
 					triggerElement: "#parallax2",
-					triggerHook: 1,
-					duration: "200%"})
-						.setTween("#element-3", 0.5, { bottom: "40%", left: "50%"})
+					triggerHook: 0.75,
+					duration: "80%"})
+						.setTween("#element-3", 1, { bottom: "40%", left: "50%"})
 						.addTo(controller);
 
 				new ScrollMagic.Scene({
 					triggerElement: "#parallax2",
-					triggerHook: 1,
-					duration: "200%"})
-						.setTween("#element-4", 0.5, { bottom: "35%", left: "60%", transform: "rotate(5deg)"})
+					triggerHook: 0.75,
+					duration: "80%"})
+						.setTween("#element-4", 1, { bottom: "35%", left: "66%", transform: "rotate(3deg)"})
 						.addTo(controller);
 
 // ********** SLIDE 3 **********
@@ -124,7 +153,7 @@ APP.scrollmagic = function() {
 			duration: "800%"
 			})
 			.setTween("#parallax4 > .image", {y: "0%", ease: Linear.easeNone})
-			.setPin('#parallax4')
+			.setPin("#parallax4")
 			.addTo(controller);
 
 				// Barley 360 Pinned
@@ -181,7 +210,7 @@ APP.scrollmagic = function() {
 			duration: "200%"
 			})
 			.setTween("#parallax5 > .image", {y: "0%", ease: Linear.easeNone})
-			.setPin('#parallax5')
+			.setPin("#parallax5")
 			.addTo(controller);
 
 				new ScrollMagic.Scene({
@@ -252,8 +281,14 @@ APP.scrollmagic = function() {
 	new ScrollMagic.Scene({
 			triggerElement: "#parallax6",
 			triggerHook: "onEnter",
-			duration: "200%"})
-				.setTween("#parallax6 > .image", {y: "80%", ease: Linear.easeNone})
+			duration: "100%"})
+				.setTween("#parallax6 > .image", {y: "20%", ease: Linear.easeNone})
 				.addIndicators()
 				.addTo(controller);
-}
+};
+
+
+
+
+
+
