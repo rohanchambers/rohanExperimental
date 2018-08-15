@@ -525,6 +525,7 @@ a, span {
   background-image: url(../../assets/img/example_parallax_bg3.png); }
 
 #parallax7 .image {
+  background: red;
   background-image: url(../../assets/img/example_parallax_bg1.png); }
 
 .content {
@@ -574,10 +575,12 @@ a, span {
 #element-4 {
   background-color: green;
   bottom: 35%;
-  left: 50%;
+  left: unset;
+  right: 50%;
   width: 300px;
   height: 300px;
-  z-index: 10; }
+  z-index: 10;
+  transform: translateX(50%); }
 
 #element-5 {
   z-index: 1;

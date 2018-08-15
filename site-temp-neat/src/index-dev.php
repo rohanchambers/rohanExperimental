@@ -120,8 +120,17 @@
         <div class="image"></div>
     </div>
 
+    <div id="parallax7" class="parallaxParent">
+        <div class="content">
+            <h2>Lorem ipsum (Slide 7)</h2>
+            <p>Experimental section</p>
+            <a href="#parallax1">Back to top</a>
+        </div>               
+        <div class="image"></div>
+    </div>
 
-    <footer>Protoype site by Slam Dunk Digital</footer>
+
+    <footer>Protoype <!-- site by Slam Dunk Digital --></footer>
     <!--(if target dev)><!-->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/gsap/src/minified/TweenMax.min.js"></script>

@@ -49,7 +49,7 @@ a, span {
 #parallax4 .image { background-image: url(../../assets/img/example_parallax_bg1.png);}
 #parallax5 .image { background-image: url(../../assets/img/example_parallax_bg2.png);}
 #parallax6 .image { background-image: url(../../assets/img/example_parallax_bg3.png);}
-#parallax7 .image { background-image: url(../../assets/img/example_parallax_bg1.png);}
+#parallax7 .image { background: red; background-image: url(../../assets/img/example_parallax_bg1.png);}	
 
 .content {
 	position: absolute;
@@ -111,11 +111,13 @@ a, span {
 #element-4 {
 	background-color: green;
 	bottom: 35%;
-	//left: auto;
-	left: 50%;	
+	left: unset;
+	right: 50%;	
 	width: 300px;	
 	height: 300px;	
 	z-index: 10;
+	-webkit-transform: translateX(50%);
+	transform: translateX(50%);	
 }
 
 #element-5 {

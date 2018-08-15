@@ -35,14 +35,14 @@ APP.smoothScrolling = function() {
 
 APP.scrollToSections = function() {
 	// Get scrolltop position
-	// $(window).on('scroll', function() {
-	//     console.log( $(this).scrollTop() );
-	// });
+	$(window).on("scroll", function() {
+	    console.log( $(this).scrollTop() );
+	});
 
 	// // Go to position
-	// $('html, body').animate({
-	// 	scrollTop: 110
-	// }, 500);
+	$("html, body").animate({
+		scrollTop: 1400
+	}, 500);
 
 	$("a[href^='#']").on("click", function(event) {
 	    var target = $( $(this).attr("href") );
@@ -105,7 +105,7 @@ APP.scrollmagic = function() {
 					triggerElement: "#parallax2",
 					triggerHook: 0.75,
 					duration: "80%"})
-						.setTween("#element-2", 1, { bottom: "35%", left: "7%", transform: "rotate(-3deg)"})
+						.setTween("#element-2", 1, { bottom: "35%", left: "14%", transform: "rotate(-3deg)"})
 						.addTo(controller);
 
 				new ScrollMagic.Scene({
@@ -119,7 +119,7 @@ APP.scrollmagic = function() {
 					triggerElement: "#parallax2",
 					triggerHook: 0.75,
 					duration: "80%"})
-						.setTween("#element-4", 1, { bottom: "35%", left: "66%", transform: "rotate(3deg)"})
+						.setTween("#element-4", 1, { bottom: "35%", right: "14%", transform: "rotate(3deg)"})
 						.addTo(controller);
 
 // ********** SLIDE 3 **********
@@ -285,8 +285,25 @@ APP.scrollmagic = function() {
 				.setTween("#parallax6 > .image", {y: "20%", ease: Linear.easeNone})
 				.addIndicators()
 				.addTo(controller);
-};
 
+// ********** SLIDE 7 **********
+  new ScrollMagic.Scene({
+      triggerElement: "#parallax7",
+      triggerHook: "onEnter",
+      duration: "100%"})
+        .setTween("#parallax7 > .image", {y: "0%", ease: Linear.easeNone})
+        .addIndicators()
+        .addTo(controller);
+
+          new ScrollMagic.Scene({
+              triggerElement: "#parallax7",
+              triggerHook: "onEnter",
+              duration: "250%",
+              offset: 250
+            })
+            .setTween("#element-18", 1, { bottom: "110%"})
+            .addTo(controller);        
+};
 
 
 
