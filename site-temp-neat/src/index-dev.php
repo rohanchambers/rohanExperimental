@@ -130,7 +130,7 @@
     </div>
 
 
-    <footer>Protoype <!-- site by Slam Dunk Digital --></footer>
+    <footer>Protoype parallax | Slam Dunk Digital 2018<!-- site by Slam Dunk Digital --></footer>
     <!--(if target dev)><!-->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/gsap/src/minified/TweenMax.min.js"></script>
