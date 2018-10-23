@@ -47,6 +47,7 @@ APP.smoothState = function() {
 
 APP.hamburger = function() {
   $('.hamburger').click( function(){
+    console.log(1234)
     $(this).toggleClass('is-active');
     $('#myNav').toggleClass('isActive');
   });

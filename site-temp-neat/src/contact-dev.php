@@ -49,15 +49,8 @@
             <a href="services-dev.php">Services</a>
             <a href="contact-dev.php">Contact</a>
         </nav>      
-                
-        <div id="scene-a" class="animated bounce faster page-services">
-            <div class="container">
-                <button class="hamburger hamburger--squeeze" type="button">
-                    <span class="hamburger-box">
-                        <span class="hamburger-inner"></span>
-                    </span>
-                </button>
-            </div>
+
+        <div id="scene-a" class="animated bounce fast page-services">     
             <div>
                 <section id="section-4">
                     <div class="full-container">
@@ -81,8 +74,27 @@
                     </div>
                 </section>
             </div>
-        </div>
+        </div>    
     </div>
+
+    <div class="container">
+        <button class="hamburger hamburger--squeeze" type="button">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+    </div>
+    
+    <!-- The overlay -->
+    <div id="myNav" class="overlay">
+        <!-- Overlay content -->
+        <div class="overlay-content">
+            <a href="index-dev.php">Home</a>
+            <a href="about-dev.php">About</a>
+            <a href="services-dev.php">Services</a>
+            <a href="contact-dev.php">Contact</a>
+        </div>
+    </div>        
 
     <!--(if target dev)><!-->
     <script src="../bower_components/jquery/dist/jquery.js"></script>

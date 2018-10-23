@@ -165,7 +165,8 @@ article {
  * @link https://github.com/jonsuh/hamburgers
  */
 .hamburger {
-  position: relative;
+  position: fixed;
+  right: 20px;
   z-index: 1000;
   padding: 15px 15px;
   float: right;

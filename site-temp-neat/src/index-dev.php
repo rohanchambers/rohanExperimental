@@ -48,30 +48,9 @@
             <a href="about-dev.php">About</a>
             <a href="services-dev.php">Services</a>
             <a href="contact-dev.php">Contact</a>
-        </nav>        
-        <div id="scene-a" class="animated fadeIn faster page-home">
-            <div class="container">
-                <button class="hamburger hamburger--squeeze" type="button">
-                    <span class="hamburger-box">
-                        <span class="hamburger-inner"></span>
-                    </span>
-                </button>
-            </div>
-            
-            <!-- The overlay -->
-            <div id="myNav" class="overlay">
-                <!-- Overlay content -->
-                <div class="overlay-content">
-                    <a href="index-dev.php">Home</a>
-                    <a href="about-dev.php">About</a>
-                    <a href="services-dev.php">Services</a>
-                    <a href="#">Clients</a>
-                    <a href="#">Contact</a>
-                </div>
-            </div>
-
-
-
+        </nav>     
+           
+        <div id="scene-a" class="animated fadeIn slow page-home">
             <div>
                 <section id="section-1" class="container">
                     <article id="element-1">Third column</article>
@@ -112,9 +91,27 @@
                     </div>
                 </section>
             </div>
-
-        </div>
+        </div>  
     </div>
+
+    <div class="container">
+        <button class="hamburger hamburger--squeeze" type="button">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+    </div>
+    
+    <!-- The overlay -->
+    <div id="myNav" class="overlay">
+        <!-- Overlay content -->
+        <div class="overlay-content">
+            <a href="index-dev.php">Home</a>
+            <a href="about-dev.php">About</a>
+            <a href="services-dev.php">Services</a>
+            <a href="contact-dev.php">Contact</a>
+        </div>
+    </div>          
     <!--(if target dev)><!-->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../assets/js/vendor/jquery.smoothState.min.js"></script>
