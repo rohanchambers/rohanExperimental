@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Smooth State - Home</title>
+    <title>Smooth State - Contact</title>
     <meta name="title" content="">
     <meta name="author" content="">
     <meta name="description" content="">
@@ -48,8 +48,9 @@
             <a href="about-dev.php">About</a>
             <a href="services-dev.php">Services</a>
             <a href="contact-dev.php">Contact</a>
-        </nav>        
-        <div id="scene-a" class="animated fadeIn faster page-home">
+        </nav>      
+                
+        <div id="scene-a" class="animated bounce faster page-services">
             <div class="container">
                 <button class="hamburger hamburger--squeeze" type="button">
                     <span class="hamburger-box">
@@ -57,39 +58,7 @@
                     </span>
                 </button>
             </div>
-            
-            <!-- The overlay -->
-            <div id="myNav" class="overlay">
-                <!-- Overlay content -->
-                <div class="overlay-content">
-                    <a href="index-dev.php">Home</a>
-                    <a href="about-dev.php">About</a>
-                    <a href="services-dev.php">Services</a>
-                    <a href="#">Clients</a>
-                    <a href="#">Contact</a>
-                </div>
-            </div>
-
-
-
             <div>
-                <section id="section-1" class="container">
-                    <article id="element-1">Third column</article>
-                    <article id="element-2">Third column</article>
-                    <article id="element-3">Third column</article>
-                </section>
-
-                <section id="section-2" class="container">
-                    <article id="element-4">Third column</article>
-                    <article id="element-5">Third column</article>
-                </section>
-
-                <section id="section-3">
-                    <div class="container">
-                        <article id="element-6">Third column</article>
-                    </div>
-                </section>
-
                 <section id="section-4">
                     <div class="full-container">
                         <article id="element-7">
@@ -112,9 +81,9 @@
                     </div>
                 </section>
             </div>
-
         </div>
     </div>
+
     <!--(if target dev)><!-->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../assets/js/vendor/jquery.smoothState.min.js"></script>

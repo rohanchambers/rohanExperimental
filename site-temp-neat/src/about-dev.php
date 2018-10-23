@@ -43,11 +43,14 @@
 
 <body>
     <div id="main" class="page">
-        <div id="scene-a" class="scene scene--fadein page-about">
-        <a href="index-dev.php">Home</a>
-        <a href="about-dev.php">About</a>
-        <a href="services-dev.php">Services</a>  
+        <nav>
+            <a href="index-dev.php">Home</a>
+            <a href="about-dev.php">About</a>
+            <a href="services-dev.php">Services</a>
+            <a href="contact-dev.php">Contact</a>
+        </nav>   
 
+        <div id="scene-a" class="animated slideInLeft faster page-about">
         <div class="container">
             <button class="hamburger hamburger--squeeze" type="button">
                 <span class="hamburger-box">

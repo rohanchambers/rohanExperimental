@@ -43,19 +43,21 @@
 
 <body>
     <div id="main" class="page">
-        <div id="scene-a" class="scene scene--fadein page-services">
+        <nav>
             <a href="index-dev.php">Home</a>
             <a href="about-dev.php">About</a>
             <a href="services-dev.php">Services</a>
-            
+            <a href="contact-dev.php">Contact</a>
+        </nav>           
+        <div id="scene-a" class="animated slideInUp faster page-services">
             <div class="container">
                 <button class="hamburger hamburger--squeeze" type="button">
                     <span class="hamburger-box">
                         <span class="hamburger-inner"></span>
                     </span>
                 </button>
-            </div>        
-            <div>                                                
+            </div>
+            <div>
                 <section id="section-4">
                     <div class="full-container">
                         <article id="element-7">

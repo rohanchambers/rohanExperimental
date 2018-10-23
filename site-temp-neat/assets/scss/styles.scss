@@ -36,6 +36,45 @@ body {
     }
 }
 
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: #FFF;
+  padding: 10px;
+  
+    a {
+      margin-right: 5px;
+      color: #000;
+      
+        &:hover {
+          text-decoration: none;
+        }
+    }
+}
+.page-home,
+.page-about,
+.page-services  {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+}
+
+.page-home {
+  background-color: orange;
+}
+
+.page-about {
+  background-color: red;
+}
+
+.page-services {
+  background-color: blue;
+}
+
 // Temp. Elements
 #element-1 {
   // float: right;
@@ -75,27 +114,7 @@ body {
   background-color: orange;
 }
 
-.page-home,
-.page-about,
-.page-services  {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;	
-}
 
-.page-home {
-	background-color: orange;
-}
-
-.page-about {
-	background-color: red;
-}
-
-.page-services {
-  background-color: blue;
-}
 
 
 /* @mixin respond-to
