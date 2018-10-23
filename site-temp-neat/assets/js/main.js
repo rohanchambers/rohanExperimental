@@ -1,11 +1,50 @@
 var APP = {
 };
 
+
+
 // // DOM ready
 $(function(){
-	APP.hamburger();
-	APP.smoothState();
+  //APP.smoothState();
+  APP.barbarJS();
+  Barba.Pjax.start();
 });
+
+
+APP.barbarJS = function() {
+  // This till doesn't stop the double click issue of refreshing page
+  var links = document.querySelectorAll('a[href]');
+  var cbk = function(e) {
+   if(e.currentTarget.href === window.location.href) {
+     e.preventDefault();
+     e.stopPropagation();
+   }
+  };
+
+  for(var i = 0; i < links.length; i++) {
+    links[i].addEventListener('click', cbk);
+  }
+  
+  var transEffect = Barba.BaseTransition.extend({
+      start: function(){
+        this.newContainerLoading.then(val => this.fadeInNewcontent($(this.newContainer)));
+      },
+      fadeInNewcontent: function(nc) {
+        nc.hide();
+        var _this = this;
+        $(this.oldContainer).fadeOut(1000).promise().done(() => {
+          nc.css('visibility','visible');
+          nc.fadeIn(1000, function(){
+            _this.done();
+          })
+        });
+      }
+  });
+
+  Barba.Pjax.getTransition = function() {
+    return transEffect;
+  }  
+}
 
 APP.smoothState = function() {
   'use strict';
@@ -16,7 +55,7 @@ APP.smoothState = function() {
         prefetch: true,
         cacheLength: 2,
         onStart: {
-          duration: 1000, // Duration of our animation
+          duration: 700, // Duration of our animation
           render: function ($container) {
             // Add your CSS animation reversing class
             $container.addClass('is-exiting');
@@ -33,7 +72,7 @@ APP.smoothState = function() {
           }
         },        
         onReady: {
-          duration: 0,
+          duration: 1000,
           render: function ($container, $newContent) {
             // Remove your CSS animation reversing class
             $container.removeClass('is-exiting');
@@ -44,10 +83,3 @@ APP.smoothState = function() {
       },
       smoothState = $page.smoothState(options).data('smoothState');
 }
-
-APP.hamburger = function() {
-  $('.hamburger').click( function(){
-    $(this).toggleClass('is-active');
-    $('#myNav').toggleClass('isActive');
-  });
-};

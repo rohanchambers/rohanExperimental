@@ -19,7 +19,7 @@
 @import "vendor/_keyframes";
 
 body {
-  background-color: black;
+  background-color: #000;
 }
 
 // Social media icons in SVG
@@ -101,7 +101,7 @@ body {
 /* @mixin respond-to
 ------------------------------------------------------------------- */
 /* line 6, /Users/miguelperez/Sites/csstricks/source/stylesheets/pageTransitions.css.scss */
-.page .scene {
+.barba-container {
   -webkit-animation-duration: 0.25s;
   animation-duration: 0.25s;
   -webkit-transition-timing-function: ease-in;
@@ -109,7 +109,7 @@ body {
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both; }
 /* line 17, /Users/miguelperez/Sites/csstricks/source/stylesheets/pageTransitions.css.scss */
-.page .scene--fadein {
+.barba-container .barba-container--fadein {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn; }
 /* line 22, /Users/miguelperez/Sites/csstricks/source/stylesheets/pageTransitions.css.scss */

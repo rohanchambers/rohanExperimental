@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Smooth State - About</title>
+    <title>Barba JS - About</title>
     <meta name="title" content="">
     <meta name="author" content="">
     <meta name="description" content="">
@@ -42,49 +42,20 @@
 </head>
 
 <body>
-    <div id="main" class="page">
-        <div id="scene-a" class="scene scene--fadein page-about">
-        <a href="index-dev.php">Home</a>
-        <a href="about-dev.php">About</a>
-        <a href="services-dev.php">Services</a>  
-
-        <div class="container">
-            <button class="hamburger hamburger--squeeze" type="button">
-                <span class="hamburger-box">
-                    <span class="hamburger-inner"></span>
-                </span>
-            </button>
-        </div>
-                                
-        <div>
-            <section id="section-1" class="container">
-                <article id="element-1">Third column</article>
-                <article id="element-2">Third column</article>
-                <article id="element-3">Third column</article>
-            </section>
-
-            <section id="section-2" class="container">
-                <article id="element-4">Third column</article>
-                <article id="element-5">Third column</article>
-            </section>
-        </div>
+    <div id="barba-wrapper">       
+        <div class="barba-container page-about">
+            
+                <a href="index-dev.php">Home</a>
+                <a href="about-dev.php">About</a>
+                <a href="services-dev.php">Services</a>    
+                     
+            <p>Page 2 About ...Put here the content you wish to change between pages...</p>
         </div>
     </div>
 
-            <!-- The overlay -->
-            <div id="myNav" class="overlay">
-                <!-- Overlay content -->
-                <div class="overlay-content">
-                    <a href="index-dev.php">Home</a>
-                    <a href="about-dev.php">About</a>
-                    <a href="services-dev.php">Services</a>
-                    <a href="#">Clients</a>
-                    <a href="#">Contact</a>
-                </div>
-            </div>
     <!--(if target dev)><!-->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
-    <script src="../assets/js/vendor/jquery.smoothState.min.js"></script>
+    <script src="../assets/js/vendor/barba.min.js"></script>
     <script src="../assets/js/main.js"></script>
     <!--<!(endif)-->
     <!--(if target dist)>

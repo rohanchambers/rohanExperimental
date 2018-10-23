@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Smooth State - Services</title>
+    <title>Barba JS - Services</title>
     <meta name="title" content="">
     <meta name="author" content="">
     <meta name="description" content="">
@@ -42,48 +42,20 @@
 </head>
 
 <body>
-    <div id="main" class="page">
-        <div id="scene-a" class="scene scene--fadein page-services">
-            <a href="index-dev.php">Home</a>
-            <a href="about-dev.php">About</a>
-            <a href="services-dev.php">Services</a>
+    <div id="barba-wrapper">
+        <div class="barba-container page-services">
             
-            <div class="container">
-                <button class="hamburger hamburger--squeeze" type="button">
-                    <span class="hamburger-box">
-                        <span class="hamburger-inner"></span>
-                    </span>
-                </button>
-            </div>        
-            <div>                                                
-                <section id="section-4">
-                    <div class="full-container">
-                        <article id="element-7">
-                            <div class="container">
-                                <div>Third column</div>
-                            </div>
-                        </article>
-                        <article id="element-8"></article>
-                    </div>
-                </section>
-
-                <section id="section-5">
-                    <div class="full-container">
-                        <article id="element-8"></article>
-                        <article id="element-7">
-                            <div class="container">
-                                <div>Third column</div>
-                            </div>
-                        </article>
-                    </div>
-                </section>
-            </div>
+                <a href="index-dev.php">Home</a>
+                <a href="about-dev.php">About</a>
+                <a href="services-dev.php">Services</a>    
+                        
+            <p>Page 3 Services ...Put here the content you wish to change between pages...</p>
         </div>
     </div>
 
     <!--(if target dev)><!-->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
-    <script src="../assets/js/vendor/jquery.smoothState.min.js"></script>
+    <script src="../assets/js/vendor/barba.min.js"></script>
     <script src="../assets/js/main.js"></script>
     <!--<!(endif)-->
     <!--(if target dist)>

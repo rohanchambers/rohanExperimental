@@ -1166,7 +1166,7 @@ Copyright (c) 2014 Daniel Eden
   animation-name: zoomOutUp; }
 
 body {
-  background-color: black; }
+  background-color: #000; }
 
 #social-svg {
   clear: both;
@@ -1230,13 +1230,13 @@ body {
 /* @mixin respond-to
 ------------------------------------------------------------------- */
 /* line 6, /Users/miguelperez/Sites/csstricks/source/stylesheets/pageTransitions.css.scss */
-.page .scene {
+.barba-container {
   animation-duration: 0.25s;
   transition-timing-function: ease-in;
   animation-fill-mode: both; }
 
 /* line 17, /Users/miguelperez/Sites/csstricks/source/stylesheets/pageTransitions.css.scss */
-.page .scene--fadein {
+.barba-container .barba-container--fadein {
   animation-name: fadeIn; }
 
 /* line 22, /Users/miguelperez/Sites/csstricks/source/stylesheets/pageTransitions.css.scss */
