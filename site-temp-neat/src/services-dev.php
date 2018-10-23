@@ -42,52 +42,42 @@
 </head>
 
 <body>
-    <div id="main" class="page page-services">
-        <a href="index-dev.php">Home</a>
-        <a href="about-dev.php">About</a>
-        <a href="services-dev.php">Services</a>
+    <div id="main" class="page">
+        <div id="scene-a" class="scene scene--fadein page-services">
+            <a href="index-dev.php">Home</a>
+            <a href="about-dev.php">About</a>
+            <a href="services-dev.php">Services</a>
+            
+            <div class="container">
+                <button class="hamburger hamburger--squeeze" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+            </div>        
+            <div>                                                
+                <section id="section-4">
+                    <div class="full-container">
+                        <article id="element-7">
+                            <div class="container">
+                                <div>Third column</div>
+                            </div>
+                        </article>
+                        <article id="element-8"></article>
+                    </div>
+                </section>
 
-        <!-- The overlay -->
-        <div id="myNav" class="overlay">
-            <!-- Overlay content -->
-            <div class="overlay-content">
-                <a href="index-dev.php">Home</a>
-                <a href="about-dev.php">About</a>
-                <a href="services-dev.php">Services</a>
-                <a href="#">Clients</a>
-                <a href="#">Contact</a>
+                <section id="section-5">
+                    <div class="full-container">
+                        <article id="element-8"></article>
+                        <article id="element-7">
+                            <div class="container">
+                                <div>Third column</div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
             </div>
-        </div>  
-
-        <div class="container">
-            <button class="hamburger hamburger--squeeze" type="button">
-                <span class="hamburger-box">
-                    <span class="hamburger-inner"></span>
-                </span>
-            </button>
-        </div>        
-        <div id="scene-a" class="scene scene--fadein">                                                
-            <section id="section-4">
-                <div class="full-container">
-                    <article id="element-7">
-                        <div class="container">
-                            <div>Third column</div>
-                        </div>
-                    </article>
-                    <article id="element-8"></article>
-                </div>
-            </section>
-
-            <section id="section-5">
-                <div class="full-container">
-                    <article id="element-8"></article>
-                    <article id="element-7">
-                        <div class="container">
-                            <div>Third column</div>
-                        </div>
-                    </article>
-                </div>
-            </section>
         </div>
     </div>
 

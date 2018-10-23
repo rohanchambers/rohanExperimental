@@ -9,14 +9,14 @@ $(function(){
 
 APP.smoothState = function() {
   'use strict';
-  var $page = $('#main .scene'),
+  var $page = $('.page'),
 
       options = {
         debug: true,
         prefetch: true,
         cacheLength: 2,
         onStart: {
-          duration: 250, // Duration of our animation
+          duration: 1000, // Duration of our animation
           render: function ($container) {
             // Add your CSS animation reversing class
             $container.addClass('is-exiting');
@@ -26,7 +26,7 @@ APP.smoothState = function() {
         },
         onProgress: {
           // How long this animation takes
-          duration: 10000,
+          duration: 500,
           // A function that dictates the animations that take place
           render: function ($container) {
             console.log('Testing this on progress!')
@@ -47,7 +47,6 @@ APP.smoothState = function() {
 
 APP.hamburger = function() {
   $('.hamburger').click( function(){
-    console.log(0);
     $(this).toggleClass('is-active');
     $('#myNav').toggleClass('isActive');
   });

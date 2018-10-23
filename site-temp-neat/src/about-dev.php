@@ -42,22 +42,11 @@
 </head>
 
 <body>
-    <div id="main" class="page page-about">
+    <div id="main" class="page">
+        <div id="scene-a" class="scene scene--fadein page-about">
         <a href="index-dev.php">Home</a>
         <a href="about-dev.php">About</a>
         <a href="services-dev.php">Services</a>  
-
-        <!-- The overlay -->
-        <div id="myNav" class="overlay">
-            <!-- Overlay content -->
-            <div class="overlay-content">
-                <a href="index-dev.php">Home</a>
-                <a href="about-dev.php">About</a>
-                <a href="services-dev.php">Services</a>
-                <a href="#">Clients</a>
-                <a href="#">Contact</a>
-            </div>
-        </div>  
 
         <div class="container">
             <button class="hamburger hamburger--squeeze" type="button">
@@ -67,7 +56,7 @@
             </button>
         </div>
                                 
-        <div id="scene-a" class="scene scene--fadein">
+        <div>
             <section id="section-1" class="container">
                 <article id="element-1">Third column</article>
                 <article id="element-2">Third column</article>
@@ -78,10 +67,21 @@
                 <article id="element-4">Third column</article>
                 <article id="element-5">Third column</article>
             </section>
-
+        </div>
         </div>
     </div>
 
+            <!-- The overlay -->
+            <div id="myNav" class="overlay">
+                <!-- Overlay content -->
+                <div class="overlay-content">
+                    <a href="index-dev.php">Home</a>
+                    <a href="about-dev.php">About</a>
+                    <a href="services-dev.php">Services</a>
+                    <a href="#">Clients</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
     <!--(if target dev)><!-->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../assets/js/vendor/jquery.smoothState.min.js"></script>

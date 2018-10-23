@@ -19,7 +19,7 @@
 @import "vendor/_keyframes";
 
 body {
-  background-color: pink;
+  background-color: black;
 }
 
 // Social media icons in SVG
@@ -75,6 +75,7 @@ body {
   background-color: orange;
 }
 
+.page-home,
 .page-about,
 .page-services  {
 	position: fixed;
@@ -84,17 +85,17 @@ body {
 	height: 100%;	
 }
 
-// .page-home {
-// 	background-color: orange;
-// }
+.page-home {
+	background-color: orange;
+}
 
-// .page-about {
-// 	background-color: red;
-// }
+.page-about {
+	background-color: red;
+}
 
-// .page-services {
-//   background-color: blue;
-// }
+.page-services {
+  background-color: blue;
+}
 
 
 /* @mixin respond-to
@@ -119,7 +120,7 @@ body {
 .page .scene--fadeinright {
   -webkit-animation-name: fadeInRight;
   animation-name: fadeInRight; }
-  .page .scene--fadeinleft {
+.page .scene--fadeinleft {
   -webkit-animation-name: fadeInLeft;
   animation-name: fadeInLeft; }
 /* line 32, /Users/miguelperez/Sites/csstricks/source/stylesheets/pageTransitions.css.scss */
