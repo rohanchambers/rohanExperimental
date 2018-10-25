@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Site template Neat 2.1 | Scroll magic 2.0.5 | GSAP 2</title>
+    <title>Site template Neat 2.1 | Scroll magic 2.0.5 Testing</title>
     <meta name="title" content="">
     <meta name="author" content="">
     <meta name="description" content="">
