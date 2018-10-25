@@ -7,8 +7,13 @@ $(function(){
 });
 
 APP.gsap = function() {
+
     // Single tween
     var element1 = $('#element-1');
+    
+    // Text plugin replaces yourElement's text with "This is the new text" over the course of 2 seconds
+    TweenLite.to("h1", 2, {text:"Rohan Chambers", delay: 2, ease:Bounce.easeOut});
+
     var tween = TweenMax.to(element1, 1, {
         x:500, rotation:360, repeat: 3,repeatDelay:2.5, 
         //scale: 0.5, opacity:0, 

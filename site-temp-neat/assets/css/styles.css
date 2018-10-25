@@ -55,14 +55,14 @@ p a {
 
 #element-1 {
   background-color: blue;
-  top: 35%;
+  top: 55%;
   left: 0%;
   height: 300px;
   width: 300px; }
 
 #element-2 {
   background-color: orange;
-  top: 25%;
+  top: 45%;
   left: 0%;
   width: 300px;
   height: 300px;
@@ -70,7 +70,7 @@ p a {
 
 #element-3 {
   background-color: green;
-  top: 15%;
+  top: 35%;
   left: 0%;
   width: 300px;
   height: 300px;
@@ -78,7 +78,7 @@ p a {
 
 #element-4 {
   background-color: red;
-  top: 0%;
+  top: 25%;
   left: 0%;
   width: 300px;
   height: 300px;

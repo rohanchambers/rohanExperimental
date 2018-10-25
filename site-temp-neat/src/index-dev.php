@@ -26,30 +26,31 @@
 <body>
 
     <div class="container">
+        <h1>Hello GSAP this is Rohan Chambers playing with you!</h1>
         <p>
             <a href="#" id="btn-restart">Restart</a>
-            <a href="#" id="btn-pause">Pause</a>              
-            <a href="#" id="btn-play">Play</a>          
+            <a href="#" id="btn-pause">Pause</a>
+            <a href="#" id="btn-play">Play</a>
         </p>
         <div id="element-1" class="element">
             <h2>Lorem Ipsum 1</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus libero nec nibh rhoncus, nec hendrerit turpis cursus.</p>
-        </div>   
+        </div>
 
         <div id="element-2" class="element">
             <h2>Lorem Ipsum 2</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus libero nec nibh rhoncus, nec hendrerit turpis cursus.</p>
-        </div>   
+        </div>
 
         <div id="element-3" class="element">
             <h2>Lorem Ipsum 3</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus libero nec nibh rhoncus, nec hendrerit turpis cursus.</p>
-        </div> 
+        </div>
 
         <div id="element-4" class="element">
             <h2>Lorem Ipsum 3</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus libero nec nibh rhoncus, nec hendrerit turpis cursus.</p>
-        </div>                                   
+        </div>
     </div>
 
     <!--(if target dev)><!-->
