@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Smooth State - Home</title>
+    <title>Smooth State - Home Testing Smooth</title>
     <meta name="title" content="">
     <meta name="author" content="">
     <meta name="description" content="">
