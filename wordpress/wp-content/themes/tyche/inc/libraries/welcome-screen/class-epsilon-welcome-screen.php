@@ -124,16 +124,20 @@ class Epsilon_Welcome_Screen {
 		$this->add_default_options();
 
 		/**
+		 * Automatically set pages
+		 */
+		add_action( 'init', array( $this, 'set_pages' ) );
+
+		/**
 		 * Ajax callbacks
 		 */
-		add_action( 'wp_ajax_welcome_screen_ajax_callback', array(
-			$this,
-			'welcome_screen_ajax_callback',
-		) );
-		add_action( 'wp_ajax_nopriv_welcome_screen_ajax_callback', array(
-			$this,
-			'welcome_screen_ajax_callback',
-		) );
+		add_action(
+			'wp_ajax_welcome_screen_ajax_callback', array(
+				$this,
+				'welcome_screen_ajax_callback',
+			)
+		);
+
 	}
 
 	/**
@@ -146,6 +150,18 @@ class Epsilon_Welcome_Screen {
 					array(
 						'status' => false,
 						'error'  => esc_html__( 'Not allowed', 'tyche' ),
+					)
+				)
+			);
+		}
+
+		$super_admin = is_super_admin( get_current_user_id() );
+		if ( ! $super_admin ) {
+			wp_die(
+				wp_json_encode(
+					array(
+						'status' => false,
+					'error'  => esc_html__( 'You must be a Super User!', 'tyche' ),
 					)
 				)
 			);
@@ -164,7 +180,7 @@ class Epsilon_Welcome_Screen {
 			);
 		}
 
-		if ( ! class_exists( $args_action[0] ) ) {
+		if ( 'Epsilon_Welcome_Screen' != $args_action[0] ) {
 			wp_die(
 				wp_json_encode(
 					array(
@@ -175,11 +191,10 @@ class Epsilon_Welcome_Screen {
 			);
 		}
 
-		$class  = $args_action[0];
 		$method = $args_action[1];
 		$args   = array_map( 'sanitize_text_field', wp_unslash( $_POST['args']['args'] ) );
 
-		$response = $class::$method( $args );
+		$response = self::$method( $args );
 
 		if ( is_array( $response ) ) {
 			wp_die( wp_json_encode( $response ) );
@@ -229,12 +244,12 @@ class Epsilon_Welcome_Screen {
 	public function enqueue() {
 		if ( is_admin() ) {
 			wp_enqueue_style(
-				'welcome-screen',
+				'epsilon-welcome-screen',
 				get_template_directory_uri() . '/inc/libraries/welcome-screen/css/welcome.css'
 			);
 
 			wp_enqueue_script(
-				'welcome-screen',
+				'epsilon-welcome-screen',
 				get_template_directory_uri() . '/inc/libraries/welcome-screen/js/welcome.js',
 				array(
 					'jquery-ui-slider',
@@ -243,8 +258,8 @@ class Epsilon_Welcome_Screen {
 			);
 
 			wp_localize_script(
-				'welcome-screen',
-				'welcomeScreen',
+				'epsilon-welcome-screen',
+				'epsilonWelcomeScreen',
 				array(
 					'nr_actions_required'      => absint( $this->count_actions() ),
 					'template_directory'       => esc_url( get_template_directory_uri() ),
@@ -347,10 +362,6 @@ class Epsilon_Welcome_Screen {
 	 * Render the welcome screen
 	 */
 	public function render_welcome_screen() {
-		require_once( ABSPATH . 'wp-load.php' );
-		require_once( ABSPATH . 'wp-admin/admin.php' );
-		require_once( ABSPATH . 'wp-admin/admin-header.php' );
-
 		$theme = wp_get_theme();
 		$tab   = isset( $_GET['tab'] ) ? sanitize_text_field( wp_unslash( $_GET['tab'] ) ) : 'getting-started';
 
@@ -622,26 +633,28 @@ class Epsilon_Welcome_Screen {
 		$call_api = get_transient( $this->theme_slug . '_plugin_information_transient_' . $slug );
 
 		if ( false === $call_api ) {
-			$call_api = plugins_api( 'plugin_information', array(
-				'slug'   => $slug,
-				'fields' => array(
-					'downloaded'        => false,
-					'rating'            => false,
-					'description'       => false,
-					'short_description' => true,
-					'donate_link'       => false,
-					'tags'              => false,
-					'sections'          => true,
-					'homepage'          => true,
-					'added'             => false,
-					'last_updated'      => false,
-					'compatibility'     => false,
-					'tested'            => false,
-					'requires'          => false,
-					'downloadlink'      => false,
-					'icons'             => true,
-				),
-			) );
+			$call_api = plugins_api(
+				'plugin_information', array(
+					'slug'   => $slug,
+					'fields' => array(
+						'downloaded'        => false,
+						'rating'            => false,
+						'description'       => false,
+						'short_description' => true,
+						'donate_link'       => false,
+						'tags'              => false,
+						'sections'          => true,
+						'homepage'          => true,
+						'added'             => false,
+						'last_updated'      => false,
+						'compatibility'     => false,
+						'tested'            => false,
+						'requires'          => false,
+						'downloadlink'      => false,
+						'icons'             => true,
+					),
+				)
+			);
 			set_transient( $this->theme_slug . '_plugin_information_transient_' . $slug, $call_api, 30 * MINUTE_IN_SECONDS );
 		}
 
@@ -690,11 +703,9 @@ class Epsilon_Welcome_Screen {
 	/**
 	 * Set a frontpage to static
 	 *
-	 * @param array $args Argument array.
-	 *
 	 * @return string;
 	 */
-	public function tyche_set_pages() {
+	public function set_pages() {
 		if ( ! empty( $_GET ) ) {
 			/**
 			 * Check action
@@ -702,14 +713,19 @@ class Epsilon_Welcome_Screen {
 			if ( ! empty( $_GET['action'] ) && 'set_page_automatic' === $_GET['action'] ) {
 				$active_tab = $_GET['tab'];
 				$about      = get_page_by_title( 'Home' );
-				update_option( 'page_on_front', $about->ID );
-				update_option( 'show_on_front', 'page' );
+				if ( $about ) {
+					update_option( 'page_on_front', $about->ID );
+					update_option( 'show_on_front', 'page' );
+				}
 
 				// Set the blog page
 				$blog = get_page_by_title( 'Blog' );
-				update_option( 'page_for_posts', $blog->ID );
+				if ( $blog ) {
+					update_option( 'page_for_posts', $blog->ID );
+				}
+				
 
-				wp_redirect( self_admin_url( 'themes.php?page=tyche-welcome&tab=' . $active_tab ) );
+				wp_redirect( esc_url( self_admin_url( 'themes.php?page=tyche-welcome&tab=' . $active_tab ) ) );
 			}
 		}
 

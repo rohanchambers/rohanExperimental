@@ -38,6 +38,9 @@ class Tyche {
 				$this->$method();
 			}
 		}
+
+		// Added backwards compatibility with WooCommerce lower than 3.3.0
+		require_once 'tyche-functions.php';
 	}
 
 	/**
@@ -107,7 +110,23 @@ class Tyche {
 			 * Removed recommended plugins for now (until we integrate them nicely)
 			 * https://themes.trac.wordpress.org/ticket/43404#comment:24
 			 */
-			$tyche_recommended_plugins = array();
+			$tyche_recommended_plugins = array(
+				'colorlib-login-customizer' => array(
+					'recommended' => false,
+				),
+		        'colorlib-404-customizer' => array(
+		            'recommended' => false,
+		        ),
+		        'colorlib-coming-soon-maintenance' => array(
+		            'recommended' => false,
+		        ),
+				'simple-custom-post-order'  => array(
+					'recommended' => false,
+				),
+				'fancybox-for-wordpress'    => array(
+					'recommended' => false,
+				),
+			);
 
 			/*
 			 * id - unique id; required
@@ -151,7 +170,7 @@ class Tyche {
 					'id'          => 'tyche-req-ac-static-latest-news',
 					'title'       => esc_html__( 'Set front page to static', 'tyche' ),
 					'description' => esc_html__( 'If you just installed Tyche, and are not able to see the front - page demo, you need to go to Settings -> Reading , Front page displays and select "Static Page" . ', 'tyche' ),
-					'help'        => 'If you need more help understanding how this works, check out the following <a target="_blank"  href="https://codex.wordpress.org/Creating_a_Static_Front_Page#WordPress_Static_Front_Page_Process">link</a > . <br /><br /> <a class="button button-secondary" target="_blank"  href="' . esc_url( self_admin_url( 'options-reading.php' ) ) . '" > ' . __( 'Set manually', 'tyche' ) . ' </a > <a class="button button-primary"  href="' . wp_nonce_url( self_admin_url( 'themes.php?page=tyche-welcome&tab=recommended_actions&action=set_page_automatic' ), 'set_page_automatic' ) . '" > ' . __( 'Set automatically', 'tyche' ) . ' </a > ',
+					'help'        => 'If you need more help understanding how this works, check out the following <a target="_blank"  href="https://codex.wordpress.org/Creating_a_Static_Front_Page#WordPress_Static_Front_Page_Process">link</a > . <br /><br /> <a class="button button-secondary" target="_blank"  href="' . esc_url( self_admin_url( 'options-reading.php' ) ) . '" > ' . __( 'Set manually', 'tyche' ) . ' </a > <a class="button button-primary"  href="' . wp_nonce_url( self_admin_url( 'themes.php?page=tyche-welcome&tab=recommended-actions&action=set_page_automatic' ), 'set_page_automatic' ) . '" > ' . __( 'Set automatically', 'tyche' ) . ' </a > ',
 					'check'       => Tyche_Notify_System::is_not_static_page(),
 				),
 			);
@@ -161,6 +180,7 @@ class Tyche {
 					'theme-name' => 'Tyche',
 					'theme-slug' => 'tyche',
 					'actions'    => $tyche_required_actions,
+					'plugins'    => $tyche_recommended_plugins,
 				)
 			);
 		}// End if().
@@ -182,7 +202,7 @@ class Tyche {
 
 		$scheme = get_theme_mod( 'tyche_color_scheme', 'red' );
 		if ( 'red' !== $scheme ) {
-			wp_enqueue_style( 'tyche-style', get_stylesheet_directory_uri() . '/assets/css/style-' . $scheme . '.css' );
+			wp_enqueue_style( 'tyche-style', get_stylesheet_directory_uri() . '/assets/css/style-' . sanitize_key( $scheme ) . '.css' );
 		} else {
 			wp_enqueue_style( 'tyche-style', get_stylesheet_directory_uri() . '/assets/css/style.css' );
 		}
@@ -215,6 +235,17 @@ class Tyche {
 			'',
 			false
 		);
+		$tyche_helper = array(
+			'initZoom' => 1,
+			'ajaxURL' => admin_url( 'admin-ajax.php' ),
+		);
+
+		if ( false === get_theme_mod( 'tyche_enable_zoom_image_product', true ) ) {
+			$tyche_helper['initZoom'] = 0;
+		}
+
+		wp_localize_script( 'tyche-scripts', 'tycheHelper', $tyche_helper );
+
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
 		}
@@ -233,6 +264,14 @@ class Tyche {
 
 			wp_enqueue_script( 'tyche_media_upload_js', get_template_directory_uri() . '/inc/customizer/assets/js/upload-media.js', array( 'jquery' ) );
 			wp_enqueue_style( 'tyche_media_upload_css', get_template_directory_uri() . '/inc/customizer/assets/css/upload-media.css' );
+
+			wp_localize_script(
+				'tyche_media_upload_js', 'EpsilonWPUrls', array(
+					'siteurl' => get_option( 'siteurl' ),
+					'theme'   => get_template_directory_uri(),
+					'ajaxurl' => admin_url( 'admin-ajax.php' ),
+				)
+			);
 		}
 	}
 
@@ -327,4 +366,5 @@ class Tyche {
 			$GLOBALS['content_width'] = 600;
 		}
 	}
+
 }

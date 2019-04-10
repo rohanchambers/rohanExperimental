@@ -1,3 +1,27 @@
+Tyche v1.1.2
+- https://github.com/ColorlibHQ/tyche/milestone/1?closed=1
+
+Tyche v1.1.1
+- Fixed security issue
+
+Tyche v1.1.0
+- Fixed Tyche Icons ( https://github.com/puikinsh/tyche/issues/38 )
+- Added settings for setting number of columns and products per page ( https://github.com/puikinsh/tyche/issues/39 )
+- Added control to disable product zoom on hover ( https://github.com/puikinsh/tyche/issues/40 )
+- Added real time update of minicart ( https://github.com/puikinsh/tyche/issues/41 )
+- Added option to translate slider text ( https://github.com/puikinsh/tyche/issues/42 )
+- Updated WooCommerce files ( https://github.com/puikinsh/tyche/issues/47 )
+- Fixed : Hide out of stock products ( https://github.com/puikinsh/tyche/issues/46 )
+
+Tyche v1.0.13
+- https://themes.trac.wordpress.org/ticket/47201#comment:4
+
+Tyche v1.0.12
+- Added documentation section in customizer
+- Fixed a few escapes
+- Fixed deprecated Kirki warning (fields should not be added through the customize_register hook)
+- Removed epsilon framework as a submodule dependency, added it as a normal library (stripped of what is not used)
+
 Tyche v1.0.11
 - Adsense was not initiated
 

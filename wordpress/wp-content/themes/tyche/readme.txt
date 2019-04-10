@@ -1,18 +1,8 @@
 [![Build Status](https://api.travis-ci.org/puikinsh/tyche.svg?branch=master)](https://travis-ci.org/puikinsh/tyche)
-
-# Repository clone/download :fire: :fire: :fire:
-
-This repository contains a git sub-module and as such, can not be completely downloaded using the web-interface of GitHub. This is a known limitation of GitHub's own tools. However, cloning this repository via CLI works absolutely fine and will pull all sub-modules as long as you use the proper commands. 
-
-Here's a short tutorial on how to achieve this as well as a better explanation of what Git sub-modules are and how they're useful: https://gist.github.com/gitaarik/8735255
-
-Easiest way to go about cloning a repository recursively is to use (Windows only) TortoiseGIT: https://tortoisegit.org/.
-
-
 === Tyche ===
 
 Contributors: colorlib
-Tags: e-commerce, two-columns, left-sidebar, right-sidebar, custom-colors, custom-header, custom-menu, featured-images, threaded-comments, footer-widgets, sticky-post, theme-options
+Tags: e-commerce, custom-logo, two-columns, left-sidebar, right-sidebar, custom-colors, custom-header, custom-menu, featured-images, threaded-comments, footer-widgets, sticky-post, theme-options
 
 Requires at least:	4.0
 
@@ -55,9 +45,6 @@ Unless otherwise specified, all the theme files, scripts and images are licensed
 - Font Awesome font licensing:
     -- SIL OFL 1.1
     -- URL: http://scripts.sil.org/OFL
-- Glyphicons
-    -- Released under the same license as Bootstrap ( http://glyphicons.com/license/ )
-    -- Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
 - Google Fonts
     -- License: SIL OFL 1.1
     -- URL: http://scripts.sil.org/OFL

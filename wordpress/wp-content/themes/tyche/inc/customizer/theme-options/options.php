@@ -5,21 +5,6 @@
  * @package Tyche
  */
 
-if ( ! class_exists( 'Kirki' ) ) {
-	global $wp_customize;
-
-	$wp_customize->add_setting(
-		'kirki_installer_setting',
-		array(
-			'sanitize_callback' => '__return_true',
-		)
-	);
-	$wp_customize->add_control( 'kirki_installer_control', array(
-		'section'  => 'kirki_installer',
-		'settings' => 'kirki_installer_setting',
-	) );
-}
-
 /**
  *  Section information
  */
@@ -104,11 +89,68 @@ Tyche_Kirki::add_field( 'tyche_theme', array(
 	'label'    => esc_html__( 'Shop Layout', 'tyche' ),
 	'section'  => 'theme_options_general',
 	'default'  => 'fullwidth',
-	'priority' => 13,
+	'priority' => 14,
 	'choices'  => array(
 		'left'      => esc_attr__( 'Left Sidebar', 'tyche' ),
 		'fullwidth' => esc_attr__( 'Full Width', 'tyche' ),
 		'right'     => esc_attr__( 'Right Sidebar', 'tyche' ),
+	),
+) );
+
+Tyche_Kirki::add_field( 'tyche_theme', array(
+	'type'     => 'toggle',
+	'settings' => 'tyche_enable_zoom_image_product',
+	'label'    => esc_html__( 'Enable Image Zoom', 'tyche' ),
+	'section'  => 'theme_options_woocommerce',
+	'default'  => true,
+	'priority' => 1,
+) );
+Tyche_Kirki::add_field( 'tyche_theme', array(
+	'type'     => 'number',
+	'settings' => 'tyche_shop_full_width_columns',
+	'label'    => esc_attr__( 'Number the columns on Full Width Shop', 'tyche' ),
+	'section'  => 'theme_options_woocommerce',
+	'default'  => 4,
+	'choices'  => array(
+		'min'  => 0,
+		'max'  => 80,
+		'step' => 1,
+	),
+) );
+Tyche_Kirki::add_field( 'tyche_theme', array(
+	'type'     => 'number',
+	'settings' => 'tyche_shop_full_width_products',
+	'label'    => esc_attr__( 'Number the products on Full Width Shop', 'tyche' ),
+	'section'  => 'theme_options_woocommerce',
+	'default'  => 12,
+	'choices'  => array(
+		'min'  => 0,
+		'max'  => 80,
+		'step' => 1,
+	),
+) );
+Tyche_Kirki::add_field( 'tyche_theme', array(
+	'type'     => 'number',
+	'settings' => 'tyche_shop_sidebar_columns',
+	'label'    => esc_attr__( 'Number the columns on Shop with Sidebar', 'tyche' ),
+	'section'  => 'theme_options_woocommerce',
+	'default'  => 3,
+	'choices'  => array(
+		'min'  => 0,
+		'max'  => 80,
+		'step' => 1,
+	),
+) );
+Tyche_Kirki::add_field( 'tyche_theme', array(
+	'type'     => 'number',
+	'settings' => 'tyche_shop_sidebar_products',
+	'label'    => esc_attr__( 'Number the products on Shop with Sidebar', 'tyche' ),
+	'section'  => 'theme_options_woocommerce',
+	'default'  => 12,
+	'choices'  => array(
+		'min'  => 0,
+		'max'  => 80,
+		'step' => 1,
 	),
 ) );
 
@@ -258,7 +300,15 @@ Tyche_Kirki::add_field( 'tyche_theme', array(
 	'settings' => 'tyche_copyright_contents',
 	'label'    => esc_html__( 'Copyright Contents', 'tyche' ),
 	'section'  => 'theme_options_footer',
-	'default'  => 'Copyright &copy; ' . date( 'Y' ) . ' | Powered by WordPress.',
+	'default'  => vsprintf(
+		// Translators: 1 is current year, 2 is separator, 3 is theme link.
+		__( 'Copyright &copy; %1$s %2$s %3$s %2$s Powered by WordPress.', 'tyche' ),
+		array(
+			date_i18n( __( 'Y', 'tyche' ) ),
+			'<span class="sep">|</span>',
+			sprintf( '<a href="https://colorlib.com/tyche">%s</a>', __( 'Theme: Tyche', 'tyche' ) ),
+		)
+	),
 	'priority' => 12,
 ) );
 
@@ -310,63 +360,99 @@ Tyche_Kirki::add_field( 'tyche_theme', array(
 	),
 ) );
 
-Tyche_Kirki::add_field( 'tyche_theme', array(
-	'type'      => 'repeater',
-	'label'     => esc_attr__( 'Slider Backgrounds', 'tyche' ),
-	'section'   => 'frontpage_sections_bigtitle_images',
-	'priority'  => 10,
-	'row_label' => array(
-		'type'  => 'text',
-		'value' => esc_attr__( 'Background Image', 'tyche' ),
-	),
-	'default'   => array(
-		'image_bg'        => get_template_directory_uri() . '/assets/images/hero.jpg',
-		'cta_text'        => '2016',
-		'cta_subtext'     => 'Autumn Collection',
-		'button_one_text' => 'Shop Now',
-		'button_two_text' => 'Learn More',
-		'button_one_url'  => 'https://colorlib.com',
-		'button_two_url'  => 'https://colorlib.com',
-	),
-	'settings'  => 'tyche_slider_bg',
-	'fields'    => array(
-		'image_bg'        => array(
-			'type'    => 'image',
-			'label'   => esc_attr__( 'Image', 'tyche' ),
-			'default' => '',
+
+$languages = array();
+
+// if wpml is active.
+if ( function_exists( 'icl_object_id' ) ) {
+	$languages = apply_filters( 'wpml_active_languages', NULL, 'orderby=id&order=desc' );
+	foreach ( $languages as $index => $language ) :
+		$languages[ $index ] = array(
+			'name' => $language['native_name'],
+			'suffix' => '_' . $language['language_code'],
+		);
+	endforeach;
+}
+
+// if polylang is active.
+if ( function_exists( 'pll_languages_list' ) ) {
+	$languages_slug = pll_languages_list( array( 'fields' => 'slug' ) );
+	$languages_names = pll_languages_list( array( 'fields' => 'name' ) );
+	foreach ( $languages_slug as $index => $language ) :
+		$languages[ $language ] = array(
+			'name' => $languages_names[ $index ],
+			'suffix' => '_' . $language,
+		);
+	endforeach;
+}
+
+// if neither wpml or polylang are active.
+if ( ! $languages ) {
+	$languages[] = array( 'name' => '', 'suffix' => '' );
+}
+
+foreach( $languages as $language ) :
+
+	Tyche_Kirki::add_field( 'tyche_theme', array(
+		'type'      => 'repeater',
+		'label'     => sprintf( esc_attr__( 'Slider Backgrounds %s', 'tyche' ), $language['name'] ),
+		'description' => $language['name'] ? sprintf( esc_html__( 'this slider will be displayed when the selected language is: %s', 'tyche' ), $language['name'] ) : '',
+		'section'   => 'frontpage_sections_bigtitle_images',
+		'priority'  => 10,
+		'row_label' => array(
+			'type'  => 'text',
+			'value' => esc_attr__( 'Background Image', 'tyche' ),
 		),
-		'cta_text'        => array(
-			'type'    => 'text',
-			'label'   => esc_html__( 'CTA Text', 'tyche' ),
-			'default' => '2016',
+		'default'   => array(
+			'image_bg'        => get_template_directory_uri() . '/assets/images/hero.jpg',
+			'cta_text'        => '2016',
+			'cta_subtext'     => 'Autumn Collection',
+			'button_one_text' => 'Shop Now',
+			'button_two_text' => 'Learn More',
+			'button_one_url'  => 'https://colorlib.com',
+			'button_two_url'  => 'https://colorlib.com',
 		),
-		'cta_subtext'     => array(
-			'type'    => 'text',
-			'label'   => esc_html__( 'CTA Subtext', 'tyche' ),
-			'default' => 'Autumn Collection',
+		'settings'  => 'tyche_slider_bg' . $language['suffix'],
+		'fields'    => array(
+			'image_bg'        => array(
+				'type'    => 'image',
+				'label'   => esc_attr__( 'Image', 'tyche' ),
+				'default' => '',
+			),
+			'cta_text'        => array(
+				'type'    => 'text',
+				'label'   => esc_html__( 'CTA Text', 'tyche' ),
+				'default' => '2016',
+			),
+			'cta_subtext'     => array(
+				'type'    => 'text',
+				'label'   => esc_html__( 'CTA Subtext', 'tyche' ),
+				'default' => 'Autumn Collection',
+			),
+			'button_one_text' => array(
+				'type'    => 'text',
+				'label'   => esc_html__( 'Button #1 Text', 'tyche' ),
+				'default' => 'Shop Now',
+			),
+			'button_one_url'  => array(
+				'type'    => 'text',
+				'label'   => esc_html__( 'Button #1 URL', 'tyche' ),
+				'default' => 'https://colorlib.com',
+			),
+			'button_two_text' => array(
+				'type'    => 'text',
+				'label'   => esc_html__( 'Button #2 Text', 'tyche' ),
+				'default' => 'Learn More',
+			),
+			'button_two_url'  => array(
+				'type'    => 'text',
+				'label'   => esc_html__( 'Button #2 URL', 'tyche' ),
+				'default' => 'https://colorlib.com',
+			),
 		),
-		'button_one_text' => array(
-			'type'    => 'text',
-			'label'   => esc_html__( 'Button #1 Text', 'tyche' ),
-			'default' => 'Shop Now',
-		),
-		'button_one_url'  => array(
-			'type'    => 'text',
-			'label'   => esc_html__( 'Button #1 URL', 'tyche' ),
-			'default' => 'https://colorlib.com',
-		),
-		'button_two_text' => array(
-			'type'    => 'text',
-			'label'   => esc_html__( 'Button #2 Text', 'tyche' ),
-			'default' => 'Learn More',
-		),
-		'button_two_url'  => array(
-			'type'    => 'text',
-			'label'   => esc_html__( 'Button #2 URL', 'tyche' ),
-			'default' => 'https://colorlib.com',
-		),
-	),
-) );
+	) );
+endforeach;
+
 
 Tyche_Kirki::add_field( 'tyche_theme', array(
 	'type'     => 'text',
@@ -425,7 +511,7 @@ Tyche_Kirki::add_field( 'tyche_theme', array(
 	'settings' => 'info_section_three_text',
 	'default'  => 'OUR LOCATION',
 	'section'  => 'frontpage_sections_bigtitle_info',
-	'label'    => esc_html__( 'Info Section #1 Text', 'tyche' ),
+	'label'    => esc_html__( 'Info Section #3 Text', 'tyche' ),
 	'priority' => 16,
 ) );
 
