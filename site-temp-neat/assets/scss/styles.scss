@@ -1,318 +1,171 @@
 // Bourbon and Neat  2.1
 @import "../../bower_components/bourbon/app/assets/stylesheets/bourbon";
 @import "../../bower_components/neat/core/neat";
-// Partials
-@import "partials/_base";
-@import "partials/_typography";
-
-footer {
-	position: fixed;
-	bottom: 0;
-	width: 100%;
-	padding: 10px 0;
-	background: black;	
-	color: white;
-	z-index: 1000;
-	text-align: center;
-	font-size: 14px;
-}
 
 // Custom SASS imports
 // Partials
-.parallaxParent {
-	position: relative;
-	height: 100vh;
-	overflow: hidden;
-}
-.parallaxParent > .image {
-	height: 200%;
-	position: relative;
-	top: -100%;
-}
+@import "partials/_base";
+@import "partials/_typography";
+@import "partials/_nav";
+@import "partials/_layout";
 
-a, span {
-	display: inline-block;
-	background-color: white;
-	color: black;
-	padding: 5px;
-	text-decoration: underline;
-	
-		&:hover {
-			text-decoration: none;
-			cursor: pointer;
-		}
+// Modules
+@import "modules/_common";
+@import "modules/_mixins";
+
+// Vendor
+@import "vendor/_hamburgers";
+@import "vendor/_overlay";
+@import "vendor/_keyframes";
+
+body {
+  background-color: black;
 }
 
-#parallax1 .image { background-image: url(../../assets/img/example_parallax_bg1.png);}
-#parallax2 .image { background-image: url(../../assets/img/example_parallax_bg2.png);}
-#parallax3 .image { background-image: url(../../assets/img/example_parallax_bg3.png);}
-#parallax4 .image { background-image: url(../../assets/img/example_parallax_bg1.png);}
-#parallax5 .image { background-image: url(../../assets/img/example_parallax_bg2.png);}
-#parallax6 .image { background-image: url(../../assets/img/example_parallax_bg3.png);}
-#parallax7 .image { background: red; background-image: url(../../assets/img/example_parallax_bg1.png);}	
+// Social media icons in SVG
+#social-svg {
+  clear: both;
+  width: 175px;
 
-.content {
-	position: absolute;
-	top: 2%;
-	width: 50%;
-	left: 50%;
-	-webkit-transform: translateX(-50%);
-	transform: translateX(-50%);
-	height: 200px;
-	text-align: center;
-	z-index: 1;
-		
-		p {
-			color: black;
-		}
+    svg {
+      fill: #000;
+      width: 35px;
+      height: 35px;
+      background-color: #FFF;
+      border-radius: 35px;
+    }
 }
 
-.element {
-	box-sizing: border-box;
-	position: absolute;
-	z-index: 0;	
-	width: 350px;
-	min-height: 200px;
-	padding: 10px;
-	left: 50%;
-	-webkit-transform: translateX(-50%);
-	transform: translateX(-50%);
-	text-align: center;
-	color: white;
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: #FFF;
+  padding: 10px;
+  
+    a {
+      margin-right: 5px;
+      color: #000;
+      
+        &:hover {
+          text-decoration: none;
+        }
+    }
+}
+.page-home,
+.page-about,
+.page-services  {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
 }
 
+.page-home {
+  background-color: orange;
+}
 
+.page-about {
+  background-color: red;
+}
+
+.page-services {
+  background-color: blue;
+}
 
 // Temp. Elements
-#element-1,
-#element-5 {
-	background-color: blue;
-	bottom: 35%;
+#element-1 {
+  // float: right;
+  // position: relative; 
+  background-color: red;
 }
 
-
 #element-2 {
-	background-color: orange;
-	bottom: 35%;	
-	left: 50%;	
-	height: 300px;	
-	width: 300px;
+  background-color: orange;
+  // Testing autoprefixing with postcss in grunt
+  display: flex;
+  column-count: 2;
+  appearance: none; 
 }
 
 #element-3 {
-	background-color: red;
-	bottom: 35%;	
-	left: 50%;
-	width: 300px;	
-	height: 300px;		
-	z-index: 1;
+  background-color: green;
 }
 
 #element-4 {
-	background-color: green;
-	bottom: 35%;
-	left: unset;
-	right: 50%;	
-	width: 300px;	
-	height: 300px;	
-	z-index: 10;
-	-webkit-transform: translateX(50%);
-	transform: translateX(50%);	
+  background-color: blue;
 }
 
 #element-5 {
-	z-index: 1;
-	bottom: 0;
+  background-color: turquoise;
 }
 
 #element-6 {
-	background-color: purple;
-	height: 400px;
-	bottom: 0;
-	left: auto;
-	right: 0;	
-	transform: none;
-	z-index: 1;
+  background-color: purple;
 }
 
 #element-7 {
-	background-color: red;
-	top: -50%;
-	left: 50%;
-	z-index: 1;
+  background-color: red;
 }
 
 #element-8 {
-	background: orange;
-	left: 20%;
-	bottom: -50%;
-	z-index: 1;	
-}
-
-#element-9 {
-	background: orange;
-	left: 80%;		
-	bottom: -50%;
-	z-index: 1;		
-}
-
-#element-10 {
-	background: orange;
-	left: 20%;	
-	bottom: -50%;	
-	z-index: 1;		
-}
-
-#element-11 {
-	background: turquoise;
-	left: 25%;	
-	bottom: 40%;	
-	z-index: 1;		
-}
-
-#element-12 {
-	background: black;
-	left: 50%;	
-	bottom: -50%;	
-	z-index: 10;		
-}
-
-#element-13 {
-	background: red;
-	left: 75%;	
-	bottom: -50%;	
-	z-index: 1;		
-}
-
-#element-14 {
-	background: blue;
-	left: 33%;	
-	bottom: -50%;	
-	z-index: 1;		
-}
-
-#element-15 {
-	background: pink;
-	left: 66%;	
-	bottom: -50%;	
-	z-index: 1;		
-}
-
-#element-16 {
-	background: blue;
-	left: 50%;
-	width: 800px;	
-	bottom: -50%;	
-	z-index: 1;		
-}
-
-#element-17 {
-	background: orange;
-	left: 25%;	
-	bottom: -50%;	
-	z-index: 1;		
-}
-
-.spacer.s_viewport {
-	min-width: 100%;
-	min-height: 100%;
-}
-
-.spacer {
-	text-align: center;
-	min-height: 100px;
-	background: #c7e1ff url("../img/example_bg_spacer_v.gif");
+  background-color: orange;
 }
 
 
-.spacer.s0 {
-	min-height: 1px;
-}
-.spacer.s1 {
-	min-height: 100px;
-}
-.spacer.s2 {
-	min-height: 200px;
-}
-.spacer.s3 {
-	min-height: 300px;
-}
-.spacer.s4 {
-	min-height: 400px;
-}
-.spacer.s5 {
-	min-height: 500px;
-}
-.spacer.s6 {
-	min-height: 600px;
-}
-.spacer.s7 {
-	min-height: 700px;
-}
-.spacer.s8 {
-	min-height: 800px;
-}
-.spacer.s9 {
-	min-height: 900px;
-}
-.spacer.s10 {
-	min-height: 1000px;
-}
-.spacer.s_viewport {
-	min-height: 100%;
-}
-.spacer.s_viewport {
-	min-width: 100%;
-}
 
-.box1, .box2, .box3 {
-	display: inline-block;
-	position: relative;
-	border-radius: 8px;
-	border: 0px solid white;
-	text-align: center;
-	vertical-align: middle;
-	padding: 0 5px;
-}
-.box1 {
-	min-width: 100px;
-	height: 100px;
-	margin: 0 auto 0 auto;
-}
-.box2 {
-	min-width: 50px;
-	height: 50px;
-	margin: 25px auto 25px auto;
-}
-.box3 {
-	min-width: 26px;
-	height: 26px;
-	margin: 37px auto 37px auto;
-}
-.horizontal .box1 {
-	top: 50%;
-	max-height: 100px;
-	margin: -50px 0 auto 0;
-}
-.horizontal .box2 {
-	top: 50%;
-	max-height: 50px;
-	margin: -25px 25px auto 25px;
-}
-.horizontal .box3 {
-	top: 50%;
-	max-height: 26px;
-	margin: -13px 37px auto 37px;
-}
-.box1 p, .box2 p, .box3 p {
-	margin: 5px 15px 5px 15px;
-	font-size: 13px;
-	font-weight: lighter;
-	color: black;
-}
-.box1 p:first-child {
-	margin-top: 27px;
-}
-.box1 a, .box2 a, .box3 a {
-	color: black;
+
+/* @mixin respond-to
+------------------------------------------------------------------- */
+/* line 6, /Users/miguelperez/Sites/csstricks/source/stylesheets/pageTransitions.css.scss */
+.page .scene {
+  -webkit-animation-duration: 0.25s;
+  animation-duration: 0.25s;
+  -webkit-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
+/* line 17, /Users/miguelperez/Sites/csstricks/source/stylesheets/pageTransitions.css.scss */
+.page .scene--fadein {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn; }
+/* line 22, /Users/miguelperez/Sites/csstricks/source/stylesheets/pageTransitions.css.scss */
+.page .scene--fadeinup {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp; }
+/* line 27, /Users/miguelperez/Sites/csstricks/source/stylesheets/pageTransitions.css.scss */
+.page .scene--fadeinright {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight; }
+.page .scene--fadeinleft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft; }
+/* line 32, /Users/miguelperez/Sites/csstricks/source/stylesheets/pageTransitions.css.scss */
+.page .scene--delayed {
+  -webkit-animation-delay: 0.25s;
+  animation-delay: 0.25s; }
+/* line 37, /Users/miguelperez/Sites/csstricks/source/stylesheets/pageTransitions.css.scss */
+.page.is-exiting .scene {
+  -webkit-animation-direction: alternate-reverse;
+  animation-direction: alternate-reverse; }
+/* line 42, /Users/miguelperez/Sites/csstricks/source/stylesheets/pageTransitions.css.scss */
+.page.is-exiting .scene--delayed {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s; }
+/* line 47, /Users/miguelperez/Sites/csstricks/source/stylesheets/pageTransitions.css.scss */
+.page.is-exiting .scene--noexiting {
+  -webkit-animation-direction: alternate-reverse;
+  animation-direction: alternate-reverse; }
+
+@media screen and (min-width: 768px) {
+  /* line 58, /Users/miguelperez/Sites/csstricks/source/stylesheets/pageTransitions.css.scss */
+  .page .scene--fadeinright-wide {
+    -webkit-animation-name: fadeInRight;
+    animation-name: fadeInRight; } }
+
+.is-loading,
+.is-loading a {
+  cursor: progress;
 }
