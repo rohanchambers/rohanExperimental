@@ -34,7 +34,7 @@ module.exports = function(grunt){
 				options: {
 					separator: '\n;',
 				},
-				src: ['assets/js/modernizr-custom.js', 'bower_components/jquery/dist/jquery.min.js', 'assets/js/vendor/**/*.js', 'assets/js/main.js'],
+				src: ['assets/js/modernizr-custom.js', 'bower_components/jquery/dist/jquery.min.js', 'bower_components/gsap/src/minified/TweenMax.min.js', 'bower_components/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js', 'bower_components/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js', 'bower_components/gsap/src/minified/plugins/CSSPlugin.min.js', 'bower_components/gsap/src/minified/plugins/ScrollToPlugin.min.js', 'bower_components/scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js', 'assets/js/vendor/**/*.js', 'assets/js/main.js'],
 				dest: 'assets/js/compiled.js'
 			}
 		},
@@ -57,7 +57,7 @@ module.exports = function(grunt){
 	            options: {
 					camelcase: true,
 					noempty: true,
-					quotmark: 'single',
+					quotmark: 'double',
 				    curly: true,
 				    eqeqeq: true,
 				    eqnull: true,
