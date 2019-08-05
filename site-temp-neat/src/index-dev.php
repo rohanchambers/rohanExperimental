@@ -21,37 +21,23 @@
     <!--(if target dev)><!-->
     <script src="../assets/js/vendor/modernizr-custom.js"></script>
     <!--<!(endif)-->
-
-    <!-- Open graph tags -->
-    <meta property="og:image"           content="">
-    <meta property="og:title"           content="">
-    <meta property="og:description"     content="">
-    <meta property="og:url"             content="">
-    <meta property="og:image:width"     content="600">
-    <meta property="og:image:height"    content="600">
-    <meta property="og:image:type"      content="image/jpg">
-    <meta property="fb:app_id"          content="">
-
-    <meta name="twitter:card"           content="summary">
-    <meta name="twitter:site"           content="">
-    <meta name="twitter:title"          content="">
-    <meta name="twitter:description"    content="">
-    <meta name="twitter:creator"        content="">
-    <meta name="twitter:image:src"      content="">
-    <meta name="twitter:domain"         content="">
 </head>
-
 <body>
-    <div id="barba-wrapper">     
+    <nav>
+        <a href="index-dev.php">Home</a>
+        <a href="about-dev.php">About</a>
+        <a href="services-dev.php">Services</a>
+    </nav>
+    <div id="barba-wrapper">
         <div class="barba-container page-home">
-            <a href="index-dev.php">Home</a>
-            <a href="about-dev.php">About</a>
-            <a href="services-dev.php">Services</a>    
-                
-            <p>...Put here the content you wish to change between pages...</p>
+            <div class="page-home page">
+                <div class="content">
+                    <h2>Home</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
         </div>
     </div>
-
     <!--(if target dev)><!-->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../assets/js/vendor/barba.min.js"></script>

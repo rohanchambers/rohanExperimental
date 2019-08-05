@@ -1,85 +1,65 @@
-var APP = {
-};
+var FadeTransition = Barba.BaseTransition.extend({
+  start: function() {
+    /**
+     * This function is automatically called as soon the Transition starts
+     * this.newContainerLoading is a Promise for the loading of the new container
+     * (Barba.js also comes with an handy Promise polyfill!)
+     */
 
+    // As soon the loading is finished and the old page is faded out, let's fade the new page
+    Promise
+      .all([this.newContainerLoading, this.fadeOut()])
+      .then(this.fadeIn.bind(this));
+  },
 
+  fadeOut: function() {
+    /**
+     * this.oldContainer is the HTMLElement of the old Container
+     */
 
-// // DOM ready
-$(function(){
-  //APP.smoothState();
-  APP.barbarJS();
-  Barba.Pjax.start();
+    return $(this.oldContainer).animate({ opacity: 0 }).promise();
+  },
+
+  fadeIn: function() {
+    /**
+     * this.newContainer is the HTMLElement of the new Container
+     * At this stage newContainer is on the DOM (inside our #barba-container and with visibility: hidden)
+     * Please note, newContainer is available just after newContainerLoading is resolved!
+     */
+
+    var _this = this;
+    var $el = $(this.newContainer);
+
+    $(this.oldContainer).hide();
+
+    $el.css({
+      visibility : 'visible',
+      opacity : 0
+    });
+
+    $el.animate({ opacity: 1 }, 400, function() {
+      /**
+       * Do not forget to call .done() as soon your transition is finished!
+       * .done() will automatically remove from the DOM the old Container
+       */
+
+      _this.done();
+    });
+  }
 });
 
+/**
+ * Next step, you have to tell Barba to use the new Transition
+ */
 
-APP.barbarJS = function() {
-  // This till doesn't stop the double click issue of refreshing page
-  var links = document.querySelectorAll('a[href]');
-  var cbk = function(e) {
-   if(e.currentTarget.href === window.location.href) {
-     e.preventDefault();
-     e.stopPropagation();
-   }
-  };
+Barba.Pjax.getTransition = function() {
+  /**
+   * Here you can use your own logic!
+   * For example you can use different Transition based on the current page or link...
+   */
 
-  for(var i = 0; i < links.length; i++) {
-    links[i].addEventListener('click', cbk);
-  }
-  
-  var transEffect = Barba.BaseTransition.extend({
-      start: function(){
-        this.newContainerLoading.then(val => this.fadeInNewcontent($(this.newContainer)));
-      },
-      fadeInNewcontent: function(nc) {
-        nc.hide();
-        var _this = this;
-        $(this.oldContainer).fadeOut(1000).promise().done(() => {
-          nc.css('visibility','visible');
-          nc.fadeIn(1000, function(){
-            _this.done();
-          })
-        });
-      }
-  });
+  return FadeTransition;
+};
 
-  Barba.Pjax.getTransition = function() {
-    return transEffect;
-  }  
-}
-
-APP.smoothState = function() {
-  'use strict';
-  var $page = $('.page'),
-
-      options = {
-        debug: true,
-        prefetch: true,
-        cacheLength: 2,
-        onStart: {
-          duration: 700, // Duration of our animation
-          render: function ($container) {
-            // Add your CSS animation reversing class
-            $container.addClass('is-exiting');
-            // Restart your animation
-            smoothState.restartCSSAnimations();
-          }
-        },
-        onProgress: {
-          // How long this animation takes
-          duration: 500,
-          // A function that dictates the animations that take place
-          render: function ($container) {
-            console.log('Testing this on progress!')
-          }
-        },        
-        onReady: {
-          duration: 1000,
-          render: function ($container, $newContent) {
-            // Remove your CSS animation reversing class
-            $container.removeClass('is-exiting');
-            // Inject the new content
-            $container.html($newContent);
-          }
-        }
-      },
-      smoothState = $page.smoothState(options).data('smoothState');
-}
+//Please note, the DOM should be ready
+Barba.Pjax.start();
