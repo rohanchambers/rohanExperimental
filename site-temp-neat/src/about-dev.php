@@ -23,6 +23,9 @@
     <!--<!(endif)-->
 </head>
 <body>
+<!--     <div class="screen-wipe-top"></div>
+    <div class="screen-wipe-bottom"></div>     -->
+
     <div id="barba-wrapper">       
         <div class="barba-container">                     
             <div class="page-about page">
@@ -33,9 +36,11 @@
             </div>
         </div>
     </div>
+    
     <!--(if target dev)><!-->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../assets/js/vendor/barba.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>    
     <script src="../assets/js/main.js"></script>
     <!--<!(endif)-->
     <!--(if target dist)>
