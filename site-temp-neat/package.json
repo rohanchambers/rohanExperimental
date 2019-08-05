@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "main": "gruntfile.js",
   "dependencies": {
+    "@barba/core": "^2.3.15",
+    "autoprefixer": "^9.6.1",
     "grunt-targethtml": "^0.2.6",
     "imagemin": "^5.2.2"
   },

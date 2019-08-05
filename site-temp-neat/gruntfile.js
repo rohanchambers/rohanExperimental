@@ -12,14 +12,15 @@ module.exports = function(grunt){
 			}
 		},
 
+		// Autorprexier remover as causeing conflicts
 		postcss: {
-			options: {
-			map: false, // inline sourcemaps
+			// options: {
+			// map: false, // inline sourcemaps
 
-			processors: [
-				require('autoprefixer')({browsers: 'last 2 versions'}), // add vendor prefixes
-			]
-			},
+			// processors: [
+			// 	require('autoprefixer')({browsers: 'last 2 versions'}), // add vendor prefixes
+			// ]
+			// },
 			dist: {
 				src: 'assets/css/styles.css'
 			}

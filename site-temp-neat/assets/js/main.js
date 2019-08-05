@@ -1,85 +1,52 @@
-var APP = {
-};
+// tell Barba to use the css module
+barba.use(barbaCss);
 
-
-
-// // DOM ready
-$(function(){
-  //APP.smoothState();
-  APP.barbarJS();
-  Barba.Pjax.start();
+// basic default transition (with no rules and minimal hooks)
+barba.init({
+  transitions: [{
+    leave({ current, next, trigger }) {
+      // do something with `current.container` for your leave transition
+      // then return a promise or use `this.async()`
+    },
+    enter({ current, next, trigger }) {
+      // do something with `next.container` for your enter transition
+      // then return a promise or use `this.async()`
+    }
+  }]
 });
 
+// dummy example to illustrate rules and hooks
+barba.init({
+  transitions: [{
+    name: 'dummy-transition',
 
-APP.barbarJS = function() {
-  // This till doesn't stop the double click issue of refreshing page
-  var links = document.querySelectorAll('a[href]');
-  var cbk = function(e) {
-   if(e.currentTarget.href === window.location.href) {
-     e.preventDefault();
-     e.stopPropagation();
-   }
-  };
+    // apply only when leaving `[data-barba-namespace="home"]`
+    from: 'home',
 
-  for(var i = 0; i < links.length; i++) {
-    links[i].addEventListener('click', cbk);
-  }
-  
-  var transEffect = Barba.BaseTransition.extend({
-      start: function(){
-        this.newContainerLoading.then(val => this.fadeInNewcontent($(this.newContainer)));
-      },
-      fadeInNewcontent: function(nc) {
-        nc.hide();
-        var _this = this;
-        $(this.oldContainer).fadeOut(1000).promise().done(() => {
-          nc.css('visibility','visible');
-          nc.fadeIn(1000, function(){
-            _this.done();
-          })
-        });
-      }
-  });
+    // apply only when transitioning to `[data-barba-namespace="products | contact"]`
+    to: {
+      namespace: [
+        'about',
+        'services'
+      ]
+    },
 
-  Barba.Pjax.getTransition = function() {
-    return transEffect;
-  }  
-}
+    // apply only if clicked link contains `.cta`
+    // custom: ({ current, next, trigger })
+    //   => trigger.classList && trigger.classList.contains('cta'),
 
-APP.smoothState = function() {
-  'use strict';
-  var $page = $('.page'),
+    // // do leave and enter concurrently
+    // sync: true,
 
-      options = {
-        debug: true,
-        prefetch: true,
-        cacheLength: 2,
-        onStart: {
-          duration: 700, // Duration of our animation
-          render: function ($container) {
-            // Add your CSS animation reversing class
-            $container.addClass('is-exiting');
-            // Restart your animation
-            smoothState.restartCSSAnimations();
-          }
-        },
-        onProgress: {
-          // How long this animation takes
-          duration: 500,
-          // A function that dictates the animations that take place
-          render: function ($container) {
-            console.log('Testing this on progress!')
-          }
-        },        
-        onReady: {
-          duration: 1000,
-          render: function ($container, $newContent) {
-            // Remove your CSS animation reversing class
-            $container.removeClass('is-exiting');
-            // Inject the new content
-            $container.html($newContent);
-          }
-        }
-      },
-      smoothState = $page.smoothState(options).data('smoothState');
-}
+    // available hooks…
+    beforeAppear() {},
+    appear() {},
+    afterAppear() {},
+    beforeLeave() {},
+    leave() {},
+    afterLeave() {},
+    beforeEnter() {},
+    enter() {},
+    afterEnter() {}
+  }]
+});
