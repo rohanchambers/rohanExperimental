@@ -85,6 +85,7 @@ a, span {
   top: 2%;
   width: 50%;
   left: 50%;
+  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   height: 200px;
   text-align: center;
@@ -93,13 +94,15 @@ a, span {
     color: black; }
 
 .element {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   position: absolute;
   z-index: 0;
   width: 350px;
   min-height: 200px;
   padding: 10px;
   left: 50%;
+  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   text-align: center;
   color: white; }
@@ -132,6 +135,7 @@ a, span {
   width: 300px;
   height: 300px;
   z-index: 10;
+  -webkit-transform: translateX(50%);
   transform: translateX(50%); }
 
 #element-5 {
@@ -144,7 +148,8 @@ a, span {
   bottom: 0;
   left: auto;
   right: 0;
-  transform: none;
+  -webkit-transform: none;
+          transform: none;
   z-index: 1; }
 
 #element-7 {
