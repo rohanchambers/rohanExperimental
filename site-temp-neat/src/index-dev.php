@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Barba JS - Home</title>
+    <title>Site template Neat 2.1</title>
     <meta name="title" content="">
     <meta name="author" content="">
     <meta name="description" content="">
@@ -21,44 +21,88 @@
     <!--(if target dev)><!-->
     <script src="../assets/js/vendor/modernizr-custom.js"></script>
     <!--<!(endif)-->
+
+    <!-- Open graph tags -->
+    <meta property="og:image"           content="">
+    <meta property="og:title"           content="">
+    <meta property="og:description"     content="">
+    <meta property="og:url"             content="">
+    <meta property="og:image:width"     content="600">
+    <meta property="og:image:height"    content="600">
+    <meta property="og:image:type"      content="image/jpg">
+    <meta property="fb:app_id"          content="">
+
+    <meta name="twitter:card"           content="summary">
+    <meta name="twitter:site"           content="">
+    <meta name="twitter:title"          content="">
+    <meta name="twitter:description"    content="">
+    <meta name="twitter:creator"        content="">
+    <meta name="twitter:image:src"      content="">
+    <meta name="twitter:domain"         content="">
 </head>
+
 <body>
-<!--     <div class="screen-wipe-top"></div>
-    <div class="screen-wipe-bottom"></div> -->
-
-    <nav>
-        <a href="index-dev.php">Home</a>
-        <a href="about-dev.php">About</a>
-        <a href="services-dev.php">Services</a>
-    </nav>
-
-    <div class="color-wipes-animate">
-        <div class="color-wipe"></div>
-        <div class="color-wipe"></div>
-        <div class="color-wipe"></div>
-        <div class="color-wipe"></div>
-        <div class="color-wipe"></div>
-    </div>
-    
-    <div class="loader">
-        <p>It's a Slam Dunk!</p>
-    </div>
-
-    <div id="barba-wrapper">
-        <div class="barba-container">
-            <div class="page-home page">
-                <div class="content">
-                    <h2>Home</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-            </div>
+    <!-- The overlay -->
+    <div id="myNav" class="overlay">
+        <!-- Overlay content -->
+        <div class="overlay-content">
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
         </div>
+    </div>   
+
+    <div class="container">
+        <button class="hamburger hamburger--squeeze" type="button">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
     </div>
-    
+
+    <section id="section-1" class="container">
+		<article id="element-1">Third column</article>
+		<article id="element-2">Third column</article>
+		<article id="element-3">Third column</article>
+    </section>
+
+    <section id="section-2" class="container">
+        <article id="element-4">Third column</article>
+        <article id="element-5">Third column</article>
+    </section>
+
+    <section id="section-3">
+        <div class="container">
+            <article id="element-6">Third column</article>
+        </div>
+    </section>
+
+    <section id="section-4">
+        <div class="full-container">
+            <article id="element-7">
+                <div class="container">
+                    <div>Third column</div>
+                </div>
+            </article>
+            <article id="element-8"></article>
+        </div>
+    </section>
+
+    <section id="section-5">
+        <div class="full-container">
+            <article id="element-8"></article>
+            <article id="element-7">
+                <div class="container">
+                    <div>Third column</div>
+                </div>
+            </article>
+        </div>
+    </section>
+
     <!--(if target dev)><!-->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
-    <script src="../assets/js/vendor/barba.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
+    <script src="../bower_components/jquery-validation/dist/jquery.validate.js"></script>
     <script src="../assets/js/main.js"></script>
     <!--<!(endif)-->
     <!--(if target dist)>
