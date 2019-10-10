@@ -1,0 +1,87 @@
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: Helvetica, Verdana, sans-serif;
+  font-size: 1.4rem; }
+
+h1, h2, p {
+  margin: 0; }
+
+ul li {
+  list-style-type: none; }
+
+@font-face {
+  font-family: 'arial_blackregular';
+  src: url("../fonts/arial_black/arial_black.eot");
+  src: url("../fonts/arial_black/arial_black.eot?#iefix") format("embedded-opentype"), url("../fonts/arial_black/arial_black.woff2") format("woff2"), url("../fonts/arial_black/arial_black.woff") format("woff"), url("../fonts/arial_black/arial_black.svg#arial_blackregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+h2 {
+  margin-bottom: 8px; }
+
+p {
+  font-family: Helvetica, Verdana, sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.5em;
+  color: #FFF;
+  margin-bottom: 8px; }
+
+p a {
+  display: inline-block; }
+
+.content {
+  position: absolute;
+  top: 2%;
+  width: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  height: 200px;
+  text-align: center;
+  z-index: 1; }
+  .content p {
+    color: black; }
+
+.element {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+  z-index: 0;
+  width: 350px;
+  min-height: 200px;
+  padding: 10px;
+  left: 50%;
+  text-align: center;
+  color: white; }
+
+#element-1 {
+  background-color: blue;
+  top: 55%;
+  left: 0%;
+  height: 300px;
+  width: 300px; }
+
+#element-2 {
+  background-color: orange;
+  top: 45%;
+  left: 0%;
+  width: 300px;
+  height: 300px;
+  z-index: 1; }
+
+#element-3 {
+  background-color: green;
+  top: 35%;
+  left: 0%;
+  width: 300px;
+  height: 300px;
+  z-index: 10; }
+
+#element-4 {
+  background-color: red;
+  top: 25%;
+  left: 0%;
+  width: 300px;
+  height: 300px;
+  z-index: 10; }
