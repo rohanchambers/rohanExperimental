@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'arial_blackregular';
+    src: url('../fonts/arial_black/arial_black.eot');
+    src: url('../fonts/arial_black/arial_black.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/arial_black/arial_black.woff2') format('woff2'),
+         url('../fonts/arial_black/arial_black.woff') format('woff'),
+         url('../fonts/arial_black/arial_black.svg#arial_blackregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+p {
+	font-family: $text-font;
+	font-size: $text-size;
+    line-height: 1.5em;
+    color: $black;
+    margin-bottom: 8px;
+}
