@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Site template Neat 2.1</title>
+    <title>Site template Webpack Learning</title>
     <meta name="title" content="">
     <meta name="author" content="">
     <meta name="description" content="">
@@ -75,28 +75,6 @@
     <section id="section-3">
         <div class="container">
             <article id="element-6">Third column</article>
-        </div>
-    </section>
-
-    <section id="section-4">
-        <div class="full-container">
-            <article id="element-7">
-                <div class="container">
-                    <div>Third column</div>
-                </div>
-            </article>
-            <article id="element-8"></article>
-        </div>
-    </section>
-
-    <section id="section-5">
-        <div class="full-container">
-            <article id="element-8"></article>
-            <article id="element-7">
-                <div class="container">
-                    <div>Third column</div>
-                </div>
-            </article>
         </div>
     </section>
 
