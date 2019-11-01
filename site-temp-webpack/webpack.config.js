@@ -1,11 +1,12 @@
-// Tutorial https://www.youtube.com/watch?v=D_9wd19X5gQ
-// startup: npm run dev or build
-
+//Webpack 4 | Tutorial https://www.youtube.com/watch?v=D_9wd19X5gQ
+// Terminal: npm run dev or build
 const path = require('path')
 // Call this to get dev Server as part of webpack
 const webpack = require('webpack')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-/* Webpack Placeholders for filenames 
+/* Webpack Placeholders for filenames
 *has issues when using for filename with [hash]
 * [hash]
 * [chunkhash]
@@ -18,21 +19,25 @@ const webpack = require('webpack')
 module.exports = {
 	mode: 'development',
 	entry: {
-		myfile: './src/js/app.js',
-	}, 
+		main: './src/js/app.js',
+	},
 	output: {
 		path: path.resolve(__dirname, 'dist'),
-		filename: 'bundle.js',
+		filename: 'bundle.[chunkhash].js',
 		//publicPath: '/assets/',
 		// libraryTarget: 'var',
 		// library: 'myfirstlibrary'
 	},
 	module: {
-		// any files that have css
-		rules: [
-			{
-				test: /\.css$/, use: ['style-loader', 'css-loader']	
-			},
+    	rules: [
+            {
+                test: /\.(scss|sass|css)$/, 
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    { loader: 'css-loader', options: { url: false, sourceMap: true } },
+                    { loader: 'sass-loader', options: { sourceMap: true } },                    
+                ]
+            },
 			{
 		        test: /\.js$/,
 		        exclude: /(node_modules)/,
@@ -41,16 +46,27 @@ module.exports = {
 		          options: {
 		            presets: ['@babel/preset-env']
 		          }
-		        }					
-			}			
-		]
+		        }
+			}		     
+    	]
 	},
-
-	//test: /\.js$/, use: 'babel-loader', exclude: '/node_modules/', query:{presets:['es2015']}
+	plugins: [
+		new MiniCssExtractPlugin({
+		  // Options similar to the same options in webpackOptions.output
+		  // all options are optional
+		  filename: 'styles.[chunkhash].css',
+		  ignoreOrder: false, // Enable to remove warnings about conflicting order
+		}),
+	    new HtmlWebpackPlugin({
+	      inject: false,
+	      hash: true,
+	      template: 'src/index.html',
+	      filename: 'index.html'
+	    })		
+	],	
 	devServer: {
 		port: 8080,
 		contentBase: path.join(__dirname, 'dist'),
-		writeToDisk: false// to check webpack is working
-	}//
-	//plugins: [new webpack.HotModuleReplacementPlugin()]
+		writeToDisk: false // to check webpack is working
+	}
 }

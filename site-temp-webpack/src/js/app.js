@@ -1,10 +1,14 @@
-require('../css/style.css');
+import '../scss/styles.scss';
+
+// extracts our CSS out of the JavaScript bundle into a separate file
+//const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 // Load in jquery
 let $ = require('jquery');
 
 import { writeToScreen} from './text'
 writeToScreen();
+
 import { people } from './text.js'
 
 $.each(people, function(key, value){

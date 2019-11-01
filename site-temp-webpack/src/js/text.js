@@ -1,5 +1,5 @@
 export function writeToScreen() {
-	document.write('Hello world from Rohan');
+	document.write('Hello world from Rohan and friends');
 }
 
 export let people = [

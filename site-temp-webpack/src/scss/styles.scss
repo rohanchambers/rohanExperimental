@@ -1,0 +1,10 @@
+// Testing scss with webapack bundler
+$body-color: red;
+
+body {
+  background-color: $body-color;
+  
+  	h1 {
+  		background: orange;
+  	}
+}
