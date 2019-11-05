@@ -21,6 +21,10 @@ module.exports = {
     	rules: [
             {
                 test: /\.(scss|sass|css)$/,
+	            include: [
+	                path.resolve(__dirname, 'node_modules'),
+	                path.resolve(__dirname, 'src/scss'),
+	            ],                
                 use: [
                     MiniCssExtractPlugin.loader,
                     { loader: 'css-loader', options: { url: false, sourceMap: true } },

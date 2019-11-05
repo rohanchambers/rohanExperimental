@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "main": "gruntfile.js",
   "dependencies": {
+    "bourbon-neat": "^4.0.0",
     "grunt-targethtml": "^0.2.6",
     "imagemin": "^5.2.2"
   },
   "devDependencies": {
+    "bourbon": "^6.0.0",
     "grunt": "^1.0.1",
     "grunt-assets-versioning": "^1.0.6",
     "grunt-autoprefixer": "^3.0.4",
