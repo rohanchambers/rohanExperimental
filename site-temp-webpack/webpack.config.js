@@ -19,18 +19,45 @@ module.exports = {
 	},
 	module: {
     	rules: [
+			{
+				test: /\.(png|jpg|gif|svg)$/,
+				exclude: [
+				  path.resolve(__dirname, './node_modules'),
+				],
+				use: {
+				  loader: 'file-loader',
+				  options: {
+				    name: '[name]-[hash].[ext]',
+				    outputPath: 'img',
+				    publicPath: 'assets/img',
+				  },
+				},
+			},
             {
                 test: /\.(scss|sass|css)$/,
-	            include: [
-	                path.resolve(__dirname, 'node_modules'),
-	                path.resolve(__dirname, 'src/scss'),
-	            ],                
                 use: [
                     MiniCssExtractPlugin.loader,
                     { loader: 'css-loader', options: { url: false, sourceMap: true } },
                     { loader: 'sass-loader', options: { sourceMap: true } },
                 ]
             },
+			// {
+			// test: /\.(sa|sc|c)ss$/,
+			// 	use: [
+			// 	  MiniCssExtractPlugin.loader,
+			// 	  { loader: "css-loader", options: {} },
+			// 	  {
+			// 	    loader: "postcss-loader",
+			// 	    options: {
+			// 	      ident: 'postcss',
+			// 	      plugins: [
+			// 	        require('autoprefixer'),
+			// 	      ]
+			// 	    }
+			// 	  },
+			// 	  { loader: "sass-loader", options: {} }
+			// 	]
+			// },
 			{
 		        test: /\.js$/,
 		        exclude: /(node_modules)/,
@@ -57,7 +84,8 @@ module.exports = {
 		  ignoreOrder: false, // Enable to remove warnings about conflicting order
 		}),
 	    new HtmlWebpackPlugin({
-	      inject: true,
+	      minify: { collapseWhitespace: false},
+	      inject: false,
 	      hash: true,
 	      template: 'src/index.html',
 	      filename: 'index.html'
@@ -68,7 +96,9 @@ module.exports = {
 			"TweenMax": path.resolve('node_modules', 'gsap/src/uncompressed/TweenMax.js'),
 			"TimelineMax": path.resolve('node_modules', 'gsap/src/uncompressed/TimelineMax.js'),
 			"ScrollMagic": path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/ScrollMagic.js'),
-			"animation.gsap": path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js')
+			"animation.gsap": path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js'), 
+			"debug.addIndicators": path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js'), 
+			"scrollTo": path.resolve('node_modules', 'gsap/src/uncompressed/plugins/ScrollToPlugin.js')
 		}
 	}
 }
