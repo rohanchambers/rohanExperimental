@@ -1,9 +1,12 @@
-// Webpack 4 | Tutorial https://www.youtube.com/watch?v=D_9wd19X5gQ
+// Webpack 4 Learning and creation of Boilerplate
 // Terminal: npm run dev or build
+
 const path = require('path')
 const webpack = require('webpack')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
 	mode: 'development',
@@ -13,51 +16,18 @@ module.exports = {
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 		filename: 'bundle.[chunkhash].js',
-		// publicPath: '/assets/',
+		//publicPath: '/',
 		// libraryTarget: 'var',
 		// library: 'myfirstlibrary'
 	},
+	devServer: {
+		port: 8080,
+		contentBase: path.join(__dirname, 'dist'),
+		writeToDisk: false // to check webpack is working
+		//hot: true,
+	},
 	module: {
     	rules: [
-			{
-				test: /\.(png|jpg|gif|svg)$/,
-				exclude: [
-				  path.resolve(__dirname, './node_modules'),
-				],
-				use: {
-				  loader: 'file-loader',
-				  options: {
-				    name: '[name]-[hash].[ext]',
-				    outputPath: 'img',
-				    publicPath: 'assets/img',
-				  },
-				},
-			},
-            {
-                test: /\.(scss|sass|css)$/,
-                use: [
-                    MiniCssExtractPlugin.loader,
-                    { loader: 'css-loader', options: { url: false, sourceMap: true } },
-                    { loader: 'sass-loader', options: { sourceMap: true } },
-                ]
-            },
-			// {
-			// test: /\.(sa|sc|c)ss$/,
-			// 	use: [
-			// 	  MiniCssExtractPlugin.loader,
-			// 	  { loader: "css-loader", options: {} },
-			// 	  {
-			// 	    loader: "postcss-loader",
-			// 	    options: {
-			// 	      ident: 'postcss',
-			// 	      plugins: [
-			// 	        require('autoprefixer'),
-			// 	      ]
-			// 	    }
-			// 	  },
-			// 	  { loader: "sass-loader", options: {} }
-			// 	]
-			// },
 			{
 		        test: /\.js$/,
 		        exclude: /(node_modules)/,
@@ -67,16 +37,67 @@ module.exports = {
 		            presets: ['@babel/preset-env']
 		          }
 		        }
-			}
+			},
+            {
+                test: /\.(scss|sass|css)$/,
+                use: [
+                	'style-loader',
+                    MiniCssExtractPlugin.loader,
+                    { loader: 'css-loader', options: { url: false, sourceMap: true} },
+                    { loader: 'postcss-loader'}, // Autoprefixer see config
+                    { loader: 'sass-loader', options: { sourceMap: true } },
+                ]
+            },
+			// {
+			//   test: /\.(html)$/,
+			//   use: {
+			//     loader: 'html-loader',
+			//     options: {
+			//       attrs: ['img:src']
+			//     }
+			//   }
+			// },	            
+			{
+			  test: /\.(gif|png|jpe?g|svg)$/i,
+				exclude: [
+				  path.resolve(__dirname, './node_modules'),
+				],
+			  	use: [
+				{
+			  	loader: 'file-loader',
+				  options: {
+				  	limit: 8000,
+				    name: '[name]-[hash:8].[ext]',
+				    outputPath: 'img/'
+				  }
+				}
+			  ],
+			},		
+			// {	
+			// 	test: /\.html$/,
+			// 	use: [
+			// 		{
+			// 			loader: 'file-loader',
+			// 			options: {
+			// 				name: 'index.html'
+			// 			}
+			// 		},
+			// 		{
+			// 			loader: 'extract-loader'
+			// 		},
+			// 		{
+			// 			loader: 'html-loader',
+			// 			options: {
+			// 				attrs: ["img:src"]
+			// 			}
+			// 		}
+			// 	]
+			// },			
     	]
 	},
-	devServer: {
-		port: 8080,
-		contentBase: path.join(__dirname, 'dist'),
-		writeToDisk: false // to check webpack is working
-		//hot: true,
-	},
+
 	plugins: [
+		new CleanWebpackPlugin(),
 		new MiniCssExtractPlugin({
 		  // Options similar to the same options in webpackOptions.output
 		  // all options are optional
@@ -89,16 +110,25 @@ module.exports = {
 	      hash: true,
 	      template: 'src/index.html',
 	      filename: 'index.html'
-	    })
+	    }),
+	    // npm run stylelint to lint your SCSS files
+	    // new StyleLintPlugin({
+	    //   configFile: './stylelint.config.js',
+	    //   files: './src/scss/**/*.scss',
+	    //   syntax: 'scss'
+	    // }),
 	],
 	resolve: {
 		alias: {
 			"TweenMax": path.resolve('node_modules', 'gsap/src/uncompressed/TweenMax.js'),
 			"TimelineMax": path.resolve('node_modules', 'gsap/src/uncompressed/TimelineMax.js'),
 			"ScrollMagic": path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/ScrollMagic.js'),
-			"animation.gsap": path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js'), 
-			"debug.addIndicators": path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js'), 
+			"animation.gsap": path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js'),
+			"debug.addIndicators": path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js'),
 			"scrollTo": path.resolve('node_modules', 'gsap/src/uncompressed/plugins/ScrollToPlugin.js')
+			// '@scss': path.resolve(__dirname, '../src/scss'),
+			// '@img': path.resolve(__dirname, '../src/img'),
+			// '@': path.resolve(__dirname, '../src'),
 		}
 	}
 }

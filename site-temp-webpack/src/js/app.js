@@ -1,9 +1,9 @@
 import 'normalize.css';
 import '../scss/styles.scss';
+
 import img from '../img/example_parallax_bg1.png';
 import img2 from '../img/example_parallax_bg2.png';
-// import img3 from '../img/example_parallax_bg3.png';
-// import img4 from '../img/example_parallax_bg4.png';
+import img3 from '../img/example_parallax_bg3.png';
 
 // Load external libraries | Look at webpack config file (resolve alias)
 import $ from 'jquery';
@@ -55,9 +55,9 @@ APP.scrollToSections = function() {
 
 
 	// // Go to position
-	$("html, body").animate({
-		scrollTop: 1400
-	}, 500);
+	// $("html, body").animate({
+	// 	scrollTop: 1400
+	// }, 500);
 
 	$("a[href^='#']").on("click", function(event) {
 	    var target = $( $(this).attr("href") );

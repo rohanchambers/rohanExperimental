@@ -46,13 +46,16 @@ a, span {
 		}
 }
 
-#parallax1 .image { background-image: url(img/example_parallax_bg1-66dfa91dd5b217ed3faa3cf017ba0b15.png);}
-#parallax2 .image { background-image: url(img/example_parallax_bg2-f3ab2e113c0bdd7fe5b6392876026128.png);}
-#parallax3 .image { background-image: url(img/example_parallax_bg3.png);}
-#parallax4 .image { background-image: url(img/example_parallax_bg1.png);}
-#parallax5 .image { background-image: url(img/example_parallax_bg2.png);}
-#parallax6 .image { background-image: url(img/example_parallax_bg3.png);}
-#parallax7 .image { background: red; background-image: url(img/example_parallax_bg1.png);}	
+// Testing autoprefixer on build
+//#parallax1 .image { background: linear-gradient(#e98a00, #000);}
+
+#parallax1 .image { background-image: url(../img/example_parallax_bg1.png);}
+#parallax2 .image { background-image: url(../img/example_parallax_bg2.png);}
+#parallax3 .image { background-image: url(../img/example_parallax_bg3.png);}
+#parallax4 .image { background-image: url(../img/example_parallax_bg1.png);}
+#parallax5 .image { background-image: url(../img/example_parallax_bg2.png);}
+#parallax6 .image { background-image: url(../img/example_parallax_bg3.png);}
+#parallax7 .image { background: red; background-image: url(../img/example_parallax_bg1.png);}	
 
 .content {
 	position: absolute;
@@ -93,6 +96,11 @@ a, span {
 	bottom: 35%;
 }
 
+#element-1 img {
+	border-radius: 100%;
+	width: 300px;
+	box-shadow: 0 0 20px black;
+}
 
 #element-2 {
 	background-color: orange;
