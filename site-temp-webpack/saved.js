@@ -1,3 +1,14 @@
+            {
+                test: /\.(scss|sass|css)$/,
+                use: [
+                	'style-loader',
+                    MiniCssExtractPlugin.loader,
+                    { loader: 'css-loader', options: { url: false, sourceMap: true} },
+                    { loader: 'postcss-loader'}, // Autoprefixer see postcss.config.js
+                    //{ loader: 'resolve-url-loader'},
+                    { loader: 'sass-loader', options: { sourceMap: true } },
+                ]
+            },				
 			{
 			  test: /\.(gif|png|jpe?g|svg)$/i,
 				exclude: [
@@ -12,7 +23,8 @@
 				    outputPath: 'img/'
 				    //publicPath: 'assets/img',
 				  }
-				},	    
+				},	   
+
 			    {
 			      loader: 'image-webpack-loader',
 			      options: {

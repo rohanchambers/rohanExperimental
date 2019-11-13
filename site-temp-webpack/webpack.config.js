@@ -1,10 +1,10 @@
 // Webpack 4 Learning and creation of Boilerplate
 // Terminal: npm run dev or build
-
 const path = require('path')
 const webpack = require('webpack')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
@@ -17,14 +17,10 @@ module.exports = {
 		path: path.resolve(__dirname, 'dist'),
 		filename: 'bundle.[chunkhash].js',
 		//publicPath: '/',
-		// libraryTarget: 'var',
-		// library: 'myfirstlibrary'
 	},
 	devServer: {
 		port: 8080,
 		contentBase: path.join(__dirname, 'dist'),
-		writeToDisk: false // to check webpack is working
-		//hot: true,
 	},
 	module: {
     	rules: [
@@ -38,71 +34,42 @@ module.exports = {
 		          }
 		        }
 			},
-            {
-                test: /\.(scss|sass|css)$/,
-                use: [
-                	'style-loader',
-                    MiniCssExtractPlugin.loader,
-                    { loader: 'css-loader', options: { url: false, sourceMap: true} },
-                    { loader: 'postcss-loader'}, // Autoprefixer see config
-                    { loader: 'sass-loader', options: { sourceMap: true } },
-                ]
-            },
-			// {
-			//   test: /\.(html)$/,
-			//   use: {
-			//     loader: 'html-loader',
-			//     options: {
-			//       attrs: ['img:src']
-			//     }
-			//   }
-			// },	            
 			{
 			  test: /\.(gif|png|jpe?g|svg)$/i,
-				exclude: [
-				  path.resolve(__dirname, './node_modules'),
-				],
-			  	use: [
-				{
-			  	loader: 'file-loader',
-				  options: {
-				  	limit: 8000,
-				    name: '[name]-[hash:8].[ext]',
-				    outputPath: 'img/'
-				  }
+			  	use: {
+				  	loader: 'file-loader',
+					  options: {
+					    name: '[name]-[hash].[ext]',
+					    outputPath: 'img/'
+					}
 				}
-			  ],
+			},
+			{
+				test: /\.(scss|sass|css|)$/,
+				use: [
+					'style-loader',
+					MiniCssExtractPlugin.loader,
+					"css-loader", 
+					"postcss-loader", 
+					"sass-loader"
+				]
 			},		
-			// {	
-			// 	test: /\.html$/,
-			// 	use: [
-			// 		{
-			// 			loader: 'file-loader',
-			// 			options: {
-			// 				name: 'index.html'
-			// 			}
-			// 		},
-			// 		{
-			// 			loader: 'extract-loader'
-			// 		},
-			// 		{
-			// 			loader: 'html-loader',
-			// 			options: {
-			// 				attrs: ["img:src"]
-			// 			}
-			// 		}
-			// 	]
-			// },			
+			{
+				test: /\.(woff|woff2|eot|svg|ttf|otf)$/,
+			  	use: {
+				  	loader: 'file-loader',
+					  options: {
+					    name: '[name].[hash].[ext]',
+					    outputPath: 'fonts/'
+					}
+				}
+			},
     	]
 	},
-
 	plugins: [
 		new CleanWebpackPlugin(),
 		new MiniCssExtractPlugin({
-		  // Options similar to the same options in webpackOptions.output
-		  // all options are optional
 		  filename: 'styles.[chunkhash].css',
-		  ignoreOrder: false, // Enable to remove warnings about conflicting order
 		}),
 	    new HtmlWebpackPlugin({
 	      minify: { collapseWhitespace: false},
@@ -111,6 +78,11 @@ module.exports = {
 	      template: 'src/index.html',
 	      filename: 'index.html'
 	    }),
+	    // // Copy assets over to dist folder eg. img / fonts
+	    // new CopyPlugin([
+	    //   { from: 'src/img', to: 'img'},
+	    //   { from: 'src/fonts', to: 'fonts'}
+	    // ]),        
 	    // npm run stylelint to lint your SCSS files
 	    // new StyleLintPlugin({
 	    //   configFile: './stylelint.config.js',

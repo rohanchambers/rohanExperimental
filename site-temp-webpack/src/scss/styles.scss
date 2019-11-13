@@ -7,17 +7,16 @@
 @import "partials/_base";
 @import "partials/_typography";
 
-footer {
-	position: fixed;
-	bottom: 0;
-	width: 100%;
-	padding: 10px 0;
-	background: black;	
-	color: white;
-	z-index: 1000;
-	text-align: center;
-	font-size: 14px;
-}
+// Testing autoprefixer on build
+// #parallax1 .image { background: linear-gradient(#e98a00, #000);}
+
+#parallax1 .image { background-image: url(../img/example_parallax_bg1.png);}
+#parallax2 .image { background-image: url(../img/example_parallax_bg2.png);}
+#parallax3 .image { background-image: url(../img/example_parallax_bg3.png);}
+#parallax4 .image { background-image: url(../img/example_parallax_bg1.png);}
+#parallax5 .image { background-image: url(../img/example_parallax_bg2.png);}
+#parallax6 .image { background-image: url(../img/example_parallax_bg3.png);}
+#parallax7 .image { background-image: url(../img/example_parallax_bg1.png);}	
 
 // Custom SASS imports
 // Partials
@@ -46,16 +45,7 @@ a, span {
 		}
 }
 
-// Testing autoprefixer on build
-//#parallax1 .image { background: linear-gradient(#e98a00, #000);}
 
-#parallax1 .image { background-image: url(../img/example_parallax_bg1.png);}
-#parallax2 .image { background-image: url(../img/example_parallax_bg2.png);}
-#parallax3 .image { background-image: url(../img/example_parallax_bg3.png);}
-#parallax4 .image { background-image: url(../img/example_parallax_bg1.png);}
-#parallax5 .image { background-image: url(../img/example_parallax_bg2.png);}
-#parallax6 .image { background-image: url(../img/example_parallax_bg3.png);}
-#parallax7 .image { background: red; background-image: url(../img/example_parallax_bg1.png);}	
 
 .content {
 	position: absolute;
@@ -97,7 +87,7 @@ a, span {
 }
 
 #element-1 img {
-	border-radius: 100%;
+	border-radius: 2%;
 	width: 300px;
 	box-shadow: 0 0 20px black;
 }
@@ -232,7 +222,7 @@ a, span {
 .spacer {
 	text-align: center;
 	min-height: 100px;
-	background: #c7e1ff url("../img/example_bg_spacer_v.gif");
+	//background: #c7e1ff url(../img/example_bg_spacer_v.gif);
 }
 
 
@@ -326,4 +316,16 @@ a, span {
 }
 .box1 a, .box2 a, .box3 a {
 	color: black;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	padding: 10px 0;
+	background: black;	
+	color: white;
+	z-index: 1000;
+	text-align: center;
+	font-size: 14px;
 }

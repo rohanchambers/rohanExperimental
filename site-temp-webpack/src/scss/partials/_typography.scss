@@ -9,6 +9,12 @@
     font-style: normal;
 }
 
+h2 {
+    font-family: 'arial_blackregular', Arial, Verdana;   
+    margin-bottom: 30px;
+    text-transform: uppercase; 
+}
+
 p {
 	font-family: $text-font;
 	font-size: $text-size;
