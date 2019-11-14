@@ -8,7 +8,7 @@
 @import "partials/_typography";
 
 // Testing autoprefixer on build
-#parallax1 .image { background: linear-gradient(#e98a00, #000);}
+//#parallax1 .image { background: linear-gradient(#e98a00, #000);}
 
 #parallax1 .image { background-image: url(../img/example_parallax_bg1.png);}
 #parallax2 .image { background-image: url(../img/example_parallax_bg2.png);}
@@ -16,7 +16,7 @@
 #parallax4 .image { background-image: url(../img/example_parallax_bg1.png);}
 #parallax5 .image { background-image: url(../img/example_parallax_bg2.png);}
 #parallax6 .image { background-image: url(../img/example_parallax_bg3.png);}
-#parallax7 .image { background-image: url(../img/example_parallax_bg1.png);}	
+#parallax7 .image { background-image: url(../img/example_parallax_bg1.png);}
 
 // Custom SASS imports
 // Partials
@@ -38,7 +38,7 @@ a, span {
 	color: black;
 	padding: 5px;
 	text-decoration: underline;
-	
+
 		&:hover {
 			text-decoration: none;
 			cursor: pointer;
@@ -57,7 +57,7 @@ a, span {
 	height: 200px;
 	text-align: center;
 	z-index: 1;
-		
+
 		p {
 			color: black;
 		}
@@ -66,7 +66,7 @@ a, span {
 .element {
 	box-sizing: border-box;
 	position: absolute;
-	z-index: 0;	
+	z-index: 0;
 	width: 350px;
 	min-height: 200px;
 	padding: 10px;
@@ -94,18 +94,18 @@ a, span {
 
 #element-2 {
 	background-color: orange;
-	bottom: 35%;	
-	left: 50%;	
-	height: 300px;	
+	bottom: 35%;
+	left: 50%;
+	height: 300px;
 	width: 300px;
 }
 
 #element-3 {
 	background-color: red;
-	bottom: 35%;	
+	bottom: 35%;
 	left: 50%;
-	width: 300px;	
-	height: 300px;		
+	width: 300px;
+	height: 300px;
 	z-index: 1;
 }
 
@@ -113,12 +113,12 @@ a, span {
 	background-color: green;
 	bottom: 35%;
 	left: unset;
-	right: 50%;	
-	width: 300px;	
-	height: 300px;	
+	right: 50%;
+	width: 300px;
+	height: 300px;
 	z-index: 10;
 	-webkit-transform: translateX(50%);
-	transform: translateX(50%);	
+	transform: translateX(50%);
 }
 
 #element-5 {
@@ -131,7 +131,7 @@ a, span {
 	height: 400px;
 	bottom: 0;
 	left: auto;
-	right: 0;	
+	right: 0;
 	transform: none;
 	z-index: 1;
 }
@@ -147,71 +147,71 @@ a, span {
 	background: orange;
 	left: 20%;
 	bottom: -50%;
-	z-index: 1;	
+	z-index: 1;
 }
 
 #element-9 {
 	background: orange;
-	left: 80%;		
+	left: 80%;
 	bottom: -50%;
-	z-index: 1;		
+	z-index: 1;
 }
 
 #element-10 {
 	background: orange;
-	left: 20%;	
-	bottom: -50%;	
-	z-index: 1;		
+	left: 20%;
+	bottom: -50%;
+	z-index: 1;
 }
 
 #element-11 {
 	background: turquoise;
-	left: 25%;	
-	bottom: 40%;	
-	z-index: 1;		
+	left: 25%;
+	bottom: 40%;
+	z-index: 1;
 }
 
 #element-12 {
 	background: black;
-	left: 50%;	
-	bottom: -50%;	
-	z-index: 10;		
+	left: 50%;
+	bottom: -50%;
+	z-index: 10;
 }
 
 #element-13 {
 	background: red;
-	left: 75%;	
-	bottom: -50%;	
-	z-index: 1;		
+	left: 75%;
+	bottom: -50%;
+	z-index: 1;
 }
 
 #element-14 {
 	background: blue;
-	left: 33%;	
-	bottom: -50%;	
-	z-index: 1;		
+	left: 33%;
+	bottom: -50%;
+	z-index: 1;
 }
 
 #element-15 {
 	background: pink;
-	left: 66%;	
-	bottom: -50%;	
-	z-index: 1;		
+	left: 66%;
+	bottom: -50%;
+	z-index: 1;
 }
 
 #element-16 {
 	background: blue;
 	left: 50%;
-	width: 800px;	
-	bottom: -50%;	
-	z-index: 1;		
+	width: 800px;
+	bottom: -50%;
+	z-index: 1;
 }
 
 #element-17 {
 	background: orange;
-	left: 25%;	
-	bottom: -50%;	
-	z-index: 1;		
+	left: 25%;
+	bottom: -50%;
+	z-index: 1;
 }
 
 .spacer.s_viewport {
@@ -323,7 +323,7 @@ footer {
 	bottom: 0;
 	width: 100%;
 	padding: 10px 0;
-	background: black;	
+	background: black;
 	color: white;
 	z-index: 1000;
 	text-align: center;

@@ -15,12 +15,13 @@ module.exports = {
 	},
 	output: {
 		path: path.resolve(__dirname, 'dist'),
-		filename: 'bundle.[chunkhash].js',
+		filename: '[name].[hash].js',
 		//publicPath: '/',
 	},
 	devServer: {
 		port: 8080,
 		contentBase: path.join(__dirname, 'dist'),
+		writeToDisk: true
 	},
 	module: {
     	rules: [
@@ -97,7 +98,7 @@ module.exports = {
 		new MiniCssExtractPlugin({
 		  filename: 'styles.[chunkhash].css',
 		}),
-		//new CleanWebpackPlugin(),
+		new CleanWebpackPlugin(),
 	    new HtmlWebpackPlugin({
 	      minify: { collapseWhitespace: true},
 	      inject: false,
