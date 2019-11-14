@@ -7,6 +7,12 @@
 @import "partials/_base";
 @import "partials/_typography";
 
+// Font awesome declarations
+$fa-font-path: '~@fortawesome/fontawesome-free/webfonts'; 
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+
 // Testing autoprefixer on build
 //#parallax1 .image { background: linear-gradient(#e98a00, #000);}
 
@@ -84,6 +90,15 @@ a, span {
 #element-5 {
 	background-color: blue;
 	bottom: 35%;
+	
+		p {
+			color: white;
+			margin-top: 10px;
+		}
+
+		svg {
+			margin-right: 5px;
+		}
 }
 
 #element-1 img {

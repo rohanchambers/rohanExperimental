@@ -4,6 +4,9 @@ import '../scss/styles.scss';
 // import img from '../img/example_parallax_bg1.png';
 
 // Load external libraries | Look at webpack config file (resolve alias)
+// Font awesome 5
+import '@fortawesome/fontawesome-free/js/all'
+
 import $ from 'jquery';
 import 'debug.addIndicators';
 import 'TweenMax';
