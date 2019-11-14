@@ -11,7 +11,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
 	mode: 'production',
 	entry: {
-		main: './src/js/app.js',
+		main: './src/js/index.js',
 	},
 	output: {
 		path: path.resolve(__dirname, 'dist'),
@@ -100,35 +100,16 @@ module.exports = {
 		}),
 		new CleanWebpackPlugin(),
 	    new HtmlWebpackPlugin({
-	      minify: { collapseWhitespace: true},
+	      minify: { collapseWhitespace: false},
 	      inject: false,
 	      hash: true,
 	      template: 'src/index.html',
 	      filename: 'index.html'
 	    }),
-	    // // Copy assets over to dist folder for mass images eg. img / fonts
-	    // new CopyPlugin([
-	    //   { from: 'src/img', to: 'img'},
-	    //   { from: 'src/fonts', to: 'fonts'}
-	    // ]),
-	    // npm run stylelint to lint your SCSS files
-	    // new StyleLintPlugin({
-	    //   configFile: './stylelint.config.js',
-	    //   files: './src/scss/**/*.scss',
-	    //   syntax: 'scss'
-	    // }),
 	],
 	resolve: {
 		alias: {
-			"TweenMax": path.resolve('node_modules', 'gsap/src/uncompressed/TweenMax.js'),
-			"TimelineMax": path.resolve('node_modules', 'gsap/src/uncompressed/TimelineMax.js'),
-			"ScrollMagic": path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/ScrollMagic.js'),
-			"animation.gsap": path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js'),
-			"debug.addIndicators": path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js'),
-			"scrollTo": path.resolve('node_modules', 'gsap/src/uncompressed/plugins/ScrollToPlugin.js')
-			// '@scss': path.resolve(__dirname, '../src/scss'),
-			// '@img': path.resolve(__dirname, '../src/img'),
-			// '@': path.resolve(__dirname, '../src'),
+			//"TweenMax": path.resolve('node_modules', 'gsap/src/uncompressed/TweenMax.js'),
 		}
 	}
 }
