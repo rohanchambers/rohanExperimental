@@ -9,7 +9,7 @@ const StyleLintPlugin = require('stylelint-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-	mode: 'development',
+	mode: 'production',
 	entry: {
 		main: './src/js/app.js',
 	},
@@ -35,25 +35,52 @@ module.exports = {
 		        }
 			},
 			{
-			  test: /\.(gif|png|jpe?g|svg)$/i,
-			  	use: {
-				  	loader: 'file-loader',
-					  options: {
-					    name: '[name]-[hash].[ext]',
-					    outputPath: 'img/'
-					}
-				}
+			    test: /\.(gif|png|jpe?g|svg)$/i,
+			    use: [
+			        {
+			            loader: 'file-loader',
+			            options: {
+						  	limit: 8000,
+						    name: '[name]-[hash].[ext]',			            	
+			                outputPath: 'img/'
+			            }
+			        },
+			        {
+			            loader: 'image-webpack-loader',
+						options: {
+					        mozjpeg: {
+					          progressive: true,
+					          quality: 65
+					        },
+					        // optipng.enabled: false will disable optipng
+					        optipng: {
+					          enabled: false,
+					        },
+					        pngquant: {
+					          quality: [0.65, 0.90],
+					          speed: 4
+					        },
+					        gifsicle: {
+					          interlaced: false,
+					        },
+					        // the webp option will enable WEBP
+					        webp: {
+					          quality: 75
+					        }
+						  }
+			        }
+			    ]
 			},
 			{
 				test: /\.(scss|sass|css|)$/,
 				use: [
 					'style-loader',
 					MiniCssExtractPlugin.loader,
-					"css-loader", 
-					"postcss-loader", 
+					"css-loader",
+					"postcss-loader",
 					"sass-loader"
 				]
-			},		
+			},
 			{
 				test: /\.(woff|woff2|eot|svg|ttf|otf)$/,
 			  	use: {
@@ -67,22 +94,22 @@ module.exports = {
     	]
 	},
 	plugins: [
-		new CleanWebpackPlugin(),
 		new MiniCssExtractPlugin({
 		  filename: 'styles.[chunkhash].css',
 		}),
+		//new CleanWebpackPlugin(),
 	    new HtmlWebpackPlugin({
-	      minify: { collapseWhitespace: false},
+	      minify: { collapseWhitespace: true},
 	      inject: false,
 	      hash: true,
 	      template: 'src/index.html',
 	      filename: 'index.html'
 	    }),
-	    // // Copy assets over to dist folder eg. img / fonts
+	    // // Copy assets over to dist folder for mass images eg. img / fonts
 	    // new CopyPlugin([
 	    //   { from: 'src/img', to: 'img'},
 	    //   { from: 'src/fonts', to: 'fonts'}
-	    // ]),        
+	    // ]),
 	    // npm run stylelint to lint your SCSS files
 	    // new StyleLintPlugin({
 	    //   configFile: './stylelint.config.js',

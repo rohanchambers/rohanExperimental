@@ -8,7 +8,7 @@
 @import "partials/_typography";
 
 // Testing autoprefixer on build
-// #parallax1 .image { background: linear-gradient(#e98a00, #000);}
+#parallax1 .image { background: linear-gradient(#e98a00, #000);}
 
 #parallax1 .image { background-image: url(../img/example_parallax_bg1.png);}
 #parallax2 .image { background-image: url(../img/example_parallax_bg2.png);}

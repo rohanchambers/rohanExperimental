@@ -1,10 +1,7 @@
 import 'normalize.css';
 import '../scss/styles.scss';
 
-import img from '../img/example_parallax_bg1.png';
-import img2 from '../img/example_parallax_bg2.png';
-import img3 from '../img/example_parallax_bg3.png';
-import font from '../fonts/arial_black/arial_black.woff';
+// import img from '../img/example_parallax_bg1.png';
 
 // Load external libraries | Look at webpack config file (resolve alias)
 import $ from 'jquery';
