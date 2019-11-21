@@ -12,3 +12,20 @@ $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 @import '~@fortawesome/fontawesome-free/scss/fontawesome';
 @import '~@fortawesome/fontawesome-free/scss/solid';
 @import '~@fortawesome/fontawesome-free/scss/regular';
+
+html, body {
+    font-size: 14px;
+    font-family: sans-serif;
+
+    .menu{
+        >a {
+            display: inline-block;
+            margin: 0 10px;
+            text-decoration: none;
+
+            &.active{
+                text-decoration: underline;
+            }
+        }
+    }
+}
